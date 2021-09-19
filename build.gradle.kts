@@ -16,7 +16,7 @@ application {
         "english",
         "game0"
     )*/
-    mainClass.set("Client")
+    mainClass.set("com.javatar.jagex.Client")
 }
 
 dependencies {
