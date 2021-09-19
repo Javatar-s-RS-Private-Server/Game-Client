@@ -16,7 +16,7 @@ application {
         "english",
         "game0"
     )*/
-    mainClass.set("com.javatar.Client")
+    mainClass.set("Client")
 }
 
 dependencies {
