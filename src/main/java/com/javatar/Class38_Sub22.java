@@ -21,7 +21,7 @@ final class Class38_Sub22 extends Node {
 		Class38_Sub22.aClass19_2316 = RSString
 				.createRSString("Enter your username (V password)3");
 		Class38_Sub22.aClass19_2313 = Class38_Sub22.aClass19_2316;
-		client.windowFocused = true;
+		Client.windowFocused = true;
 		Class38_Sub22.aClass19_2339 = RSString
 				.createRSString("The server is being updated)3");
 		Class38_Sub22.anIntArray2333 = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8,
@@ -105,17 +105,17 @@ final class Class38_Sub22 extends Node {
 					}
 					boolean bool = true;
 					if (class38_sub6.anInt1958 > 0)
-						bool = client.method1229(i_2_ - 337, class38_sub6);
+						bool = Client.method1229(i_2_ - 337, class38_sub6);
 					if (bool
 							&& NodeSub.method708(i_2_ ^ i_2_,
 									Class30.method283(-125, class38_sub6),
 									i - 1)) {
 						if (i == 1) {
-							client.secureBuffer.putOpcode(221); // ok here's the
-																// packet id
-							client.secureBuffer.putInt(i_1_); // int = 4 bytes
-							client.secureBuffer.putShort(i_3_); // short = 2
-																// bytes
+							Client.secureBuffer.putOpcode(221); // ok here's the
+							// packet id
+							Client.secureBuffer.putInt(i_1_); // int = 4 bytes
+							Client.secureBuffer.putShort(i_3_); // short = 2
+							// bytes
 							// byte = 1
 							// short = 2
 							// int = 4
@@ -125,50 +125,50 @@ final class Class38_Sub22 extends Node {
 							// server
 						}
 						if (i == 2) {
-							client.secureBuffer.putOpcode(108);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(108);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 3) {
-							client.secureBuffer.putOpcode(181);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(181);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 4) {
-							client.secureBuffer.putOpcode(143);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(143);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 5) {
-							client.secureBuffer.putOpcode(167);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(167);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 6) {
-							client.secureBuffer.putOpcode(175);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(175);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 7) {
-							client.secureBuffer.putOpcode(162);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(162);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 8) {
-							client.secureBuffer.putOpcode(98);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(98);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i == 9) {
-							client.secureBuffer.putOpcode(103);
-							client.secureBuffer.putInt(i_1_);
-							client.secureBuffer.putShort(i_3_);
+							Client.secureBuffer.putOpcode(103);
+							Client.secureBuffer.putInt(i_1_);
+							Client.secureBuffer.putShort(i_3_);
 						}
 						if (i != 10)
 							break;
-						client.secureBuffer.putOpcode(150);
-						client.secureBuffer.putInt(i_1_);
-						client.secureBuffer.putShort(i_3_);
+						Client.secureBuffer.putOpcode(150);
+						Client.secureBuffer.putInt(i_1_);
+						Client.secureBuffer.putShort(i_3_);
 					}
 				}
 			} catch (RuntimeException runtimeexception) {

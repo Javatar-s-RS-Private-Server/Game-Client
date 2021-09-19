@@ -13,7 +13,7 @@ final class Class22 {
 	private static RSString aClass19_537;
 
 	static {
-		client.lastCoordY = 0;
+		Client.lastCoordY = 0;
 		Class22.aClass19_537 = RSString.createRSString("Take");
 		Class22.aClass19_540 = RSString.createRSString("leuchten3:");
 		Class22.aClass19_531 = Class22.aClass19_537;

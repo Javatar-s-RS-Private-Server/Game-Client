@@ -13,7 +13,7 @@ final class Class49 {
 		Class49.anInt1089 = 0;
 		Class49.aClass19_1088 = RSString.createRSString("Fehler bei der Verbindung zum Server)3");
 		Class49.aClass19_1100 = RSString.createRSString(")1");
-		client.walkingQueueY = new int[4000];
+		Client.walkingQueueY = new int[4000];
 	}
 
 	int anInt1087;
@@ -46,7 +46,7 @@ final class Class49 {
 						i_4_ = SceneModel.anInt2546 / 256;
 					if (Class20.aBoolArray504[4] && i_4_ < Class67.anIntArray1378[4] + 128)
 						i_4_ = Class67.anIntArray1378[4] + 128;
-					Class38_Sub20_Sub10.method976(i_5_, Class35.method317(-5736, client.height, client.myPlayer.anInt3493, client.myPlayer.anInt3444) - 50, i_4_ * 3 + 600, Class38_Sub20_Sub14.anInt3037, i_4_, Class38_Sub3.anInt1780);
+					Class38_Sub20_Sub10.method976(i_5_, Class35.method317(-5736, Client.height, Client.myPlayer.anInt3493, Client.myPlayer.anInt3444) - 50, i_4_ * 3 + 600, Class38_Sub20_Sub14.anInt3037, i_4_, Class38_Sub3.anInt1780);
 				}
 				int i_6_;
 				if (!Class38_Sub21.aBool2280)
@@ -62,7 +62,7 @@ final class Class49 {
 					Class49.aClass19_1086 = null;
 				for (int i_12_ = 0; i_12_ < 5; i_12_++)
 					if (Class20.aBoolArray504[i_12_]) {
-						int i_13_ = (int) (-Class77.anIntArray1512[i_12_] + (Class77.anIntArray1512[i_12_] * 2 + 1) * Math.random() + Math.sin(client.shakingCycle[i_12_] * (Class32.anIntArray765[i_12_] / 100.0)) * Class67.anIntArray1378[i_12_]);
+						int i_13_ = (int) (-Class77.anIntArray1512[i_12_] + (Class77.anIntArray1512[i_12_] * 2 + 1) * Math.random() + Math.sin(Client.shakingCycle[i_12_] * (Class32.anIntArray765[i_12_] / 100.0)) * Class67.anIntArray1378[i_12_]);
 						if (i_12_ == 4) {
 							Class3.anInt44 += i_13_;
 							if (Class3.anInt44 < 128)
@@ -163,10 +163,10 @@ final class Class49 {
 			Class49.aClass19_1100 = null;
 			Class49.aClass19_1088 = null;
 			if (i != 256)
-				client.lastCoordX = -67;
+				Client.lastCoordX = -67;
 			Class49.aClass19_1086 = null;
 			Class49.aClass19_1099 = null;
-			client.walkingQueueY = null;
+			Client.walkingQueueY = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "kf.C(" + i + ')');
 		}

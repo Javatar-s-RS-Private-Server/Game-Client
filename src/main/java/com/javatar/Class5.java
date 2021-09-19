@@ -143,7 +143,7 @@ final class Class5 {
 			Class38_Sub3.aClass19_1789 = Class9.aClass19_150;
 			Class3.aClass19_69 = Class38_Sub7.aClass19_2021;
 			Class38_Sub20_Sub11.aClass19_2952 = Class64.aClass19_1355;
-			Class38_Sub20_Sub11.aClass19_2956 = client.aClass19_3643;
+			Class38_Sub20_Sub11.aClass19_2956 = Client.aClass19_3643;
 			Class38_Sub20_Sub11.aClass19_2926 = Class38_Sub10_Sub1.aClass19_2592;
 			Class38_Sub18.aClass19_2219 = Class11.aClass19_207;
 			Sequence.aClass19_2739 = Class38_Sub20_Sub16.aClass19_3099;

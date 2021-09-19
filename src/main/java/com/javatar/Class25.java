@@ -134,7 +134,7 @@ final class Class25 {
 								bool_29_ = i_17_ <= Class23.anInt543 && i_20_ <= Class45.anInt1015 && Class23.anInt543 < i_18_ && Class45.anInt1015 < i_19_;
 								if (Class23.anInt558 == 1 && bool_29_)
 									bool = true;
-								boolean bool_30_ = client.lastMouseAction == 1 && i_17_ <= Class73.anInt1429 && i_20_ <= RS2Buffer.anInt2416 && Class73.anInt1429 < i_18_ && RS2Buffer.anInt2416 < i_19_;
+								boolean bool_30_ = Client.lastMouseAction == 1 && i_17_ <= Class73.anInt1429 && i_20_ <= RS2Buffer.anInt2416 && Class73.anInt1429 < i_18_ && RS2Buffer.anInt2416 < i_19_;
 								if (bool_30_)
 									Class38_Sub20_Sub3_Sub4.method1153((byte) -80, class38_sub6, -i_16_ + RS2Buffer.anInt2416, Class73.anInt1429 - i_15_);
 								if (Class15.aClass38_Sub6_293 != null && Class15.aClass38_Sub6_293 != class38_sub6 && bool_29_ && Class74.method531(-4124, Class30.method283(-108, class38_sub6)))

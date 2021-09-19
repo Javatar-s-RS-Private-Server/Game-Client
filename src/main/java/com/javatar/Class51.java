@@ -56,32 +56,32 @@ final class Class51 {
 	}
 
 	static final void method404(byte i) {
-		if (client.logoutTimer > 0)
-			client.logoutTimer--;
-		if (client.systemUpdateTime > 1)
-			client.systemUpdateTime--;
-		if (client.errorPinging) {
-			client.errorPinging = false;
-			client.dropClient();
+		if (Client.logoutTimer > 0)
+			Client.logoutTimer--;
+		if (Client.systemUpdateTime > 1)
+			Client.systemUpdateTime--;
+		if (Client.errorPinging) {
+			Client.errorPinging = false;
+			Client.dropClient();
 		} else {
 			for (int id = 0; id < 100; id++)
-				if (!client.parsePacket())
+				if (!Client.parsePacket())
 					break;
 			if (Class48.anInt1069 == 30) {
-				Sequence.method911(client.secureBuffer);
-				synchronized (client.mouseRecorder.lock) {
-					if (client.flagged) {
-						if (client.lastMouseAction != 0 || client.mouseRecorder.cacheIndex >= 40) {
+				Sequence.method911(Client.secureBuffer);
+				synchronized (Client.mouseRecorder.lock) {
+					if (Client.flagged) {
+						if (Client.lastMouseAction != 0 || Client.mouseRecorder.cacheIndex >= 40) {
 							int sentCoords = 0;
-							client.secureBuffer.putOpcode(119);
-							client.secureBuffer.putByte(0);
-							int offset = client.secureBuffer.pos;
-							for (int id = 0; id < client.mouseRecorder.cacheIndex; id++) {
-								if (client.secureBuffer.pos - offset >= 240)
+							Client.secureBuffer.putOpcode(119);
+							Client.secureBuffer.putByte(0);
+							int offset = Client.secureBuffer.pos;
+							for (int id = 0; id < Client.mouseRecorder.cacheIndex; id++) {
+								if (Client.secureBuffer.pos - offset >= 240)
 									break;
 								sentCoords++;
-								int y = client.mouseRecorder.mouseYCache[id];
-								int x = client.mouseRecorder.mouseXCache[id];
+								int y = Client.mouseRecorder.mouseYCache[id];
+								int x = Client.mouseRecorder.mouseXCache[id];
 								if (y >= 0) {
 									if (y > 502)
 										y = 502;
@@ -93,52 +93,52 @@ final class Class51 {
 								} else
 									x = 0;
 								int coords = y * 765 + x;
-								if (client.mouseRecorder.mouseYCache[id] == -1 && client.mouseRecorder.mouseXCache[id] == -1) {
+								if (Client.mouseRecorder.mouseYCache[id] == -1 && Client.mouseRecorder.mouseXCache[id] == -1) {
 									coords = 524287;
 									x = -1;
 									y = -1;
 								}
-								if (client.lastCoordX == x && y == client.lastCoordY) {
-									if (client.coordCounter < 2047)
-										client.coordCounter++;
+								if (Client.lastCoordX == x && y == Client.lastCoordY) {
+									if (Client.coordCounter < 2047)
+										Client.coordCounter++;
 								} else {
-									int xDiff = -client.lastCoordX + x;
-									client.lastCoordX = x;
-									int yDiff = -client.lastCoordY + y;
-									client.lastCoordY = y;
-									if (client.coordCounter < 8 && xDiff >= -32 && xDiff <= 31 && yDiff >= -32 && yDiff <= 31) {
+									int xDiff = -Client.lastCoordX + x;
+									Client.lastCoordX = x;
+									int yDiff = -Client.lastCoordY + y;
+									Client.lastCoordY = y;
+									if (Client.coordCounter < 8 && xDiff >= -32 && xDiff <= 31 && yDiff >= -32 && yDiff <= 31) {
 										xDiff += 32;
 										yDiff += 32;
-										client.secureBuffer.putShort(yDiff + (client.coordCounter << 12) + (xDiff << 6));
-										client.coordCounter = 0;
-									} else if (client.coordCounter < 8) {
-										client.secureBuffer.method771((client.coordCounter << 19) + 8388608 + coords);
-										client.coordCounter = 0;
+										Client.secureBuffer.putShort(yDiff + (Client.coordCounter << 12) + (xDiff << 6));
+										Client.coordCounter = 0;
+									} else if (Client.coordCounter < 8) {
+										Client.secureBuffer.method771((Client.coordCounter << 19) + 8388608 + coords);
+										Client.coordCounter = 0;
 									} else {
-										client.secureBuffer.putInt(coords + (client.coordCounter << 19) - 1073741824);
-										client.coordCounter = 0;
+										Client.secureBuffer.putInt(coords + (Client.coordCounter << 19) - 1073741824);
+										Client.coordCounter = 0;
 									}
 								}
 							}
-							client.secureBuffer.putSizedByte(-offset + client.secureBuffer.pos);
-							if (client.mouseRecorder.cacheIndex <= sentCoords)
-								client.mouseRecorder.cacheIndex = 0;
+							Client.secureBuffer.putSizedByte(-offset + Client.secureBuffer.pos);
+							if (Client.mouseRecorder.cacheIndex <= sentCoords)
+								Client.mouseRecorder.cacheIndex = 0;
 							else {
-								client.mouseRecorder.cacheIndex -= sentCoords;
-								for (int id = 0; client.mouseRecorder.cacheIndex > id; id++) {
-									client.mouseRecorder.mouseXCache[id] = client.mouseRecorder.mouseXCache[id + sentCoords];
-									client.mouseRecorder.mouseYCache[id] = client.mouseRecorder.mouseYCache[sentCoords + id];
+								Client.mouseRecorder.cacheIndex -= sentCoords;
+								for (int id = 0; Client.mouseRecorder.cacheIndex > id; id++) {
+									Client.mouseRecorder.mouseXCache[id] = Client.mouseRecorder.mouseXCache[id + sentCoords];
+									Client.mouseRecorder.mouseYCache[id] = Client.mouseRecorder.mouseYCache[sentCoords + id];
 								}
 							}
 						}
 					} else
-						client.mouseRecorder.cacheIndex = 0;
+						Client.mouseRecorder.cacheIndex = 0;
 				}
-				if (client.lastMouseAction != 0) {
-					long time = (client.lastClickTime + -client.lastlastClickTime) / 50L;
+				if (Client.lastMouseAction != 0) {
+					long time = (Client.lastClickTime + -Client.lastlastClickTime) / 50L;
 					if (time > 4095L)
 						time = 4095L;
-					client.lastlastClickTime = client.lastClickTime;
+					Client.lastlastClickTime = Client.lastClickTime;
 					int x = Class73.anInt1429;
 					int y = RS2Buffer.anInt2416;
 					if (x < 0)
@@ -146,39 +146,39 @@ final class Class51 {
 					else if (x > 764)
 						x = 764;
 					int button = 0;
-					if (client.lastMouseAction == 2)
+					if (Client.lastMouseAction == 2)
 						button = 1;
-					client.secureBuffer.putOpcode(242);
+					Client.secureBuffer.putOpcode(242);
 					int timeAsInt = (int) time;
 					if (y < 0)
 						y = 0;
 					else if (y > 502)
 						y = 502;
 					int coords = y * 765 + x;
-					client.secureBuffer.putInt((timeAsInt << 20) + (button << 19) + coords);
+					Client.secureBuffer.putInt((timeAsInt << 20) + (button << 19) + coords);
 				}
-				if (client.cameraPacketDelay > 0)
-					client.cameraPacketDelay--;
-				if (client.heldKeys[96] || client.heldKeys[97] || client.heldKeys[98] || client.heldKeys[99])
-					client.holdingArrowKeys = true;
-				if (client.holdingArrowKeys && client.cameraPacketDelay <= 0) {
-					client.holdingArrowKeys = false;
-					client.cameraPacketDelay = 20;
-					client.secureBuffer.putOpcode(211);
-					client.secureBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2930);
-					client.secureBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2958);
+				if (Client.cameraPacketDelay > 0)
+					Client.cameraPacketDelay--;
+				if (Client.heldKeys[96] || Client.heldKeys[97] || Client.heldKeys[98] || Client.heldKeys[99])
+					Client.holdingArrowKeys = true;
+				if (Client.holdingArrowKeys && Client.cameraPacketDelay <= 0) {
+					Client.holdingArrowKeys = false;
+					Client.cameraPacketDelay = 20;
+					Client.secureBuffer.putOpcode(211);
+					Client.secureBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2930);
+					Client.secureBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2958);
 				}
-				if (client.awtFocused && !client.windowFocused) {
+				if (Client.awtFocused && !Client.windowFocused) {
 					Class38_Sub11.anInt2084++;
-					client.windowFocused = true;
-					client.secureBuffer.putOpcode(177);
-					client.secureBuffer.putByte(1);
+					Client.windowFocused = true;
+					Client.secureBuffer.putOpcode(177);
+					Client.secureBuffer.putByte(1);
 				}
-				if (!client.awtFocused && !!client.windowFocused) {
-					client.windowFocused = false;
+				if (!Client.awtFocused && !!Client.windowFocused) {
+					Client.windowFocused = false;
 					Class38_Sub11.anInt2084++;
-					client.secureBuffer.putOpcode(177);
-					client.secureBuffer.putByte(0);
+					Client.secureBuffer.putOpcode(177);
+					Client.secureBuffer.putByte(0);
 				}
 				Class38_Sub20_Sub14.method1002();
 				if (Class48.anInt1069 == 30) {
@@ -186,24 +186,24 @@ final class Class51 {
 					Class64.method474();
 					Class38_Sub20_Sub8.anInt2857++;
 					if (Class38_Sub20_Sub8.anInt2857 > 750)
-						client.dropClient();
+						Client.dropClient();
 					else {
 						Class79.method575((byte) 97);
 						if (i > -109)
 							Class51.method402(-72, (byte) -35);
 						Class38_Sub19.method704(-93);
 						Class38_Sub2.method617();
-						if (client.crossState != 0) {
-							client.crossIndex += 20;
-							if (client.crossIndex >= 400)
-								client.crossState = 0;
+						if (Client.crossState != 0) {
+							Client.crossIndex += 20;
+							if (Client.crossIndex >= 400)
+								Client.crossState = 0;
 						}
 						Canvas_Sub1.anInt2529++;
-						if (client.atInventoryInterfaceType != null) {
-							client.redrawTimer++;
-							if (client.redrawTimer >= 15) {
-								Class40.method340(client.atInventoryInterfaceType, (byte) -127);
-								client.atInventoryInterfaceType = null;
+						if (Client.atInventoryInterfaceType != null) {
+							Client.redrawTimer++;
+							if (Client.redrawTimer >= 15) {
+								Class40.method340(Client.atInventoryInterfaceType, (byte) -127);
+								Client.atInventoryInterfaceType = null;
 							}
 						}
 						if (Class38_Sub20_Sub8.aClass38_Sub6_2877 != null) {
@@ -245,11 +245,11 @@ final class Class51 {
 											class38_sub6.anIntArray1947[i_22_] = -1;
 											class38_sub6.anIntArray1866[i_22_] = 0;
 										}
-										client.secureBuffer.putOpcode(56);
-										client.secureBuffer.method769(Class73_Sub2.anInt2287, 122);
-										client.secureBuffer.putByteC(i_18_);
-										client.secureBuffer.method774(Class38_Sub20_Sub8.aClass38_Sub6_2877.anInt1856);
-										client.secureBuffer.method767(-25680, Class38_Sub3.anInt1786);
+										Client.secureBuffer.putOpcode(56);
+										Client.secureBuffer.method769(Class73_Sub2.anInt2287, 122);
+										Client.secureBuffer.putByteC(i_18_);
+										Client.secureBuffer.method774(Class38_Sub20_Sub8.aClass38_Sub6_2877.anInt1856);
+										Client.secureBuffer.method767(-25680, Class38_Sub3.anInt1786);
 									}
 								} else if (Class42.anInt949 != 1 && !RSString.method140(Class72.anInt1417 - 1) || Class72.anInt1417 <= 2) {
 									if (Class72.anInt1417 > 0)
@@ -257,8 +257,8 @@ final class Class51 {
 								} else
 									Class50.method401();
 								Class38_Sub20_Sub8.aClass38_Sub6_2877 = null;
-								client.redrawTimer = 10;
-								client.lastMouseAction = 0;
+								Client.redrawTimer = 10;
+								Client.lastMouseAction = 0;
 							}
 						}
 						Class21.aBool524 = false;
@@ -316,12 +316,12 @@ final class Class51 {
 						if (SceneGraph.mouseOverX != -1) {
 							int x = SceneGraph.mouseOverX;
 							int y = SceneGraph.mouseOverY;
-							boolean cross = client.calculatePath(true, 0, client.myPlayer.walkQueueY[0], 0, 0, x, client.myPlayer.walkQueueX[0], 0, y, 0, 0);
+							boolean cross = Client.calculatePath(true, 0, Client.myPlayer.walkQueueY[0], 0, 0, x, Client.myPlayer.walkQueueX[0], 0, y, 0, 0);
 							SceneGraph.mouseOverX = -1;
 							if (cross) {
-								client.crossIndex = 0;
+								Client.crossIndex = 0;
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-								client.crossState = 1;
+								Client.crossState = 1;
 								Class21.anInt523 = Class73.anInt1429;
 							}
 						}
@@ -350,17 +350,17 @@ final class Class51 {
 						if (Class38_Sub21.aBool2280)
 							Class13.method67();
 						for (int id = 0; id < 5; id++)
-							client.shakingCycle[id]++;
-						int mit = client.mouseIdleTime();
-						int kit = client.keyboardIdleTime();
+							Client.shakingCycle[id]++;
+						int mit = Client.mouseIdleTime();
+						int kit = Client.keyboardIdleTime();
 						if (mit > 4500 && kit > 4500) {
-							client.logoutTimer = 250;
-							client.setMouseIdleTime(4000);
-							client.secureBuffer.putOpcode(13);
+							Client.logoutTimer = 250;
+							Client.setMouseIdleTime(4000);
+							Client.secureBuffer.putOpcode(13);
 						}
 						Class83.anInt1679++;
 						Class35.anInt816++;
-						client.pingTimer++;
+						Client.pingTimer++;
 						if (Class35.anInt816 > 500) {
 							Class35.anInt816 = 0;
 							int i_35_ = (int) (Math.random() * 8.0);
@@ -399,18 +399,18 @@ final class Class51 {
 							Class38_Sub20_Sub8.anInt2855 = 2;
 						if (Class21.anInt517 > 60)
 							Class38_Sub20_Sub8.anInt2855 = -2;
-						if (client.pingTimer > 50) {
-							client.secureBuffer.putOpcode(232);
+						if (Client.pingTimer > 50) {
+							Client.secureBuffer.putOpcode(232);
 							Class78.anInt1545++;
 						}
 						try {
-							if (client.worldConnection != null || client.secureBuffer.pos > 0) {
-								client.worldConnection.write(client.secureBuffer.buffer, client.secureBuffer.pos, (byte) 126);
-								client.secureBuffer.pos = 0;
-								client.pingTimer = 0;
+							if (Client.worldConnection != null || Client.secureBuffer.pos > 0) {
+								Client.worldConnection.write(Client.secureBuffer.buffer, Client.secureBuffer.pos, (byte) 126);
+								Client.secureBuffer.pos = 0;
+								Client.pingTimer = 0;
 							}
 						} catch (java.io.IOException ioexception) {
-							client.dropClient();
+							Client.dropClient();
 						}
 					}
 				}

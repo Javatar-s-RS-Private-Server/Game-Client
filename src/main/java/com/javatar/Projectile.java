@@ -138,8 +138,8 @@ final class Projectile extends SceneModel {
 
 	static final void initializePlayer(int i) {
 		try {
-			client.lastlastClickTime = 0L;
-			client.awtFocused = true;
+			Client.lastlastClickTime = 0L;
+			Client.awtFocused = true;
 			Class38_Sub2.anInt1764 = 0;
 			Class83.anInt1668 = 0;
 			Class38_Sub20_Sub13.anInt3013 = 0;
@@ -153,29 +153,29 @@ final class Projectile extends SceneModel {
 			Class78.anInt1545 = 0;
 			Class83.anInt1678 = 0;
 			Class59.anInt1296 = 0;
-			client.coordCounter = 0;
-			client.windowFocused = true;
-			client.mouseRecorder.cacheIndex = 0;
+			Client.coordCounter = 0;
+			Client.windowFocused = true;
+			Client.mouseRecorder.cacheIndex = 0;
 			Class35.method314(i + 1007765799);
 			Class15.anInt280 = -1;
 			Class72.anInt1417 = 0;
 			Class38_Sub20_Sub8.anInt2864 = -1;
 			Class38_Sub20_Sub8.anInt2857 = 0;
-			client.systemUpdateTime = 0;
+			Client.systemUpdateTime = 0;
 			Class42.anInt962 = 0;
-			client.secureBuffer.pos = 0;
+			Client.secureBuffer.pos = 0;
 			SceneModel.aBool2553 = false;
-			client.logoutTimer = 0;
+			Client.logoutTimer = 0;
 			Class15.inputStream.pos = 0;
 			Class38_Sub19.anInt2233 = -1;
 			Class23.packetId = -1;
-			client.setMouseIdleTime(0);
+			Client.setMouseIdleTime(0);
 			for (int i_12_ = 0; i_12_ < 100; i_12_++)
 				Class38_Sub6.aClass19Array1945[i_12_] = null;
 			NodeSub.anInt2257 = (int) (Math.random() * 110.0) - 55;
 			Class4.anInt87 = 0;
 			ItemDefinition.anInt2783 = 0;
-			client.destX = 0;
+			Client.destX = 0;
 			Class21.anInt517 = (int) (Math.random() * 120.0) - 60;
 			Class55.anInt1212 = (int) (Math.random() * 80.0) - 40;
 			Class38_Sub20_Sub11.anInt2943 = (int) (Math.random() * 100.0) - 50;
@@ -183,7 +183,7 @@ final class Projectile extends SceneModel {
 			Class38_Sub20_Sub10.anInt2910 = 0;
 			Class42.anInt964 = 0;
 			Class38_Sub20_Sub11.anInt2930 = (int) (Math.random() * 20.0) - 10 & 0x7ff;
-			client.destY = 0;
+			Client.destY = 0;
 			Class38_Sub20_Sub17.anInt3129 = 0;
 			Class38_Sub7.anInt2027 = (int) (Math.random() * 30.0) - 20;
 			Class26.aBool614 = false;
@@ -194,7 +194,7 @@ final class Projectile extends SceneModel {
 			}
 			for (int i_14_ = 0; i_14_ < 32768; i_14_++)
 				Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_14_] = null;
-			client.myPlayer = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[2047] = new Player();
+			Client.myPlayer = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[2047] = new Player();
 			Class28.aClass13_686.method58();
 			Class13.aClass13_235.method58();
 			for (int i_15_ = 0; i_15_ < 4; i_15_++)

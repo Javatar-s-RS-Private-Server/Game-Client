@@ -80,7 +80,7 @@ final class Class38_Sub20_Sub10 extends NodeSub {
 			Class38_Sub20_Sub10.anIntArray2905 = null;
 			Class38_Sub20_Sub10.aClass19_2907 = null;
 			Class38_Sub20_Sub10.anIntArray2912 = null;
-			client.worldConnection = null;
+			Client.worldConnection = null;
 			if (i == 22755) {
 				Class38_Sub20_Sub10.aClass38_Sub23Array2895 = null;
 				Class38_Sub20_Sub10.aClass83_2902 = null;

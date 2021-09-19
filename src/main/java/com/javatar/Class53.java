@@ -213,50 +213,50 @@ final class Class53 {
 						i_43_ -= 2000;
 					int i_44_ = Class50.anIntArray1107[i_40_];
 					if (i_43_ == 7) {
-						client.secureBuffer.putOpcode(252);
-						client.secureBuffer.method777(i_42_);
-						client.secureBuffer.putShort(i_41_);
-						client.secureBuffer.method767(-25680, i_44_);
-						client.redrawTimer = 0;
-						client.atInventoryInterfaceType = Projectile.method1167(i_42_, -122);
+						Client.secureBuffer.putOpcode(252);
+						Client.secureBuffer.method777(i_42_);
+						Client.secureBuffer.putShort(i_41_);
+						Client.secureBuffer.method767(-25680, i_44_);
+						Client.redrawTimer = 0;
+						Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -122);
 						Class38_Sub20_Sub8.anInt2883 = i_41_;
 					}
 					if (i_43_ == 50) {
 						Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 						if (class38_sub20_sub3_sub7_sub2 != null) {
-							client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+							Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 							Class21.anInt523 = Class73.anInt1429;
-							client.crossState = 2;
+							Client.crossState = 2;
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.crossIndex = 0;
-							client.secureBuffer.putOpcode(31);
-							client.secureBuffer.method769(i_44_, 70);
+							Client.crossIndex = 0;
+							Client.secureBuffer.putOpcode(31);
+							Client.secureBuffer.method769(i_44_, 70);
 						}
 					}
 					if (i_43_ == 10) {
 						NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 						if (class38_sub20_sub3_sub7_sub1 != null) {
-							client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+							Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
 							Class21.anInt523 = Class73.anInt1429;
-							client.crossIndex = 0;
-							client.crossState = 2;
+							Client.crossIndex = 0;
+							Client.crossState = 2;
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.secureBuffer.putOpcode(185);
-							client.secureBuffer.putShort(i_44_);
+							Client.secureBuffer.putOpcode(185);
+							Client.secureBuffer.putShort(i_44_);
 						}
 					}
 					if (i_43_ == 22) {
 						Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 						if (class38_sub20_sub3_sub7_sub2 != null) {
-							client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+							Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.crossState = 2;
-							client.crossIndex = 0;
+							Client.crossState = 2;
+							Client.crossIndex = 0;
 							Class21.anInt523 = Class73.anInt1429;
-							client.secureBuffer.putOpcode(29);
-							client.secureBuffer.method777(Class2_Sub1.anInt2008);
-							client.secureBuffer.putLEShortA(Node.anInt893);
-							client.secureBuffer.method769(i_44_, 84);
+							Client.secureBuffer.putOpcode(29);
+							Client.secureBuffer.method777(Class2_Sub1.anInt2008);
+							Client.secureBuffer.putLEShortA(Node.anInt893);
+							Client.secureBuffer.method769(i_44_, 84);
 						}
 					}
 					if (i_43_ == 8) {
@@ -275,105 +275,105 @@ final class Class53 {
 						}
 					} else {
 						if (i_43_ == 15) {
-							client.secureBuffer.putOpcode(44);
-							client.secureBuffer.method767(-25680, i_41_);
-							client.secureBuffer.method777(i_42_);
-							client.secureBuffer.putShort(i_44_);
-							client.redrawTimer = 0;
-							client.atInventoryInterfaceType = Projectile.method1167(i_42_, -107);
+							Client.secureBuffer.putOpcode(44);
+							Client.secureBuffer.method767(-25680, i_41_);
+							Client.secureBuffer.method777(i_42_);
+							Client.secureBuffer.putShort(i_44_);
+							Client.redrawTimer = 0;
+							Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -107);
 							Class38_Sub20_Sub8.anInt2883 = i_41_;
 						}
 						if (i_43_ == 36) {
-							boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+							boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 							if (!bool)
-								bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
-							client.crossState = 2;
+								bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+							Client.crossState = 2;
 							Class21.anInt523 = Class73.anInt1429;
-							client.crossIndex = 0;
+							Client.crossIndex = 0;
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.secureBuffer.putOpcode(80);
-							client.secureBuffer.method769(client.currentBaseY + i_41_, 66);
-							client.secureBuffer.method769(client.currentBaseX + i_42_, 69);
-							client.secureBuffer.method767(-25680, i_44_);
+							Client.secureBuffer.putOpcode(80);
+							Client.secureBuffer.method769(Client.currentBaseY + i_41_, 66);
+							Client.secureBuffer.method769(Client.currentBaseX + i_42_, 69);
+							Client.secureBuffer.method767(-25680, i_44_);
 						}
 						if (i_43_ == 43) {
-							client.secureBuffer.putOpcode(204);
-							client.secureBuffer.putInt(Class2_Sub1.anInt2008);
-							client.secureBuffer.method747(i_42_, -2687);
-							client.secureBuffer.method769(i_44_, 109);
-							client.secureBuffer.putLEShortA(Node.anInt893);
-							client.secureBuffer.putLEShortA(i_41_);
-							client.redrawTimer = 0;
-							client.atInventoryInterfaceType = Projectile.method1167(i_42_, -109);
+							Client.secureBuffer.putOpcode(204);
+							Client.secureBuffer.putInt(Class2_Sub1.anInt2008);
+							Client.secureBuffer.method747(i_42_, -2687);
+							Client.secureBuffer.method769(i_44_, 109);
+							Client.secureBuffer.putLEShortA(Node.anInt893);
+							Client.secureBuffer.putLEShortA(i_41_);
+							Client.redrawTimer = 0;
+							Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -109);
 							Class38_Sub20_Sub8.anInt2883 = i_41_;
 						}
 						if (i_43_ == 16) {
 							Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 							if (class38_sub20_sub3_sub7_sub2 != null) {
-								client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
-								client.crossIndex = 0;
+								Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+								Client.crossIndex = 0;
 								Class21.anInt523 = Class73.anInt1429;
 								Class38_Sub2.anInt1764++;
-								client.crossState = 2;
+								Client.crossState = 2;
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-								client.secureBuffer.putOpcode(138);
-								client.secureBuffer.method769(i_44_, 124);
+								Client.secureBuffer.putOpcode(138);
+								Client.secureBuffer.method769(i_44_, 124);
 							}
 						}
 						if (i_43_ == 45) {
 							Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 							if (class38_sub20_sub3_sub7_sub2 != null) {
 								Class77.anInt1518++;
-								client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
-								client.crossState = 2;
+								Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+								Client.crossState = 2;
 								Class21.anInt523 = Class73.anInt1429;
-								client.crossIndex = 0;
+								Client.crossIndex = 0;
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-								client.secureBuffer.putOpcode(35);
-								client.secureBuffer.method767(-25680, i_44_);
+								Client.secureBuffer.putOpcode(35);
+								Client.secureBuffer.method767(-25680, i_44_);
 							}
 						}
 						if (i_43_ == 1002) {
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.crossState = 2;
+							Client.crossState = 2;
 							Class21.anInt523 = Class73.anInt1429;
-							client.crossIndex = 0;
-							client.secureBuffer.putOpcode(32);
-							client.secureBuffer.method769((i_44_ & 0x1fffc611) >> 14, 75);
+							Client.crossIndex = 0;
+							Client.secureBuffer.putOpcode(32);
+							Client.secureBuffer.method769((i_44_ & 0x1fffc611) >> 14, 75);
 						}
 						if (i_43_ == 24) {
 							NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 							if (class38_sub20_sub3_sub7_sub1 != null) {
-								client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
-								client.crossIndex = 0;
-								client.crossState = 2;
+								Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+								Client.crossIndex = 0;
+								Client.crossState = 2;
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 								Class21.anInt523 = Class73.anInt1429;
-								client.secureBuffer.putOpcode(37);
-								client.secureBuffer.putLEShortA(i_44_);
+								Client.secureBuffer.putOpcode(37);
+								Client.secureBuffer.putLEShortA(i_44_);
 							}
 						}
 						if (i_43_ == 58) {
 							NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 							if (class38_sub20_sub3_sub7_sub1 != null) {
-								client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+								Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 								Class21.anInt523 = Class73.anInt1429;
-								client.crossIndex = 0;
-								client.crossState = 2;
-								client.secureBuffer.putOpcode(238);
-								client.secureBuffer.method774(Class17_Sub1.anInt1713);
-								client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
-								client.secureBuffer.putLEShortA(i_44_);
-								client.secureBuffer.putLEShortA(Class58.anInt1286);
+								Client.crossIndex = 0;
+								Client.crossState = 2;
+								Client.secureBuffer.putOpcode(238);
+								Client.secureBuffer.method774(Class17_Sub1.anInt1713);
+								Client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
+								Client.secureBuffer.putLEShortA(i_44_);
+								Client.secureBuffer.putLEShortA(Class58.anInt1286);
 							}
 						}
 						if (i_43_ == 3)
-							RuntimeException_Sub1.aClass27_3292.method233(client.height, i_41_, i_42_);
+							RuntimeException_Sub1.aClass27_3292.method233(Client.height, i_41_, i_42_);
 						if (i_43_ == 40) {
 							Class38_Sub20_Sub13.anInt3013++;
-							client.secureBuffer.putOpcode(218);
-							client.secureBuffer.putInt(i_42_);
+							Client.secureBuffer.putOpcode(218);
+							Client.secureBuffer.putInt(i_42_);
 							Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -101);
 							if (class38_sub6.anIntArrayArray1955 != null && class38_sub6.anIntArrayArray1955[0][0] == 5) {
 								int i_45_ = class38_sub6.anIntArrayArray1955[0][1];
@@ -382,45 +382,45 @@ final class Class53 {
 							}
 						}
 						if (i_43_ == 25) {
-							client.secureBuffer.putOpcode(231);
-							client.secureBuffer.putLEShortA(Class58.anInt1286);
-							client.secureBuffer.method774(Class17_Sub1.anInt1713);
-							client.secureBuffer.method767(-25680, i_44_);
-							client.secureBuffer.method767(-25680, i_41_);
-							client.secureBuffer.putShort(Class38_Sub10_Sub3.anInt2837);
-							client.secureBuffer.method747(i_42_, -2687);
-							client.redrawTimer = 0;
-							client.atInventoryInterfaceType = Projectile.method1167(i_42_, -109);
+							Client.secureBuffer.putOpcode(231);
+							Client.secureBuffer.putLEShortA(Class58.anInt1286);
+							Client.secureBuffer.method774(Class17_Sub1.anInt1713);
+							Client.secureBuffer.method767(-25680, i_44_);
+							Client.secureBuffer.method767(-25680, i_41_);
+							Client.secureBuffer.putShort(Class38_Sub10_Sub3.anInt2837);
+							Client.secureBuffer.method747(i_42_, -2687);
+							Client.redrawTimer = 0;
+							Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -109);
 							Class38_Sub20_Sub8.anInt2883 = i_41_;
 						}
 						if (i_43_ == 1001) {
-							client.crossIndex = 0;
+							Client.crossIndex = 0;
 							Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-							client.crossState = 2;
+							Client.crossState = 2;
 							Class21.anInt523 = Class73.anInt1429;
 							Class42.anInt950++;
-							client.secureBuffer.putOpcode(43);
-							client.secureBuffer.putLEShortA(i_44_);
+							Client.secureBuffer.putOpcode(43);
+							Client.secureBuffer.putLEShortA(i_44_);
 						}
 						if (i_43_ == 41) {
-							client.secureBuffer.putOpcode(9);
-							client.secureBuffer.method769(i_44_, 102);
-							client.secureBuffer.method777(i_42_);
-							client.secureBuffer.putLEShortA(i_41_);
-							client.redrawTimer = 0;
-							client.atInventoryInterfaceType = Projectile.method1167(i_42_, 100);
+							Client.secureBuffer.putOpcode(9);
+							Client.secureBuffer.method769(i_44_, 102);
+							Client.secureBuffer.method777(i_42_);
+							Client.secureBuffer.putLEShortA(i_41_);
+							Client.redrawTimer = 0;
+							Client.atInventoryInterfaceType = Projectile.method1167(i_42_, 100);
 							Class38_Sub20_Sub8.anInt2883 = i_41_;
 						}
 						if (i_43_ == 44) {
 							Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 							if (class38_sub20_sub3_sub7_sub2 != null) {
-								client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
-								client.crossState = 2;
+								Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+								Client.crossState = 2;
 								Class21.anInt523 = Class73.anInt1429;
-								client.crossIndex = 0;
+								Client.crossIndex = 0;
 								Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-								client.secureBuffer.putOpcode(10);
-								client.secureBuffer.method769(i_44_, 100);
+								Client.secureBuffer.putOpcode(10);
+								Client.secureBuffer.method769(i_44_, 100);
 							}
 						}
 						if (i_43_ == 21) {
@@ -439,46 +439,46 @@ final class Class53 {
 								Class38_Sub20_Sub2.method814();
 							if (i >= 65) {
 								if (i_43_ == 38) {
-									client.secureBuffer.putOpcode(215);
-									client.secureBuffer.method767(-25680, i_41_);
-									client.secureBuffer.putInt(i_42_);
-									client.secureBuffer.putLEShortA(i_44_);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
+									Client.secureBuffer.putOpcode(215);
+									Client.secureBuffer.method767(-25680, i_41_);
+									Client.secureBuffer.putInt(i_42_);
+									Client.secureBuffer.putLEShortA(i_44_);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 13) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
-									client.crossState = 2;
-									client.crossIndex = 0;
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+									Client.crossState = 2;
+									Client.crossIndex = 0;
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 									Class21.anInt523 = Class73.anInt1429;
-									client.secureBuffer.putOpcode(120);
-									client.secureBuffer.method769(i_44_, 110);
-									client.secureBuffer.method769(client.currentBaseY + i_41_, 95);
-									client.secureBuffer.method769(i_42_ + client.currentBaseX, 74);
+									Client.secureBuffer.putOpcode(120);
+									Client.secureBuffer.method769(i_44_, 110);
+									Client.secureBuffer.method769(Client.currentBaseY + i_41_, 95);
+									Client.secureBuffer.method769(i_42_ + Client.currentBaseX, 74);
 								}
 								if (i_43_ == 18) {
-									client.secureBuffer.putOpcode(241);
-									client.secureBuffer.putShort(i_44_);
-									client.secureBuffer.putLEShortA(i_41_);
-									client.secureBuffer.method747(i_42_, -2687);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, -106);
+									Client.secureBuffer.putOpcode(241);
+									Client.secureBuffer.putShort(i_44_);
+									Client.secureBuffer.putLEShortA(i_41_);
+									Client.secureBuffer.method747(i_42_, -2687);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -106);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 6) {
 									Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 									if (class38_sub20_sub3_sub7_sub2 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 										Class21.anInt523 = Class73.anInt1429;
-										client.crossState = 2;
+										Client.crossState = 2;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-										client.crossIndex = 0;
-										client.secureBuffer.putOpcode(73);
-										client.secureBuffer.method767(-25680, i_44_);
+										Client.crossIndex = 0;
+										Client.secureBuffer.putOpcode(73);
+										Client.secureBuffer.method767(-25680, i_44_);
 									}
 								}
 								if (i_43_ == 39 && Class38_Sub2.aClass38_Sub6_1769 == null) {
@@ -488,71 +488,71 @@ final class Class53 {
 								}
 								if (i_43_ == 1) {
 									Class14.method79(i_42_, i_41_, i_44_);
-									client.secureBuffer.putOpcode(174);
-									client.secureBuffer.method767(-25680, (i_44_ & 0x1fffd825) >> 14);
-									client.secureBuffer.putLEShortA(i_41_ + client.currentBaseY);
-									client.secureBuffer.method769(client.currentBaseX + i_42_, 97);
+									Client.secureBuffer.putOpcode(174);
+									Client.secureBuffer.method767(-25680, (i_44_ & 0x1fffd825) >> 14);
+									Client.secureBuffer.putLEShortA(i_41_ + Client.currentBaseY);
+									Client.secureBuffer.method769(Client.currentBaseX + i_42_, 97);
 								}
 								if (i_43_ == 1006) {
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 									Class21.anInt523 = Class73.anInt1429;
-									client.crossState = 2;
-									client.crossIndex = 0;
+									Client.crossState = 2;
+									Client.crossIndex = 0;
 									NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 									if (class38_sub20_sub3_sub7_sub1 != null) {
 										Sequence class38_sub20_sub5 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543;
 										if (class38_sub20_sub5.anIntArray2715 != null)
 											class38_sub20_sub5 = class38_sub20_sub5.method915(-118);
 										if (class38_sub20_sub5 != null) {
-											client.secureBuffer.putOpcode(50);
-											client.secureBuffer.putLEShortA(class38_sub20_sub5.anInt2725);
+											Client.secureBuffer.putOpcode(50);
+											Client.secureBuffer.putLEShortA(class38_sub20_sub5.anInt2725);
 										}
 									}
 								}
 								if (i_43_ == 42) {
-									client.secureBuffer.putOpcode(96);
-									client.secureBuffer.putInt(i_42_);
-									client.secureBuffer.method767(-25680, i_41_);
-									client.secureBuffer.method747(Class2_Sub1.anInt2008, -2687);
-									client.secureBuffer.method769(Node.anInt893, 127);
+									Client.secureBuffer.putOpcode(96);
+									Client.secureBuffer.putInt(i_42_);
+									Client.secureBuffer.method767(-25680, i_41_);
+									Client.secureBuffer.method747(Class2_Sub1.anInt2008, -2687);
+									Client.secureBuffer.method769(Node.anInt893, 127);
 								}
 								if (i_43_ == 19) {
-									client.secureBuffer.putOpcode(117);
-									client.secureBuffer.putShort(i_44_);
-									client.secureBuffer.putShort(i_41_);
-									client.secureBuffer.putInt(i_42_);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
+									Client.secureBuffer.putOpcode(117);
+									Client.secureBuffer.putShort(i_44_);
+									Client.secureBuffer.putShort(i_41_);
+									Client.secureBuffer.putInt(i_42_);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 49 && Class14.method79(i_42_, i_41_, i_44_)) {
-									client.secureBuffer.putOpcode(75);
-									client.secureBuffer.putLEShortA(Class58.anInt1286);
-									client.secureBuffer.putShort(i_44_ >> 14 & 0x7fff);
-									client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
-									client.secureBuffer.method769(client.currentBaseY + i_41_, 74);
-									client.secureBuffer.method767(-25680, client.currentBaseX + i_42_);
-									client.secureBuffer.putInt(Class17_Sub1.anInt1713);
+									Client.secureBuffer.putOpcode(75);
+									Client.secureBuffer.putLEShortA(Class58.anInt1286);
+									Client.secureBuffer.putShort(i_44_ >> 14 & 0x7fff);
+									Client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
+									Client.secureBuffer.method769(Client.currentBaseY + i_41_, 74);
+									Client.secureBuffer.method767(-25680, Client.currentBaseX + i_42_);
+									Client.secureBuffer.putInt(Class17_Sub1.anInt1713);
 								}
 								if (i_43_ == 2 && Class14.method79(i_42_, i_41_, i_44_)) {
-									client.secureBuffer.putOpcode(208);
-									client.secureBuffer.method769((i_44_ & 0x1fffd5ce) >> 14, 67);
-									client.secureBuffer.method767(-25680, client.currentBaseX + i_42_);
-									client.secureBuffer.method774(Class2_Sub1.anInt2008);
-									client.secureBuffer.putLEShortA(client.currentBaseY + i_41_);
-									client.secureBuffer.putLEShortA(Node.anInt893);
+									Client.secureBuffer.putOpcode(208);
+									Client.secureBuffer.method769((i_44_ & 0x1fffd5ce) >> 14, 67);
+									Client.secureBuffer.method767(-25680, Client.currentBaseX + i_42_);
+									Client.secureBuffer.method774(Class2_Sub1.anInt2008);
+									Client.secureBuffer.putLEShortA(Client.currentBaseY + i_41_);
+									Client.secureBuffer.putLEShortA(Node.anInt893);
 								}
 								if (i_43_ == 1003) {
 									Class14.method79(i_42_, i_41_, i_44_);
-									client.secureBuffer.putOpcode(182);
-									client.secureBuffer.putShort(client.currentBaseY + i_41_);
-									client.secureBuffer.putShort(client.currentBaseX + i_42_);
-									client.secureBuffer.method769(i_44_ >> 14 & 0x7fff, 92);
+									Client.secureBuffer.putOpcode(182);
+									Client.secureBuffer.putShort(Client.currentBaseY + i_41_);
+									Client.secureBuffer.putShort(Client.currentBaseX + i_42_);
+									Client.secureBuffer.method769(i_44_ >> 14 & 0x7fff, 92);
 								}
 								if (i_43_ == 34) {
 									Class38_Sub20_Sub13.anInt3013++;
-									client.secureBuffer.putOpcode(218);
-									client.secureBuffer.putInt(i_42_);
+									Client.secureBuffer.putOpcode(218);
+									Client.secureBuffer.putInt(i_42_);
 									Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -113);
 									if (class38_sub6.anIntArrayArray1955 != null && class38_sub6.anIntArrayArray1955[0][0] == 5) {
 										int i_46_ = class38_sub6.anIntArrayArray1955[0][1];
@@ -565,40 +565,40 @@ final class Class53 {
 								if (i_43_ == 29) {
 									Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 									if (class38_sub20_sub3_sub7_sub2 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 										Class38_Sub22.anInt2323++;
-										client.crossState = 2;
-										client.crossIndex = 0;
+										Client.crossState = 2;
+										Client.crossIndex = 0;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 										Class21.anInt523 = Class73.anInt1429;
-										client.secureBuffer.putOpcode(81);
-										client.secureBuffer.putLEShortA(i_44_);
+										Client.secureBuffer.putOpcode(81);
+										Client.secureBuffer.putLEShortA(i_44_);
 									}
 								}
 								if (i_43_ == 20) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 									Class21.anInt523 = Class73.anInt1429;
-									client.crossState = 2;
-									client.crossIndex = 0;
-									client.secureBuffer.putOpcode(97);
-									client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
-									client.secureBuffer.method769(client.currentBaseX + i_42_, 66);
-									client.secureBuffer.method777(Class17_Sub1.anInt1713);
-									client.secureBuffer.putLEShortA(Class58.anInt1286);
-									client.secureBuffer.putShort(i_44_);
-									client.secureBuffer.method769(client.currentBaseY + i_41_, 74);
+									Client.crossState = 2;
+									Client.crossIndex = 0;
+									Client.secureBuffer.putOpcode(97);
+									Client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
+									Client.secureBuffer.method769(Client.currentBaseX + i_42_, 66);
+									Client.secureBuffer.method777(Class17_Sub1.anInt1713);
+									Client.secureBuffer.putLEShortA(Class58.anInt1286);
+									Client.secureBuffer.putShort(i_44_);
+									Client.secureBuffer.method769(Client.currentBaseY + i_41_, 74);
 								}
 								if (i_43_ == 26) {
 									Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -123);
 									boolean bool = true;
 									if (class38_sub6.anInt1958 > 0)
-										bool = client.method1229(-126, class38_sub6);
+										bool = Client.method1229(-126, class38_sub6);
 									if (bool) {
-										client.secureBuffer.putOpcode(218);
-										client.secureBuffer.putInt(i_42_);
+										Client.secureBuffer.putOpcode(218);
+										Client.secureBuffer.putInt(i_42_);
 										Class38_Sub20_Sub13.anInt3013++;
 									}
 								}
@@ -607,88 +607,88 @@ final class Class53 {
 								if (i_43_ == 48) {
 									Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 									if (class38_sub20_sub3_sub7_sub2 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
-										client.crossState = 2;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+										Client.crossState = 2;
 										Class83.anInt1678++;
 										Class21.anInt523 = Class73.anInt1429;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-										client.crossIndex = 0;
-										client.secureBuffer.putOpcode(193);
-										client.secureBuffer.putShort(i_44_);
+										Client.crossIndex = 0;
+										Client.secureBuffer.putOpcode(193);
+										Client.secureBuffer.putShort(i_44_);
 									}
 								}
 								if (i_43_ == 51) {
-									client.secureBuffer.putOpcode(195);
-									client.secureBuffer.method769(i_44_, 106);
-									client.secureBuffer.method777(i_42_);
-									client.secureBuffer.putLEShortA(i_41_);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, -120);
+									Client.secureBuffer.putOpcode(195);
+									Client.secureBuffer.method769(i_44_, 106);
+									Client.secureBuffer.method777(i_42_);
+									Client.secureBuffer.putLEShortA(i_41_);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -120);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 28) {
 									NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 									if (class38_sub20_sub3_sub7_sub1 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
-										client.crossState = 2;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+										Client.crossState = 2;
 										Class21.anInt523 = Class73.anInt1429;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-										client.crossIndex = 0;
-										client.secureBuffer.putOpcode(45);
-										client.secureBuffer.method767(-25680, i_44_);
+										Client.crossIndex = 0;
+										Client.secureBuffer.putOpcode(45);
+										Client.secureBuffer.method767(-25680, i_44_);
 									}
 								}
 								if (i_43_ == 30) {
-									client.secureBuffer.putOpcode(130);
-									client.secureBuffer.putShort(i_41_);
-									client.secureBuffer.method747(i_42_, -2687);
-									client.secureBuffer.method769(i_44_, 94);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, -126);
+									Client.secureBuffer.putOpcode(130);
+									Client.secureBuffer.putShort(i_41_);
+									Client.secureBuffer.method747(i_42_, -2687);
+									Client.secureBuffer.method769(i_44_, 94);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -126);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 57) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-									client.crossState = 2;
+									Client.crossState = 2;
 									Class21.anInt523 = Class73.anInt1429;
-									client.crossIndex = 0;
-									client.secureBuffer.putOpcode(250);
-									client.secureBuffer.method769(client.currentBaseY + i_41_, 63);
-									client.secureBuffer.method769(i_44_, 95);
-									client.secureBuffer.method769(client.currentBaseX + i_42_, 120);
+									Client.crossIndex = 0;
+									Client.secureBuffer.putOpcode(250);
+									Client.secureBuffer.method769(Client.currentBaseY + i_41_, 63);
+									Client.secureBuffer.method769(i_44_, 95);
+									Client.secureBuffer.method769(Client.currentBaseX + i_42_, 120);
 								}
 								if (i_43_ == 11) {
 									Class14.method79(i_42_, i_41_, i_44_);
-									client.secureBuffer.putOpcode(144);
-									client.secureBuffer.putLEShortA(client.currentBaseY + i_41_);
-									client.secureBuffer.method767(-25680, client.currentBaseX + i_42_);
-									client.secureBuffer.putShort(i_44_ >> 14 & 0x7fff);
+									Client.secureBuffer.putOpcode(144);
+									Client.secureBuffer.putLEShortA(Client.currentBaseY + i_41_);
+									Client.secureBuffer.method767(-25680, Client.currentBaseX + i_42_);
+									Client.secureBuffer.putShort(i_44_ >> 14 & 0x7fff);
 								}
 								if (i_43_ == 14) {
 									NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 									if (class38_sub20_sub3_sub7_sub1 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
-										client.crossIndex = 0;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+										Client.crossIndex = 0;
 										Class21.anInt523 = Class73.anInt1429;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-										client.crossState = 2;
-										client.secureBuffer.putOpcode(6);
-										client.secureBuffer.method769(i_44_, 85);
+										Client.crossState = 2;
+										Client.secureBuffer.putOpcode(6);
+										Client.secureBuffer.method769(i_44_, 85);
 									}
 								}
 								if (i_43_ == 23) {
 									Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 									if (class38_sub20_sub3_sub7_sub2 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 										Class21.anInt523 = Class73.anInt1429;
-										client.crossState = 2;
-										client.crossIndex = 0;
-										client.secureBuffer.putOpcode(158);
-										client.secureBuffer.method769(i_44_, 93);
+										Client.crossState = 2;
+										Client.crossIndex = 0;
+										Client.secureBuffer.putOpcode(158);
+										Client.secureBuffer.method769(i_44_, 93);
 									}
 								}
 								if (i_43_ == 1004) {
@@ -697,126 +697,126 @@ final class Class53 {
 										Class62.method464(Class9.method43(new RSString[]{RuntimeException_Sub1.method1098(class38_sub6.anIntArray1866[i_41_], 0), Class54.aClass19_1188, Node.forId(i_44_, 81).aClass19_2808}, (byte) -20), 0, Class38_Sub22.aClass19_2312);
 									else {
 										Class42.anInt950++;
-										client.secureBuffer.putOpcode(43);
-										client.secureBuffer.putLEShortA(i_44_);
+										Client.secureBuffer.putOpcode(43);
+										Client.secureBuffer.putLEShortA(i_44_);
 									}
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, 120);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, 120);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 5) {
 									Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_44_];
 									if (class38_sub20_sub3_sub7_sub2 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
-										client.crossState = 2;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+										Client.crossState = 2;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 										Class21.anInt523 = Class73.anInt1429;
-										client.crossIndex = 0;
-										client.secureBuffer.putOpcode(67);
-										client.secureBuffer.method774(Class17_Sub1.anInt1713);
-										client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
-										client.secureBuffer.method767(-25680, i_44_);
-										client.secureBuffer.putShort(Class58.anInt1286);
+										Client.crossIndex = 0;
+										Client.secureBuffer.putOpcode(67);
+										Client.secureBuffer.method774(Class17_Sub1.anInt1713);
+										Client.secureBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
+										Client.secureBuffer.method767(-25680, i_44_);
+										Client.secureBuffer.putShort(Class58.anInt1286);
 									}
 								}
 								if (i_43_ == 31) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
-									client.crossIndex = 0;
-									client.crossState = 2;
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+									Client.crossIndex = 0;
+									Client.crossState = 2;
 									Class21.anInt523 = Class73.anInt1429;
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-									client.secureBuffer.putOpcode(137);
-									client.secureBuffer.putShort(client.currentBaseY + i_41_);
-									client.secureBuffer.method767(-25680, i_44_);
-									client.secureBuffer.putShort(client.currentBaseX + i_42_);
+									Client.secureBuffer.putOpcode(137);
+									Client.secureBuffer.putShort(Client.currentBaseY + i_41_);
+									Client.secureBuffer.method767(-25680, i_44_);
+									Client.secureBuffer.putShort(Client.currentBaseX + i_42_);
 								}
 								if (i_43_ == 35) {
-									client.secureBuffer.putOpcode(115);
-									client.secureBuffer.putInt(i_42_);
-									client.secureBuffer.method767(-25680, i_41_);
-									client.secureBuffer.method769(i_44_, 69);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, 35);
+									Client.secureBuffer.putOpcode(115);
+									Client.secureBuffer.putInt(i_42_);
+									Client.secureBuffer.method767(-25680, i_41_);
+									Client.secureBuffer.method769(i_44_, 69);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, 35);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 33) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-									client.crossIndex = 0;
+									Client.crossIndex = 0;
 									Class21.anInt523 = Class73.anInt1429;
-									client.crossState = 2;
-									client.secureBuffer.putOpcode(122);
-									client.secureBuffer.putShort(i_42_ + client.currentBaseX);
-									client.secureBuffer.putLEShortA(i_41_ + client.currentBaseY);
-									client.secureBuffer.method774(Class2_Sub1.anInt2008);
-									client.secureBuffer.putShort(Node.anInt893);
-									client.secureBuffer.method767(-25680, i_44_);
+									Client.crossState = 2;
+									Client.secureBuffer.putOpcode(122);
+									Client.secureBuffer.putShort(i_42_ + Client.currentBaseX);
+									Client.secureBuffer.putLEShortA(i_41_ + Client.currentBaseY);
+									Client.secureBuffer.method774(Class2_Sub1.anInt2008);
+									Client.secureBuffer.putShort(Node.anInt893);
+									Client.secureBuffer.method767(-25680, i_44_);
 								}
 								if (i_43_ == 47) {
-									boolean bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 0, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
+									boolean bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 0, 2);
 									if (!bool)
-										bool = client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, i_41_, client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
-									client.crossIndex = 0;
+										bool = Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, i_41_, Client.myPlayer.walkQueueX[0], 0, i_42_, 1, 2);
+									Client.crossIndex = 0;
 									Class21.anInt523 = Class73.anInt1429;
-									client.crossState = 2;
+									Client.crossState = 2;
 									Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-									client.secureBuffer.putOpcode(112);
-									client.secureBuffer.putShort(i_42_ + client.currentBaseX);
-									client.secureBuffer.putShort(i_44_);
-									client.secureBuffer.putShort(i_41_ + client.currentBaseY);
+									Client.secureBuffer.putOpcode(112);
+									Client.secureBuffer.putShort(i_42_ + Client.currentBaseX);
+									Client.secureBuffer.putShort(i_44_);
+									Client.secureBuffer.putShort(i_41_ + Client.currentBaseY);
 								}
 								if (i_43_ == 32) {
 									Class14.method79(i_42_, i_41_, i_44_);
-									client.secureBuffer.putOpcode(170);
-									client.secureBuffer.method767(-25680, i_42_ + client.currentBaseX);
-									client.secureBuffer.putLEShortA((i_44_ & 0x1fffc39d) >> 14);
-									client.secureBuffer.putLEShortA(i_41_ + client.currentBaseY);
+									Client.secureBuffer.putOpcode(170);
+									Client.secureBuffer.method767(-25680, i_42_ + Client.currentBaseX);
+									Client.secureBuffer.putLEShortA((i_44_ & 0x1fffc39d) >> 14);
+									Client.secureBuffer.putLEShortA(i_41_ + Client.currentBaseY);
 								}
 								if (i_43_ == 12) {
 									NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 									if (class38_sub20_sub3_sub7_sub1 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
-										client.crossIndex = 0;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+										Client.crossIndex = 0;
 										Class21.anInt523 = Class73.anInt1429;
-										client.crossState = 2;
+										Client.crossState = 2;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-										client.secureBuffer.putOpcode(253);
-										client.secureBuffer.putShort(Node.anInt893);
-										client.secureBuffer.method774(Class2_Sub1.anInt2008);
-										client.secureBuffer.method769(i_44_, 76);
+										Client.secureBuffer.putOpcode(253);
+										Client.secureBuffer.putShort(Node.anInt893);
+										Client.secureBuffer.method774(Class2_Sub1.anInt2008);
+										Client.secureBuffer.method769(i_44_, 76);
 									}
 								}
 								if (i_43_ == 17) {
-									client.secureBuffer.putOpcode(214);
-									client.secureBuffer.method767(-25680, i_41_);
-									client.secureBuffer.putInt(i_42_);
-									client.secureBuffer.putShort(i_44_);
-									client.redrawTimer = 0;
-									client.atInventoryInterfaceType = Projectile.method1167(i_42_, 123);
+									Client.secureBuffer.putOpcode(214);
+									Client.secureBuffer.method767(-25680, i_41_);
+									Client.secureBuffer.putInt(i_42_);
+									Client.secureBuffer.putShort(i_44_);
+									Client.redrawTimer = 0;
+									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, 123);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
 								}
 								if (i_43_ == 9) {
 									NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_44_];
 									if (class38_sub20_sub3_sub7_sub1 != null) {
-										client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
-										client.crossIndex = 0;
+										Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub1.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub1.walkQueueY[0], 1, 2);
+										Client.crossIndex = 0;
 										Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
 										Class21.anInt523 = Class73.anInt1429;
-										client.crossState = 2;
-										client.secureBuffer.putOpcode(149);
-										client.secureBuffer.putShort(i_44_);
+										Client.crossState = 2;
+										Client.secureBuffer.putOpcode(149);
+										Client.secureBuffer.putShort(i_44_);
 									}
 								}
 								if (i_43_ == 37) {
 									Class14.method79(i_42_, i_41_, i_44_);
-									client.secureBuffer.putOpcode(229);
-									client.secureBuffer.putShort(i_42_ + client.currentBaseX);
-									client.secureBuffer.putShort(client.currentBaseY + i_41_);
-									client.secureBuffer.putShort((i_44_ & 0x1ffff34a) >> 14);
+									Client.secureBuffer.putOpcode(229);
+									Client.secureBuffer.putShort(i_42_ + Client.currentBaseX);
+									Client.secureBuffer.putShort(Client.currentBaseY + i_41_);
+									Client.secureBuffer.putShort((i_44_ & 0x1ffff34a) >> 14);
 								}
 								if (Class42.anInt964 != 0) {
 									Class42.anInt964 = 0;
@@ -824,9 +824,9 @@ final class Class53 {
 								}
 								if (Class26.aBool614)
 									Class11.method55(-8602);
-								if (client.atInventoryInterfaceType == null || client.redrawTimer != 0)
+								if (Client.atInventoryInterfaceType == null || Client.redrawTimer != 0)
 									break;
-								Class40.method340(client.atInventoryInterfaceType, (byte) -112);
+								Class40.method340(Client.atInventoryInterfaceType, (byte) -112);
 							}
 						}
 					}

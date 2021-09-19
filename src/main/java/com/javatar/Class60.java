@@ -60,7 +60,7 @@ final class Class60 implements KeyListener, FocusListener {
 				if (i_8_ != Class38_Sub9.anInt2067)
 					class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_8_];
 				else
-					class38_sub20_sub3_sub7_sub2 = client.myPlayer;
+					class38_sub20_sub3_sub7_sub2 = Client.myPlayer;
 				if (class38_sub20_sub3_sub7_sub2 != null) {
 					ObjectDefinition class38_sub20_sub1 = Class80.method581(-126, i_10_);
 					int i_15_;
@@ -76,7 +76,7 @@ final class Class60 implements KeyListener, FocusListener {
 					int i_18_ = i_13_ + (i_16_ + 1 >> 1);
 					int i_19_ = (i_15_ >> 1) + i_14_;
 					int i_20_ = (i_15_ + 1 >> 1) + i_14_;
-					int[][] is = Player.anIntArrayArrayArray3566[client.height];
+					int[][] is = Player.anIntArrayArrayArray3566[Client.height];
 					int i_21_ = is[i_18_][i_20_] + is[i_17_][i_19_] + is[i_18_][i_19_] + is[i_17_][i_20_] >> 2;
 					int i_22_ = (i_16_ << 6) + (i_13_ << 7);
 					int i_23_ = (i_14_ << 7) + (i_15_ << 6);
@@ -87,7 +87,7 @@ final class Class60 implements KeyListener, FocusListener {
 							i_9_ = i_7_;
 							i_7_ = i_24_;
 						}
-						Class38_Sub8.method658(i_14_, i_2_ + 1, i_13_, -113, i_5_, 0, client.height, i_0_ + 1, 0, -1);
+						Class38_Sub8.method658(i_14_, i_2_ + 1, i_13_, -113, i_5_, 0, Client.height, i_0_ + 1, 0, -1);
 						class38_sub20_sub3_sub7_sub2.anInt3589 = Class45.anInt1016 + i_0_;
 						class38_sub20_sub3_sub7_sub2.anInt3575 = Class45.anInt1016 + i_2_;
 						if (i_1_ > i_11_) {
@@ -116,9 +116,9 @@ final class Class60 implements KeyListener, FocusListener {
 					Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = new Class38_Sub20_Sub3_Sub4();
 					class38_sub20_sub3_sub4.anInt3351 = i_26_;
 					class38_sub20_sub3_sub4.anInt3348 = i_30_;
-					if (Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_28_][i_29_] == null)
-						Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_28_][i_29_] = new Class13();
-					Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_28_][i_29_].method68(class38_sub20_sub3_sub4, (byte) 114);
+					if (Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_28_][i_29_] == null)
+						Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_28_][i_29_] = new Class13();
+					Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_28_][i_29_].method68(class38_sub20_sub3_sub4, (byte) 114);
 					Class13.method59(-1, i_29_, i_28_);
 				}
 			} else if (Class23.packetId == 147) {
@@ -132,45 +132,45 @@ final class Class60 implements KeyListener, FocusListener {
 				int i_38_ = Class15.inputStream.getUShortA();
 				if (i_37_ >= 0 && i_36_ >= 0 && i_37_ < 103 && i_36_ < 103) {
 					if (i_34_ == 0) {
-						Class82 class82 = RuntimeException_Sub1.aClass27_3292.method226(client.height, i_37_, i_36_);
+						Class82 class82 = RuntimeException_Sub1.aClass27_3292.method226(Client.height, i_37_, i_36_);
 						if (class82 != null) {
 							int i_39_ = (class82.anInt1640 & 0x1fffe1bf) >> 14;
 							if (i_33_ == 2) {
-								class82.aClass38_Sub20_Sub3_1627 = new Class38_Sub20_Sub3_Sub2(i_39_, 2, i_32_ + 4, client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1627);
-								class82.aClass38_Sub20_Sub3_1630 = new Class38_Sub20_Sub3_Sub2(i_39_, 2, i_32_ + 1 & 0x3, client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1630);
+								class82.aClass38_Sub20_Sub3_1627 = new Class38_Sub20_Sub3_Sub2(i_39_, 2, i_32_ + 4, Client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1627);
+								class82.aClass38_Sub20_Sub3_1630 = new Class38_Sub20_Sub3_Sub2(i_39_, 2, i_32_ + 1 & 0x3, Client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1630);
 							} else
-								class82.aClass38_Sub20_Sub3_1627 = new Class38_Sub20_Sub3_Sub2(i_39_, i_33_, i_32_, client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1627);
+								class82.aClass38_Sub20_Sub3_1627 = new Class38_Sub20_Sub3_Sub2(i_39_, i_33_, i_32_, Client.height, i_37_, i_36_, i_38_, false, class82.aClass38_Sub20_Sub3_1627);
 						}
 					}
 					if (i_34_ == 1) {
-						Class43 class43 = RuntimeException_Sub1.aClass27_3292.method253(client.height, i_37_, i_36_);
+						Class43 class43 = RuntimeException_Sub1.aClass27_3292.method253(Client.height, i_37_, i_36_);
 						if (class43 != null) {
 							int i_40_ = class43.anInt975 >> 14 & 0x7fff;
 							if (i_33_ != 4 && i_33_ != 5) {
 								if (i_33_ != 6) {
 									if (i_33_ == 7)
-										class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, (i_32_ + 2 & 0x3) + 4, client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
+										class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, (i_32_ + 2 & 0x3) + 4, Client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
 									else if (i_33_ == 8) {
-										class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_ + 4, client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
-										class43.aClass38_Sub20_Sub3_967 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, (i_32_ + 2 & 0x3) + 4, client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_967);
+										class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_ + 4, Client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
+										class43.aClass38_Sub20_Sub3_967 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, (i_32_ + 2 & 0x3) + 4, Client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_967);
 									}
 								} else
-									class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_ + 4, client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
+									class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_ + 4, Client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
 							} else
-								class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_, client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
+								class43.aClass38_Sub20_Sub3_981 = new Class38_Sub20_Sub3_Sub2(i_40_, 4, i_32_, Client.height, i_37_, i_36_, i_38_, false, class43.aClass38_Sub20_Sub3_981);
 						}
 					}
 					if (i_34_ == 2) {
-						Class3 class3 = RuntimeException_Sub1.aClass27_3292.method222(client.height, i_37_, i_36_);
+						Class3 class3 = RuntimeException_Sub1.aClass27_3292.method222(Client.height, i_37_, i_36_);
 						if (i_33_ == 11)
 							i_33_ = 10;
 						if (class3 != null)
-							class3.aClass38_Sub20_Sub3_53 = new Class38_Sub20_Sub3_Sub2((class3.anInt62 & 0x1fffe914) >> 14, i_33_, i_32_, client.height, i_37_, i_36_, i_38_, false, class3.aClass38_Sub20_Sub3_53);
+							class3.aClass38_Sub20_Sub3_53 = new Class38_Sub20_Sub3_Sub2((class3.anInt62 & 0x1fffe914) >> 14, i_33_, i_32_, Client.height, i_37_, i_36_, i_38_, false, class3.aClass38_Sub20_Sub3_53);
 					}
 					if (i_34_ == 3) {
-						Class49 class49 = RuntimeException_Sub1.aClass27_3292.method263(client.height, i_37_, i_36_);
+						Class49 class49 = RuntimeException_Sub1.aClass27_3292.method263(Client.height, i_37_, i_36_);
 						if (class49 != null)
-							class49.aClass38_Sub20_Sub3_1101 = new Class38_Sub20_Sub3_Sub2((class49.anInt1097 & 0x1ffff451) >> 14, 22, i_32_, client.height, i_37_, i_36_, i_38_, false, class49.aClass38_Sub20_Sub3_1101);
+							class49.aClass38_Sub20_Sub3_1101 = new Class38_Sub20_Sub3_Sub2((class49.anInt1097 & 0x1ffff451) >> 14, 22, i_32_, Client.height, i_37_, i_36_, i_38_, false, class49.aClass38_Sub20_Sub3_1101);
 					}
 				}
 			} else if (Class23.packetId == 32) {
@@ -179,7 +179,7 @@ final class Class60 implements KeyListener, FocusListener {
 				int i_43_ = (i_41_ & 0x7) + Class64.anInt1358;
 				int i_44_ = Class15.inputStream.getULEShort();
 				if (i_42_ >= 0 && i_43_ >= 0 && i_42_ < 104 && i_43_ < 104) {
-					Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_42_][i_43_];
+					Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_42_][i_43_];
 					if (class13 != null) {
 						for (Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method65(88); class38_sub20_sub3_sub4 != null; class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method63(-3))
 							if ((i_44_ & 0x7fff) == class38_sub20_sub3_sub4.anInt3348) {
@@ -187,7 +187,7 @@ final class Class60 implements KeyListener, FocusListener {
 								break;
 							}
 						if (class13.method65(7 ^ 0x75) == null)
-							Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_42_][i_43_] = null;
+							Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_42_][i_43_] = null;
 						Class13.method59(-1, i_43_, i_42_);
 					}
 				}
@@ -199,7 +199,7 @@ final class Class60 implements KeyListener, FocusListener {
 				int i_49_ = Class15.inputStream.readUnsignedShortLE();
 				int i_50_ = Class15.inputStream.readUnsignedShortLE();
 				if (i_46_ >= 0 && i_47_ >= 0 && i_46_ < 104 && i_47_ < 104) {
-					Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_46_][i_47_];
+					Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_46_][i_47_];
 					if (class13 != null) {
 						for (Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method65(88); class38_sub20_sub3_sub4 != null; class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method63(7 ^ ~0x5))
 							if ((i_48_ & 0x7fff) == class38_sub20_sub3_sub4.anInt3348 && i_49_ == class38_sub20_sub3_sub4.anInt3351) {
@@ -218,7 +218,7 @@ final class Class60 implements KeyListener, FocusListener {
 				int i_56_ = Class2_Sub1.anInt2003 + ((i_55_ & 0x78) >> 4);
 				int i_57_ = Class64.anInt1358 + (i_55_ & 0x7);
 				if (i_56_ >= 0 && i_57_ >= 0 && i_56_ < 104 && i_57_ < 104)
-					Class38_Sub8.method658(i_57_, 0, i_56_, -88, i_54_, i_53_, client.height, -1, i_52_, -1);
+					Class38_Sub8.method658(i_57_, 0, i_56_, -88, i_54_, i_53_, Client.height, -1, i_52_, -1);
 			} else if (Class23.packetId == 120) {
 				int i_58_ = Class15.inputStream.getUByte();
 				int i_59_ = Class64.anInt1358 + (i_58_ & 0x7);
@@ -229,7 +229,7 @@ final class Class60 implements KeyListener, FocusListener {
 				if (i_60_ >= 0 && i_59_ >= 0 && i_60_ < 104 && i_59_ < 104) {
 					i_59_ = i_59_ * 128 + 64;
 					i_60_ = i_60_ * 128 + 64;
-					Class38_Sub20_Sub3_Sub5 class38_sub20_sub3_sub5 = new Class38_Sub20_Sub3_Sub5(i_61_, client.height, i_60_, i_59_, Class35.method317(-5736, client.height, i_60_, i_59_) - i_62_, i_63_, Class45.anInt1016);
+					Class38_Sub20_Sub3_Sub5 class38_sub20_sub3_sub5 = new Class38_Sub20_Sub3_Sub5(i_61_, Client.height, i_60_, i_59_, Class35.method317(-5736, Client.height, i_60_, i_59_) - i_62_, i_63_, Class45.anInt1016);
 					Class13.aClass13_235.method68(class38_sub20_sub3_sub5, (byte) 97);
 				}
 			} else if (Class23.packetId == 103) {
@@ -243,9 +243,9 @@ final class Class60 implements KeyListener, FocusListener {
 					Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = new Class38_Sub20_Sub3_Sub4();
 					class38_sub20_sub3_sub4.anInt3348 = i_69_;
 					class38_sub20_sub3_sub4.anInt3351 = i_64_;
-					if (Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_67_][i_68_] == null)
-						Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_67_][i_68_] = new Class13();
-					Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_67_][i_68_].method68(class38_sub20_sub3_sub4, (byte) 122);
+					if (Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_67_][i_68_] == null)
+						Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_67_][i_68_] = new Class13();
+					Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_67_][i_68_].method68(class38_sub20_sub3_sub4, (byte) 122);
 					Class13.method59(-1, i_68_, i_67_);
 				}
 			} else {
@@ -261,7 +261,7 @@ final class Class60 implements KeyListener, FocusListener {
 					int i_76_ = (i_75_ >> 4 & 0x7) + Class2_Sub1.anInt2003;
 					int i_77_ = (i_75_ & 0x7) + Class64.anInt1358;
 					if (i_76_ >= 0 && i_77_ >= 0 && i_76_ < 104 && i_77_ < 104)
-						Class38_Sub8.method658(i_77_, 0, i_76_, -99, i_73_, i_72_, client.height, -1, i_71_, i_74_);
+						Class38_Sub8.method658(i_77_, 0, i_76_, -99, i_73_, i_72_, Client.height, -1, i_71_, i_74_);
 				} else {
 					if (Class23.packetId == 195) {
 						int i_78_ = Class15.inputStream.getUByte();
@@ -274,7 +274,7 @@ final class Class60 implements KeyListener, FocusListener {
 						int i_85_ = i_82_ >> 4 & 0xf;
 						if (i_79_ >= 0 && i_80_ >= 0 && i_79_ < 104 && i_80_ < 104) {
 							int i_86_ = i_85_ + 1;
-							if (-i_86_ + i_79_ <= client.myPlayer.walkQueueX[0] && client.myPlayer.walkQueueX[0] <= i_86_ + i_79_ && -i_86_ + i_80_ <= client.myPlayer.walkQueueY[0] && client.myPlayer.walkQueueY[0] <= i_80_ + i_86_ && Class77.anInt1505 != 0 && i_84_ > 0 && Class38_Sub20_Sub10.anInt2910 < 50) {
+							if (-i_86_ + i_79_ <= Client.myPlayer.walkQueueX[0] && Client.myPlayer.walkQueueX[0] <= i_86_ + i_79_ && -i_86_ + i_80_ <= Client.myPlayer.walkQueueY[0] && Client.myPlayer.walkQueueY[0] <= i_80_ + i_86_ && Class77.anInt1505 != 0 && i_84_ > 0 && Class38_Sub20_Sub10.anInt2910 < 50) {
 								ObjectDefinition.anIntArray2442[Class38_Sub20_Sub10.anInt2910] = i_81_;
 								Class61.anIntArray1330[Class38_Sub20_Sub10.anInt2910] = i_84_;
 								Class76.anIntArray1495[Class38_Sub20_Sub10.anInt2910] = i_83_;
@@ -302,9 +302,9 @@ final class Class60 implements KeyListener, FocusListener {
 							i_89_ = i_89_ * 128 + 64;
 							i_88_ = i_88_ * 128 + 64;
 							i_91_ = i_91_ * 128 + 64;
-							Projectile class38_sub20_sub3_sub6 = new Projectile(i_93_, client.height, i_88_, i_89_, -i_94_ + Class35.method317(-5736, client.height, i_88_, i_89_), Class45.anInt1016 + i_96_, Class45.anInt1016 + i_97_, i_98_, i_99_, i_92_, i_95_);
+							Projectile class38_sub20_sub3_sub6 = new Projectile(i_93_, Client.height, i_88_, i_89_, -i_94_ + Class35.method317(-5736, Client.height, i_88_, i_89_), Class45.anInt1016 + i_96_, Class45.anInt1016 + i_97_, i_98_, i_99_, i_92_, i_95_);
 							i_90_ = i_90_ * 128 + 64;
-							class38_sub20_sub3_sub6.method1170(i_91_, i_90_, (byte) 98, i_96_ + Class45.anInt1016, -i_95_ + Class35.method317(-5736, client.height, i_90_, i_91_));
+							class38_sub20_sub3_sub6.method1170(i_91_, i_90_, (byte) 98, i_96_ + Class45.anInt1016, -i_95_ + Class35.method317(-5736, Client.height, i_90_, i_91_));
 							Class28.aClass13_686.method68(class38_sub20_sub3_sub6, (byte) 62);
 						}
 					}
@@ -341,7 +341,7 @@ final class Class60 implements KeyListener, FocusListener {
 			class38_sub8.anInt2049 = i;
 			class38_sub8.anInt2038 = i_104_;
 			Class10.aClass14_190.method80(i_105_, class38_sub8);
-			client.method1231(0, i_104_);
+			Client.method1231(0, i_104_);
 			if (22878 != 22878)
 				Class60.aClass13_1304 = null;
 			Class78.method566(i_104_, 50);
@@ -460,7 +460,7 @@ final class Class60 implements KeyListener, FocusListener {
 	public final synchronized void keyReleased(KeyEvent keyevent) {
 		try {
 			if (Class38_Sub11.aClass60_2099 != null) {
-				client.keyboardIdleTime = 0;
+				Client.keyboardIdleTime = 0;
 				int i = keyevent.getKeyCode();
 				if (i >= 0 && i < Class38_Sub14.anIntArray2143.length)
 					i = Class38_Sub14.anIntArray2143[i] & ~0x80;
@@ -501,7 +501,7 @@ final class Class60 implements KeyListener, FocusListener {
 	public final synchronized void keyPressed(KeyEvent keyevent) {
 		try {
 			if (Class38_Sub11.aClass60_2099 != null) {
-				client.keyboardIdleTime = 0;
+				Client.keyboardIdleTime = 0;
 				int i = keyevent.getKeyCode();
 				if (i >= 0 && Class38_Sub14.anIntArray2143.length > i) {
 					i = Class38_Sub14.anIntArray2143[i];

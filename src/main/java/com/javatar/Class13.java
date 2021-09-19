@@ -37,9 +37,9 @@ final class Class13 {
 
 	static final void method59(int i, int i_0_, int i_1_) {
 		try {
-			Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_1_][i_0_];
+			Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_1_][i_0_];
 			if (class13 == null)
-				RuntimeException_Sub1.aClass27_3292.method229(client.height, i_1_, i_0_);
+				RuntimeException_Sub1.aClass27_3292.method229(Client.height, i_1_, i_0_);
 			else {
 				int i_2_ = -99999999;
 				Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = null;
@@ -55,7 +55,7 @@ final class Class13 {
 				}
 				if (i == -1)
 					if (class38_sub20_sub3_sub4 == null)
-						RuntimeException_Sub1.aClass27_3292.method229(client.height, i_1_, i_0_);
+						RuntimeException_Sub1.aClass27_3292.method229(Client.height, i_1_, i_0_);
 					else {
 						class13.method61(i ^ 0x31, class38_sub20_sub3_sub4);
 						Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4_5_ = null;
@@ -69,7 +69,7 @@ final class Class13 {
 									class38_sub20_sub3_sub4_7_ = class38_sub20_sub3_sub4_6_;
 							}
 						int i_8_ = i_1_ + (i_0_ << 7) + 1610612736;
-						RuntimeException_Sub1.aClass27_3292.method268(client.height, i_1_, i_0_, Class35.method317(-5736, client.height, i_1_ * 128 + 64, i_0_ * 128 + 64), class38_sub20_sub3_sub4, i_8_, class38_sub20_sub3_sub4_5_, class38_sub20_sub3_sub4_7_);
+						RuntimeException_Sub1.aClass27_3292.method268(Client.height, i_1_, i_0_, Class35.method317(-5736, Client.height, i_1_ * 128 + 64, i_0_ * 128 + 64), class38_sub20_sub3_sub4, i_8_, class38_sub20_sub3_sub4_5_, class38_sub20_sub3_sub4_7_);
 					}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -106,7 +106,7 @@ final class Class13 {
 			try {
 				int i = Class35.anInt805 * 128 + 64;
 				int i_11_ = Class38_Sub20_Sub3_Sub2.anInt3274 * 128 + 64;
-				int i_12_ = Class35.method317(-5736, client.height, i, i_11_) - Class38_Sub17.anInt2195;
+				int i_12_ = Class35.method317(-5736, Client.height, i, i_11_) - Class38_Sub17.anInt2195;
 				if (false)
 					Class13.anIntArray248 = null;
 				if (Class11.anInt208 < i) {
@@ -141,7 +141,7 @@ final class Class13 {
 						Class2.anInt30 = i_11_;
 				}
 				i_11_ = Class38_Sub9.anInt2072 * 128 + 64;
-				i_12_ = Class35.method317(-5736, client.height, i, i_11_) - Class38_Sub20_Sub15.anInt3071;
+				i_12_ = Class35.method317(-5736, Client.height, i, i_11_) - Class38_Sub20_Sub15.anInt3071;
 				int i_13_ = i_11_ - Class2.anInt30;
 				int i_14_ = -Class11.anInt208 + i;
 				int i_15_ = -Class38_Sub18.anInt2209 + i_12_;
@@ -254,7 +254,7 @@ final class Class13 {
 					if (i_27_ == 7)
 						i_28_ = Class21.anIntArray528[is[i_26_++]] * 100 / 46875;
 					if (i_27_ == 8)
-						i_28_ = client.myPlayer.combatLevel;
+						i_28_ = Client.myPlayer.combatLevel;
 					if (i_27_ == 9)
 						for (int i_34_ = 0; i_34_ < 25; i_34_++)
 							if (Class3.aBoolArray64[i_34_])
@@ -285,9 +285,9 @@ final class Class13 {
 						i_28_ = Player.method1206(i_41_);
 					}
 					if (i_27_ == 18)
-						i_28_ = client.currentBaseY + (client.myPlayer.anInt3493 >> 7);
+						i_28_ = Client.currentBaseY + (Client.myPlayer.anInt3493 >> 7);
 					if (i_27_ == 19)
-						i_28_ = client.currentBaseX + (client.myPlayer.anInt3444 >> 7);
+						i_28_ = Client.currentBaseX + (Client.myPlayer.anInt3444 >> 7);
 					if (i_27_ == 20)
 						i_28_ = is[i_26_++];
 					if (i_29_ != 0)

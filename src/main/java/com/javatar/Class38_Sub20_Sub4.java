@@ -61,28 +61,28 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 					for (int i_4_ = 0; ItemDefinition.anInt2783 > i_4_; i_4_++) {
 						Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[Class47.anIntArray1055[i_4_]];
 						if (class38_sub20_sub3_sub7_sub2 != null && class38_sub20_sub3_sub7_sub2.name != null && class38_sub20_sub3_sub7_sub2.name.method174((byte) 118, class19_3_)) {
-							client.calculatePath(false, 0, client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
+							Client.calculatePath(false, 0, Client.myPlayer.walkQueueY[0], 0, 1, class38_sub20_sub3_sub7_sub2.walkQueueX[0], Client.myPlayer.walkQueueX[0], 0, class38_sub20_sub3_sub7_sub2.walkQueueY[0], 1, 2);
 							bool = true;
 							if (i == 1) {
-								client.secureBuffer.putOpcode(35);
-								client.secureBuffer.method767(i_2_ - 25761, Class47.anIntArray1055[i_4_]);
+								Client.secureBuffer.putOpcode(35);
+								Client.secureBuffer.method767(i_2_ - 25761, Class47.anIntArray1055[i_4_]);
 								Class77.anInt1518++;
 							} else if (i != 4) {
 								if (i != 6) {
 									if (i == 7) {
 										Class38_Sub2.anInt1764++;
-										client.secureBuffer.putOpcode(138);
-										client.secureBuffer.method769(Class47.anIntArray1055[i_4_], 109);
+										Client.secureBuffer.putOpcode(138);
+										Client.secureBuffer.method769(Class47.anIntArray1055[i_4_], 109);
 									}
 								} else {
 									Class83.anInt1678++;
-									client.secureBuffer.putOpcode(193);
-									client.secureBuffer.putShort(Class47.anIntArray1055[i_4_]);
+									Client.secureBuffer.putOpcode(193);
+									Client.secureBuffer.putShort(Class47.anIntArray1055[i_4_]);
 								}
 							} else {
 								Class38_Sub22.anInt2323++;
-								client.secureBuffer.putOpcode(81);
-								client.secureBuffer.putLEShortA(Class47.anIntArray1055[i_4_]);
+								Client.secureBuffer.putOpcode(81);
+								Client.secureBuffer.putLEShortA(Class47.anIntArray1055[i_4_]);
 							}
 							break;
 						}
@@ -103,9 +103,9 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 			if (i != -7645)
 				Class38_Sub20_Sub4.method824(-120, -22, null);
 			if (l != 0L) {
-				client.secureBuffer.putOpcode(23);
+				Client.secureBuffer.putOpcode(23);
 				Class28.anInt689++;
-				client.secureBuffer.writeLong(l);
+				Client.secureBuffer.writeLong(l);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "vc.J(" + l + ',' + i + ')');

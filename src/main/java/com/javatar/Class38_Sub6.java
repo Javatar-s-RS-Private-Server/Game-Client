@@ -274,8 +274,8 @@ final class Class38_Sub6 extends Node {
 							Class80.anIntArray1606[i_13_] = Class80.anIntArray1606[i_13_ + 1];
 						}
 						Class81.anInt1624 = Entity.anInt3513;
-						client.secureBuffer.putOpcode(135);
-						client.secureBuffer.writeLong(l);
+						Client.secureBuffer.putOpcode(135);
+						Client.secureBuffer.writeLong(l);
 						break;
 					}
 			}

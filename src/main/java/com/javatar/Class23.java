@@ -55,17 +55,17 @@ final class Class23 {
 				int i_10_ = (i_6_ & 0x3fdf) >> 7;
 				if (i_6_ != i_4_) {
 					i_4_ = i_6_;
-					if (i_7_ == 2 && RuntimeException_Sub1.aClass27_3292.method224(client.height, i_8_, i_10_, i_6_) >= 0) {
+					if (i_7_ == 2 && RuntimeException_Sub1.aClass27_3292.method224(Client.height, i_8_, i_10_, i_6_) >= 0) {
 						ObjectDefinition class38_sub20_sub1 = Class80.method581(7, i_9_);
 						if (class38_sub20_sub1.anIntArray2498 != null)
 							class38_sub20_sub1 = class38_sub20_sub1.method805((byte) -17);
 						if (class38_sub20_sub1 == null)
 							continue;
 						if (Class42.anInt964 == 1)
-							Class37.method328(i_6_, Class38_Sub10_Sub3.aClass19_2836, 3231, i_10_, 49, Class9.method43(new RSString[] { Class38_Sub2.aClass19_1759, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+							Class37.method328(i_6_, Class38_Sub10_Sub3.aClass19_2836, 3231, i_10_, 49, Class9.method43(new RSString[]{Class38_Sub2.aClass19_1759, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460}, (byte) -20), i_8_);
 						else if (Class26.aBool614) {
 							if ((Class28.anInt693 & 0x4) == 4)
-								Class37.method328(i_6_, Class30.aClass19_736, 3231, i_10_, 2, Class9.method43(new RSString[] { Class53.aClass19_1168, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+								Class37.method328(i_6_, Class30.aClass19_736, 3231, i_10_, 2, Class9.method43(new RSString[]{Class53.aClass19_1168, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460}, (byte) -20), i_8_);
 						} else {
 							RSString[] class19s = class38_sub20_sub1.actions;
 							if (Class44.aBool992)
@@ -122,7 +122,7 @@ final class Class23 {
 						Class38_Sub20_Sub15.method1011(i_9_, i_10_, class38_sub20_sub3_sub7_sub2, (byte) -123, i_8_);
 					}
 					if (i_7_ == 3) {
-						Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[client.height][i_8_][i_10_];
+						Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_8_][i_10_];
 						if (class13 != null)
 							for (Class38_Sub20_Sub3_Sub4 class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method74(-1 - 48); class38_sub20_sub3_sub4 != null; class38_sub20_sub3_sub4 = (Class38_Sub20_Sub3_Sub4) class13.method62()) {
 								ItemDefinition class38_sub20_sub6 = Node.forId(class38_sub20_sub3_sub4.anInt3348, -1 + 50);

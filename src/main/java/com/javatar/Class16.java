@@ -18,8 +18,8 @@ final class Class16 {
 	static RSString aClass19_319 = Class16.aClass19_311;
 
 	static {
-		client.coordCounter = 0;
-		Class16.aShortArrayArray322 = new short[][] { new short[0], { 9104, 10275, 7595, 3610, 7975, 8526, 918, -26734, 24466, 10145, -6882, 5027, 1457, 16565, -30545, 25486 }, new short[0], new short[0], new short[0] };
+		Client.coordCounter = 0;
+		Class16.aShortArrayArray322 = new short[][]{new short[0], {9104, 10275, 7595, 3610, 7975, 8526, 918, -26734, 24466, 10145, -6882, 5027, 1457, 16565, -30545, 25486}, new short[0], new short[0], new short[0]};
 		Class16.aClass19_341 = RSString.createRSString(":");
 	}
 
@@ -104,7 +104,7 @@ final class Class16 {
 				if (class19.method174((byte) 105, Class81.aClass19_1626))
 					System.gc();
 				if (class19.method174((byte) 126, Class23.aClass19_555))
-					client.dropClient();
+					Client.dropClient();
 				if (class19.method174((byte) 117, Class24.aClass19_567))
 					Class13.aBool246 = true;
 				if (class19.method174((byte) 112, Class79.aClass19_1565))
@@ -113,7 +113,7 @@ final class Class16 {
 					for (int i_23_ = 0; i_23_ < 4; i_23_++)
 						for (int i_24_ = 1; i_24_ < 103; i_24_++)
 							for (int i_25_ = 1; i_25_ < 103; i_25_++)
-								client.clippingHeights[i_23_].clippingFlags[i_24_][i_25_] = 0;
+								Client.clippingHeights[i_23_].clippingFlags[i_24_][i_25_] = 0;
 				if (class19.method174((byte) 119, Class2_Sub1.aClass19_2006) && Player.anInt3582 == 2)
 					throw new RuntimeException();
 				if (class19.method165(Class45.aClass19_1022)) {
@@ -123,10 +123,10 @@ final class Class16 {
 				if (class19.method174((byte) 102, Class38_Sub20_Sub10.aClass19_2909))
 					Node.aBool892 = true;
 			}
-			client.secureBuffer.putOpcode(89);
+			Client.secureBuffer.putOpcode(89);
 			if (-103 < -16) {
-				client.secureBuffer.putByte(class19.method143((byte) 24) - 1);
-				client.secureBuffer.writeString(class19.method171((byte) -58, 2), (byte) 115);
+				Client.secureBuffer.putByte(class19.method143((byte) 24) - 1);
+				Client.secureBuffer.writeString(class19.method171((byte) -58, 2), (byte) 115);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "vf.C(" + (class19 != null ? "{...}" : "null") + ',' + -103 + ')');

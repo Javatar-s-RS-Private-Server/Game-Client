@@ -60,8 +60,8 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 					}
 				}
 				if ((class38_sub20_sub3_sub7.anInt3487 != 0 || class38_sub20_sub3_sub7.anInt3443 != 0) && (class38_sub20_sub3_sub7.walkQueueLocationIndex == 0 || class38_sub20_sub3_sub7.anInt3440 > 0)) {
-					int i = class38_sub20_sub3_sub7.anInt3493 - (class38_sub20_sub3_sub7.anInt3487 - (client.currentBaseY + client.currentBaseY)) * 64;
-					int i_3_ = -((-client.currentBaseX + class38_sub20_sub3_sub7.anInt3443 - client.currentBaseX) * 64) + class38_sub20_sub3_sub7.anInt3444;
+					int i = class38_sub20_sub3_sub7.anInt3493 - (class38_sub20_sub3_sub7.anInt3487 - (Client.currentBaseY + Client.currentBaseY)) * 64;
+					int i_3_ = -((-Client.currentBaseX + class38_sub20_sub3_sub7.anInt3443 - Client.currentBaseX) * 64) + class38_sub20_sub3_sub7.anInt3444;
 					if (i != 0 || i_3_ != 0)
 						class38_sub20_sub3_sub7.anInt3488 = (int) (Math.atan2(i, i_3_) * 325.949) & 0x7ff;
 					class38_sub20_sub3_sub7.anInt3487 = 0;
@@ -120,12 +120,12 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 	static final void method1002() {
 		do {
 			try {
-				if (Class38_Sub4.aBool1811 && Entity.anInt3489 != client.height)
-					Class38_Sub20_Sub13.updateRegion(client.height, Class38_Sub17.anInt2193, ItemDefinition.anInt2801, client.myPlayer.walkQueueX[0], client.myPlayer.walkQueueY[0], (byte) -128);
+				if (Class38_Sub4.aBool1811 && Entity.anInt3489 != Client.height)
+					Class38_Sub20_Sub13.updateRegion(Client.height, Class38_Sub17.anInt2193, ItemDefinition.anInt2801, Client.myPlayer.walkQueueX[0], Client.myPlayer.walkQueueY[0], (byte) -128);
 				else {
-					if (client.height != Class80.anInt1595) {
-						Class80.anInt1595 = client.height;
-						Class81.method584(client.height);
+					if (Client.height != Class80.anInt1595) {
+						Class80.anInt1595 = Client.height;
+						Class81.method584(Client.height);
 					}
 					if ((byte) -66 == -66)
 						break;

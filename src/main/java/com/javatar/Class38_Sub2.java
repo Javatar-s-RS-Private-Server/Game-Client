@@ -59,9 +59,9 @@ final class Class38_Sub2 extends Node {
 		try {
 			if (i != -21211)
 				Class38_Sub2.method612(91);
-			int i_0_ = Class35.method317(-5736, client.height, Class11.anInt208, Class2.anInt30);
-			if (-Class38_Sub18.anInt2209 + i_0_ < 800 && (Class82.aByteArrayArrayArray1648[client.height][Class11.anInt208 >> 7][Class2.anInt30 >> 7] & 0x4) != 0)
-				return client.height;
+			int i_0_ = Class35.method317(-5736, Client.height, Class11.anInt208, Class2.anInt30);
+			if (-Class38_Sub18.anInt2209 + i_0_ < 800 && (Class82.aByteArrayArrayArray1648[Client.height][Class11.anInt208 >> 7][Class2.anInt30 >> 7] & 0x4) != 0)
+				return Client.height;
 			return 3;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ha.E(" + i + ')');

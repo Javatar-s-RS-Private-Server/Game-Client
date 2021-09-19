@@ -347,7 +347,7 @@ final class Class38_Sub18 extends Node {
 				return null;
 			if (is.length > 136 && !Entity.aBool3511)
 				try {
-					Class59 class59 = (Class59) Class.forName("bb").newInstance();
+					Class59 class59 = (Class59) Class.forName("com.javatar.bb").newInstance();
 					class59.method447(is, (byte) -125);
 					return class59;
 				} catch (Throwable throwable) {

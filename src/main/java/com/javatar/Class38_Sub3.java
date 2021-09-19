@@ -21,7 +21,7 @@ final class Class38_Sub3 extends Node {
 		Class38_Sub3.anInt1786 = 0;
 		Class38_Sub3.aClass19_1787 = RSString.createRSString("Verbindung mit Update)2Server)3)3)3");
 		Class38_Sub3.aClass19_1788 = RSString.createRSString("Bitte starten Sie eine Mitgliedschaft");
-		client.heldKeys = new boolean[112];
+		Client.heldKeys = new boolean[112];
 		Class38_Sub3.aClass19_1791 = RSString.createRSString("Ihr Spielkonto wurde deaktiviert)3");
 		Class38_Sub3.aClass19_1789 = Class38_Sub3.aClass19_1785;
 	}
@@ -123,7 +123,7 @@ final class Class38_Sub3 extends Node {
 		try {
 			int i_20_ = -110 % ((-30 - i) / 44);
 			Class38_Sub3.aClass19_1789 = null;
-			client.heldKeys = null;
+			Client.heldKeys = null;
 			Class38_Sub3.aClass19_1777 = null;
 			Class38_Sub3.aClass19_1785 = null;
 			Class38_Sub3.aClass19_1788 = null;

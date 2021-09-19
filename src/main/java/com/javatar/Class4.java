@@ -141,7 +141,7 @@ final class Class4 {
 		try {
 			if (0 == 0)
 				for (Class38_Sub20_Sub3_Sub5 class38_sub20_sub3_sub5 = (Class38_Sub20_Sub3_Sub5) Class13.aClass13_235.method65(96); class38_sub20_sub3_sub5 != null; class38_sub20_sub3_sub5 = (Class38_Sub20_Sub3_Sub5) Class13.aClass13_235.method63(-3))
-					if (class38_sub20_sub3_sub5.anInt3368 == client.height && !class38_sub20_sub3_sub5.aBool3377) {
+					if (class38_sub20_sub3_sub5.anInt3368 == Client.height && !class38_sub20_sub3_sub5.aBool3377) {
 						if (class38_sub20_sub3_sub5.anInt3370 <= Class45.anInt1016) {
 							class38_sub20_sub3_sub5.method1162(Canvas_Sub1.anInt2529);
 							if (!class38_sub20_sub3_sub5.aBool3377)

@@ -78,8 +78,8 @@ final class Class43 {
 				for (int i_1_ = 0; i_1_ < Class38_Sub17.aByteArrayArray2198.length; i_1_++) {
 					byte[] is = Class21.aByteArrayArray507[i_1_];
 					if (is != null) {
-						int i_2_ = (Class38_Sub12.anIntArray2115[i_1_] >> 8) * 64 - client.currentBaseY;
-						int i_3_ = (Class38_Sub12.anIntArray2115[i_1_] & 0xff) * 64 - client.currentBaseX;
+						int i_2_ = (Class38_Sub12.anIntArray2115[i_1_] >> 8) * 64 - Client.currentBaseY;
+						int i_3_ = (Class38_Sub12.anIntArray2115[i_1_] & 0xff) * 64 - Client.currentBaseX;
 						if (Class37.secondMapRegion) {
 							i_2_ = 10;
 							i_3_ = 10;
@@ -99,7 +99,7 @@ final class Class43 {
 					Class42.method357(-7);
 					System.gc();
 					for (int i_4_ = 0; i_4_ < 4; i_4_++)
-						client.clippingHeights[i_4_].method530(109);
+						Client.clippingHeights[i_4_].method530(109);
 					for (int i_5_ = 0; i_5_ < 4; i_5_++)
 						for (int i_6_ = 0; i_6_ < 104; i_6_++)
 							for (int i_7_ = 0; i_7_ < 104; i_7_++)
@@ -111,17 +111,17 @@ final class Class43 {
 					Class43.method365(true, (byte) 124);
 					if (!Class37.secondMapRegion) {
 						for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
-							int i_10_ = -client.currentBaseX + (Class38_Sub12.anIntArray2115[i_9_] & 0xff) * 64;
+							int i_10_ = -Client.currentBaseX + (Class38_Sub12.anIntArray2115[i_9_] & 0xff) * 64;
 							byte[] is = Class38_Sub17.aByteArrayArray2198[i_9_];
-							int i_11_ = (Class38_Sub12.anIntArray2115[i_9_] >> 8) * 64 - client.currentBaseY;
+							int i_11_ = (Class38_Sub12.anIntArray2115[i_9_] >> 8) * 64 - Client.currentBaseY;
 							if (is != null) {
 								Class42.method357(-7);
-								Class38_Sub3.method621(is, (Class38_Sub17.anInt2193 - 6) * 8, i_10_, 12809, ItemDefinition.anInt2801 * 8 - 48, client.clippingHeights, i_11_);
+								Class38_Sub3.method621(is, (Class38_Sub17.anInt2193 - 6) * 8, i_10_, 12809, ItemDefinition.anInt2801 * 8 - 48, Client.clippingHeights, i_11_);
 							}
 						}
 						for (int i_12_ = 0; i_8_ > i_12_; i_12_++) {
-							int i_13_ = (Class38_Sub12.anIntArray2115[i_12_] >> 8) * 64 - client.currentBaseY;
-							int i_14_ = (Class38_Sub12.anIntArray2115[i_12_] & 0xff) * 64 - client.currentBaseX;
+							int i_13_ = (Class38_Sub12.anIntArray2115[i_12_] >> 8) * 64 - Client.currentBaseY;
+							int i_14_ = (Class38_Sub12.anIntArray2115[i_12_] & 0xff) * 64 - Client.currentBaseX;
 							byte[] is = Class38_Sub17.aByteArrayArray2198[i_12_];
 							if (is == null && Class38_Sub17.anInt2193 < 800) {
 								Class42.method357(-7);
@@ -132,10 +132,10 @@ final class Class43 {
 						for (int i_15_ = 0; i_15_ < i_8_; i_15_++) {
 							byte[] is = Class21.aByteArrayArray507[i_15_];
 							if (is != null) {
-								int i_16_ = -client.currentBaseY + (Class38_Sub12.anIntArray2115[i_15_] >> 8) * 64;
-								int i_17_ = (Class38_Sub12.anIntArray2115[i_15_] & 0xff) * 64 - client.currentBaseX;
+								int i_16_ = -Client.currentBaseY + (Class38_Sub12.anIntArray2115[i_15_] >> 8) * 64;
+								int i_17_ = (Class38_Sub12.anIntArray2115[i_15_] & 0xff) * 64 - Client.currentBaseX;
 								Class42.method357(-7);
-								Class60.method455(i_16_, RuntimeException_Sub1.aClass27_3292, is, client.clippingHeights, i_17_);
+								Class60.method455(i_16_, RuntimeException_Sub1.aClass27_3292, is, Client.clippingHeights, i_17_);
 							}
 						}
 					}
@@ -155,7 +155,7 @@ final class Class43 {
 										for (int i_28_ = 0; Class38_Sub12.anIntArray2115.length > i_28_; i_28_++)
 											if (Class38_Sub12.anIntArray2115[i_28_] == i_27_ && Class38_Sub17.aByteArrayArray2198[i_28_] != null) {
 												bool_21_ = true;
-												PacketBuffer.method793((i_25_ & 0x7) * 8, i_20_ * 8, i_19_ * 8, (i_26_ & 0x7) * 8, i_23_, client.clippingHeights, Class38_Sub17.aByteArrayArray2198[i_28_], i_24_, i_18_);
+												PacketBuffer.method793((i_25_ & 0x7) * 8, i_20_ * 8, i_19_ * 8, (i_26_ & 0x7) * 8, i_23_, Client.clippingHeights, Class38_Sub17.aByteArrayArray2198[i_28_], i_24_, i_18_);
 												break;
 											}
 									}
@@ -183,7 +183,7 @@ final class Class43 {
 										int i_40_ = i_39_ / 8 + (i_38_ / 8 << 8);
 										for (int i_41_ = 0; i_41_ < Class38_Sub12.anIntArray2115.length; i_41_++)
 											if (Class38_Sub12.anIntArray2115[i_41_] == i_40_ && Class21.aByteArrayArray507[i_41_] != null) {
-												Class15.method86(i_32_, Class21.aByteArrayArray507[i_41_], i_36_, (i_39_ & 0x7) * 8, i_34_ * 8, i_33_ * 8, RuntimeException_Sub1.aClass27_3292, i_37_, client.clippingHeights, (i_38_ & 0x7) * 8);
+												Class15.method86(i_32_, Class21.aByteArrayArray507[i_41_], i_36_, (i_39_ & 0x7) * 8, i_34_ * 8, i_33_ * 8, RuntimeException_Sub1.aClass27_3292, i_37_, Client.clippingHeights, (i_38_ & 0x7) * 8);
 												break;
 											}
 									}
@@ -193,15 +193,15 @@ final class Class43 {
 					Class43.method365(true, (byte) 107);
 					Class4.method25(-90);
 					Class42.method357(-7);
-					Class38_Sub20_Sub16.method1025(client.clippingHeights, RuntimeException_Sub1.aClass27_3292);
+					Class38_Sub20_Sub16.method1025(Client.clippingHeights, RuntimeException_Sub1.aClass27_3292);
 					Class43.method365(true, (byte) 113);
 					if (i > -14)
 						Class43.aClass19_968 = null;
 					int i_42_ = Class26.anInt618;
-					if (client.height < i_42_)
-						i_42_ = client.height;
-					if (i_42_ < client.height - 1)
-						i_42_ = client.height - 1;
+					if (Client.height < i_42_)
+						i_42_ = Client.height;
+					if (i_42_ < Client.height - 1)
+						i_42_ = Client.height - 1;
 					if (!Class38_Sub4.aBool1811)
 						RuntimeException_Sub1.aClass27_3292.method245(0);
 					else
@@ -212,9 +212,9 @@ final class Class43 {
 					Class42.method357(-7);
 					Class47.method383((byte) 56);
 					Entity.aClass83_3466.method596(118);
-					if (client.clientFrame != null) {
-						client.secureBuffer.putOpcode(153);
-						client.secureBuffer.putInt(1057001181);
+					if (Client.clientFrame != null) {
+						Client.secureBuffer.putOpcode(153);
+						Client.secureBuffer.putInt(1057001181);
 					}
 					if (!Class37.secondMapRegion) {
 						int i_45_ = (ItemDefinition.anInt2801 + 6) / 8;
@@ -224,14 +224,14 @@ final class Class43 {
 						for (int i_49_ = i_47_ - 1; i_45_ + 1 >= i_49_; i_49_++)
 							for (int i_50_ = i_48_ - 1; i_46_ + 1 >= i_50_; i_50_++)
 								if (i_49_ < i_47_ || i_49_ > i_45_ || i_50_ < i_48_ || i_46_ < i_50_) {
-									Class48.indexMaps.method115((byte) 95, Class9.method43(new RSString[] { Class38_Sub6.aClass19_1880, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0) }, (byte) -20));
+									Class48.indexMaps.method115((byte) 95, Class9.method43(new RSString[]{Class38_Sub6.aClass19_1880, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0)}, (byte) -20));
 									Class48.indexMaps.method115((byte) 95, Class9.method43(new RSString[] { Class77.aClass19_1528, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0) }, (byte) -20));
 								}
 					}
 					Canvas_Sub1.method808(0, 30);
 					Class42.method357(-7);
 					Class74.method534();
-					client.secureBuffer.putOpcode(39);
+					Client.secureBuffer.putOpcode(39);
 					Class75.method540();
 				}
 			}
@@ -262,17 +262,17 @@ final class Class43 {
 				Class42.method357(-7);
 				if (i < 100)
 					Class43.method363((byte) -101);
-				client.pingTimer++;
-				if (client.pingTimer >= 50 || bool) {
-					client.pingTimer = 0;
-					if (client.errorPinging || client.worldConnection == null)
+				Client.pingTimer++;
+				if (Client.pingTimer >= 50 || bool) {
+					Client.pingTimer = 0;
+					if (Client.errorPinging || Client.worldConnection == null)
 						break;
-					client.secureBuffer.putOpcode(232);
+					Client.secureBuffer.putOpcode(232);
 					try {
-						client.worldConnection.write(client.secureBuffer.buffer, client.secureBuffer.pos, (byte) 123);
-						client.secureBuffer.pos = 0;
+						Client.worldConnection.write(Client.secureBuffer.buffer, Client.secureBuffer.pos, (byte) 123);
+						Client.secureBuffer.pos = 0;
 					} catch (java.io.IOException ioexception) {
-						client.errorPinging = true;
+						Client.errorPinging = true;
 					}
 					Class78.anInt1545++;
 				}

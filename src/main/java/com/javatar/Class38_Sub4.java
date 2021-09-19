@@ -21,7 +21,7 @@ final class Class38_Sub4 extends Node {
 		Class38_Sub4.aBool1811 = false;
 		Class38_Sub4.anInt1795 = -1;
 		Class38_Sub4.anInt1827 = 0;
-		client.crossIndex = 0;
+		Client.crossIndex = 0;
 		Class38_Sub4.aClass19_1830 = RSString.createRSString("Bitte warten Sie eine Minute");
 		Class38_Sub4.aClass19_1820 = RSString.createRSString("<br>");
 		Class38_Sub4.aClass19_1810 = RSString.createRSString("http:)4)4");
@@ -65,7 +65,7 @@ final class Class38_Sub4 extends Node {
 		do {
 			try {
 				if (Class38_Sub20_Sub8.aClass38_Sub6_2877 == null && (byte) -74 <= -39 && Class15.aClass38_Sub6_293 == null) {
-					int i_0_ = client.lastMouseAction;
+					int i_0_ = Client.lastMouseAction;
 					if (SceneModel.aBool2553) {
 						if (i_0_ != 1) {
 							int i_1_ = Class23.anInt543;

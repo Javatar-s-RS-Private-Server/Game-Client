@@ -159,7 +159,7 @@ final class RSString implements Interface2 {
 				if (class38_sub20_sub5 != null && class38_sub20_sub5.aBool2689) {
 					RSString class19 = class38_sub20_sub5.aClass19_2705;
 					if (class38_sub20_sub5.anInt2699 != 0)
-						class19 = Class9.method43(new RSString[] { class19, Class21.method191(class38_sub20_sub5.anInt2699, i_65_ - 3957, client.myPlayer.combatLevel), Class38_Sub10_Sub3.aClass19_2825, ItemDefinition.aClass19_2816, RuntimeException_Sub1.method1098(class38_sub20_sub5.anInt2699, 0), Class38_Sub21.aClass19_2265 }, (byte) -20);
+						class19 = Class9.method43(new RSString[]{class19, Class21.method191(class38_sub20_sub5.anInt2699, i_65_ - 3957, Client.myPlayer.combatLevel), Class38_Sub10_Sub3.aClass19_2825, ItemDefinition.aClass19_2816, RuntimeException_Sub1.method1098(class38_sub20_sub5.anInt2699, 0), Class38_Sub21.aClass19_2265}, (byte) -20);
 					if (i_65_ != 801)
 						RSString.method160((byte) 124, 32, -41, 68, 2, -107);
 					if (Class42.anInt964 == 1)
@@ -191,7 +191,7 @@ final class RSString implements Interface2 {
 							for (int i_70_ = 4; i_70_ >= 0; i_70_--)
 								if (class19s[i_70_] != null && class19s[i_70_].method174((byte) 105, Class52.aClass19_1154)) {
 									int i_71_ = 0;
-									if (class38_sub20_sub5.anInt2699 > client.myPlayer.combatLevel)
+									if (class38_sub20_sub5.anInt2699 > Client.myPlayer.combatLevel)
 										i_71_ = 2000;
 									int i_72_ = 0;
 									if (i_70_ == 0)
@@ -314,7 +314,7 @@ final class RSString implements Interface2 {
 	/* synthetic */
 	static Class method182() {
 		try {
-			return Class.forName("RSString");
+			return Class.forName("com.javatar.RSString");
 		} catch (ClassNotFoundException classnotfoundexception) {
 			throw new NoClassDefFoundError(classnotfoundexception.getMessage());
 		}

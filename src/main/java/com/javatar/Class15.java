@@ -548,7 +548,7 @@ final class Class15 {
 										if (i_4_ != 1202)
 											break;
 										class38_sub6.anInt1883 = 3;
-										class38_sub6.anInt1962 = client.myPlayer.appearance.method137(-127);
+										class38_sub6.anInt1962 = Client.myPlayer.appearance.method137(-127);
 									}
 								} else if ((i_4_ < 1300 || i_4_ >= 1400) && (i_4_ < 2300 || i_4_ >= 2400)) {
 									if (i_4_ >= 1400 && i_4_ < 1500 || i_4_ >= 2400 && i_4_ < 2500) {
@@ -765,9 +765,9 @@ final class Class15 {
 																int i_57_ = Class38_Sub11.anIntArray2096[--i_2_];
 																Class38_Sub11.anIntArray2096[i_2_++] = Class38_Sub20_Sub3_Sub4.anIntArray3358[i_57_];
 															} else if (i_4_ == 3308) {
-																int i_58_ = client.height;
-																int i_59_ = (client.myPlayer.anInt3493 >> 7) + client.currentBaseY;
-																int i_60_ = client.currentBaseX + (client.myPlayer.anInt3444 >> 7);
+																int i_58_ = Client.height;
+																int i_59_ = (Client.myPlayer.anInt3493 >> 7) + Client.currentBaseY;
+																int i_60_ = Client.currentBaseX + (Client.myPlayer.anInt3444 >> 7);
 																Class38_Sub11.anIntArray2096[i_2_++] = i_60_ + (i_58_ << 28) + (i_59_ << 14);
 															} else if (i_4_ == 3309) {
 																int i_61_ = Class38_Sub11.anIntArray2096[--i_2_];
@@ -801,7 +801,7 @@ final class Class15 {
 																else
 																	Class38_Sub11.anIntArray2096[i_2_++] = 0;
 															} else if (i_4_ == 3317)
-																Class38_Sub11.anIntArray2096[i_2_++] = client.systemUpdateTime;
+																Class38_Sub11.anIntArray2096[i_2_++] = Client.systemUpdateTime;
 															else if (i_4_ == 3318)
 																Class38_Sub11.anIntArray2096[i_2_++] = Class23.anInt556;
 															else if (i_4_ == 3321)
@@ -983,7 +983,7 @@ final class Class15 {
 																	i_1_ -= 2;
 																	RSString class19 = Class37.aClass19Array875[i_1_ + 1];
 																	RSString class19_118_ = Class37.aClass19Array875[i_1_];
-																	if (client.myPlayer.appearance == null || !client.myPlayer.appearance.aBool410)
+																	if (Client.myPlayer.appearance == null || !Client.myPlayer.appearance.aBool410)
 																		Class37.aClass19Array875[i_1_++] = class19_118_;
 																	else
 																		Class37.aClass19Array875[i_1_++] = class19;
@@ -1082,19 +1082,19 @@ final class Class15 {
 																	Class81.anInt1619 = Class38_Sub11.anIntArray2096[i_2_];
 																	Class81.anInt1621 = Class38_Sub11.anIntArray2096[i_2_ + 1];
 																	Class2_Sub1.anInt1996 = Class38_Sub11.anIntArray2096[i_2_ + 2];
-																	client.secureBuffer.putOpcode(69);
-																	client.secureBuffer.putByte(Class81.anInt1619);
-																	client.secureBuffer.putByte(Class81.anInt1621);
-																	client.secureBuffer.putByte(Class2_Sub1.anInt1996);
+																	Client.secureBuffer.putOpcode(69);
+																	Client.secureBuffer.putByte(Class81.anInt1619);
+																	Client.secureBuffer.putByte(Class81.anInt1621);
+																	Client.secureBuffer.putByte(Class2_Sub1.anInt1996);
 																} else if (i_4_ == 5002) {
 																	RSString class19 = Class37.aClass19Array875[--i_1_];
 																	i_2_ -= 2;
 																	int i_139_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
 																	int i_140_ = Class38_Sub11.anIntArray2096[i_2_];
-																	client.secureBuffer.putOpcode(192);
-																	client.secureBuffer.writeLong(class19.method162(0));
-																	client.secureBuffer.putByte(i_140_ - 1);
-																	client.secureBuffer.putByte(i_139_);
+																	Client.secureBuffer.putOpcode(192);
+																	Client.secureBuffer.writeLong(class19.method162(0));
+																	Client.secureBuffer.putByte(i_140_ - 1);
+																	Client.secureBuffer.putByte(i_139_);
 																} else if (i_4_ == 5003) {
 																	int i_141_ = Class38_Sub11.anIntArray2096[--i_2_];
 																	RSString class19 = null;
@@ -1252,24 +1252,24 @@ final class Class15 {
 																			class19 = class19.method171((byte) -38, Class38_Sub20_Sub3_Sub2.aClass19_3270.method143((byte) 72));
 																			i_145_ = 3;
 																		}
-																		client.secureBuffer.putOpcode(27);
-																		client.secureBuffer.putByte(0);
-																		int i_147_ = client.secureBuffer.pos;
-																		client.secureBuffer.putByte(i_146_);
-																		client.secureBuffer.putByte(i_145_);
-																		Class38_Sub4.method627(class19, client.secureBuffer);
-																		client.secureBuffer.putSizedByte(client.secureBuffer.pos - i_147_);
+																		Client.secureBuffer.putOpcode(27);
+																		Client.secureBuffer.putByte(0);
+																		int i_147_ = Client.secureBuffer.pos;
+																		Client.secureBuffer.putByte(i_146_);
+																		Client.secureBuffer.putByte(i_145_);
+																		Class38_Sub4.method627(class19, Client.secureBuffer);
+																		Client.secureBuffer.putSizedByte(Client.secureBuffer.pos - i_147_);
 																	}
 																} else if (i_4_ == 5009) {
 																	i_1_ -= 2;
 																	RSString class19 = Class37.aClass19Array875[i_1_];
 																	RSString class19_148_ = Class37.aClass19Array875[i_1_ + 1];
-																	client.secureBuffer.putOpcode(164);
-																	client.secureBuffer.putByte(0);
-																	int i_149_ = client.secureBuffer.pos;
-																	client.secureBuffer.writeLong(class19.method162(0));
-																	Class38_Sub4.method627(class19_148_, client.secureBuffer);
-																	client.secureBuffer.putSizedByte(client.secureBuffer.pos - i_149_);
+																	Client.secureBuffer.putOpcode(164);
+																	Client.secureBuffer.putByte(0);
+																	int i_149_ = Client.secureBuffer.pos;
+																	Client.secureBuffer.writeLong(class19.method162(0));
+																	Class38_Sub4.method627(class19_148_, Client.secureBuffer);
+																	Client.secureBuffer.putSizedByte(Client.secureBuffer.pos - i_149_);
 																} else if (i_4_ == 5010) {
 																	int i_150_ = Class38_Sub11.anIntArray2096[--i_2_];
 																	RSString class19 = null;
@@ -1288,8 +1288,8 @@ final class Class15 {
 																	Class37.aClass19Array875[i_1_++] = class19;
 																} else if (i_4_ == 5015) {
 																	RSString class19;
-																	if (client.myPlayer != null && client.myPlayer.name != null)
-																		class19 = client.myPlayer.name;
+																	if (Client.myPlayer != null && Client.myPlayer.name != null)
+																		class19 = Client.myPlayer.name;
 																	else
 																		class19 = Class51.username;
 																	Class37.aClass19Array875[i_1_++] = class19;
@@ -1451,7 +1451,7 @@ final class Class15 {
 															Class38_Sub11.anIntArray2096[i_2_++] = NPC.method1202(class19) ? 1 : 0;
 														} else if (i_4_ == 3624) {
 															int i_170_ = Class38_Sub11.anIntArray2096[--i_2_];
-															if (NPC.aClass38_Sub9Array3557 == null || Class15.anInt300 <= i_170_ || !NPC.aClass38_Sub9Array3557[i_170_].aClass19_2061.method174((byte) 102, client.myPlayer.name))
+															if (NPC.aClass38_Sub9Array3557 == null || Class15.anInt300 <= i_170_ || !NPC.aClass38_Sub9Array3557[i_170_].aClass19_2061.method174((byte) 102, Client.myPlayer.name))
 																Class38_Sub11.anIntArray2096[i_2_++] = 0;
 															else
 																Class38_Sub11.anIntArray2096[i_2_++] = 1;
@@ -1479,7 +1479,7 @@ final class Class15 {
 													Class62.method464(class19, 0, RuntimeException_Sub1.aClass19_3287);
 												} else if (i_4_ == 3101) {
 													i_2_ -= 2;
-													Class48.method390((byte) 124, Class38_Sub11.anIntArray2096[i_2_ + 1], client.myPlayer, Class38_Sub11.anIntArray2096[i_2_]);
+													Class48.method390((byte) 124, Class38_Sub11.anIntArray2096[i_2_ + 1], Client.myPlayer, Class38_Sub11.anIntArray2096[i_2_]);
 												} else if (i_4_ == 3103)
 													Class38_Sub20_Sub2.method814();
 												else if (i_4_ == 3104) {
@@ -1487,17 +1487,17 @@ final class Class15 {
 													int i_171_ = 0;
 													if (class19.method177())
 														i_171_ = class19.method164(19);
-													client.secureBuffer.putOpcode(216);
-													client.secureBuffer.putInt(i_171_);
+													Client.secureBuffer.putOpcode(216);
+													Client.secureBuffer.putInt(i_171_);
 												} else if (i_4_ == 3105) {
 													RSString class19 = Class37.aClass19Array875[--i_1_];
-													client.secureBuffer.putOpcode(36);
-													client.secureBuffer.writeLong(class19.method162(0));
+													Client.secureBuffer.putOpcode(36);
+													Client.secureBuffer.writeLong(class19.method162(0));
 												} else if (i_4_ == 3106) {
 													RSString class19 = Class37.aClass19Array875[--i_1_];
-													client.secureBuffer.putOpcode(86);
-													client.secureBuffer.putByte(class19.method143((byte) 16) + 1);
-													client.secureBuffer.writeString(class19, (byte) 124);
+													Client.secureBuffer.putOpcode(86);
+													Client.secureBuffer.putByte(class19.method143((byte) 16) + 1);
+													Client.secureBuffer.writeString(class19, (byte) 124);
 												} else if (i_4_ == 3107) {
 													int i_172_ = Class38_Sub11.anIntArray2096[--i_2_];
 													RSString class19 = Class37.aClass19Array875[--i_1_];

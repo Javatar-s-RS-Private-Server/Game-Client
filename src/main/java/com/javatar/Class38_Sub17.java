@@ -21,11 +21,11 @@ final class Class38_Sub17 extends Node {
 
 	static final void method691(int i, int i_0_) {
 		try {
-			client.secureBuffer.putOpcode(172);
+			Client.secureBuffer.putOpcode(172);
 			if (!true)
 				Class38_Sub17.aClass19_2186 = null;
-			client.secureBuffer.method747(i_0_, -2687);
-			client.secureBuffer.method769(i, 105);
+			Client.secureBuffer.method747(i_0_, -2687);
+			Client.secureBuffer.method769(i, 105);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "uc.E(" + i + ',' + true + ',' + i_0_ + ')');
 		}
@@ -148,7 +148,7 @@ final class Class38_Sub17 extends Node {
 				class38_sub20_sub3_sub7_sub1.idleAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2696;
 				if (i_18_ > 15)
 					i_18_ -= 32;
-				class38_sub20_sub3_sub7_sub1.updatePosition(i_15_ + client.myPlayer.walkQueueX[0], i_18_ + client.myPlayer.walkQueueY[0], i_17_ == 1);
+				class38_sub20_sub3_sub7_sub1.updatePosition(i_15_ + Client.myPlayer.walkQueueX[0], i_18_ + Client.myPlayer.walkQueueY[0], i_17_ == 1);
 			}
 			if (true)
 				Class15.inputStream.method788();
@@ -162,7 +162,7 @@ final class Class38_Sub17 extends Node {
 			if ((byte) 80 != 80)
 				Class38_Sub17.method693(false);
 			for (Projectile class38_sub20_sub3_sub6 = (Projectile) Class28.aClass13_686.method65(81); class38_sub20_sub3_sub6 != null; class38_sub20_sub3_sub6 = (Projectile) Class28.aClass13_686.method63(-3))
-				if (class38_sub20_sub3_sub6.graphicId == client.height && class38_sub20_sub3_sub6.anInt3409 >= Class45.anInt1016) {
+				if (class38_sub20_sub3_sub6.graphicId == Client.height && class38_sub20_sub3_sub6.anInt3409 >= Class45.anInt1016) {
 					if (Class45.anInt1016 >= class38_sub20_sub3_sub6.anInt3424) {
 						if (class38_sub20_sub3_sub6.anInt3421 > 0) {
 							NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[class38_sub20_sub3_sub6.anInt3421 - 1];
@@ -175,12 +175,12 @@ final class Class38_Sub17 extends Node {
 							if (Class38_Sub9.anInt2067 != i_19_)
 								class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_19_];
 							else
-								class38_sub20_sub3_sub7_sub2 = client.myPlayer;
+								class38_sub20_sub3_sub7_sub2 = Client.myPlayer;
 							if (class38_sub20_sub3_sub7_sub2 != null && class38_sub20_sub3_sub7_sub2.anInt3493 >= 0 && class38_sub20_sub3_sub7_sub2.anInt3493 < 13312 && class38_sub20_sub3_sub7_sub2.anInt3444 >= 0 && class38_sub20_sub3_sub7_sub2.anInt3444 < 13312)
 								class38_sub20_sub3_sub6.method1170(class38_sub20_sub3_sub7_sub2.anInt3444, class38_sub20_sub3_sub7_sub2.anInt3493, (byte) 127, Class45.anInt1016, Class35.method317(-5736, class38_sub20_sub3_sub6.graphicId, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444) - class38_sub20_sub3_sub6.startTime);
 						}
 						class38_sub20_sub3_sub6.update(Canvas_Sub1.anInt2529);
-						RuntimeException_Sub1.aClass27_3292.method249(client.height, (int) class38_sub20_sub3_sub6.aDouble3410, (int) class38_sub20_sub3_sub6.aDouble3412, (int) class38_sub20_sub3_sub6.aDouble3413, 60, class38_sub20_sub3_sub6, class38_sub20_sub3_sub6.anInt3429, -1, false);
+						RuntimeException_Sub1.aClass27_3292.method249(Client.height, (int) class38_sub20_sub3_sub6.aDouble3410, (int) class38_sub20_sub3_sub6.aDouble3412, (int) class38_sub20_sub3_sub6.aDouble3413, 60, class38_sub20_sub3_sub6, class38_sub20_sub3_sub6.anInt3429, -1, false);
 					}
 				} else
 					class38_sub20_sub3_sub6.method330(0);

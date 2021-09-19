@@ -75,7 +75,7 @@ final class Class38_Sub21 extends Node {
 							Class62.method464(Class9.method43(new RSString[]{Class80.aClass19_1598, class19, Class44.aClass19_1006}, (byte) -20), 0, Class38_Sub22.aClass19_2312);
 							return;
 						}
-					if (class19.method175(client.myPlayer.name))
+					if (class19.method175(Client.myPlayer.name))
 						Class62.method464(Class2_Sub1.aClass19_2015, 0, Class38_Sub22.aClass19_2312);
 					else {
 						Class5.aLongArray97[Class38_Sub20_Sub3_Sub2.anInt3250] = l;
@@ -83,8 +83,8 @@ final class Class38_Sub21 extends Node {
 						Class81.anInt1624 = Entity.anInt3513;
 						if (31 < 16)
 							Class38_Sub21.method714((byte) -120, -78);
-						client.secureBuffer.putOpcode(38);
-						client.secureBuffer.writeLong(l);
+						Client.secureBuffer.putOpcode(38);
+						Client.secureBuffer.writeLong(l);
 					}
 				}
 		} catch (RuntimeException runtimeexception) {
@@ -97,7 +97,7 @@ final class Class38_Sub21 extends Node {
 			if (Class74.aBool1448)
 				Class72.method512(applet_sub1);
 			else {
-				if (client.lastMouseAction == 1 && Class73.anInt1429 >= 715 && RS2Buffer.anInt2416 >= 453) {
+				if (Client.lastMouseAction == 1 && Class73.anInt1429 >= 715 && RS2Buffer.anInt2416 >= 453) {
 					Class17.aBool355 = !Class17.aBool355;
 					if (!Class17.aBool355)
 						Class4.method24(Class51.aClass19_1132, Class67.indexTrack1, Class38_Sub18.aClass19_2202);
@@ -108,7 +108,7 @@ final class Class38_Sub21 extends Node {
 					RS2Buffer.anInt2397++;
 					if (Class48.anInt1069 == 10) {
 						if (Class38_Sub3.anInt1776 != 2 && Class64.anInt1361 == 0) {
-							if (client.lastMouseAction == 1) {
+							if (Client.lastMouseAction == 1) {
 								int i_3_ = 5;
 								int i_4_ = 35;
 								int i_5_ = 463;
@@ -121,7 +121,7 @@ final class Class38_Sub21 extends Node {
 							if (Class73_Sub2.aClass55_2303 != null)
 								Class35.method316(7032);
 						}
-						int i_7_ = client.lastMouseAction;
+						int i_7_ = Client.lastMouseAction;
 						if ((byte) 93 == 93) {
 							int i_8_ = RS2Buffer.anInt2416;
 							int i_9_ = Class73.anInt1429;

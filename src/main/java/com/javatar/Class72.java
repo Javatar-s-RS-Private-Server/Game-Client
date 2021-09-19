@@ -32,7 +32,7 @@ final class Class72 {
 		try {
 			if ((byte) 33 != 33)
 				Class72.anIntArray1409 = null;
-			if (client.lastMouseAction == 1) {
+			if (Client.lastMouseAction == 1) {
 				int i_0_ = 280;
 				if (i_0_ <= Class73.anInt1429 && i_0_ + 14 >= Class73.anInt1429 && RS2Buffer.anInt2416 >= 4 && RS2Buffer.anInt2416 <= 18)
 					Class28.method274(0, (byte) 77, 0);

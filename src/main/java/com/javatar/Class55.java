@@ -64,7 +64,7 @@ final class Class55 {
 			Class55.anIntArray1230 = null;
 			Class55.anIntArray1227 = null;
 			Class55.aClass65_1213 = null;
-			client.clientFrame = null;
+			Client.clientFrame = null;
 			Class55.aClass19_1222 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "bc.C(" + i + ')');

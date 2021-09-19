@@ -147,12 +147,12 @@ final class ItemDefinition extends NodeSub {
 								i_4_ -= -2147483648;
 							RuntimeException_Sub1.aClass27_3292
 									.method249(
-											client.height,
+											Client.height,
 											class38_sub20_sub3_sub7_sub1.anInt3493,
 											class38_sub20_sub3_sub7_sub1.anInt3444,
 											Class35.method317(
 													-5736,
-													client.height,
+													Client.height,
 													class38_sub20_sub3_sub7_sub1.anInt3457
 															* 64
 															- 64

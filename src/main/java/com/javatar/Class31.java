@@ -69,7 +69,7 @@ final class Class31 implements Runnable {
 				int i_5_ = Class15.inputStream.method785(1);
 				if (i_5_ == 1)
 					ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_0_;
-				class38_sub20_sub3_sub7_sub2.updatePosition(client.myPlayer.walkQueueX[0] + i_1_, client.myPlayer.walkQueueY[0] + i_2_, i_4_ == 1);
+				class38_sub20_sub3_sub7_sub2.updatePosition(Client.myPlayer.walkQueueX[0] + i_1_, Client.myPlayer.walkQueueY[0] + i_2_, i_4_ == 1);
 			}
 			if (11 != 11)
 				Class31.aClass19_755 = null;

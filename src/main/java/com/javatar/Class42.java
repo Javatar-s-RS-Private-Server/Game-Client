@@ -280,7 +280,7 @@ final class Class42 {
 															class38_sub20_sub9_sub3 = Class38_Sub20_Sub11.method983(2, i_55_, 54, false, 0, class38_sub6.anIntArray1866[i_49_]);
 														if (class38_sub20_sub9_sub3 != null) {
 															if (class38_sub6 != Class38_Sub20_Sub8.aClass38_Sub6_2877 || Class38_Sub3.anInt1786 != i_49_) {
-																if (class38_sub6 != client.atInventoryInterfaceType || Class38_Sub20_Sub8.anInt2883 != i_49_)
+																if (class38_sub6 != Client.atInventoryInterfaceType || Class38_Sub20_Sub8.anInt2883 != i_49_)
 																	class38_sub20_sub9_sub3.method1105(i_52_, i_53_);
 																else
 																	class38_sub20_sub9_sub3.method1120(i_52_, i_53_, 128);
@@ -449,18 +449,18 @@ final class Class42 {
 											if (class38_sub6.anInt1883 != 5) {
 												if (i_70_ != -1) {
 													Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 105, i_70_);
-													class38_sub20_sub3_sub1 = class38_sub6.method641(class38_sub20_sub4, -50, client.myPlayer.appearance, class38_sub6.anInt1875, bool);
+													class38_sub20_sub3_sub1 = class38_sub6.method641(class38_sub20_sub4, -50, Client.myPlayer.appearance, class38_sub6.anInt1875, bool);
 													if (class38_sub20_sub3_sub1 == null && Class42.aBool965)
 														Class40.method340(class38_sub6, (byte) -124);
 												} else {
-													class38_sub20_sub3_sub1 = class38_sub6.method641(null, i - 51, client.myPlayer.appearance, -1, bool);
+													class38_sub20_sub3_sub1 = class38_sub6.method641(null, i - 51, Client.myPlayer.appearance, -1, bool);
 													if (class38_sub20_sub3_sub1 == null && Class42.aBool965)
 														Class40.method340(class38_sub6, (byte) -106);
 												}
 											} else if (class38_sub6.anInt1962 == 0)
 												class38_sub20_sub3_sub1 = Class38_Sub20_Sub15.aClass18_3072.method136(null, -1, null, -1);
 											else
-												class38_sub20_sub3_sub1 = client.myPlayer.method820();
+												class38_sub20_sub3_sub1 = Client.myPlayer.method820();
 										} else {
 											ItemDefinition class38_sub20_sub6 = Node.forId(class38_sub6.anInt1917, 27);
 											if (class38_sub20_sub6 != null) {

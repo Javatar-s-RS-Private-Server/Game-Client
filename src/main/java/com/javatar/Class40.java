@@ -83,7 +83,7 @@ final class Class40 implements Runnable {
 		try {
 			int i_5_ = 83 / ((-48 - 44) / 52);
 			try {
-				Class var_class = Class.forName("ca");
+				Class var_class = Class.forName("com.javatar.ca");
 				Class2 class2 = (Class2) var_class.newInstance();
 				class2.method15(-33, i, i_3_, component);
 				return class2;

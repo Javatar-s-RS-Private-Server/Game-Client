@@ -75,7 +75,7 @@ final class Class26 {
 			if (NodeSub.anInt2253 == 0) {
 				RuntimeException_Sub1.aClass27_3292 = new SceneGraph(Player.anIntArrayArrayArray3566);
 				for (int i_1_ = 0; i_1_ < 4; i_1_++)
-					client.clippingHeights[i_1_] = new Class74();
+					Client.clippingHeights[i_1_] = new Class74();
 				Class38_Sub17.aClass38_Sub20_Sub9_Sub3_2194 = new Class38_Sub20_Sub9_Sub3(512, 512);
 				NodeSub.anInt2253 = 20;
 				Class51.aClass19_1127 = Class31.aClass19_761;
@@ -155,10 +155,10 @@ final class Class26 {
 				Class51.aClass19_1127 = Class38_Sub20_Sub14.aClass19_3044;
 			} else if (NodeSub.anInt2253 == 50) {
 				int i_7_ = 0;
-				if (client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 != null)
+				if (Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 != null)
 					i_7_++;
 				else
-					client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 = Class76.method542((byte) -62, Class17.indexSprites, Class13.indexFonts, Class38_Sub22.aClass19_2312, Class38_Sub2.aClass19_1766);
+					Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 = Class76.method542((byte) -62, Class17.indexSprites, Class13.indexFonts, Class38_Sub22.aClass19_2312, Class38_Sub2.aClass19_1766);
 				if (Class38_Sub20_Sub13.aClass38_Sub20_Sub9_Sub1_Sub1_3023 == null)
 					Class38_Sub20_Sub13.aClass38_Sub20_Sub9_Sub1_Sub1_3023 = Class76.method542((byte) -68, Class17.indexSprites, Class13.indexFonts, Class38_Sub22.aClass19_2312, Class78.aClass19_1554);
 				else
@@ -197,7 +197,7 @@ final class Class26 {
 					Class38_Sub20_Sub7.method945(Class30.indexModels, Class78.indexConfigs);
 					Class51.method403(Class30.indexModels, Class38_Sub4.aBool1811, Class78.indexConfigs);
 					Class38_Sub20_Sub3_Sub5.method1161(Class78.indexConfigs, Class30.indexModels, (byte) 116);
-					Class66.method476(Class30.indexModels, Class78.indexConfigs, Node.aBool889, client.aClass38_Sub20_Sub9_Sub1_Sub1_3656);
+					Class66.method476(Class30.indexModels, Class78.indexConfigs, Node.aBool889, Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656);
 					Class38_Sub22.method722(Class38_Sub11.indexFramemaps, Class78.indexConfigs, (byte) -85, Class38_Sub14.indexFrames);
 					Class82.method588(Class30.indexModels, Class78.indexConfigs);
 					SceneModel.method819(Class78.indexConfigs, (byte) -92 + 92);
@@ -301,17 +301,17 @@ final class Class26 {
 						Class31.anInt748 = 90;
 					}
 				} else if (NodeSub.anInt2253 == 110) {
-					client.mouseRecorder = new Class40();
-					Class38_Sub4.aClass56_1798.method430(10, client.mouseRecorder, (byte) -92 + 197);
+					Client.mouseRecorder = new Class40();
+					Class38_Sub4.aClass56_1798.method430(10, Client.mouseRecorder, (byte) -92 + 197);
 					Class31.anInt748 = 94;
 					NodeSub.anInt2253 = 120;
 					Class51.aClass19_1127 = Class10.aClass19_187;
 				} else if (NodeSub.anInt2253 == 120) {
-					if (!Class52.indexBinary.method113(client.str_huffman, Class38_Sub22.aClass19_2312, -122)) {
-						Class51.aClass19_1127 = Class9.method43(new RSString[] { Class13.aClass19_243, Class38_Sub11.aClass19_2102 }, (byte) -20);
+					if (!Class52.indexBinary.method113(Client.str_huffman, Class38_Sub22.aClass19_2312, -122)) {
+						Class51.aClass19_1127 = Class9.method43(new RSString[]{Class13.aClass19_243, Class38_Sub11.aClass19_2102}, (byte) -20);
 						Class31.anInt748 = 96;
 					} else {
-						Class53 class53 = new Class53(Class52.indexBinary.method122(client.str_huffman, (byte) -92 ^ ~0xa5b, Class38_Sub22.aClass19_2312));
+						Class53 class53 = new Class53(Class52.indexBinary.method122(Client.str_huffman, (byte) -92 ^ ~0xa5b, Class38_Sub22.aClass19_2312));
 						Class58.method444(class53);
 						Class51.aClass19_1127 = Class25.aClass19_586;
 						Class31.anInt748 = 96;

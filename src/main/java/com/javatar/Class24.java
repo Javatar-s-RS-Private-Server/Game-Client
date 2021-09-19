@@ -19,7 +19,7 @@ final class Class24 {
 			Class24.aShortArray575 = null;
 			Class24.aClass19_567 = null;
 			if (i > -35)
-				client.lastClickTime = 14L;
+				Client.lastClickTime = 14L;
 			Class24.aClass19_568 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ma.D(" + i + ')');

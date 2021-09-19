@@ -19,7 +19,7 @@ final class Class38_Sub20_Sub3_Sub4 extends SceneModel {
 		Class38_Sub20_Sub3_Sub4.aClass19_3363 = RSString.createRSString("Die Adresse dieses Computers wurde gesperrt)1");
 		Class38_Sub20_Sub3_Sub4.anIntArray3358 = new int[25];
 		Class38_Sub20_Sub3_Sub4.aClass19_3365 = RSString.createRSString(":chalreq:");
-		client.shakingCycle = new int[5];
+		Client.shakingCycle = new int[5];
 	}
 
 	int anInt3348;
@@ -54,7 +54,7 @@ final class Class38_Sub20_Sub3_Sub4 extends SceneModel {
 			Class38_Sub20_Sub3_Sub4.anIntArray3358 = null;
 			Class38_Sub20_Sub3_Sub4.anIntArray3362 = null;
 			Class38_Sub20_Sub3_Sub4.aClass19_3350 = null;
-			client.shakingCycle = null;
+			Client.shakingCycle = null;
 			Class38_Sub20_Sub3_Sub4.aClass19_3355 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "cb.L(" + i + ')');
@@ -94,10 +94,10 @@ final class Class38_Sub20_Sub3_Sub4 extends SceneModel {
 	static final void method1155(int i, int i_8_, int i_10_, int i_11_) {
 		do {
 			try {
-				if (client.crossState == 1)
-					Class33.aClass38_Sub20_Sub9_Sub3Array780[client.crossIndex / 100].method1105(Class21.anInt523 - 8, Class38_Sub4.anInt1827 - 8);
-				if (client.crossState == 2)
-					Class33.aClass38_Sub20_Sub9_Sub3Array780[4 + client.crossIndex / 100].method1105(Class21.anInt523 - 8, Class38_Sub4.anInt1827 - 8);
+				if (Client.crossState == 1)
+					Class33.aClass38_Sub20_Sub9_Sub3Array780[Client.crossIndex / 100].method1105(Class21.anInt523 - 8, Class38_Sub4.anInt1827 - 8);
+				if (Client.crossState == 2)
+					Class33.aClass38_Sub20_Sub9_Sub3Array780[4 + Client.crossIndex / 100].method1105(Class21.anInt523 - 8, Class38_Sub4.anInt1827 - 8);
 				Class38_Sub20_Sub2.method815();
 				if (12504 == 12504) {
 					if (!Class13.aBool246)

@@ -18,7 +18,7 @@ final class Class79 {
 
 	static {
 		Class79.aClass19_1567 = Class79.aClass19_1571;
-		client.walkingQueueX = new int[4000];
+		Client.walkingQueueX = new int[4000];
 		Class79.aClass19_1577 = RSString.createRSString("No reply from loginserver)3");
 		Class79.aClass19_1565 = RSString.createRSString("::fpsoff");
 		Class79.aClass19_1576 = RSString.createRSString(" steht bereits auf Ihrer Ignorieren)2Liste(Q");
@@ -155,12 +155,12 @@ final class Class79 {
 									} catch (Exception exception) {
 										/* empty */
 									}
-									client.anInt3652++;
+									Client.anInt3652++;
 									Class38_Sub14.aByte2141 = (byte) (int) (Math.random() * 255.0 + 1.0);
 									Class38_Sub20_Sub17.aClass31_3138 = null;
 									return false;
 								}
-								client.anInt3652 = 0;
+								Client.anInt3652 = 0;
 								Class38_Sub20_Sub15.anInt3067 = 0;
 								Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564.aClass17_Sub1_2544.method597(NodeSub.aBool2251, (int) (Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564.aLong898 & 0xffffL), (Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564.aLong898 & 0xff0000L) == 16711680L, Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.buffer);
 							} else {
@@ -215,7 +215,7 @@ final class Class79 {
 			Class79.aClass19_1571 = null;
 			Class79.str_titleBox = null;
 			Class79.anIntArray1564 = null;
-			client.walkingQueueX = null;
+			Client.walkingQueueX = null;
 			if (i > -105)
 				Class79.method569((byte) -82);
 			Class79.aClass19_1567 = null;

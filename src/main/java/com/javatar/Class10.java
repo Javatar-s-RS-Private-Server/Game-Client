@@ -349,7 +349,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mouseEntered(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Class61.anInt1322 = mouseevent.getX();
 				Class17_Sub1.anInt1712 = mouseevent.getY();
 			}
@@ -362,7 +362,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mousePressed(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Class26.anInt613 = mouseevent.getX();
 				Class38_Sub10_Sub1.anInt2627 = mouseevent.getY();
 				PlayerAppearance.aLong414 = Class9.method48((byte) -45);
@@ -404,7 +404,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mouseReleased(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Applet_Sub1.anInt3636 = 0;
 			}
 			if (mouseevent.isPopupTrigger())
@@ -428,7 +428,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mouseMoved(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Class61.anInt1322 = mouseevent.getX();
 				Class17_Sub1.anInt1712 = mouseevent.getY();
 			}
@@ -441,7 +441,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mouseDragged(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Class61.anInt1322 = mouseevent.getX();
 				Class17_Sub1.anInt1712 = mouseevent.getY();
 			}
@@ -454,7 +454,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	public final synchronized void mouseExited(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
-				client.mouseIdleTime = 0;
+				Client.mouseIdleTime = 0;
 				Class61.anInt1322 = -1;
 				Class17_Sub1.anInt1712 = -1;
 			}

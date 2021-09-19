@@ -56,15 +56,15 @@ final class Class14 {
 					ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = 2047;
 				else if (i_1_ == 1) {
 					int i_2_ = Class15.inputStream.method785(3);
-					client.myPlayer.move(i_2_, false);
+					Client.myPlayer.move(i_2_, false);
 					int i_3_ = Class15.inputStream.method785(1);
 					if (i_3_ == 1)
 						ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = 2047;
 				} else if (i_1_ == 2) {
 					int i_4_ = Class15.inputStream.method785(3);
-					client.myPlayer.move(i_4_, true);
+					Client.myPlayer.move(i_4_, true);
 					int i_5_ = Class15.inputStream.method785(3);
-					client.myPlayer.move(i_5_, true);
+					Client.myPlayer.move(i_5_, true);
 					int i_6_ = Class15.inputStream.method785(1);
 					if (i_6_ == 1)
 						ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = 2047;
@@ -74,9 +74,9 @@ final class Class14 {
 					int i_9_ = Class15.inputStream.method785(1);
 					if (i_9_ == 1)
 						ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = 2047;
-					client.height = Class15.inputStream.method785(2);
+					Client.height = Class15.inputStream.method785(2);
 					int i_10_ = Class15.inputStream.method785(1);
-					client.myPlayer.updatePosition(i_8_, i_7_, i_10_ == 1);
+					Client.myPlayer.updatePosition(i_8_, i_7_, i_10_ == 1);
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -106,15 +106,15 @@ final class Class14 {
 		try {
 			int i_16_ = i_15_ >> 14 & 0x7fff;
 			int i_17_ = RuntimeException_Sub1.aClass27_3292.method224(
-					client.height, i_14_, i, i_15_);
+					Client.height, i_14_, i, i_15_);
 			if (i_17_ == -1)
 				return false;
 			int i_18_ = i_17_ & 0x1f;
 			int i_19_ = i_17_ >> 6 & 0x3;
 			if (i_18_ != 10 && i_18_ != 11 && i_18_ != 22)
-				client.calculatePath(true, i_19_,
-						client.myPlayer.walkQueueY[0], i_18_ + 1, 0,
-						i_14_, client.myPlayer.walkQueueX[0], 0, i,
+				Client.calculatePath(true, i_19_,
+						Client.myPlayer.walkQueueY[0], i_18_ + 1, 0,
+						i_14_, Client.myPlayer.walkQueueX[0], 0, i,
 						0, 2);
 			else {
 				ObjectDefinition class38_sub20_sub1 = Class80.method581(47,
@@ -131,17 +131,17 @@ final class Class14 {
 				int i_22_ = class38_sub20_sub1.anInt2439;
 				if (i_19_ != 0)
 					i_22_ = (i_22_ << i_19_ & 0xf) + (i_22_ >> -i_19_ + 4);
-				client.calculatePath(true, 0,
-						client.myPlayer.walkQueueY[0], 0, i_20_,
-						i_14_, client.myPlayer.walkQueueX[0], i_22_,
+				Client.calculatePath(true, 0,
+						Client.myPlayer.walkQueueY[0], 0, i_20_,
+						i_14_, Client.myPlayer.walkQueueX[0], i_22_,
 						i, i_21_, 2);
 			}
 			if ((byte) 90 != 90)
 				Class14.aClass38_Sub20_Sub9_Sub2_259 = null;
 			Class21.anInt523 = Class73.anInt1429;
 			Class38_Sub4.anInt1827 = RS2Buffer.anInt2416;
-			client.crossIndex = 0;
-			client.crossState = 2;
+			Client.crossIndex = 0;
+			Client.crossState = 2;
 			return true;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "wc.G(" + i + ','

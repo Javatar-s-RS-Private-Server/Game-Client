@@ -68,7 +68,7 @@ final class Class38_Sub9 extends Node {
 			if ((byte) -4 != -4)
 				Class38_Sub9.aClass38_Sub10_Sub4_2057 = null;
 			try {
-				return (Class32) Class.forName("ic").newInstance();
+				return (Class32) Class.forName("com.javatar.ic").newInstance();
 			} catch (Throwable throwable) {
 				return null;
 			}

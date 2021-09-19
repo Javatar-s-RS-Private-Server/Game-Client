@@ -8,7 +8,7 @@ final class Class6 {
 	static Class38_Sub20_Sub9_Sub3 aClass38_Sub20_Sub9_Sub3_129;
 
 	static {
-		client.wayPoints = new int[104][104];
+		Client.wayPoints = new int[104][104];
 	}
 
 	public Class6() {
@@ -37,7 +37,7 @@ final class Class6 {
 				Class6.str_headicons_pk = null;
 				Class6.aClass38_Sub20_Sub9_Sub3_129 = null;
 				Class6.aClass19_127 = null;
-				client.wayPoints = null;
+				Client.wayPoints = null;
 				if (i == -193)
 					break;
 				Class6.str_headicons_pk = null;

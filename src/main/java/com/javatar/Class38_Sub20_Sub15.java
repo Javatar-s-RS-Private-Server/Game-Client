@@ -106,7 +106,7 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 							Class38_Sub20_Sub9.method962(Class38_Sub8.anIntArray2045[i_3_], Class67.anIntArray1387[i_3_], Class22.anIntArray536[i_3_], Class64.anIntArray1356[i_3_], 16711680, 128);
 					} else
 						Class38_Sub20_Sub9.method962(Class38_Sub8.anIntArray2045[i_3_], Class67.anIntArray1387[i_3_], Class22.anIntArray536[i_3_], Class64.anIntArray1356[i_3_], 16711935, 128);
-			Class3.method19(client.myPlayer.anInt3444, client.myPlayer.anInt3493, Canvas_Sub1.anInt2529, client.height);
+			Class3.method19(Client.myPlayer.anInt3444, Client.myPlayer.anInt3493, Canvas_Sub1.anInt2529, Client.height);
 			Canvas_Sub1.anInt2529 = 0;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ie.E(" + (byte) 108 + ')');
@@ -115,13 +115,13 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 
 	static final void method1011(int i, int i_5_, Player class38_sub20_sub3_sub7_sub2, byte i_6_, int i_7_) {
 		try {
-			if (client.myPlayer != class38_sub20_sub3_sub7_sub2 && Class72.anInt1417 < 400) {
+			if (Client.myPlayer != class38_sub20_sub3_sub7_sub2 && Class72.anInt1417 < 400) {
 				int i_8_ = 59 % ((-11 - i_6_) / 45);
 				RSString class19;
 				if (class38_sub20_sub3_sub7_sub2.skillLevel == 0)
-					class19 = Class9.method43(new RSString[] { class38_sub20_sub3_sub7_sub2.name, Class21.method191(class38_sub20_sub3_sub7_sub2.combatLevel, -3156, client.myPlayer.combatLevel), Class38_Sub10_Sub3.aClass19_2825, ItemDefinition.aClass19_2816, RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7_sub2.combatLevel, 0), Class38_Sub21.aClass19_2265 }, (byte) -20);
+					class19 = Class9.method43(new RSString[]{class38_sub20_sub3_sub7_sub2.name, Class21.method191(class38_sub20_sub3_sub7_sub2.combatLevel, -3156, Client.myPlayer.combatLevel), Class38_Sub10_Sub3.aClass19_2825, ItemDefinition.aClass19_2816, RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7_sub2.combatLevel, 0), Class38_Sub21.aClass19_2265}, (byte) -20);
 				else
-					class19 = Class9.method43(new RSString[] { class38_sub20_sub3_sub7_sub2.name, Class38_Sub10_Sub3.aClass19_2825, Class74.aClass19_1469, RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7_sub2.skillLevel, 0), Class38_Sub21.aClass19_2265 }, (byte) -20);
+					class19 = Class9.method43(new RSString[]{class38_sub20_sub3_sub7_sub2.name, Class38_Sub10_Sub3.aClass19_2825, Class74.aClass19_1469, RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7_sub2.skillLevel, 0), Class38_Sub21.aClass19_2265}, (byte) -20);
 				if (Class42.anInt964 != 1) {
 					if (!Class26.aBool614) {
 						for (int i_9_ = 7; i_9_ >= 0; i_9_--)
@@ -131,10 +131,10 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 									if (Class17_Sub1.aBoolArray1717[i_9_])
 										i_10_ = 2000;
 								} else {
-									if (client.myPlayer.combatLevel < class38_sub20_sub3_sub7_sub2.combatLevel)
+									if (Client.myPlayer.combatLevel < class38_sub20_sub3_sub7_sub2.combatLevel)
 										i_10_ = 2000;
-									if (client.myPlayer.team != 0 && class38_sub20_sub3_sub7_sub2.team != 0)
-										if (class38_sub20_sub3_sub7_sub2.team == client.myPlayer.team)
+									if (Client.myPlayer.team != 0 && class38_sub20_sub3_sub7_sub2.team != 0)
+										if (class38_sub20_sub3_sub7_sub2.team == Client.myPlayer.team)
 											i_10_ = 2000;
 										else
 											i_10_ = 0;

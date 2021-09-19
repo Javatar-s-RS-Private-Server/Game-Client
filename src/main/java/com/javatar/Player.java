@@ -21,7 +21,7 @@ final class Player extends Entity {
 		Player.aClass19_3562 = Player.aClass19_3570;
 		Player.anInt3569 = -1;
 		Player.anInt3565 = 127;
-		client.pingTimer = 0;
+		Client.pingTimer = 0;
 		Player.aClass19_3597 = RSString.createRSString("Close");
 		Player.aClass19_3592 = Player.aClass19_3597;
 	}

@@ -72,7 +72,7 @@ final class Class83 {
 		do {
 			try {
 				if (Class42.anInt962 == 2) {
-					Class38_Sub20_Sub3_Sub5.method1158((Class5.anInt93 - client.currentBaseX << 7) + client.anInt3641, (byte) 121, (-client.currentBaseY + Class32.anInt770 << 7) + Class47.anInt1062, Class38_Sub20_Sub2.anInt2535 * 2);
+					Class38_Sub20_Sub3_Sub5.method1158((Class5.anInt93 - Client.currentBaseX << 7) + Client.anInt3641, (byte) 121, (-Client.currentBaseY + Class32.anInt770 << 7) + Class47.anInt1062, Class38_Sub20_Sub2.anInt2535 * 2);
 					if (i_1_ != 28)
 						Class83.method595((byte) 108);
 					if (Class29.anInt703 <= -1 || Class45.anInt1016 % 20 >= 10)

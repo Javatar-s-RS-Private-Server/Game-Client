@@ -26,7 +26,7 @@ final class PlayerAppearance {
 					i_40_ >>>= 1;
 			PlayerAppearance.anIntArray415[i] = i_40_;
 		}
-		client.destY = 0;
+		Client.destY = 0;
 		PlayerAppearance.aClass19_421 = RSString.createRSString("Ladevorgang )2 bitte warten Sie)3");
 		PlayerAppearance.anIntArray418 = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
 	}
@@ -90,7 +90,7 @@ final class PlayerAppearance {
 				class38_sub20_sub3_sub7.anInt3476 = 0;
 				class38_sub20_sub3_sub7.resetWalkingQueue();
 			}
-			if (class38_sub20_sub3_sub7 == client.myPlayer && (class38_sub20_sub3_sub7.anInt3493 < 1536 || class38_sub20_sub3_sub7.anInt3444 < 1536 || class38_sub20_sub3_sub7.anInt3493 >= 11776 || class38_sub20_sub3_sub7.anInt3444 >= 11776)) {
+			if (class38_sub20_sub3_sub7 == Client.myPlayer && (class38_sub20_sub3_sub7.anInt3493 < 1536 || class38_sub20_sub3_sub7.anInt3444 < 1536 || class38_sub20_sub3_sub7.anInt3493 >= 11776 || class38_sub20_sub3_sub7.anInt3444 >= 11776)) {
 				class38_sub20_sub3_sub7.anInt3470 = 0;
 				class38_sub20_sub3_sub7.anInt3493 = class38_sub20_sub3_sub7.walkQueueX[0] * 128 + class38_sub20_sub3_sub7.anInt3457 * 64;
 				class38_sub20_sub3_sub7.anInt3477 = -1;

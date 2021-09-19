@@ -133,8 +133,8 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 
 	static final void method854(boolean bool) {
 		try {
-			if (client.myPlayer.anInt3493 >> 7 == client.destX && client.myPlayer.anInt3444 >> 7 == client.destY)
-				client.destX = 0;
+			if (Client.myPlayer.anInt3493 >> 7 == Client.destX && Client.myPlayer.anInt3444 >> 7 == Client.destY)
+				Client.destX = 0;
 			int i_74_ = ItemDefinition.anInt2783;
 			if (bool)
 				i_74_ = 1;
@@ -146,7 +146,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 				Player class38_sub20_sub3_sub7_sub2;
 				if (bool) {
 					i_76_ = 33538048;
-					class38_sub20_sub3_sub7_sub2 = client.myPlayer;
+					class38_sub20_sub3_sub7_sub2 = Client.myPlayer;
 				} else {
 					i_76_ = Class47.anIntArray1055[i_75_] << 14;
 					class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[Class47.anIntArray1055[i_75_]];
@@ -158,16 +158,16 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 					if (i_78_ >= 0 && i_78_ < 104 && i_77_ >= 0 && i_77_ < 104)
 						if (class38_sub20_sub3_sub7_sub2.aClass38_Sub20_Sub3_Sub1_3590 != null && class38_sub20_sub3_sub7_sub2.anInt3575 <= Class45.anInt1016 && Class45.anInt1016 < class38_sub20_sub3_sub7_sub2.anInt3589) {
 							class38_sub20_sub3_sub7_sub2.isIdle = false;
-							class38_sub20_sub3_sub7_sub2.anInt3579 = Class35.method317(-5736, client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444);
-							RuntimeException_Sub1.aClass27_3292.method246(client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, class38_sub20_sub3_sub7_sub2, class38_sub20_sub3_sub7_sub2.anInt3491, i_76_, class38_sub20_sub3_sub7_sub2.anInt3568, class38_sub20_sub3_sub7_sub2.anInt3581, class38_sub20_sub3_sub7_sub2.anInt3578, class38_sub20_sub3_sub7_sub2.anInt3572);
+							class38_sub20_sub3_sub7_sub2.anInt3579 = Class35.method317(-5736, Client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444);
+							RuntimeException_Sub1.aClass27_3292.method246(Client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, class38_sub20_sub3_sub7_sub2, class38_sub20_sub3_sub7_sub2.anInt3491, i_76_, class38_sub20_sub3_sub7_sub2.anInt3568, class38_sub20_sub3_sub7_sub2.anInt3581, class38_sub20_sub3_sub7_sub2.anInt3578, class38_sub20_sub3_sub7_sub2.anInt3572);
 						} else {
 							if ((class38_sub20_sub3_sub7_sub2.anInt3493 & 0x7f) == 64 && (class38_sub20_sub3_sub7_sub2.anInt3444 & 0x7f) == 64) {
 								if (RuntimeException_Sub1.anInt3293 == Class38_Sub6.anIntArrayArray1902[i_78_][i_77_])
 									continue;
 								Class38_Sub6.anIntArrayArray1902[i_78_][i_77_] = RuntimeException_Sub1.anInt3293;
 							}
-							class38_sub20_sub3_sub7_sub2.anInt3579 = Class35.method317(-5736, client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444);
-							RuntimeException_Sub1.aClass27_3292.method249(client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, 60, class38_sub20_sub3_sub7_sub2, class38_sub20_sub3_sub7_sub2.anInt3491, i_76_, class38_sub20_sub3_sub7_sub2.aBool3481);
+							class38_sub20_sub3_sub7_sub2.anInt3579 = Class35.method317(-5736, Client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444);
+							RuntimeException_Sub1.aClass27_3292.method249(Client.height, class38_sub20_sub3_sub7_sub2.anInt3493, class38_sub20_sub3_sub7_sub2.anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, 60, class38_sub20_sub3_sub7_sub2, class38_sub20_sub3_sub7_sub2.anInt3491, i_76_, class38_sub20_sub3_sub7_sub2.aBool3481);
 						}
 				}
 			}

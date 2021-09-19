@@ -92,7 +92,7 @@ final class Class41 {
 							Class62.method464(Class9.method43(new RSString[]{Class80.aClass19_1600, class19, Class16.aClass19_319}, (byte) -20), 0, Class38_Sub22.aClass19_2312);
 							return;
 						}
-					if (class19.method175(client.myPlayer.name))
+					if (class19.method175(Client.myPlayer.name))
 						Class62.method464(Class80.aClass19_1599, 0, Class38_Sub22.aClass19_2312);
 					else {
 						if (i <= 52)
@@ -103,8 +103,8 @@ final class Class41 {
 						Class80.anIntArray1606[Class81.anInt1618] = 0;
 						Class81.anInt1624 = Entity.anInt3513;
 						Class81.anInt1618++;
-						client.secureBuffer.putOpcode(28);
-						client.secureBuffer.writeLong(l);
+						Client.secureBuffer.putOpcode(28);
+						Client.secureBuffer.writeLong(l);
 					}
 				}
 		} catch (RuntimeException runtimeexception) {
@@ -131,7 +131,7 @@ final class Class41 {
 						if (class38_sub21.anInt2274 > 0)
 							class38_sub21.anInt2274--;
 						if (class38_sub21.anInt2274 == 0 && class38_sub21.anInt2267 >= 1 && class38_sub21.anInt2282 >= 1 && class38_sub21.anInt2267 <= 102 && class38_sub21.anInt2282 <= 102 && (class38_sub21.anInt2276 < 0 || Class20.method189((byte) 78, class38_sub21.anInt2276, class38_sub21.anInt2266))) {
-							client.method1227(class38_sub21.anInt2266, class38_sub21.anInt2260, class38_sub21.anInt2267, (byte) 13, class38_sub21.anInt2276, class38_sub21.anInt2275, class38_sub21.anInt2263, class38_sub21.anInt2282);
+							Client.method1227(class38_sub21.anInt2266, class38_sub21.anInt2260, class38_sub21.anInt2267, (byte) 13, class38_sub21.anInt2276, class38_sub21.anInt2275, class38_sub21.anInt2263, class38_sub21.anInt2282);
 							class38_sub21.anInt2274 = -1;
 							if (class38_sub21.anInt2268 != class38_sub21.anInt2276 || class38_sub21.anInt2268 != -1) {
 								if (class38_sub21.anInt2268 == class38_sub21.anInt2276 && class38_sub21.anInt2272 == class38_sub21.anInt2275 && class38_sub21.anInt2266 == class38_sub21.anInt2270)
@@ -140,7 +140,7 @@ final class Class41 {
 								class38_sub21.method330(25682 - 25682);
 						}
 					} else if (class38_sub21.anInt2268 < 0 || Class20.method189((byte) 76, class38_sub21.anInt2268, class38_sub21.anInt2270)) {
-						client.method1227(class38_sub21.anInt2270, class38_sub21.anInt2260, class38_sub21.anInt2267, (byte) 114, class38_sub21.anInt2268, class38_sub21.anInt2272, class38_sub21.anInt2263, class38_sub21.anInt2282);
+						Client.method1227(class38_sub21.anInt2270, class38_sub21.anInt2260, class38_sub21.anInt2267, (byte) 114, class38_sub21.anInt2268, class38_sub21.anInt2272, class38_sub21.anInt2263, class38_sub21.anInt2282);
 						class38_sub21.method330(0);
 					}
 				}
@@ -204,11 +204,11 @@ final class Class41 {
 								Class15.method84(class38_sub19, (byte) -89);
 							}
 							if (Class67.aClass38_Sub6_1381 != null && Class38_Sub10_Sub1.method860(1442844045, Class15.aClass38_Sub6_293) != null) {
-								client.secureBuffer.putOpcode(178);
-								client.secureBuffer.method774(Class67.aClass38_Sub6_1381.anInt1856);
-								client.secureBuffer.method769(Class67.aClass38_Sub6_1381.anInt1941, 88);
-								client.secureBuffer.method747(Class15.aClass38_Sub6_293.anInt1856, 2 - 2689);
-								client.secureBuffer.method767(-25680, Class15.aClass38_Sub6_293.anInt1941);
+								Client.secureBuffer.putOpcode(178);
+								Client.secureBuffer.method774(Class67.aClass38_Sub6_1381.anInt1856);
+								Client.secureBuffer.method769(Class67.aClass38_Sub6_1381.anInt1941, 88);
+								Client.secureBuffer.method747(Class15.aClass38_Sub6_293.anInt1856, 2 - 2689);
+								Client.secureBuffer.method767(-25680, Class15.aClass38_Sub6_293.anInt1941);
 							}
 						} else if ((Class42.anInt949 == 1 || RSString.method140(Class72.anInt1417 - 1)) && Class72.anInt1417 > 2)
 							Class50.method401();
@@ -227,14 +227,14 @@ final class Class41 {
 	static final void method350(int i) {
 		try {
 			if (i == -10015) {
-				if (client.worldConnection != null) {
-					client.worldConnection.method292(-95);
-					client.worldConnection = null;
+				if (Client.worldConnection != null) {
+					Client.worldConnection.method292(-95);
+					Client.worldConnection = null;
 				}
 				Class4.method25(i ^ ~0x272d);
 				RuntimeException_Sub1.aClass27_3292.method242();
 				for (int i_11_ = 0; i_11_ < 4; i_11_++)
-					client.clippingHeights[i_11_].method530(74);
+					Client.clippingHeights[i_11_].method530(74);
 				System.gc();
 				Class16.method89(2, (byte) 55);
 				Class76.aBool1490 = false;
@@ -249,7 +249,7 @@ final class Class41 {
 
 	static final Class38_Sub20_Sub7 method351(int i) {
 		try {
-			Class38_Sub20_Sub7 class38_sub20_sub7 = (Class38_Sub20_Sub7) client.aClass83_3646.method591(17093 - 45918, i);
+			Class38_Sub20_Sub7 class38_sub20_sub7 = (Class38_Sub20_Sub7) Client.aClass83_3646.method591(17093 - 45918, i);
 			if (class38_sub20_sub7 != null)
 				return class38_sub20_sub7;
 			if (17093 != 17093)
@@ -258,7 +258,7 @@ final class Class41 {
 			class38_sub20_sub7 = new Class38_Sub20_Sub7();
 			if (is != null)
 				class38_sub20_sub7.method944(new RS2Buffer(is));
-			client.aClass83_3646.method590(i, (byte) -122, class38_sub20_sub7);
+			Client.aClass83_3646.method590(i, (byte) -122, class38_sub20_sub7);
 			return class38_sub20_sub7;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "na.A(" + i + ',' + 17093 + ')');
@@ -275,10 +275,10 @@ final class Class41 {
 						if (NPC.aClass38_Sub9Array3557[i_13_].aLong898 == l)
 							break;
 					if (NPC.aClass38_Sub9Array3557.length > i_13_ && NPC.aClass38_Sub9Array3557[i_13_] != null) {
-						client.secureBuffer.putOpcode(194);
+						Client.secureBuffer.putOpcode(194);
 						if ((byte) -123 != -123)
 							Class41.method346(-29, -106L);
-						client.secureBuffer.writeLong(NPC.aClass38_Sub9Array3557[i_13_].aLong898);
+						Client.secureBuffer.writeLong(NPC.aClass38_Sub9Array3557[i_13_].aLong898);
 					}
 				}
 			}

@@ -70,7 +70,7 @@ final class Class61 {
 			if (i != 0)
 				Class61.method460(null, -65);
 			Class61.anIntArray1332 = null;
-			client.str_huffman = null;
+			Client.str_huffman = null;
 			Class61.aClass19_1331 = null;
 			Class61.anIntArray1330 = null;
 			Class61.aClass26_1325 = null;

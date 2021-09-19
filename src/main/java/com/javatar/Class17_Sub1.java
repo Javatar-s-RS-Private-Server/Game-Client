@@ -56,7 +56,7 @@ final class Class17_Sub1 extends Class17 {
 		try {
 			Class17_Sub1.aBoolArray1717 = null;
 			Class17_Sub1.aClass19_1720 = null;
-			client.secureBuffer = null;
+			Client.secureBuffer = null;
 			Class17_Sub1.aClass16_1707 = null;
 			Class17_Sub1.aClass83_1689 = null;
 			Class17_Sub1.anIntArray1709 = null;

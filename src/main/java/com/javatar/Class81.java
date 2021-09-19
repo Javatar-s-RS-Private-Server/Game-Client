@@ -67,7 +67,7 @@ final class Class81 {
 				Applet_Sub1.anInt3627 = 0;
 				for (int i_11_ = 0; i_11_ < 104; i_11_++)
 					for (int i_12_ = 0; i_12_ < 104; i_12_++) {
-						int i_13_ = RuntimeException_Sub1.aClass27_3292.method237(client.height, i_11_, i_12_);
+						int i_13_ = RuntimeException_Sub1.aClass27_3292.method237(Client.height, i_11_, i_12_);
 						if (i_13_ != 0) {
 							i_13_ = i_13_ >> 14 & 0x7fff;
 							int i_14_ = Class80.method581(100, i_13_).anInt2456;
@@ -75,7 +75,7 @@ final class Class81 {
 								int i_15_ = i_11_;
 								int i_16_ = i_12_;
 								if (i_14_ != 22 && i_14_ != 29 && i_14_ != 34 && i_14_ != 36 && i_14_ != 46 && i_14_ != 47 && i_14_ != 48) {
-									int[][] is_17_ = client.clippingHeights[client.height].clippingFlags;
+									int[][] is_17_ = Client.clippingHeights[Client.height].clippingFlags;
 									for (int i_18_ = 0; i_18_ < 10; i_18_++) {
 										int i_19_ = (int) (Math.random() * 4.0);
 										if (i_19_ == 0 && i_15_ > 0 && i_15_ > i_11_ - 3 && (is_17_[i_15_ - 1][i_16_] & 0x12c0108) == 0)

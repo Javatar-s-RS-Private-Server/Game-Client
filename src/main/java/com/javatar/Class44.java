@@ -125,10 +125,10 @@ final class Class44 {
 
 	static final void method371(int i, RSString class19, byte i_7_) {
 		try {
-			client.secureBuffer.putOpcode(205);
+			Client.secureBuffer.putOpcode(205);
 			if (i_7_ >= 62) {
-				client.secureBuffer.method768(i);
-				client.secureBuffer.method733(class19.method162(0));
+				Client.secureBuffer.method768(i);
+				Client.secureBuffer.method733(class19.method162(0));
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "nd.D(" + i + ','

@@ -35,7 +35,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			if ((byte) 121 < 119)
 				return null;
 			try {
-				return (Class73) Class.forName("pd").newInstance();
+				return (Class73) Class.forName("com.javatar.pd").newInstance();
 			} catch (Throwable throwable) {
 				return new Class73_Sub2();
 			}
@@ -47,7 +47,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	static final void method1218(byte i) {
 		try {
 			if (i >= -54)
-				client.errorPinging = false;
+				Client.errorPinging = false;
 			for (Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method82((byte) 91); class38_sub8 != null; class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method78(-118)) {
 				int i_6_ = class38_sub8.anInt2038;
 				if (Class22.method196(i_6_)) {
@@ -116,7 +116,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	@Override
 	public final String getParameter(String string) {
 		try {
-			if (client.clientFrame != null)
+			if (Client.clientFrame != null)
 				return null;
 			if (Class38_Sub4.aClass56_1798 != null && this != Class38_Sub4.aClass56_1798.anApplet1242)
 				return Class38_Sub4.aClass56_1798.anApplet1242.getParameter(string);
@@ -168,7 +168,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
 	@Override
 	public final URL getCodeBase() {
-		if (client.clientFrame != null)
+		if (Client.clientFrame != null)
 			return null;
 		if (Class38_Sub4.aClass56_1798 != null && Class38_Sub4.aClass56_1798.anApplet1242 != this)
 			return Class38_Sub4.aClass56_1798.anApplet1242.getCodeBase();
@@ -189,14 +189,14 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 				Class20.anInt501 = 503;
 				Class74.anInt1468 = 468;
 				Class38_Sub8.anInt2050 = 765;
-				client.clientFrame = new Frame();
-				client.clientFrame.setTitle("Jagex");
-				client.clientFrame.setResizable(false);
-				client.clientFrame.addWindowListener(this);
-				client.clientFrame.setVisible(true);
-				client.clientFrame.toFront();
-				Insets insets = client.clientFrame.getInsets();
-				client.clientFrame.setSize(insets.right + insets.left + 765, insets.bottom + 503 + insets.top);
+				Client.clientFrame = new Frame();
+				Client.clientFrame.setTitle("Jagex");
+				Client.clientFrame.setResizable(false);
+				Client.clientFrame.addWindowListener(this);
+				Client.clientFrame.setVisible(true);
+				Client.clientFrame.toFront();
+				Insets insets = Client.clientFrame.getInsets();
+				Client.clientFrame.setSize(insets.right + insets.left + 765, insets.bottom + 503 + insets.top);
 				Class23.aClass56_552 = Class38_Sub4.aClass56_1798 = new Class56(true, null, i_4_, "runescape", 16);
 				Class38_Sub4.aClass56_1798.method430(1, this, 1 ^ 0x67);
 			} catch (Exception exception) {
@@ -212,7 +212,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	@Override
 	public final AppletContext getAppletContext() {
 		try {
-			if (client.clientFrame != null)
+			if (Client.clientFrame != null)
 				return null;
 			if (Class38_Sub4.aClass56_1798 != null && Class38_Sub4.aClass56_1798.anApplet1242 != this)
 				return Class38_Sub4.aClass56_1798.anApplet1242.getAppletContext();
@@ -253,7 +253,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 				} catch (Exception exception) {
 					/* empty */
 				}
-				if (client.clientFrame != null)
+				if (Client.clientFrame != null)
 					try {
 						System.exit(0);
 					} catch (Throwable throwable) {
@@ -289,7 +289,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			Class42.aLongArray954[Node.anInt895] = l;
 			Node.anInt895 = Node.anInt895 + 1 & 0x1f;
 			synchronized (this) {
-				client.awtFocused = Class21.aBool508;
+				Client.awtFocused = Class21.aBool508;
 			}
 			method1209();
 		} catch (RuntimeException runtimeexception) {
@@ -379,10 +379,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	final synchronized void method1219(int i) {
 		try {
 			Container container;
-			if (client.clientFrame == null)
+			if (Client.clientFrame == null)
 				container = Class38_Sub4.aClass56_1798.anApplet1242;
 			else
-				container = client.clientFrame;
+				container = Client.clientFrame;
 			if (i != -29492)
 				Applet_Sub1.method1222(true);
 			if (Class38_Sub3.aCanvas1783 != null) {
@@ -393,8 +393,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			container.add(Class38_Sub3.aCanvas1783);
 			Class38_Sub3.aCanvas1783.setSize(Class38_Sub8.anInt2050, Class20.anInt501);
 			Class38_Sub3.aCanvas1783.setVisible(true);
-			if (client.clientFrame != null) {
-				Insets insets = client.clientFrame.getInsets();
+			if (Client.clientFrame != null) {
+				Insets insets = Client.clientFrame.getInsets();
 				Class38_Sub3.aCanvas1783.setLocation(insets.left, insets.top);
 			} else
 				Class38_Sub3.aCanvas1783.setLocation(0, 0);
@@ -425,10 +425,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 				Class75.anInt1476 -= 50;
 				Class38_Sub3.aCanvas1783.setSize(Class38_Sub8.anInt2050, Class20.anInt501);
 				Class38_Sub3.aCanvas1783.setVisible(true);
-				if (client.clientFrame == null)
+				if (Client.clientFrame == null)
 					Class38_Sub3.aCanvas1783.setLocation(0, 0);
 				else {
-					Insets insets = client.clientFrame.getInsets();
+					Insets insets = Client.clientFrame.getInsets();
 					Class38_Sub3.aCanvas1783.setLocation(insets.left, insets.top);
 				}
 			}
@@ -481,7 +481,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	@Override
 	public final URL getDocumentBase() {
 		try {
-			if (client.clientFrame != null)
+			if (Client.clientFrame != null)
 				return null;
 			if (Class38_Sub4.aClass56_1798 != null && this != Class38_Sub4.aClass56_1798.anApplet1242)
 				return Class38_Sub4.aClass56_1798.anApplet1242.getDocumentBase();

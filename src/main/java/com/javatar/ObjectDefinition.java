@@ -19,7 +19,7 @@ final class ObjectDefinition extends NodeSub {
 	static {
 		ObjectDefinition.anInt2467 = 0;
 		ObjectDefinition.aLong2495 = 0L;
-		client.distanceValues = new int[104][104];
+		Client.distanceValues = new int[104][104];
 		ObjectDefinition.aClass19_2505 = RSString.createRSString("Login limit exceeded)3");
 		ObjectDefinition.anInt2496 = 0;
 		ObjectDefinition.aClass19_2459 = RSString.createRSString("Ok");
@@ -110,7 +110,7 @@ final class ObjectDefinition extends NodeSub {
 	public static void method800(byte i) {
 		try {
 			if (i == -110) {
-				client.distanceValues = null;
+				Client.distanceValues = null;
 				ObjectDefinition.aClass65_2461 = null;
 				ObjectDefinition.aClass19_2459 = null;
 				ObjectDefinition.aClass19_2505 = null;
@@ -133,14 +133,14 @@ final class ObjectDefinition extends NodeSub {
 			Entity.anInt3446 = 0;
 			if (i != 104)
 				ObjectDefinition.method801((byte) 31);
-			client.secureBuffer.pos = 0;
+			Client.secureBuffer.pos = 0;
 			Class38_Sub20_Sub8.anInt2864 = -1;
 			Class38_Sub20_Sub8.anInt2857 = 0;
 			Class38_Sub19.anInt2233 = -1;
-			client.systemUpdateTime = 0;
+			Client.systemUpdateTime = 0;
 			Class15.anInt280 = -1;
 			Class15.inputStream.pos = 0;
-			client.destX = 0;
+			Client.destX = 0;
 			for (int i_41_ = 0; i_41_ < Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152.length; i_41_++)
 				if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_41_] != null)
 					Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_41_].anInt3502 = -1;

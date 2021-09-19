@@ -5,7 +5,7 @@ package com.javatar;/* client - Decompiled by JODE
 import java.awt.*;
 import java.net.Socket;
 
-public final class client extends Applet_Sub1 {
+public final class Client extends Applet_Sub1 {
 	protected static boolean errorPinging = false;
 	static int anInt3641;
 	static RSString aClass19_3643 = RSString.createRSString("Startseite auf (WSpielkonto wiederherstellen(W)3");
@@ -53,20 +53,20 @@ public final class client extends Applet_Sub1 {
 	static Frame clientFrame;
 
 	static {
-		client.anInt3641 = 0;
-		client.anInt3652 = 0;
-		client.aClass83_3646 = new Class83(64);
+		Client.anInt3641 = 0;
+		Client.anInt3652 = 0;
+		Client.aClass83_3646 = new Class83(64);
 	}
 
 	public static void method1225(boolean bool) {
 		do {
 			try {
-				client.aClass83_3646 = null;
-				client.aClass19_3643 = null;
-				client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 = null;
+				Client.aClass83_3646 = null;
+				Client.aClass19_3643 = null;
+				Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656 = null;
 				if (!bool)
 					break;
-				client.main(null);
+				Client.main(null);
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "client.V(" + bool + ')');
 			}
@@ -77,7 +77,7 @@ public final class client extends Applet_Sub1 {
 	static void method1227(int i, int i_2_, int i_3_, byte i_4_, int i_5_, int i_6_, int i_7_, int i_8_) {
 		try {
 			if (i_3_ >= 1 && i_8_ >= 1 && i_3_ <= 102 && i_8_ <= 102) {
-				if (Class38_Sub4.aBool1811 && client.height != i_7_)
+				if (Class38_Sub4.aBool1811 && Client.height != i_7_)
 					return;
 				int i_9_ = 0;
 				if (i_2_ == 0)
@@ -100,7 +100,7 @@ public final class client extends Applet_Sub1 {
 						RuntimeException_Sub1.aClass27_3292.method251(i_7_, i_3_, i_8_);
 						ObjectDefinition class38_sub20_sub1 = Class80.method581(-126, i_10_);
 						if (class38_sub20_sub1.anInt2482 != 0)
-							client.clippingHeights[i_7_].method528(i_3_, i_13_, i_14_, i_8_, class38_sub20_sub1.aBool2466);
+							Client.clippingHeights[i_7_].method528(i_3_, i_13_, i_14_, i_8_, class38_sub20_sub1.aBool2466);
 					}
 					if (i_2_ == 1)
 						RuntimeException_Sub1.aClass27_3292.method227(i_7_, i_3_, i_8_);
@@ -110,20 +110,20 @@ public final class client extends Applet_Sub1 {
 						if (class38_sub20_sub1.anInt2469 + i_3_ > 103 || i_8_ + class38_sub20_sub1.anInt2469 > 103 || class38_sub20_sub1.anInt2480 + i_3_ > 103 || i_8_ + class38_sub20_sub1.anInt2480 > 103)
 							return;
 						if (class38_sub20_sub1.anInt2482 != 0)
-							client.clippingHeights[i_7_].method532(i_3_, class38_sub20_sub1.anInt2469, i_8_, class38_sub20_sub1.aBool2466, i_13_, class38_sub20_sub1.anInt2480);
+							Client.clippingHeights[i_7_].method532(i_3_, class38_sub20_sub1.anInt2469, i_8_, class38_sub20_sub1.aBool2466, i_13_, class38_sub20_sub1.anInt2480);
 					}
 					if (i_2_ == 3) {
 						RuntimeException_Sub1.aClass27_3292.method239(i_7_, i_3_, i_8_);
 						ObjectDefinition class38_sub20_sub1 = Class80.method581(95, i_10_);
 						if (class38_sub20_sub1.anInt2482 == 1)
-							client.clippingHeights[i_7_].method523(i_8_, -31858, i_3_);
+							Client.clippingHeights[i_7_].method523(i_8_, -31858, i_3_);
 					}
 				}
 				if (i_5_ >= 0) {
 					int i_15_ = i_7_;
 					if (i_15_ < 3 && (Class82.aByteArrayArrayArray1648[1][i_3_][i_8_] & 0x2) == 2)
 						i_15_++;
-					RS2Buffer.method758(i_5_, i, RuntimeException_Sub1.aClass27_3292, i_8_, i_15_, i_3_, client.clippingHeights[i_7_], i_7_, i_6_, 0);
+					RS2Buffer.method758(i_5_, i, RuntimeException_Sub1.aClass27_3292, i_8_, i_15_, i_3_, Client.clippingHeights[i_7_], i_7_, i_6_, 0);
 				}
 			}
 			int i_16_ = 117 / ((i_4_ + 75) / 47);
@@ -136,7 +136,7 @@ public final class client extends Applet_Sub1 {
 		try {
 			int i_22_ = class38_sub6.anInt1958;
 			if (i_22_ == 205) {
-				client.logoutTimer = 250;
+				Client.logoutTimer = 250;
 				return true;
 			}
 			if (i_22_ >= 300 && i_22_ <= 313) {
@@ -154,12 +154,12 @@ public final class client extends Applet_Sub1 {
 			if (i_22_ == 325)
 				Class38_Sub20_Sub15.aClass18_3072.method127(-109, true);
 			if (i_22_ == 326) {
-				client.secureBuffer.putOpcode(78);
-				Class38_Sub20_Sub15.aClass18_3072.method125(client.secureBuffer);
+				Client.secureBuffer.putOpcode(78);
+				Class38_Sub20_Sub15.aClass18_3072.method125(Client.secureBuffer);
 				return true;
 			}
 			if (i >= -124)
-				client.anInt3652 = -55;
+				Client.anInt3652 = -55;
 			return false;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "client.S(" + i + ',' + (class38_sub6 != null ? "{...}" : "null") + ')');
@@ -171,22 +171,22 @@ public final class client extends Applet_Sub1 {
 			Class41.method350(-10015);
 		else {
 			Canvas_Sub1.method808(0, 40);
-			Class60.aClass31_1306 = client.worldConnection;
-			client.worldConnection = null;
+			Class60.aClass31_1306 = Client.worldConnection;
+			Client.worldConnection = null;
 			// Class38_Sub20_Sub16.aClass19_3093 = null;
 		}
 	}
 
 	static boolean parsePacket() {
 		try {
-			if (client.worldConnection == null)
+			if (Client.worldConnection == null)
 				return false;
 			try {
-				int i_41_ = client.worldConnection.avaliable((byte) 122);
+				int i_41_ = Client.worldConnection.avaliable((byte) 122);
 				if (i_41_ == 0)
 					return false;
 				if (Class23.packetId == -1) {
-					client.worldConnection.method290(124, 0, Class15.inputStream.buffer, 1);
+					Client.worldConnection.method290(124, 0, Class15.inputStream.buffer, 1);
 					Class15.inputStream.pos = 0;
 					Class23.packetId = Class15.inputStream.getOpcode();
 					Entity.anInt3446 = Class3.anIntArray67[Class23.packetId];
@@ -196,13 +196,13 @@ public final class client extends Applet_Sub1 {
 					if (i_41_ <= 0)
 						return false;
 					i_41_--;
-					client.worldConnection.method290(116, 0, Class15.inputStream.buffer, 1);
+					Client.worldConnection.method290(116, 0, Class15.inputStream.buffer, 1);
 					Entity.anInt3446 = Class15.inputStream.buffer[0] & 0xff;
 				}
 				if (Entity.anInt3446 == -2)
 					if (i_41_ > 1) {
 						i_41_ -= 2;
-						client.worldConnection.method290(30703 ^ 0x7794, 0, Class15.inputStream.buffer, 2);
+						Client.worldConnection.method290(30703 ^ 0x7794, 0, Class15.inputStream.buffer, 2);
 						Class15.inputStream.pos = 0;
 						Entity.anInt3446 = Class15.inputStream.readUnsignedShortLE();
 					} else
@@ -210,7 +210,7 @@ public final class client extends Applet_Sub1 {
 				if (i_41_ < Entity.anInt3446)
 					return false;
 				Class15.inputStream.pos = 0;
-				client.worldConnection.method290(117, 0, Class15.inputStream.buffer, Entity.anInt3446);
+				Client.worldConnection.method290(117, 0, Class15.inputStream.buffer, Entity.anInt3446);
 				Class38_Sub20_Sub8.anInt2857 = 0;
 				Class38_Sub20_Sub8.anInt2864 = Class15.anInt280;
 				Class15.anInt280 = Class38_Sub19.anInt2233;
@@ -600,7 +600,7 @@ public final class client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 137) {
-					client.systemUpdateTime = Class15.inputStream.getULEShort() * 30;
+					Client.systemUpdateTime = Class15.inputStream.getULEShort() * 30;
 					Class38_Sub20_Sub3_Sub2.anInt3260 = Entity.anInt3513;
 					Class23.packetId = -1;
 					return true;
@@ -1247,7 +1247,7 @@ public final class client extends Applet_Sub1 {
 				Class38_Sub20_Sub2.method813(null, "T1 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446);
 				Class41.method350(-10015);
 			} catch (java.io.IOException ioexception) {
-				client.dropClient();
+				Client.dropClient();
 			} catch (Exception exception) {
 				String string = "T2 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446 + "," + (currentBaseY + myPlayer.walkQueueX[0]) + "," + (currentBaseX + myPlayer.walkQueueY[0]) + " - ";
 				for (int i_198_ = 0; Entity.anInt3446 > i_198_ && i_198_ < 50; i_198_++)
@@ -1521,7 +1521,7 @@ public final class client extends Applet_Sub1 {
 				else
 					Class41.method344();
 				Class26.aString611 = "127.0.0.1";
-				client var_client = new client();
+				Client var_client = new Client();
 				var_client.method1212(32 + ObjectDefinition.anInt2464);
 			} catch (Exception exception) {
 				Class38_Sub20_Sub2.method813(exception, null);
@@ -1593,7 +1593,7 @@ public final class client extends Applet_Sub1 {
 	@Override
 	void method1214(int i) {
 		try {
-			client.method1225(false);
+			Client.method1225(false);
 			RSString.method142(i ^ 0x39);
 			Applet_Sub1.method1222(false);
 			Class73.method517((byte) -68);
@@ -1734,7 +1734,7 @@ public final class client extends Applet_Sub1 {
 	private void method1226() {
 		do
 			try {
-				if (client.anInt3652 >= 4) {
+				if (Client.anInt3652 >= 4) {
 					method1224("js5crc");
 					Class48.anInt1069 = 1000;
 				} else {
@@ -1830,12 +1830,12 @@ public final class client extends Applet_Sub1 {
 					Class4.aClass32_91.method299(96, Class38_Sub3.aCanvas1783);
 			}
 			if (2 != 2)
-				client.aClass83_3646 = null;
+				Client.aClass83_3646 = null;
 			if (Class48.anInt1069 == 0)
 				Class47.method385(Class51.aClass19_1127, 300, null, Class31.anInt748);
 			else if (Class48.anInt1069 != 5) {
 				if (Class48.anInt1069 == 10)
-					RuntimeException_Sub1.method1096(client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 2 + 460, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
+					RuntimeException_Sub1.method1096(Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 2 + 460, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
 				else if (Class48.anInt1069 != 20) {
 					if (Class48.anInt1069 != 25) {
 						if (Class48.anInt1069 != 30) {
@@ -1859,9 +1859,9 @@ public final class client extends Applet_Sub1 {
 						Class53.method409(Class9.method43(new RSString[] { Class2.aClass19_39, Entity.aClass19_3438, RuntimeException_Sub1.method1098(i_18_, 0), Class33.aClass19_792 }, (byte) -20), 16777215, false);
 					}
 				} else
-					RuntimeException_Sub1.method1096(client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 2 + 460, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
+					RuntimeException_Sub1.method1096(Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 2 + 460, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
 			} else
-				RuntimeException_Sub1.method1096(client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 462, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
+				RuntimeException_Sub1.method1096(Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656, 462, Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093);
 			if (Class48.anInt1069 == 30 && Class38_Sub14.anInt2139 == 0 && !Class33.aBool781)
 				try {
 					Graphics graphics = Class38_Sub3.aCanvas1783.getGraphics();
@@ -1933,14 +1933,14 @@ public final class client extends Applet_Sub1 {
 	void method1217() {
 		do
 			try {
-				if (client.mouseRecorder != null)
-					client.mouseRecorder.aBool907 = false;
-				client.mouseRecorder = null;
+				if (Client.mouseRecorder != null)
+					Client.mouseRecorder.aBool907 = false;
+				Client.mouseRecorder = null;
 				if (false)
-					client.anInt3652 = -8;
-				if (client.worldConnection != null) {
-					client.worldConnection.method292(-84);
-					client.worldConnection = null;
+					Client.anInt3652 = -8;
+				if (Client.worldConnection != null) {
+					Client.worldConnection.method292(-84);
+					Client.worldConnection = null;
 				}
 				Class40.method341();
 				Class38_Sub20_Sub3_Sub2.method1093();

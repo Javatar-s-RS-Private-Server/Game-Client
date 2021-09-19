@@ -102,8 +102,8 @@ final class Class21 implements Runnable {
 							Class54.aClass19Array1206[i_4_] = Class54.aClass19Array1206[i_4_ + 1];
 						}
 						Class81.anInt1624 = Entity.anInt3513;
-						client.secureBuffer.putOpcode(239);
-						client.secureBuffer.writeLong(l);
+						Client.secureBuffer.putOpcode(239);
+						Client.secureBuffer.writeLong(l);
 						break;
 					}
 				int i_5_ = -88 % ((64 - i) / 52);

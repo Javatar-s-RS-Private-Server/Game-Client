@@ -54,7 +54,7 @@ final class Class33 {
 		do {
 			try {
 				if ((Class38_Sub20_Sub17.anInt3129 ^ 0xffffffff) == -1 || Class38_Sub20_Sub17.anInt3129 == 3) {
-					if (client.lastMouseAction != 1)
+					if (Client.lastMouseAction != 1)
 						break;
 					int i_5_ = -i + Class73.anInt1429 - 25;
 					int i_6_ = RS2Buffer.anInt2416 + -5 - i_3_;
@@ -69,22 +69,22 @@ final class Class33 {
 					i_9_ = (Class38_Sub7.anInt2027 + 256) * i_9_ >> 8;
 					int i_10_ = i_6_ * i_9_ - i_5_ * i_8_ >> 11;
 					int i_11_ = i_8_ * i_6_ + i_5_ * i_9_ >> 11;
-					int i_12_ = client.myPlayer.anInt3444 - i_10_ >> 7;
-					int i_13_ = client.myPlayer.anInt3493 + i_11_ >> 7;
-					boolean bool = client.calculatePath(true, 0, client.myPlayer.walkQueueY[0], 0, 0, i_13_, client.myPlayer.walkQueueX[0], 0, i_12_, 0, 1);
+					int i_12_ = Client.myPlayer.anInt3444 - i_10_ >> 7;
+					int i_13_ = Client.myPlayer.anInt3493 + i_11_ >> 7;
+					boolean bool = Client.calculatePath(true, 0, Client.myPlayer.walkQueueY[0], 0, 0, i_13_, Client.myPlayer.walkQueueX[0], 0, i_12_, 0, 1);
 					if (!bool)
 						break;
-					client.secureBuffer.putByte(i_5_);
-					client.secureBuffer.putByte(i_6_);
-					client.secureBuffer.putShort(Class38_Sub20_Sub11.anInt2930);
-					client.secureBuffer.putByte(57);
-					client.secureBuffer.putByte(Class21.anInt517);
-					client.secureBuffer.putByte(Class38_Sub7.anInt2027);
-					client.secureBuffer.putByte(89);
-					client.secureBuffer.putShort(client.myPlayer.anInt3493);
-					client.secureBuffer.putShort(client.myPlayer.anInt3444);
-					client.secureBuffer.putByte(client.arbitraryDestination);
-					client.secureBuffer.putByte(63);
+					Client.secureBuffer.putByte(i_5_);
+					Client.secureBuffer.putByte(i_6_);
+					Client.secureBuffer.putShort(Class38_Sub20_Sub11.anInt2930);
+					Client.secureBuffer.putByte(57);
+					Client.secureBuffer.putByte(Class21.anInt517);
+					Client.secureBuffer.putByte(Class38_Sub7.anInt2027);
+					Client.secureBuffer.putByte(89);
+					Client.secureBuffer.putShort(Client.myPlayer.anInt3493);
+					Client.secureBuffer.putShort(Client.myPlayer.anInt3444);
+					Client.secureBuffer.putByte(Client.arbitraryDestination);
+					Client.secureBuffer.putByte(63);
 				}
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "a.D(" + i + ',' + i_3_ + ',' + -1 + ')');

@@ -41,13 +41,13 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 		try {
 			try {
 				if (Class9.loginState == 0) {
-					if (client.worldConnection != null) {
-						client.worldConnection.method292(i ^ ~0x3011);
-						client.worldConnection = null;
+					if (Client.worldConnection != null) {
+						Client.worldConnection.method292(i ^ ~0x3011);
+						Client.worldConnection = null;
 					}
 					Class38_Sub12.anInt2118 = 0;
 					Class55.aClass65_1213 = null;
-					client.errorPinging = false;
+					Client.errorPinging = false;
 					Class9.loginState = 1;
 				}
 				if (Class9.loginState == 1) {
@@ -56,7 +56,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					if (Class55.aClass65_1213.anInt1368 == 2)
 						throw new IOException();
 					if (Class55.aClass65_1213.anInt1368 == 1) {
-						client.worldConnection = new Class31((Socket) Class55.aClass65_1213.anObject1365, Class38_Sub4.aClass56_1798);
+						Client.worldConnection = new Class31((Socket) Class55.aClass65_1213.anObject1365, Class38_Sub4.aClass56_1798);
 						Class55.aClass65_1213 = null;
 						Class9.loginState = 2;
 					}
@@ -66,10 +66,10 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 				if (Class9.loginState == 2) {
 					long l = Class38_Sub1.aLong1737 = Class51.username.method162(i ^ ~0x304e);
 					int nameHash = (int) (l >> 16 & 0x1fL);
-					client.secureBuffer.pos = 0;
-					client.secureBuffer.putByte(14);
-					client.secureBuffer.putByte(nameHash);
-					client.worldConnection.write(client.secureBuffer.buffer, 2, (byte) 121);
+					Client.secureBuffer.pos = 0;
+					Client.secureBuffer.putByte(14);
+					Client.secureBuffer.putByte(nameHash);
+					Client.worldConnection.write(Client.secureBuffer.buffer, 2, (byte) 121);
 					Class9.loginState = 3;
 					Class15.inputStream.pos = 0;
 				}
@@ -78,7 +78,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 						Class38_Sub6.aClass77_1857.method552();
 					if (Class38_Sub7.aClass77_2025 != null)
 						Class38_Sub7.aClass77_2025.method552();
-					int handshakeResponse = client.worldConnection.read(i ^ -13075);
+					int handshakeResponse = Client.worldConnection.read(i ^ -13075);
 					if (Class38_Sub6.aClass77_1857 != null)
 						Class38_Sub6.aClass77_1857.method552();
 					if (Class38_Sub7.aClass77_2025 != null)
@@ -92,11 +92,11 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 				}
 				if (Class9.loginState == 4) {
 					if (Class15.inputStream.pos < 8) {
-						int i_2_ = client.worldConnection.avaliable((byte) 116);
+						int i_2_ = Client.worldConnection.avaliable((byte) 116);
 						if (i_2_ > -Class15.inputStream.pos + 8)
 							i_2_ = 8 - Class15.inputStream.pos;
 						if (i_2_ > 0) {
-							client.worldConnection.method290(113, Class15.inputStream.pos, Class15.inputStream.buffer, i_2_);
+							Client.worldConnection.method290(113, Class15.inputStream.pos, Class15.inputStream.buffer, i_2_);
 							Class15.inputStream.pos += i_2_;
 						}
 					}
@@ -108,26 +108,26 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					}
 				}
 				if (Class9.loginState == 5) {
-					client.secureBuffer.pos = 0;
+					Client.secureBuffer.pos = 0;
 					int[] isaacKeys = new int[4];
 					isaacKeys[0] = (int) (Math.random() * 9.9999999E7);
 					isaacKeys[1] = (int) (Math.random() * 9.9999999E7);
 					isaacKeys[2] = (int) (Class5.sessionKey >> 32);
 					isaacKeys[3] = (int) Class5.sessionKey;
-					client.secureBuffer.putByte(10);
-					client.secureBuffer.putInt(isaacKeys[0]);
-					client.secureBuffer.putInt(isaacKeys[1]);
-					client.secureBuffer.putInt(isaacKeys[2]);
-					client.secureBuffer.putInt(isaacKeys[3]);
-					client.secureBuffer.writeLong(Class51.username.method162(0));
-					client.secureBuffer.writeString(Class51.password, (byte) -114);
-					client.secureBuffer.encryptRSA(true, Class26.aBigInteger599, Class78.aBigInteger1553);
+					Client.secureBuffer.putByte(10);
+					Client.secureBuffer.putInt(isaacKeys[0]);
+					Client.secureBuffer.putInt(isaacKeys[1]);
+					Client.secureBuffer.putInt(isaacKeys[2]);
+					Client.secureBuffer.putInt(isaacKeys[3]);
+					Client.secureBuffer.writeLong(Class51.username.method162(0));
+					Client.secureBuffer.writeString(Class51.password, (byte) -114);
+					Client.secureBuffer.encryptRSA(true, Class26.aBigInteger599, Class78.aBigInteger1553);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.pos = 0;
 					if (Class48.anInt1069 == 40)
 						Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(18);
 					else
 						Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(16);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(client.secureBuffer.pos + 93);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(Client.secureBuffer.pos + 93);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(468);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(Class38_Sub4.aBool1811 ? 1 : 0);
 					Node.writeUID(Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843);
@@ -147,16 +147,16 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(Class13.indexFonts.crc);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(Class5.indexVarbits.crc);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(Node.indexInstruments.crc);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putBytes(client.secureBuffer.pos, client.secureBuffer.buffer);
-					client.worldConnection.write(Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.buffer, Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.pos, (byte) 126);
-					client.secureBuffer.method792(isaacKeys);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putBytes(Client.secureBuffer.pos, Client.secureBuffer.buffer);
+					Client.worldConnection.write(Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.buffer, Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.pos, (byte) 126);
+					Client.secureBuffer.method792(isaacKeys);
 					for (int i_3_ = 0; i_3_ < 4; i_3_++)
 						isaacKeys[i_3_] += 50;
 					Class15.inputStream.method792(isaacKeys);
 					Class9.loginState = 6;
 				}
-				if (Class9.loginState == 6 && client.worldConnection.avaliable((byte) 127) > 0) {
-					int i_4_ = client.worldConnection.read(860);
+				if (Class9.loginState == 6 && Client.worldConnection.avaliable((byte) 127) > 0) {
+					int i_4_ = Client.worldConnection.read(860);
 					if (i_4_ == 21 && Class48.anInt1069 == 20)
 						Class9.loginState = 7;
 					else if (i_4_ != 2) {
@@ -174,8 +174,8 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					} else
 						Class9.loginState = 9;
 				}
-				if (Class9.loginState == 7 && client.worldConnection.avaliable((byte) 127) > 0) {
-					Class74.anInt1451 = client.worldConnection.read(i + 13227) * 60 + 180;
+				if (Class9.loginState == 7 && Client.worldConnection.avaliable((byte) 127) > 0) {
+					Class74.anInt1451 = Client.worldConnection.read(i + 13227) * 60 + 180;
 					Class9.loginState = 8;
 				}
 				if (Class9.loginState == 8) {
@@ -184,25 +184,25 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					if (--Class74.anInt1451 <= 0)
 						Class9.loginState = 0;
 				} else {
-					if (Class9.loginState == 9 && client.worldConnection.avaliable((byte) 116) >= 8) {
-						Class32.anInt772 = client.worldConnection.read(i + 13227);
-						client.flagged = client.worldConnection.read(860) == 1;
-						Class38_Sub9.anInt2067 = client.worldConnection.read(i ^ ~0x3312);
+					if (Class9.loginState == 9 && Client.worldConnection.avaliable((byte) 116) >= 8) {
+						Class32.anInt772 = Client.worldConnection.read(i + 13227);
+						Client.flagged = Client.worldConnection.read(860) == 1;
+						Class38_Sub9.anInt2067 = Client.worldConnection.read(i ^ ~0x3312);
 						Class38_Sub9.anInt2067 <<= 8;
-						Class38_Sub9.anInt2067 += client.worldConnection.read(i + 13227);
-						Class15.anInt272 = client.worldConnection.read(860);
-						client.worldConnection.method290(123, 0, Class15.inputStream.buffer, 1);
+						Class38_Sub9.anInt2067 += Client.worldConnection.read(i + 13227);
+						Class15.anInt272 = Client.worldConnection.read(860);
+						Client.worldConnection.method290(123, 0, Class15.inputStream.buffer, 1);
 						Class15.inputStream.pos = 0;
 						Class23.packetId = Class15.inputStream.getOpcode();
-						client.worldConnection.method290(127, 0, Class15.inputStream.buffer, 2);
+						Client.worldConnection.method290(127, 0, Class15.inputStream.buffer, 2);
 						Class15.inputStream.pos = 0;
 						Entity.anInt3446 = Class15.inputStream.readUnsignedShortLE();
 						Class9.loginState = 10;
 					}
 					if (Class9.loginState == 10) {
-						if (client.worldConnection.avaliable((byte) 127) >= Entity.anInt3446) {
+						if (Client.worldConnection.avaliable((byte) 127) >= Entity.anInt3446) {
 							Class15.inputStream.pos = 0;
-							client.worldConnection.method290(114, 0, Class15.inputStream.buffer, Entity.anInt3446);
+							Client.worldConnection.method290(114, 0, Class15.inputStream.buffer, Entity.anInt3446);
 							Projectile.initializePlayer(0);
 							ItemDefinition.anInt2801 = -1;
 							Class38_Sub20_Sub17.sendMapRegion(false, (byte) 87);
@@ -364,7 +364,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					if (class38_sub20_sub3_sub7_sub2.aClass19_3467.method163(54, 0) == 126) {
 						class38_sub20_sub3_sub7_sub2.aClass19_3467 = class38_sub20_sub3_sub7_sub2.aClass19_3467.method171((byte) -115, 1);
 						Class62.method464(class38_sub20_sub3_sub7_sub2.aClass19_3467, 2, class38_sub20_sub3_sub7_sub2.name);
-					} else if (class38_sub20_sub3_sub7_sub2 == client.myPlayer)
+					} else if (class38_sub20_sub3_sub7_sub2 == Client.myPlayer)
 						Class62.method464(class38_sub20_sub3_sub7_sub2.aClass19_3467, 2, class38_sub20_sub3_sub7_sub2.name);
 					class38_sub20_sub3_sub7_sub2.anInt3452 = 150;
 					class38_sub20_sub3_sub7_sub2.anInt3495 = 0;

@@ -68,7 +68,7 @@ final class Class80 {
 				Class80.aClass19_1601 = null;
 				Class80.aClass19_1610 = null;
 				Class80.aClass19_1587 = null;
-				client.atInventoryInterfaceType = null;
+				Client.atInventoryInterfaceType = null;
 				Class80.aClass19_1612 = null;
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -111,10 +111,10 @@ final class Class80 {
 			if (Class3.anInt44 < 310) {
 				int i_7_ = Class11.anInt208 >> 7;
 				int i_8_ = Class2.anInt30 >> 7;
-				if ((Class82.aByteArrayArrayArray1648[client.height][i_7_][i_8_] & 0x4) != 0)
-					i_6_ = client.height;
-				int i_9_ = client.myPlayer.anInt3493 >> 7;
-				int i_10_ = client.myPlayer.anInt3444 >> 7;
+				if ((Class82.aByteArrayArrayArray1648[Client.height][i_7_][i_8_] & 0x4) != 0)
+					i_6_ = Client.height;
+				int i_9_ = Client.myPlayer.anInt3493 >> 7;
+				int i_10_ = Client.myPlayer.anInt3444 >> 7;
 				int i_11_;
 				if (i_7_ < i_9_)
 					i_11_ = -i_7_ + i_9_;
@@ -134,16 +134,16 @@ final class Class80 {
 								i_7_--;
 						} else
 							i_7_++;
-						if ((Class82.aByteArrayArrayArray1648[client.height][i_7_][i_8_] & 0x4) != 0)
-							i_6_ = client.height;
+						if ((Class82.aByteArrayArrayArray1648[Client.height][i_7_][i_8_] & 0x4) != 0)
+							i_6_ = Client.height;
 						i_14_ += i_13_;
 						if (i_14_ >= 65536) {
 							if (i_10_ > i_8_)
 								i_8_++;
 							else if (i_10_ < i_8_)
 								i_8_--;
-							if ((Class82.aByteArrayArrayArray1648[client.height][i_7_][i_8_] & 0x4) != 0)
-								i_6_ = client.height;
+							if ((Class82.aByteArrayArrayArray1648[Client.height][i_7_][i_8_] & 0x4) != 0)
+								i_6_ = Client.height;
 							i_14_ -= 65536;
 						}
 					}
@@ -157,8 +157,8 @@ final class Class80 {
 						} else
 							i_8_++;
 						i_16_ += i_15_;
-						if ((Class82.aByteArrayArrayArray1648[client.height][i_7_][i_8_] & 0x4) != 0)
-							i_6_ = client.height;
+						if ((Class82.aByteArrayArrayArray1648[Client.height][i_7_][i_8_] & 0x4) != 0)
+							i_6_ = Client.height;
 						if (i_16_ >= 65536) {
 							if (i_7_ >= i_9_) {
 								if (i_7_ > i_9_)
@@ -166,14 +166,14 @@ final class Class80 {
 							} else
 								i_7_++;
 							i_16_ -= 65536;
-							if ((Class82.aByteArrayArrayArray1648[client.height][i_7_][i_8_] & 0x4) != 0)
-								i_6_ = client.height;
+							if ((Class82.aByteArrayArrayArray1648[Client.height][i_7_][i_8_] & 0x4) != 0)
+								i_6_ = Client.height;
 						}
 					}
 				}
 			}
-			if ((Class82.aByteArrayArrayArray1648[client.height][client.myPlayer.anInt3493 >> 7][client.myPlayer.anInt3444 >> 7] & 0x4) != 0)
-				i_6_ = client.height;
+			if ((Class82.aByteArrayArrayArray1648[Client.height][Client.myPlayer.anInt3493 >> 7][Client.myPlayer.anInt3444 >> 7] & 0x4) != 0)
+				i_6_ = Client.height;
 			return i_6_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ad.C(" + 3 + ')');

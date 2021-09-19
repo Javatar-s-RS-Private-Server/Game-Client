@@ -90,7 +90,7 @@ final class Class74 {
 				if (class19.method174((byte) 125, Class53.aClass19Array1173[i_35_]))
 					return true;
 			int i_36_ = -43 % ((-28 - i) / 45);
-			return class19.method174((byte) 103, client.myPlayer.name);
+			return class19.method174((byte) 103, Client.myPlayer.name);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "qf.B(" + i + ',' + (class19 != null ? "{...}" : "null") + ')');
 		}

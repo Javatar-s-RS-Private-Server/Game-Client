@@ -24,7 +24,7 @@ final class Class38_Sub14 extends Node {
 	static {
 		Class38_Sub14.anObject2126 = new Object();
 		Class38_Sub14.aClass83_2130 = new Class83(64);
-		client.holdingArrowKeys = false;
+		Client.holdingArrowKeys = false;
 		Class38_Sub14.aClass19_2140 = RSString.createRSString("Einloggen");
 		Class38_Sub14.aClass19_2135 = RSString.createRSString("Unexpected loginserver response)3");
 		Class38_Sub14.aByte2141 = (byte) 0;

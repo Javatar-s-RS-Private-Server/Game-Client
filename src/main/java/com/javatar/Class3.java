@@ -152,7 +152,7 @@ final class Class3 {
 				return Double.TYPE;
 			if (string.equals("C"))
 				return Character.TYPE;
-			return Class.forName(string);
+			return Class.forName("com.javatar." + string);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "gb.B(" + (string != null ? "{...}" : "null") + ',' + i + ')');
 		}

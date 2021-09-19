@@ -57,7 +57,7 @@ final class Class38_Sub20_Sub3_Sub5 extends SceneModel {
 				Class38_Sub20_Sub12.anInt3002 = -1;
 				Class29.anInt703 = -1;
 			} else {
-				int i_3_ = -i_2_ + Class35.method317(-5736, client.height, i_1_, i);
+				int i_3_ = -i_2_ + Class35.method317(-5736, Client.height, i_1_, i);
 				i -= Class2.anInt30;
 				int i_4_ = Class38_Sub20_Sub9_Sub4.anIntArray3520[Class3.anInt44];
 				i_3_ -= Class38_Sub18.anInt2209;

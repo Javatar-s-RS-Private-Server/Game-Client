@@ -54,14 +54,14 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 				Class38_Sub17.anInt2193 = regionX;
 				Canvas_Sub1.method808(0, 25);
 				Class53.method409(Class2.aClass19_39, 16777215, true);
-				int baseY = client.currentBaseY;
-				client.currentBaseY = regionY * 8 - 48;
-				int i_6_ = client.currentBaseX;
-				client.currentBaseX = (regionX - 6) * 8;
-				int i_7_ = -baseY + client.currentBaseY;
-				baseY = client.currentBaseY;
-				int i_8_ = -i_6_ + client.currentBaseX;
-				i_6_ = client.currentBaseX;
+				int baseY = Client.currentBaseY;
+				Client.currentBaseY = regionY * 8 - 48;
+				int i_6_ = Client.currentBaseX;
+				Client.currentBaseX = (regionX - 6) * 8;
+				int i_7_ = -baseY + Client.currentBaseY;
+				baseY = Client.currentBaseY;
+				int i_8_ = -i_6_ + Client.currentBaseX;
+				i_6_ = Client.currentBaseX;
 				for (int i_9_ = 0; i_9_ < 32768; i_9_++) {
 					NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_9_];
 					if (class38_sub20_sub3_sub7_sub1 != null) {
@@ -84,8 +84,8 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 						class38_sub20_sub3_sub7_sub2.anInt3444 -= i_8_ * 128;
 					}
 				}
-				client.height = height;
-				client.myPlayer.updatePosition(localX, localY, false);
+				Client.height = height;
+				Client.myPlayer.updatePosition(localX, localY, false);
 				int i_13_ = 0;
 				int i_14_ = 104;
 				int i_15_ = 1;
@@ -120,9 +120,9 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 					if (class38_sub21.anInt2267 < 0 || class38_sub21.anInt2282 < 0 || class38_sub21.anInt2267 >= 104 || class38_sub21.anInt2282 >= 104)
 						class38_sub21.method330(0);
 				}
-				if (client.destX != 0) {
-					client.destX -= i_7_;
-					client.destY -= i_8_;
+				if (Client.destX != 0) {
+					Client.destX -= i_7_;
+					Client.destY -= i_8_;
 				}
 				Class38_Sub21.aBool2280 = false;
 				Class38_Sub20_Sub10.anInt2910 = 0;
@@ -143,16 +143,16 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 					Class38_Sub20_Sub13.method993(-64);
 				if (Class53.anInt1165 < 0) {
 					for (int i_24_ = 0; i_24_ < 112; i_24_++)
-						client.heldKeys[i_24_] = false;
+						Client.heldKeys[i_24_] = false;
 					Class53.anInt1165 = Class77.anInt1519;
 				} else
 					while (Class77.anInt1519 != Class53.anInt1165) {
 						int i_25_ = Class38_Sub20_Sub17.anIntArray3112[Class77.anInt1519];
 						Class77.anInt1519 = Class77.anInt1519 + 1 & 0x7f;
 						if (i_25_ >= 0)
-							client.heldKeys[i_25_] = true;
+							Client.heldKeys[i_25_] = true;
 						else
-							client.heldKeys[i_25_ ^ 0xffffffff] = false;
+							Client.heldKeys[i_25_ ^ 0xffffffff] = false;
 					}
 				Class38_Sub12.anInt2116 = ItemDefinition.anInt2775;
 			}

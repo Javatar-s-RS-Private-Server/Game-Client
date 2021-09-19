@@ -25,7 +25,7 @@ final class Class64 {
 			Class64.aClass38_Sub20_Sub9_Sub2_1359 = null;
 			Class64.anIntArray1356 = null;
 			int i_0_ = -44 / ((61 - i) / 34);
-			client.myPlayer = null;
+			Client.myPlayer = null;
 			Class64.aClass19_1362 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ce.A(" + i + ')');
@@ -95,11 +95,11 @@ final class Class64 {
 							else {
 								int i_3_ = (Class77.anIntArray1531[i] & 0xff) * 128;
 								int i_4_ = (Class77.anIntArray1531[i] & 0xffc8e2) >> 16;
-								int i_5_ = i_4_ * 128 + 64 - client.myPlayer.anInt3493;
+								int i_5_ = i_4_ * 128 + 64 - Client.myPlayer.anInt3493;
 								if (i_5_ < 0)
 									i_5_ = -i_5_;
 								int i_6_ = Class77.anIntArray1531[i] >> 8 & 0xff;
-								int i_7_ = -client.myPlayer.anInt3444 + i_6_ * 128 + 64;
+								int i_7_ = -Client.myPlayer.anInt3444 + i_6_ * 128 + 64;
 								if (i_7_ < 0)
 									i_7_ = -i_7_;
 								int i_8_ = i_7_ + i_5_ - 128;

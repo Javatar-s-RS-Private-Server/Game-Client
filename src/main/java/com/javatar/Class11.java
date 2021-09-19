@@ -72,7 +72,7 @@ final class Class11 {
 		try {
 			Class11.aClass19_206 = null;
 			Class11.aClass19_210 = null;
-			client.clippingHeights = null;
+			Client.clippingHeights = null;
 			Class11.aClass17_213 = null;
 			Class11.aClass19_203 = null;
 			Class11.aClass19_207 = null;

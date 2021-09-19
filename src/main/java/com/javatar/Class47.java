@@ -41,8 +41,8 @@ final class Class47 implements Runnable {
 	static final void method381() {
 		do {
 			try {
-				if (!client.heldKeys[98]) {
-					if (client.heldKeys[99])
+				if (!Client.heldKeys[98]) {
+					if (Client.heldKeys[99])
 						Class48.anInt1076 += (-12 - Class48.anInt1076) / 2;
 					else
 						Class48.anInt1076 /= 2;
@@ -53,15 +53,15 @@ final class Class47 implements Runnable {
 					Class38_Sub20_Sub11.anInt2958 = 128;
 				if (Class38_Sub20_Sub11.anInt2958 > 383)
 					Class38_Sub20_Sub11.anInt2958 = 383;
-				if (client.heldKeys[96])
+				if (Client.heldKeys[96])
 					Class38_Sub20_Sub2.anInt2532 += (-Class38_Sub20_Sub2.anInt2532 - 24) / 2;
-				else if (!client.heldKeys[97])
+				else if (!Client.heldKeys[97])
 					Class38_Sub20_Sub2.anInt2532 /= 2;
 				else
 					Class38_Sub20_Sub2.anInt2532 += (-Class38_Sub20_Sub2.anInt2532 + 24) / 2;
 				Class38_Sub20_Sub11.anInt2930 = Class38_Sub20_Sub11.anInt2930 + Class38_Sub20_Sub2.anInt2532 / 2 & 0x7ff;
-				int i = Class38_Sub20_Sub11.anInt2943 + client.myPlayer.anInt3493;
-				int i_0_ = NodeSub.anInt2257 + client.myPlayer.anInt3444;
+				int i = Class38_Sub20_Sub11.anInt2943 + Client.myPlayer.anInt3493;
+				int i_0_ = NodeSub.anInt2257 + Client.myPlayer.anInt3444;
 				if (Class38_Sub20_Sub14.anInt3037 - i < -500 || -i + Class38_Sub20_Sub14.anInt3037 > 500 || Class38_Sub3.anInt1780 - i_0_ < -500 || Class38_Sub3.anInt1780 - i_0_ > 500) {
 					Class38_Sub3.anInt1780 = i_0_;
 					Class38_Sub20_Sub14.anInt3037 = i;
@@ -73,11 +73,11 @@ final class Class47 implements Runnable {
 				int i_1_ = Class38_Sub20_Sub14.anInt3037 >> 7;
 				int i_2_ = 0;
 				int i_3_ = Class38_Sub3.anInt1780 >> 7;
-				int i_4_ = Class35.method317(-5736, client.height, Class38_Sub20_Sub14.anInt3037, Class38_Sub3.anInt1780);
+				int i_4_ = Class35.method317(-5736, Client.height, Class38_Sub20_Sub14.anInt3037, Class38_Sub3.anInt1780);
 				if (i_1_ > 3 && i_3_ > 3 && i_1_ < 100 && i_3_ < 100)
 					for (int i_5_ = i_1_ - 4; i_5_ <= i_1_ + 4; i_5_++)
 						for (int i_6_ = i_3_ - 4; i_6_ <= i_3_ + 4; i_6_++) {
-							int i_7_ = client.height;
+							int i_7_ = Client.height;
 							if (i_7_ < 3 && (Class82.aByteArrayArrayArray1648[1][i_5_][i_6_] & 0x2) == 2)
 								i_7_++;
 							int i_8_ = i_4_ - Player.anIntArrayArrayArray3566[i_7_][i_5_][i_6_];
@@ -106,7 +106,7 @@ final class Class47 implements Runnable {
 
 	public static void method382(boolean bool) {
 		try {
-			client.mouseRecorder = null;
+			Client.mouseRecorder = null;
 			Class47.aClass19_1045 = null;
 			Class47.anIntArray1055 = null;
 			Class47.aClass19_1052 = null;
@@ -150,10 +150,10 @@ final class Class47 implements Runnable {
 				Class45.anInt1015 = Class17_Sub1.anInt1712;
 				if (i != -18075)
 					Class47.method384(121);
-				client.lastMouseAction = Class15.anInt277;
+				Client.lastMouseAction = Class15.anInt277;
 				Class73.anInt1429 = Class26.anInt613;
 				RS2Buffer.anInt2416 = Class38_Sub10_Sub1.anInt2627;
-				client.lastClickTime = PlayerAppearance.aLong414;
+				Client.lastClickTime = PlayerAppearance.aLong414;
 				Class15.anInt277 = 0;
 			}
 		} catch (RuntimeException runtimeexception) {

@@ -9,7 +9,7 @@ final class Class38_Sub20_Sub7 extends NodeSub {
 	static RSString aClass19_2853;
 
 	static {
-		client.mouseIdleTime = 0;
+		Client.mouseIdleTime = 0;
 		Class38_Sub20_Sub7.aClass19_2853 = RSString.createRSString("<col=ffffff>");
 	}
 

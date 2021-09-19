@@ -17,7 +17,7 @@ final class Class37 {
 	static boolean aBool880;
 
 	static {
-		client.systemUpdateTime = 0;
+		Client.systemUpdateTime = 0;
 		Class37.aClass19_876 = RSString.createRSString("<col=40ff00>");
 		Class37.aClass61Array872 = new Class61[50];
 		Class37.aClass19Array865 = new RSString[500];
@@ -84,7 +84,7 @@ final class Class37 {
 			for (int i_7_ = -1; i_7_ < ItemDefinition.anInt2783 + Class4.anInt87; i_7_++) {
 				Entity class38_sub20_sub3_sub7;
 				if (i_7_ == -1)
-					class38_sub20_sub3_sub7 = client.myPlayer;
+					class38_sub20_sub3_sub7 = Client.myPlayer;
 				else if (i_7_ < ItemDefinition.anInt2783)
 					class38_sub20_sub3_sub7 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[Class47.anIntArray1055[i_7_]];
 				else
@@ -172,7 +172,7 @@ final class Class37 {
 									Class38_Sub20_Sub12.anInt3002 -= 10;
 								}
 								Class17.aClass38_Sub20_Sub9_Sub3Array391[class38_sub20_sub3_sub7.hitMarkTypes[i_10_]].method1105(Class29.anInt703 + i_5_ - 12, Class38_Sub20_Sub12.anInt3002 + i_4_ - 12);
-								client.aClass38_Sub20_Sub9_Sub1_Sub1_3656.method1086(RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7.hitValues[i_10_], (byte) -87 ^ ~0x56), i_5_ + Class29.anInt703 - 1, i_4_ + Class38_Sub20_Sub12.anInt3002 + 3, 16777215, 0);
+								Client.aClass38_Sub20_Sub9_Sub1_Sub1_3656.method1086(RuntimeException_Sub1.method1098(class38_sub20_sub3_sub7.hitValues[i_10_], (byte) -87 ^ ~0x56), i_5_ + Class29.anInt703 - 1, i_4_ + Class38_Sub20_Sub12.anInt3002 + 3, 16777215, 0);
 							}
 						}
 				}
