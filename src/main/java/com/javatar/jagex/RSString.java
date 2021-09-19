@@ -176,7 +176,7 @@ final class RSString implements Interface2 {
 			for (int i_20_ = 0; i_20_ < Class38_Sub20_Sub15.anInt3064; i_20_++) {
 				int i_21_ = ItemDefinition.anIntArray2797[i_20_];
 				NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_21_];
-				int i_22_ = Class15.inputStream.getUByte();
+				int i_22_ = Class15.inputStream.readUnsignedByte();
 				if ((i_22_ & 0x1) != 0) {
 					class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543 = Class38_Sub20_Sub3_Sub4.method1156(-99, Class15.inputStream.getULEShort());
 					((Entity) class38_sub20_sub3_sub7_sub1).turn90CCAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2712;
@@ -207,7 +207,7 @@ final class RSString implements Interface2 {
 					class38_sub20_sub3_sub7_sub1.addHit(Class45.anInt1016, i_25_, i_24_);
 					((Entity) class38_sub20_sub3_sub7_sub1).hitCycle = Class45.anInt1016 + 300;
 					((Entity) class38_sub20_sub3_sub7_sub1).anInt3501 = Class15.inputStream.method741(67);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.method756(13285);
+					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.readUnsignedByteC(13285);
 				}
 				if ((i_22_ & 0x40) != 0) {
 					((Entity) class38_sub20_sub3_sub7_sub1).aClass19_3467 = Class15.inputStream.getUShort(1347418632);
@@ -219,12 +219,12 @@ final class RSString implements Interface2 {
 						((Entity) class38_sub20_sub3_sub7_sub1).anInt3502 = -1;
 				}
 				if ((i_22_ & 0x80) != 0) {
-					int i_26_ = Class15.inputStream.getUByte();
+					int i_26_ = Class15.inputStream.readUnsignedByte();
 					int i_27_ = Class15.inputStream.method741(64);
 					class38_sub20_sub3_sub7_sub1.addHit(Class45.anInt1016, i_27_, i_26_);
 					((Entity) class38_sub20_sub3_sub7_sub1).hitCycle = Class45.anInt1016 + 300;
 					((Entity) class38_sub20_sub3_sub7_sub1).anInt3501 = Class15.inputStream.method741(100);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.getUByte();
+					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.readUnsignedByte();
 				}
 				if ((i_22_ & 0x10) != 0) {
 					int i_28_ = Class15.inputStream.method740((byte) 113);
@@ -569,7 +569,7 @@ final class RSString implements Interface2 {
 				if (Class13.aClass14_238 == null)
 					Class13.aClass14_238 = new Class14(4096);
 				else
-					for (Class38_Sub12 class38_sub12 = (Class38_Sub12) Class13.aClass14_238.method75(l, (byte) -106); class38_sub12 != null; class38_sub12 = (Class38_Sub12) Class13.aClass14_238.method81((byte) -36))
+					for (Class38_Sub12 class38_sub12 = (Class38_Sub12) Class13.aClass14_238.method75(l); class38_sub12 != null; class38_sub12 = (Class38_Sub12) Class13.aClass14_238.method81((byte) -36))
 						if (method175(true, class38_sub12.aClass19_2109))
 							return class38_sub12.aClass19_2109;
 				Class38_Sub12 class38_sub12 = new Class38_Sub12();
@@ -997,31 +997,31 @@ final class RSString implements Interface2 {
 			Class38_Sub20_Sub10 class38_sub20_sub10 = (Class38_Sub20_Sub10) Class38_Sub2.aClass83_1757.method591(-28825, i);
 			if (class38_sub20_sub10 != null)
 				return class38_sub20_sub10;
-			byte[] is = Class38_Sub1.aClass17_Sub1_1724.method109(i, 0, -118);
+			byte[] is = Class38_Sub1.aClass17_Sub1_1724.getFileData(i, 0, -118);
 			if (is == null)
 				return null;
 			class38_sub20_sub10 = new Class38_Sub20_Sub10();
 			RS2Buffer class38_sub23 = new RS2Buffer(is);
 			int i_125_ = 0;
 			class38_sub23.pos = class38_sub23.buffer.length - 12;
-			int i_126_ = class38_sub23.method759(bool);
-			class38_sub20_sub10.anInt2892 = class38_sub23.getUShort();
-			class38_sub20_sub10.anInt2897 = class38_sub23.getUShort();
-			class38_sub20_sub10.anInt2900 = class38_sub23.getUShort();
-			class38_sub20_sub10.anInt2896 = class38_sub23.getUShort();
+			int i_126_ = class38_sub23.readInt(bool);
+			class38_sub20_sub10.anInt2892 = class38_sub23.readUnsignedShort();
+			class38_sub20_sub10.anInt2897 = class38_sub23.readUnsignedShort();
+			class38_sub20_sub10.anInt2900 = class38_sub23.readUnsignedShort();
+			class38_sub20_sub10.anInt2896 = class38_sub23.readUnsignedShort();
 			class38_sub23.pos = 0;
 			class38_sub20_sub10.aClass19_2894 = class38_sub23.method728((byte) 32);
 			class38_sub20_sub10.anIntArray2898 = new int[i_126_];
 			class38_sub20_sub10.aClass19Array2901 = new RSString[i_126_];
 			class38_sub20_sub10.anIntArray2903 = new int[i_126_];
 			while (class38_sub23.buffer.length - 12 > class38_sub23.pos) {
-				int i_127_ = class38_sub23.getUShort();
+				int i_127_ = class38_sub23.readUnsignedShort();
 				if (i_127_ == 3)
 					class38_sub20_sub10.aClass19Array2901[i_125_] = class38_sub23.getUShort(1347418632);
 				else if (i_127_ >= 100 || i_127_ == 21 || i_127_ == 38 || i_127_ == 39)
-					class38_sub20_sub10.anIntArray2903[i_125_] = class38_sub23.getUByte();
+					class38_sub20_sub10.anIntArray2903[i_125_] = class38_sub23.readUnsignedByte();
 				else
-					class38_sub20_sub10.anIntArray2903[i_125_] = class38_sub23.method759(bool);
+					class38_sub20_sub10.anIntArray2903[i_125_] = class38_sub23.readInt(bool);
 				class38_sub20_sub10.anIntArray2898[i_125_++] = i_127_;
 			}
 			Class38_Sub2.aClass83_1757.method590(i, (byte) -119, class38_sub20_sub10);

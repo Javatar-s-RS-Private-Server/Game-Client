@@ -47,13 +47,13 @@ final class Class38_Sub4 extends Node {
 						if (i_0_ != 1) {
 							int i_1_ = Class23.anInt543;
 							int i_2_ = Class45.anInt1015;
-							if (Class38_Sub6.anInt1976 - 10 > i_1_ || i_1_ > Class38_Sub6.anInt1976 + Class3.anInt66 + 10 || Class38_Sub20_Sub13.anInt3011 - 10 > i_2_ || i_2_ > Class38_Sub20_Sub13.anInt3011 + Class38_Sub20_Sub2.anInt2540 + 10) {
+							if (WidgetComponent.anInt1976 - 10 > i_1_ || i_1_ > WidgetComponent.anInt1976 + Class3.anInt66 + 10 || Class38_Sub20_Sub13.anInt3011 - 10 > i_2_ || i_2_ > Class38_Sub20_Sub13.anInt3011 + Class38_Sub20_Sub2.anInt2540 + 10) {
 								SceneModel.aBool2553 = false;
-								ItemDefinition.method931(106, Class38_Sub6.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
+								ItemDefinition.method931(106, WidgetComponent.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
 							}
 						}
 						if (i_0_ == 1) {
-							int i_3_ = Class38_Sub6.anInt1976;
+							int i_3_ = WidgetComponent.anInt1976;
 							int i_4_ = Class38_Sub20_Sub13.anInt3011;
 							int i_5_ = Class3.anInt66;
 							int i_6_ = Class73.anInt1429;
@@ -67,7 +67,7 @@ final class Class38_Sub4 extends Node {
 							if (i_8_ != -1)
 								Class53.method416(105, i_8_);
 							SceneModel.aBool2553 = false;
-							ItemDefinition.method931(115, Class38_Sub6.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
+							ItemDefinition.method931(115, WidgetComponent.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
 						}
 					} else {
 						if (i_0_ == 1 && Class72.anInt1417 > 0) {
@@ -75,7 +75,7 @@ final class Class38_Sub4 extends Node {
 							if (i_11_ == 38 || i_11_ == 15 || i_11_ == 51 || i_11_ == 18 || i_11_ == 41 || i_11_ == 17 || i_11_ == 30 || i_11_ == 7 || i_11_ == 19 || i_11_ == 35 || i_11_ == 21 || i_11_ == 1004) {
 								int i_12_ = Class38_Sub20_Sub13.anIntArray3015[Class72.anInt1417 - 1];
 								int i_13_ = Class15.anIntArray284[Class72.anInt1417 - 1];
-								Class38_Sub6 class38_sub6 = Projectile.method1167(i_13_, -112);
+								WidgetComponent class38_sub6 = Projectile.method1167(i_13_, -112);
 								if (Class53.method415((byte) 52, Class30.method283(-126, class38_sub6)) || Class37.method322(16777215, Class30.method283(-118, class38_sub6))) {
 									Class10.anInt188 = 0;
 									Class52.aBool1143 = false;
@@ -136,8 +136,8 @@ final class Class38_Sub4 extends Node {
 		try {
 			if (i_17_ < 6)
 				Class38_Sub4.method628(null, 36, 19, -85, false, 21);
-			if (Class22.method196(i, -18020))
-				Canvas_Sub1.method811((byte) 40, Class62.aClass38_Sub6ArrayArray1339[i], i_16_);
+			if (Class22.loadWidget(i))
+				Canvas_Sub1.method811((byte) 40, Class62.widgets[i], i_16_);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "wa.A(" + i + ',' + i_16_ + ',' + i_17_ + ')');
 		}

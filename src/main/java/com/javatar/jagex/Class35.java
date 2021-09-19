@@ -83,11 +83,11 @@ final class Class35 {
 						byte[] is = Class73_Sub2.aClass55_2303.method426(false);
 						if (is != null) {
 							RS2Buffer class38_sub23 = new RS2Buffer(is);
-							Class49.anInt1089 = class38_sub23.getUShort();
+							Class49.anInt1089 = class38_sub23.readUnsignedShort();
 							Sequence.aClass4Array2736 = new Class4[Class49.anInt1089];
 							for (int i_0_ = 0; Class49.anInt1089 > i_0_; i_0_++) {
 								Class4 class4 = Sequence.aClass4Array2736[i_0_] = new Class4();
-								int i_1_ = class38_sub23.getUShort();
+								int i_1_ = class38_sub23.readUnsignedShort();
 								class4.anInt86 = i_1_ & 0x7fff;
 								class4.aBool83 = (i_1_ & 0x8000) != 0;
 								class4.aClass19_73 = class38_sub23.getUShort(1347418632);

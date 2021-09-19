@@ -119,20 +119,20 @@ final class Model extends SceneModel {
 		RS2Buffer class38_sub23_10_ = new RS2Buffer(is);
 		RS2Buffer class38_sub23_11_ = new RS2Buffer(is);
 		class38_sub23.pos = is.length - 23;
-		int i = class38_sub23.getUShort();
-		int i_12_ = class38_sub23.getUShort();
-		int i_13_ = class38_sub23.getUByte();
-		int i_14_ = class38_sub23.getUByte();
-		int i_15_ = class38_sub23.getUByte();
-		int i_16_ = class38_sub23.getUByte();
-		int i_17_ = class38_sub23.getUByte();
-		int i_18_ = class38_sub23.getUByte();
-		int i_19_ = class38_sub23.getUByte();
-		int i_20_ = class38_sub23.getUShort();
-		int i_21_ = class38_sub23.getUShort();
-		int i_22_ = class38_sub23.getUShort();
-		int i_23_ = class38_sub23.getUShort();
-		int i_24_ = class38_sub23.getUShort();
+		int i = class38_sub23.readUnsignedShort();
+		int i_12_ = class38_sub23.readUnsignedShort();
+		int i_13_ = class38_sub23.readUnsignedByte();
+		int i_14_ = class38_sub23.readUnsignedByte();
+		int i_15_ = class38_sub23.readUnsignedByte();
+		int i_16_ = class38_sub23.readUnsignedByte();
+		int i_17_ = class38_sub23.readUnsignedByte();
+		int i_18_ = class38_sub23.readUnsignedByte();
+		int i_19_ = class38_sub23.readUnsignedByte();
+		int i_20_ = class38_sub23.readUnsignedShort();
+		int i_21_ = class38_sub23.readUnsignedShort();
+		int i_22_ = class38_sub23.readUnsignedShort();
+		int i_23_ = class38_sub23.readUnsignedShort();
+		int i_24_ = class38_sub23.readUnsignedShort();
 		int i_25_ = 0;
 		int i_26_ = 0;
 		int i_27_ = 0;
@@ -141,7 +141,7 @@ final class Model extends SceneModel {
 			class38_sub23.pos = 0;
 			for (int i_28_ = 0; i_28_ < i_13_; i_28_++) {
 				byte i_29_ = aByteArray3331[i_28_] = class38_sub23
-						.method765((byte) 88);
+						.readByte((byte) 88);
 				if (i_29_ == 0)
 					i_25_++;
 				if (i_29_ >= 1 && i_29_ <= 3)
@@ -248,7 +248,7 @@ final class Model extends SceneModel {
 		int i_53_ = 0;
 		int i_54_ = 0;
 		for (int i_55_ = 0; i_55_ < i; i_55_++) {
-			int i_56_ = class38_sub23.getUByte();
+			int i_56_ = class38_sub23.readUnsignedByte();
 			int i_57_ = 0;
 			if ((i_56_ & 0x1) != 0)
 				i_57_ = class38_sub23_6_.method737(-49152);
@@ -265,7 +265,7 @@ final class Model extends SceneModel {
 			i_53_ = yVertices[i_55_];
 			i_54_ = zVertices[i_55_];
 			if (i_19_ == 1)
-				vertexVSkins[i_55_] = class38_sub23_9_.getUByte();
+				vertexVSkins[i_55_] = class38_sub23_9_.readUnsignedByte();
 		}
 		class38_sub23.pos = i_41_;
 		class38_sub23_6_.pos = i_32_;
@@ -275,22 +275,22 @@ final class Model extends SceneModel {
 		class38_sub23_10_.pos = i_39_;
 		class38_sub23_11_.pos = i_40_;
 		for (int i_60_ = 0; i_60_ < i_12_; i_60_++) {
-			triangleColors[i_60_] = (short) class38_sub23.getUShort();
+			triangleColors[i_60_] = (short) class38_sub23.readUnsignedShort();
 			if (i_14_ == 1)
 				triangleFaceTypes[i_60_] = class38_sub23_6_
-						.method765((byte) 106);
+						.readByte((byte) 106);
 			if (i_15_ == 255)
 				trianglePriorities[i_60_] = class38_sub23_7_
-						.method765((byte) 90);
+						.readByte((byte) 90);
 			if (i_16_ == 1)
 				triangleTransparencies[i_60_] = class38_sub23_8_
-						.method765((byte) 124);
+						.readByte((byte) 124);
 			if (i_17_ == 1)
-				anIntArray3343[i_60_] = class38_sub23_9_.getUByte();
+				anIntArray3343[i_60_] = class38_sub23_9_.readUnsignedByte();
 			if (i_18_ == 1)
-				aShortArray3305[i_60_] = (short) (class38_sub23_10_.getUShort() - 1);
+				aShortArray3305[i_60_] = (short) (class38_sub23_10_.readUnsignedShort() - 1);
 			if (triangleTSkins != null && aShortArray3305[i_60_] != -1)
-				triangleTSkins[i_60_] = (byte) (class38_sub23_11_.getUByte() - 1);
+				triangleTSkins[i_60_] = (byte) (class38_sub23_11_.readUnsignedByte() - 1);
 		}
 		class38_sub23.pos = i_38_;
 		class38_sub23_6_.pos = i_33_;
@@ -299,7 +299,7 @@ final class Model extends SceneModel {
 		int i_63_ = 0;
 		int i_64_ = 0;
 		for (int i_65_ = 0; i_65_ < i_12_; i_65_++) {
-			int i_66_ = class38_sub23_6_.getUByte();
+			int i_66_ = class38_sub23_6_.readUnsignedByte();
 			if (i_66_ == 1) {
 				i_61_ = class38_sub23.method737(-49152) + i_64_;
 				i_64_ = i_61_;
@@ -347,53 +347,53 @@ final class Model extends SceneModel {
 		for (int i_68_ = 0; i_68_ < i_13_; i_68_++) {
 			int i_69_ = aByteArray3331[i_68_] & 0xff;
 			if (i_69_ == 0) {
-				aShortArray3344[i_68_] = (short) class38_sub23.getUShort();
-				aShortArray3318[i_68_] = (short) class38_sub23.getUShort();
-				aShortArray3320[i_68_] = (short) class38_sub23.getUShort();
+				aShortArray3344[i_68_] = (short) class38_sub23.readUnsignedShort();
+				aShortArray3318[i_68_] = (short) class38_sub23.readUnsignedShort();
+				aShortArray3320[i_68_] = (short) class38_sub23.readUnsignedShort();
 			}
 			if (i_69_ == 1) {
-				aShortArray3344[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3318[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3320[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3341[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3321[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3325[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3322[i_68_] = (short) class38_sub23_8_.getUShort();
-				aByteArray3336[i_68_] = class38_sub23_9_.method765((byte) 99);
-				aShortArray3334[i_68_] = (short) class38_sub23_10_.getUShort();
+				aShortArray3344[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3318[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3320[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3341[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3321[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3325[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3322[i_68_] = (short) class38_sub23_8_.readUnsignedShort();
+				aByteArray3336[i_68_] = class38_sub23_9_.readByte((byte) 99);
+				aShortArray3334[i_68_] = (short) class38_sub23_10_.readUnsignedShort();
 			}
 			if (i_69_ == 2) {
-				aShortArray3344[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3318[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3320[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3341[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3321[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3325[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3322[i_68_] = (short) class38_sub23_8_.getUShort();
-				aByteArray3336[i_68_] = class38_sub23_9_.method765((byte) 85);
-				aShortArray3334[i_68_] = (short) class38_sub23_10_.getUShort();
-				aShortArray3319[i_68_] = (short) class38_sub23_10_.getUShort();
+				aShortArray3344[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3318[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3320[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3341[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3321[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3325[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3322[i_68_] = (short) class38_sub23_8_.readUnsignedShort();
+				aByteArray3336[i_68_] = class38_sub23_9_.readByte((byte) 85);
+				aShortArray3334[i_68_] = (short) class38_sub23_10_.readUnsignedShort();
+				aShortArray3319[i_68_] = (short) class38_sub23_10_.readUnsignedShort();
 			}
 			if (i_69_ == 3) {
-				aShortArray3344[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3318[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3320[i_68_] = (short) class38_sub23_6_.getUShort();
-				aShortArray3341[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3321[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3325[i_68_] = (short) class38_sub23_7_.getUShort();
-				aShortArray3322[i_68_] = (short) class38_sub23_8_.getUShort();
-				aByteArray3336[i_68_] = class38_sub23_9_.method765((byte) 91);
-				aShortArray3334[i_68_] = (short) class38_sub23_10_.getUShort();
+				aShortArray3344[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3318[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3320[i_68_] = (short) class38_sub23_6_.readUnsignedShort();
+				aShortArray3341[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3321[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3325[i_68_] = (short) class38_sub23_7_.readUnsignedShort();
+				aShortArray3322[i_68_] = (short) class38_sub23_8_.readUnsignedShort();
+				aByteArray3336[i_68_] = class38_sub23_9_.readByte((byte) 91);
+				aShortArray3334[i_68_] = (short) class38_sub23_10_.readUnsignedShort();
 			}
 		}
 		class38_sub23.pos = i_51_;
-		int i_70_ = class38_sub23.getUByte();
+		int i_70_ = class38_sub23.readUnsignedByte();
 		if (i_70_ != 0) {
 			new Class6();
-			class38_sub23.getUShort();
-			class38_sub23.getUShort();
-			class38_sub23.getUShort();
-			class38_sub23.method759(true);
+			class38_sub23.readUnsignedShort();
+			class38_sub23.readUnsignedShort();
+			class38_sub23.readUnsignedShort();
+			class38_sub23.readInt(true);
 		}
 	}
 
@@ -575,7 +575,7 @@ final class Model extends SceneModel {
 	}
 
 	static final Model get(Class17 class17, int i, int i_116_) {
-		byte[] is = class17.method109(i, i_116_, -68);
+		byte[] is = class17.getFileData(i, i_116_, -68);
 		if (is == null)
 			return null;
 		return new Model(is);
@@ -590,18 +590,18 @@ final class Model extends SceneModel {
 		RS2Buffer class38_sub23_120_ = new RS2Buffer(is);
 		RS2Buffer class38_sub23_121_ = new RS2Buffer(is);
 		class38_sub23.pos = is.length - 18;
-		int i = class38_sub23.getUShort();
-		int i_122_ = class38_sub23.getUShort();
-		int i_123_ = class38_sub23.getUByte();
-		int i_124_ = class38_sub23.getUByte();
-		int i_125_ = class38_sub23.getUByte();
-		int i_126_ = class38_sub23.getUByte();
-		int i_127_ = class38_sub23.getUByte();
-		int i_128_ = class38_sub23.getUByte();
-		int i_129_ = class38_sub23.getUShort();
-		int i_130_ = class38_sub23.getUShort();
-		int i_131_ = class38_sub23.getUShort();
-		int i_132_ = class38_sub23.getUShort();
+		int i = class38_sub23.readUnsignedShort();
+		int i_122_ = class38_sub23.readUnsignedShort();
+		int i_123_ = class38_sub23.readUnsignedByte();
+		int i_124_ = class38_sub23.readUnsignedByte();
+		int i_125_ = class38_sub23.readUnsignedByte();
+		int i_126_ = class38_sub23.readUnsignedByte();
+		int i_127_ = class38_sub23.readUnsignedByte();
+		int i_128_ = class38_sub23.readUnsignedByte();
+		int i_129_ = class38_sub23.readUnsignedShort();
+		int i_130_ = class38_sub23.readUnsignedShort();
+		int i_131_ = class38_sub23.readUnsignedShort();
+		int i_132_ = class38_sub23.readUnsignedShort();
 		int i_133_ = 0;
 		int i_134_ = i_133_;
 		i_133_ += i;
@@ -674,7 +674,7 @@ final class Model extends SceneModel {
 		int i_148_ = 0;
 		int i_149_ = 0;
 		for (int i_150_ = 0; i_150_ < i; i_150_++) {
-			int i_151_ = class38_sub23.getUByte();
+			int i_151_ = class38_sub23.readUnsignedByte();
 			int i_152_ = 0;
 			if ((i_151_ & 0x1) != 0)
 				i_152_ = class38_sub23_118_.method737(-49152);
@@ -691,7 +691,7 @@ final class Model extends SceneModel {
 			i_148_ = yVertices[i_150_];
 			i_149_ = zVertices[i_150_];
 			if (i_128_ == 1)
-				vertexVSkins[i_150_] = class38_sub23_121_.getUByte();
+				vertexVSkins[i_150_] = class38_sub23_121_.readUnsignedByte();
 		}
 		class38_sub23.pos = i_142_;
 		class38_sub23_118_.pos = i_138_;
@@ -699,9 +699,9 @@ final class Model extends SceneModel {
 		class38_sub23_120_.pos = i_140_;
 		class38_sub23_121_.pos = i_137_;
 		for (int i_155_ = 0; i_155_ < i_122_; i_155_++) {
-			triangleColors[i_155_] = (short) class38_sub23.getUShort();
+			triangleColors[i_155_] = (short) class38_sub23.readUnsignedShort();
 			if (i_124_ == 1) {
-				int i_156_ = class38_sub23_118_.getUByte();
+				int i_156_ = class38_sub23_118_.readUnsignedByte();
 				if ((i_156_ & 0x1) == 1) {
 					triangleFaceTypes[i_155_] = (byte) 1;
 					bool = true;
@@ -720,12 +720,12 @@ final class Model extends SceneModel {
 			}
 			if (i_125_ == 255)
 				trianglePriorities[i_155_] = class38_sub23_119_
-						.method765((byte) 82);
+						.readByte((byte) 82);
 			if (i_126_ == 1)
 				triangleTransparencies[i_155_] = class38_sub23_120_
-						.method765((byte) 124);
+						.readByte((byte) 124);
 			if (i_127_ == 1)
-				anIntArray3343[i_155_] = class38_sub23_121_.getUByte();
+				anIntArray3343[i_155_] = class38_sub23_121_.readUnsignedByte();
 		}
 		class38_sub23.pos = i_141_;
 		class38_sub23_118_.pos = i_135_;
@@ -734,7 +734,7 @@ final class Model extends SceneModel {
 		int i_159_ = 0;
 		int i_160_ = 0;
 		for (int i_161_ = 0; i_161_ < i_122_; i_161_++) {
-			int i_162_ = class38_sub23_118_.getUByte();
+			int i_162_ = class38_sub23_118_.readUnsignedByte();
 			if (i_162_ == 1) {
 				i_157_ = class38_sub23.method737(-49152) + i_160_;
 				i_160_ = i_157_;
@@ -776,9 +776,9 @@ final class Model extends SceneModel {
 		class38_sub23.pos = i_143_;
 		for (int i_164_ = 0; i_164_ < i_123_; i_164_++) {
 			aByteArray3331[i_164_] = (byte) 0;
-			aShortArray3344[i_164_] = (short) class38_sub23.getUShort();
-			aShortArray3318[i_164_] = (short) class38_sub23.getUShort();
-			aShortArray3320[i_164_] = (short) class38_sub23.getUShort();
+			aShortArray3344[i_164_] = (short) class38_sub23.readUnsignedShort();
+			aShortArray3318[i_164_] = (short) class38_sub23.readUnsignedShort();
+			aShortArray3320[i_164_] = (short) class38_sub23.readUnsignedShort();
 		}
 		if (triangleTSkins != null) {
 			boolean bool_165_ = false;

@@ -163,9 +163,9 @@ abstract class Class32 {
 
 	abstract int method297(byte i);
 
-	static final Class38_Sub6 method298(Class38_Sub6 class38_sub6, byte i) {
+	static final WidgetComponent method298(WidgetComponent class38_sub6, byte i) {
 		try {
-			Class38_Sub6 class38_sub6_7_ = Class38_Sub10_Sub1.method860(1442844045, class38_sub6);
+			WidgetComponent class38_sub6_7_ = Class38_Sub10_Sub1.method860(1442844045, class38_sub6);
 			int i_8_ = 66 / ((12 - i) / 33);
 			if (class38_sub6_7_ == null)
 				class38_sub6_7_ = class38_sub6.aClass38_Sub6_1937;

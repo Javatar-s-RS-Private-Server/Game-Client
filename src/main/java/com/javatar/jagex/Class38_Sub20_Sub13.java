@@ -171,12 +171,12 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 	Class38_Sub20_Sub13(Class17 class17, Class17 class17_29_, int i, boolean bool) {
 		try {
 			Class13 class13 = new Class13();
-			int i_30_ = class17.method103((byte) 53, i);
+			int i_30_ = class17.getFileCount((byte) 53, i);
 			this.aClass7Array3018 = new Animation[i_30_];
 			int[] is = class17.method110(i, 20);
 			for (int i_31_ = 0; i_31_ < is.length; i_31_++) {
 				Class38_Sub14 class38_sub14 = null;
-				byte[] is_32_ = class17.method109(i, is[i_31_], -104);
+				byte[] is_32_ = class17.getFileData(i, is[i_31_], -104);
 				int i_33_ = (is_32_[0] & 0xff) << -1913906968 | is_32_[1] & 0xff;
 				for (Class38_Sub14 class38_sub14_34_ = (Class38_Sub14) class13.method65(105); class38_sub14_34_ != null; class38_sub14_34_ = (Class38_Sub14) class13.method63(-3))
 					if (i_33_ == class38_sub14_34_.anInt2131) {

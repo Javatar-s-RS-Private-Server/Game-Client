@@ -123,29 +123,29 @@ final class Class38_Sub5 extends Node {
 	}
 
 	Class38_Sub5(RS2Buffer class38_sub23) {
-		this.anInt1843 = class38_sub23.getUShort();
-		this.aBool1842 = class38_sub23.getUByte() == 1;
-		int i = class38_sub23.getUByte();
+		this.anInt1843 = class38_sub23.readUnsignedShort();
+		this.aBool1842 = class38_sub23.readUnsignedByte() == 1;
+		int i = class38_sub23.readUnsignedByte();
 		if (i < 1 || i > 4)
 			throw new RuntimeException();
 		anIntArray1846 = new int[i];
 		for (int i_32_ = 0; i_32_ < i; i_32_++)
-			anIntArray1846[i_32_] = class38_sub23.getUShort();
+			anIntArray1846[i_32_] = class38_sub23.readUnsignedShort();
 		if (i > 1) {
 			anIntArray1847 = new int[i - 1];
 			for (int i_33_ = 0; i_33_ < i - 1; i_33_++)
-				anIntArray1847[i_33_] = class38_sub23.getUByte();
+				anIntArray1847[i_33_] = class38_sub23.readUnsignedByte();
 		}
 		if (i > 1) {
 			anIntArray1845 = new int[i - 1];
 			for (int i_34_ = 0; i_34_ < i - 1; i_34_++)
-				anIntArray1845[i_34_] = class38_sub23.getUByte();
+				anIntArray1845[i_34_] = class38_sub23.readUnsignedByte();
 		}
 		anIntArray1840 = new int[i];
 		for (int i_35_ = 0; i_35_ < i; i_35_++)
-			anIntArray1840[i_35_] = class38_sub23.method759(true);
-		this.anInt1839 = class38_sub23.getUByte();
-		anInt1838 = class38_sub23.getUByte();
+			anIntArray1840[i_35_] = class38_sub23.readInt(true);
+		this.anInt1839 = class38_sub23.readUnsignedByte();
+		anInt1838 = class38_sub23.readUnsignedByte();
 		this.anIntArray1844 = null;
 	}
 }

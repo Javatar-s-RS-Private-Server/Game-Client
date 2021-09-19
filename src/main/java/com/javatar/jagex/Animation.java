@@ -28,12 +28,12 @@ final class Animation {
 		RS2Buffer class38_sub23 = new RS2Buffer(is);
 		RS2Buffer class38_sub23_0_ = new RS2Buffer(is);
 		class38_sub23.pos = 2;
-		int i = class38_sub23.getUByte();
+		int i = class38_sub23.readUnsignedByte();
 		int i_1_ = -1;
 		int i_2_ = 0;
 		class38_sub23_0_.pos = class38_sub23.pos + i;
 		for (int i_3_ = 0; i_3_ < i; i_3_++) {
-			int i_4_ = class38_sub23.getUByte();
+			int i_4_ = class38_sub23.readUnsignedByte();
 			if (i_4_ > 0) {
 				if (this.aClass38_Sub14_132.anIntArray2129[i_3_] != 0)
 					for (int i_5_ = i_3_ - 1; i_5_ > i_1_; i_5_--)

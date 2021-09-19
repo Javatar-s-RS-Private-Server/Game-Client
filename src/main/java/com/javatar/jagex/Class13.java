@@ -12,7 +12,7 @@ final class Class13 {
 	private static RSString aClass19_242;
 	static RSString aClass19_243;
 	private Node aClass38_244;
-	static Class38_Sub6 aClass38_Sub6_245;
+	static WidgetComponent aClass38_Sub6_245;
 	static boolean aBool246;
 	static int anInt247;
 	static int[] anIntArray248;
@@ -327,7 +327,7 @@ final class Class13 {
 		}
 	}
 
-	static final int method72(byte i, Class38_Sub6 class38_sub6, int i_23_) {
+	static final int method72(byte i, WidgetComponent class38_sub6, int i_23_) {
 		try {
 			if (class38_sub6.anIntArrayArray1955 == null || i_23_ >= class38_sub6.anIntArrayArray1955.length)
 				return -2;
@@ -359,7 +359,7 @@ final class Class13 {
 					if (i_27_ == 4) {
 						int i_30_ = is[i_26_++] << -1482235568;
 						i_30_ += is[i_26_++];
-						Class38_Sub6 class38_sub6_31_ = Projectile.method1167(i_30_, 62);
+						WidgetComponent class38_sub6_31_ = Projectile.method1167(i_30_, 62);
 						int i_32_ = is[i_26_++];
 						if (i_32_ != -1 && (!Node.forId(i_32_, 125).aBool2771 || Node.aBool889))
 							for (int i_33_ = 0; i_33_ < class38_sub6_31_.anIntArray1947.length; i_33_++)
@@ -381,7 +381,7 @@ final class Class13 {
 					if (i_27_ == 10) {
 						int i_35_ = is[i_26_++] << -1804328464;
 						i_35_ += is[i_26_++];
-						Class38_Sub6 class38_sub6_36_ = Projectile.method1167(i_35_, -126);
+						WidgetComponent class38_sub6_36_ = Projectile.method1167(i_35_, -126);
 						int i_37_ = is[i_26_++];
 						if (i_37_ != -1 && (!Node.forId(i_37_, 51).aBool2771 || Node.aBool889))
 							for (int i_38_ = 0; i_38_ < class38_sub6_36_.anIntArray1947.length; i_38_++)

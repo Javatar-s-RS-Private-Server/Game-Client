@@ -29,13 +29,13 @@ final class Class38_Sub20_Sub3_Sub2 extends SceneModel {
 	static RSString aClass19_3276;
 	static RSString aClass19_3277;
 
-	static final void method1092(int i, Class38_Sub6[] class38_sub6s, int i_0_) {
+	static final void method1092(int i, WidgetComponent[] class38_sub6s, int i_0_) {
 		try {
 			if (i_0_ != 2047)
 				Class38_Sub20_Sub3_Sub2.method1094(7);
 			int i_1_ = 0;
 			for (/**/; i_1_ < class38_sub6s.length; i_1_++) {
-				Class38_Sub6 class38_sub6 = class38_sub6s[i_1_];
+				WidgetComponent class38_sub6 = class38_sub6s[i_1_];
 				if (class38_sub6 != null && class38_sub6.anInt1977 == i && (!class38_sub6.aBool1961 || !Class43.method362(true, class38_sub6))) {
 					if (class38_sub6.anInt1868 == 0) {
 						if (!class38_sub6.aBool1961 && Class43.method362(true, class38_sub6) && Class38_Sub2.aClass38_Sub6_1774 != class38_sub6)
@@ -43,7 +43,7 @@ final class Class38_Sub20_Sub3_Sub2 extends SceneModel {
 						Class38_Sub20_Sub3_Sub2.method1092(class38_sub6.anInt1856, class38_sub6s, i_0_);
 						if (class38_sub6.aClass38_Sub6Array1867 != null)
 							Class38_Sub20_Sub3_Sub2.method1092(class38_sub6.anInt1856, class38_sub6.aClass38_Sub6Array1867, 2047);
-						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856, (byte) -106);
+						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856);
 						if (class38_sub8 != null)
 							Class10.method54(-128, class38_sub8.anInt2038);
 					}

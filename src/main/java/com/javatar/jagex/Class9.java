@@ -67,8 +67,8 @@ final class Class9 {
 				Class9.method46(-104, null, -69);
 			if (Class72.aClass38_Sub23_1414 != null) {
 				Class72.aClass38_Sub23_1414.pos = i * 8 + 5;
-				int i_2_ = Class72.aClass38_Sub23_1414.method759(true);
-				int i_3_ = Class72.aClass38_Sub23_1414.method759(true);
+				int i_2_ = Class72.aClass38_Sub23_1414.readInt(true);
+				int i_3_ = Class72.aClass38_Sub23_1414.readInt(true);
 				class17_sub1.method598(i_3_, i_2_, i_1_ - 3756);
 			} else {
 				Class61.method458(true, (byte) -109, (byte) 0, 255, 255, null, 0);
@@ -81,7 +81,7 @@ final class Class9 {
 
 	static final int method47(int i, int i_4_, int i_5_) {
 		try {
-			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_4_, (byte) -106);
+			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_4_);
 			if (class38_sub3 == null)
 				return 0;
 			if (i_5_ < 0 || class38_sub3.anIntArray1779.length <= i_5_)

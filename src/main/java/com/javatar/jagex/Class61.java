@@ -20,11 +20,11 @@ final class Class61 {
 	static final void method458(boolean bool, byte i, byte i_0_, int i_1_, int i_2_, Class17_Sub1 class17_sub1, int i_3_) {
 		try {
 			long l = i_1_ + (i_2_ << -1034773296);
-			Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Sequence.aClass14_2713.method75(l, (byte) -106);
+			Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Sequence.aClass14_2713.method75(l);
 			if (class38_sub20_sub2 == null) {
-				class38_sub20_sub2 = (Class38_Sub20_Sub2) Class76.aClass14_1485.method75(l, (byte) -106);
+				class38_sub20_sub2 = (Class38_Sub20_Sub2) Class76.aClass14_1485.method75(l);
 				if (class38_sub20_sub2 == null) {
-					class38_sub20_sub2 = (Class38_Sub20_Sub2) Class40.aClass14_914.method75(l, (byte) -106);
+					class38_sub20_sub2 = (Class38_Sub20_Sub2) Class40.aClass14_914.method75(l);
 					if (i >= -105)
 						Class61.anIntArray1330 = null;
 					if (class38_sub20_sub2 != null) {
@@ -36,7 +36,7 @@ final class Class61 {
 						}
 					} else {
 						if (!bool) {
-							class38_sub20_sub2 = (Class38_Sub20_Sub2) PlayerAppearance.aClass14_397.method75(l, (byte) -106);
+							class38_sub20_sub2 = (Class38_Sub20_Sub2) PlayerAppearance.aClass14_397.method75(l);
 							if (class38_sub20_sub2 != null)
 								return;
 						}

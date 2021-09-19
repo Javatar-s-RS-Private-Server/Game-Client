@@ -49,7 +49,7 @@ final class Class38_Sub20_Sub3_Sub4 extends SceneModel {
 		}
 	}
 
-	static final void method1153(byte i, Class38_Sub6 class38_sub6, int i_5_, int i_6_) {
+	static final void method1153(byte i, WidgetComponent class38_sub6, int i_5_, int i_6_) {
 		try {
 			if (Class15.aClass38_Sub6_293 == null && !SceneModel.aBool2553 && class38_sub6 != null && Class32.method298(class38_sub6, (byte) -76) != null) {
 				int i_7_ = -96 % ((-15 - i) / 44);
@@ -118,7 +118,7 @@ final class Class38_Sub20_Sub3_Sub4 extends SceneModel {
 				Class38_Sub20_Sub3_Sub4.anIntArray3358 = null;
 			if (class38_sub20_sub5 != null)
 				return class38_sub20_sub5;
-			byte[] is = Class38_Sub4.aClass17_1794.method109(9, i_16_, -113);
+			byte[] is = Class38_Sub4.aClass17_1794.getFileData(9, i_16_, -113);
 			class38_sub20_sub5 = new Sequence();
 			class38_sub20_sub5.anInt2725 = i_16_;
 			if (is != null)

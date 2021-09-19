@@ -43,7 +43,7 @@ final class Class70 {
 
 	private final int method496(int i, int i_3_) {
 		if (i_3_ == 255) {
-			int i_4_ = aClass38_Sub23_1398.getUByte();
+			int i_4_ = aClass38_Sub23_1398.readUnsignedByte();
 			int i_5_ = aClass38_Sub23_1398.method731(-1592222329);
 			if (i_4_ == 47) {
 				aClass38_Sub23_1398.pos += i_5_;
@@ -64,9 +64,9 @@ final class Class70 {
 		byte i_8_ = Class70.aByteArray1397[i_3_ - 128];
 		int i_9_ = i_3_;
 		if (i_8_ >= 1)
-			i_9_ |= aClass38_Sub23_1398.getUByte() << 8;
+			i_9_ |= aClass38_Sub23_1398.readUnsignedByte() << 8;
 		if (i_8_ >= 2)
-			i_9_ |= aClass38_Sub23_1398.getUByte() << 16;
+			i_9_ |= aClass38_Sub23_1398.readUnsignedByte() << 16;
 		return i_9_;
 	}
 
@@ -140,14 +140,14 @@ final class Class70 {
 	final void method507(byte[] is) {
 		aClass38_Sub23_1398.buffer = is;
 		aClass38_Sub23_1398.pos = 10;
-		int i = aClass38_Sub23_1398.getUShort();
-		this.anInt1404 = aClass38_Sub23_1398.getUShort();
+		int i = aClass38_Sub23_1398.readUnsignedShort();
+		this.anInt1404 = aClass38_Sub23_1398.readUnsignedShort();
 		anInt1401 = 500000;
 		anIntArray1403 = new int[i];
 		int i_16_ = 0;
 		while (i_16_ < i) {
-			int i_17_ = aClass38_Sub23_1398.method759(true);
-			int i_18_ = aClass38_Sub23_1398.method759(true);
+			int i_17_ = aClass38_Sub23_1398.readInt(true);
+			int i_18_ = aClass38_Sub23_1398.readInt(true);
 			if (i_17_ == 1297379947) {
 				anIntArray1403[i_16_] = aClass38_Sub23_1398.pos;
 				i_16_++;

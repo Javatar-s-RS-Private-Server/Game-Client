@@ -106,9 +106,9 @@ final class ItemDefinition extends NodeSub {
 							if (((Entity) class38_sub20_sub3_sub7_sub1).anInt3457 == 1
 									&& (((Entity) class38_sub20_sub3_sub7_sub1).anInt3493 & 0x7f) == 64
 									&& (((Entity) class38_sub20_sub3_sub7_sub1).anInt3444 & 0x7f) == 64) {
-								if (Class38_Sub6.anIntArrayArray1902[i_5_][i_6_] == RuntimeException_Sub1.anInt3293)
+								if (WidgetComponent.anIntArrayArray1902[i_5_][i_6_] == RuntimeException_Sub1.anInt3293)
 									continue;
-								Class38_Sub6.anIntArrayArray1902[i_5_][i_6_] = RuntimeException_Sub1.anInt3293;
+								WidgetComponent.anIntArrayArray1902[i_5_][i_6_] = RuntimeException_Sub1.anInt3293;
 							}
 							if (!class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.aBool2689)
 								i_4_ -= -2147483648;
@@ -294,7 +294,7 @@ final class ItemDefinition extends NodeSub {
 
 	final void readValues(RS2Buffer stream) {
 		for (;;) {
-			int opcode = stream.getUByte();
+			int opcode = stream.readUnsignedByte();
 			if (opcode == 0)
 				break;
 			readValues((byte) -26, stream, opcode);
@@ -324,20 +324,20 @@ final class ItemDefinition extends NodeSub {
 			if (i >= -2)
 				ItemDefinition.aClass19_2806 = null;
 			if (opcode == 1)
-				anInt2786 = stream.getUShort();
+				anInt2786 = stream.readUnsignedShort();
 			else if (opcode == 2)
 				this.aClass19_2808 = stream.getUShort(1347418632);
 			else if (opcode == 4)
-				this.anInt2770 = stream.getUShort();
+				this.anInt2770 = stream.readUnsignedShort();
 			else if (opcode != 5) {
 				if (opcode == 6)
-					this.anInt2795 = stream.getUShort();
+					this.anInt2795 = stream.readUnsignedShort();
 				else if (opcode == 7) {
-					this.modelOffsetX = stream.getUShort();
+					this.modelOffsetX = stream.readUnsignedShort();
 					if (this.modelOffsetX > 32767)
 						this.modelOffsetX -= 65536;
 				} else if (opcode == 8) {
-					this.modelOffsetY = stream.getUShort();
+					this.modelOffsetY = stream.readUnsignedShort();
 					if (this.modelOffsetY > 32767)
 						this.modelOffsetY -= 65536;
 				} else if (opcode == 11)
@@ -348,42 +348,42 @@ final class ItemDefinition extends NodeSub {
 							if (opcode != 24) {
 								if (opcode != 25) {
 									if (opcode == 26)
-										anInt2793 = stream.getUShort();
+										anInt2793 = stream.readUnsignedShort();
 									else if (opcode < 30 || opcode >= 35) {
 										if (opcode >= 35 && opcode < 40)
 											this.aClass19Array2807[opcode - 35] = stream
 													.getUShort(1347418632);
 										else if (opcode != 40) {
 											if (opcode == 41) {
-												int len = stream.getUByte();
+												int len = stream.readUnsignedByte();
 												modifiedModelColor = new short[len];
 												originalModelColors = new short[len];
 												for (int i_39_ = 0; i_39_ < len; i_39_++) {
 													originalModelColors[i_39_] = (short) stream
-															.getUShort();
+															.readUnsignedShort();
 													modifiedModelColor[i_39_] = (short) stream
-															.getUShort();
+															.readUnsignedShort();
 												}
 											} else if (opcode == 78)
-												anInt2759 = stream.getUShort();
+												anInt2759 = stream.readUnsignedShort();
 											else if (opcode != 79) {
 												if (opcode != 90) {
 													if (opcode == 91)
 														femaleHeadId = stream
-																.getUShort();
+																.readUnsignedShort();
 													else if (opcode == 92)
 														maleHatId = stream
-																.getUShort();
+																.readUnsignedShort();
 													else if (opcode == 93)
 														femaleHatId = stream
-																.getUShort();
+																.readUnsignedShort();
 													else if (opcode == 95)
 														this.anInt2753 = stream
-																.getUShort();
+																.readUnsignedShort();
 													else if (opcode != 97) {
 														if (opcode == 98)
 															this.anInt2767 = stream
-																	.getUShort();
+																	.readUnsignedShort();
 														else if (opcode >= 100
 																&& opcode < 110) {
 															if (this.anIntArray2791 == null) {
@@ -391,46 +391,46 @@ final class ItemDefinition extends NodeSub {
 																this.anIntArray2791 = new int[10];
 															}
 															this.anIntArray2791[opcode - 100] = stream
-																	.getUShort();
+																	.readUnsignedShort();
 															this.anIntArray2751[opcode - 100] = stream
-																	.getUShort();
+																	.readUnsignedShort();
 														} else if (opcode == 110)
 															anInt2750 = stream
-																	.getUShort();
+																	.readUnsignedShort();
 														else if (opcode == 111)
 															anInt2781 = stream
-																	.getUShort();
+																	.readUnsignedShort();
 														else if (opcode != 112) {
 															if (opcode == 113)
 																this.anInt2760 = stream
-																		.method765((byte) 102);
+																		.readByte((byte) 102);
 															else if (opcode != 114) {
 																if (opcode == 115)
 																	this.team = stream
-																			.getUByte();
+																			.readUnsignedByte();
 															} else
 																this.anInt2762 = stream
-																		.method765((byte) 108) * 5;
+																		.readByte((byte) 108) * 5;
 														} else
 															anInt2748 = stream
-																	.getUShort();
+																	.readUnsignedShort();
 													} else
 														this.anInt2790 = stream
-																.getUShort();
+																.readUnsignedShort();
 												} else
 													maleHeadId = stream
-															.getUShort();
+															.readUnsignedShort();
 											} else
-												anInt2799 = stream.getUShort();
+												anInt2799 = stream.readUnsignedShort();
 										} else {
-											int i_40_ = stream.getUByte();
+											int i_40_ = stream.readUnsignedByte();
 											aShortArray2810 = new short[i_40_];
 											aShortArray2800 = new short[i_40_];
 											for (int i_41_ = 0; i_41_ < i_40_; i_41_++) {
 												aShortArray2800[i_41_] = (short) stream
-														.getUShort();
+														.readUnsignedShort();
 												aShortArray2810[i_41_] = (short) stream
-														.getUShort();
+														.readUnsignedShort();
 											}
 										}
 									} else {
@@ -443,21 +443,21 @@ final class ItemDefinition extends NodeSub {
 											this.aClass19Array2789[opcode - 30] = null;
 									}
 								} else {
-									anInt2779 = stream.getUShort();
-									femaleHeight = stream.getUByte();
+									anInt2779 = stream.readUnsignedShort();
+									femaleHeight = stream.readUnsignedByte();
 								}
 							} else
-								anInt2796 = stream.getUShort();
+								anInt2796 = stream.readUnsignedShort();
 						} else {
-							anInt2764 = stream.getUShort();
-							maleHeight = stream.getUByte();
+							anInt2764 = stream.readUnsignedShort();
+							maleHeight = stream.readUnsignedByte();
 						}
 					} else
 						this.aBool2771 = true;
 				} else
-					this.anInt2754 = stream.method759(true);
+					this.anInt2754 = stream.readInt(true);
 			} else
-				this.anInt2805 = stream.getUShort();
+				this.anInt2805 = stream.readUnsignedShort();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "j.K(" + i + ','
 					+ (stream != null ? "{...}" : "null") + ',' + opcode + ')');

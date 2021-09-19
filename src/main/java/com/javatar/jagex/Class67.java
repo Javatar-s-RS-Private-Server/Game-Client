@@ -7,7 +7,7 @@ final class Class67 {
 	static int[] anIntArray1378;
 	static RSString aClass19_1379;
 	static int anInt1380 = 0;
-	static Class38_Sub6 aClass38_Sub6_1381;
+	static WidgetComponent aClass38_Sub6_1381;
 	static Class17_Sub1 aClass17_Sub1_1382;
 	static RSString aClass19_1384;
 	static int[] anIntArray1385;

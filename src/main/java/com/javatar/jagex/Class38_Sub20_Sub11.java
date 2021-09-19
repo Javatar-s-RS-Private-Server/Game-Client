@@ -132,7 +132,7 @@ final class Class38_Sub20_Sub11 extends NodeSub {
 		try {
 			if (i == 0)
 				for (;;) {
-					int i_0_ = stream.getUByte();
+					int i_0_ = stream.readUnsignedByte();
 					if (i_0_ == 0)
 						break;
 					method982(false, i_0_, stream);
@@ -155,40 +155,40 @@ final class Class38_Sub20_Sub11 extends NodeSub {
 			if (!bool)
 				if (i != 1) {
 					if (i == 2)
-						this.anInt2972 = stream.getUShort();
+						this.anInt2972 = stream.readUnsignedShort();
 					else if (i != 4) {
 						if (i == 5)
-							anInt2950 = stream.getUShort();
+							anInt2950 = stream.readUnsignedShort();
 						else if (i == 6)
-							anInt2935 = stream.getUShort();
+							anInt2935 = stream.readUnsignedShort();
 						else if (i != 7) {
 							if (i == 8)
-								anInt2940 = stream.getUByte();
+								anInt2940 = stream.readUnsignedByte();
 							else if (i != 40) {
 								if (i == 41) {
-									int i_2_ = stream.getUByte();
+									int i_2_ = stream.readUnsignedByte();
 									aShortArray2980 = new short[i_2_];
 									aShortArray2978 = new short[i_2_];
 									for (int i_3_ = 0; i_2_ > i_3_; i_3_++) {
-										aShortArray2978[i_3_] = (short) stream.getUShort();
-										aShortArray2980[i_3_] = (short) stream.getUShort();
+										aShortArray2978[i_3_] = (short) stream.readUnsignedShort();
+										aShortArray2980[i_3_] = (short) stream.readUnsignedShort();
 									}
 								}
 							} else {
-								int i_4_ = stream.getUByte();
+								int i_4_ = stream.readUnsignedByte();
 								aShortArray2947 = new short[i_4_];
 								aShortArray2931 = new short[i_4_];
 								for (int i_5_ = 0; i_4_ > i_5_; i_5_++) {
-									aShortArray2947[i_5_] = (short) stream.getUShort();
-									aShortArray2931[i_5_] = (short) stream.getUShort();
+									aShortArray2947[i_5_] = (short) stream.readUnsignedShort();
+									aShortArray2931[i_5_] = (short) stream.readUnsignedShort();
 								}
 							}
 						} else
-							anInt2949 = stream.getUByte();
+							anInt2949 = stream.readUnsignedByte();
 					} else
-						anInt2955 = stream.getUShort();
+						anInt2955 = stream.readUnsignedShort();
 				} else
-					anInt2915 = stream.getUShort();
+					anInt2915 = stream.readUnsignedShort();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ta.G(" + bool + ',' + i + ',' + (stream != null ? "{...}" : "null") + ')');
 		}

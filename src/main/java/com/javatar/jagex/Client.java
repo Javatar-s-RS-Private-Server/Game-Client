@@ -32,7 +32,7 @@ public final class Client extends Applet_Sub1 {
 	static int currentBaseX;
 	static int currentBaseY;
 	static int redrawTimer = 0;
-	static Class38_Sub6 atInventoryInterfaceType;
+	static WidgetComponent atInventoryInterfaceType;
 	static int cameraPacketDelay = 0;
 	static boolean holdingArrowKeys;
 	static boolean awtFocused;
@@ -112,7 +112,7 @@ public final class Client extends Applet_Sub1 {
 	}
 
 	@Override
-	final void method1214(int i) {
+	void method1214(int i) {
 		try {
 			Client.method1225(false);
 			RSString.method142(i ^ 0x39);
@@ -129,7 +129,7 @@ public final class Client extends Applet_Sub1 {
 			PacketBuffer.method786((byte) -93);
 			SceneGraph.method262();
 			Class74.method525(i ^ i);
-			Class38_Sub6.method638((byte) -126);
+			WidgetComponent.method638((byte) -126);
 			Player.method1208((byte) -68);
 			Class13.method71((byte) -78);
 			Class14.method77((byte) 125);
@@ -287,7 +287,7 @@ public final class Client extends Applet_Sub1 {
 									Class38_Sub20_Sub16.aClass31_3098 = new Class31((Socket) ObjectDefinition.aClass65_2461.anObject1365, Class38_Sub4.aClass56_1798);
 									RS2Buffer class38_sub23 = new RS2Buffer(5);
 									class38_sub23.putByte(15);
-									class38_sub23.putInt(468);// client
+									class38_sub23.writeInt(468);// client
 																// revision
 									Class38_Sub20_Sub16.aClass31_3098.write(class38_sub23.buffer, 5, 0, (byte) 127);
 									Class47.anInt1046++;
@@ -392,8 +392,8 @@ public final class Client extends Applet_Sub1 {
 	final void method1223(int i) {
 		try {
 			boolean bool = Class31.method293(89);
-			if (bool && Class76.aBool1490 && Class38_Sub6.aClass77_1857 != null)
-				Class38_Sub6.aClass77_1857.method557(true);
+			if (bool && Class76.aBool1490 && WidgetComponent.aClass77_1857 != null)
+				WidgetComponent.aClass77_1857.method557(true);
 			if (Class15.aBool283) {
 				Class38_Sub20_Sub3_Sub4.method1157(i ^ 0x8002, Class38_Sub3.aCanvas1783);
 				Class61.method460(Class38_Sub3.aCanvas1783, i ^ ~0x2);
@@ -504,7 +504,7 @@ public final class Client extends Applet_Sub1 {
 		} while (false);
 	}
 
-	static final boolean method1229(int i, Class38_Sub6 class38_sub6) {
+	static final boolean method1229(int i, WidgetComponent class38_sub6) {
 		try {
 			int i_22_ = class38_sub6.anInt1958;
 			if (i_22_ == 205) {
@@ -514,7 +514,7 @@ public final class Client extends Applet_Sub1 {
 			if (i_22_ >= 300 && i_22_ <= 313) {
 				int i_23_ = i_22_ & 0x1;
 				int i_24_ = (i_22_ - 300) / 2;
-				Class38_Sub20_Sub15.aClass18_3072.method132((byte) -59, i_24_, i_23_ == 1);
+				Class38_Sub20_Sub15.aClass18_3072.method132(i_24_, i_23_ == 1);
 			}
 			if (i_22_ >= 314 && i_22_ <= 323) {
 				int i_25_ = i_22_ & 0x1;
@@ -554,8 +554,8 @@ public final class Client extends Applet_Sub1 {
 				Class40.method341(98);
 				Class38_Sub20_Sub3_Sub2.method1093(100);
 				Class4.aClass32_91 = null;
-				if (Class38_Sub6.aClass77_1857 != null)
-					Class38_Sub6.aClass77_1857.method548((byte) -124);
+				if (WidgetComponent.aClass77_1857 != null)
+					WidgetComponent.aClass77_1857.method548((byte) -124);
 				if (Class38_Sub7.aClass77_2025 != null)
 					Class38_Sub7.aClass77_2025.method548((byte) 85);
 				Class38_Sub10_Sub3.method940(true);
@@ -716,52 +716,52 @@ public final class Client extends Applet_Sub1 {
 				int i_41_ = Client.worldConnection.method291((byte) 122);
 				if (i_41_ == 0)
 					return false;
-				if (Class23.anInt546 == -1) {
-					Client.worldConnection.method290(124, 0, ((RS2Buffer) Class15.inputStream).buffer, 1);
-					((RS2Buffer) Class15.inputStream).pos = 0;
-					Class23.anInt546 = Class15.inputStream.getOpcode();
-					Entity.anInt3446 = Class3.anIntArray67[Class23.anInt546];
+				if (Class23.packetId == -1) {
+					Client.worldConnection.method290(124, 0, Class15.inputStream.buffer, 1);
+					Class15.inputStream.pos = 0;
+					Class23.packetId = Class15.inputStream.readIsaacByte();
+					Entity.anInt3446 = Class3.anIntArray67[Class23.packetId];
 					i_41_--;
 				}
 				if (Entity.anInt3446 == -1) {
 					if (i_41_ <= 0)
 						return false;
 					i_41_--;
-					Client.worldConnection.method290(116, 0, ((RS2Buffer) Class15.inputStream).buffer, 1);
-					Entity.anInt3446 = ((RS2Buffer) Class15.inputStream).buffer[0] & 0xff;
+					Client.worldConnection.method290(116, 0, Class15.inputStream.buffer, 1);
+					Entity.anInt3446 = Class15.inputStream.buffer[0] & 0xff;
 				}
 				if (Entity.anInt3446 == -2)
 					if (i_41_ > 1) {
 						i_41_ -= 2;
-						Client.worldConnection.method290(i ^ 0x7794, 0, ((RS2Buffer) Class15.inputStream).buffer, 2);
-						((RS2Buffer) Class15.inputStream).pos = 0;
-						Entity.anInt3446 = Class15.inputStream.getUShort();
+						Client.worldConnection.method290(i ^ 0x7794, 0, Class15.inputStream.buffer, 2);
+						Class15.inputStream.pos = 0;
+						Entity.anInt3446 = Class15.inputStream.readUnsignedShort();
 					} else
 						return false;
 				if (i_41_ < Entity.anInt3446)
 					return false;
-				((RS2Buffer) Class15.inputStream).pos = 0;
-				Client.worldConnection.method290(117, 0, ((RS2Buffer) Class15.inputStream).buffer, Entity.anInt3446);
+				Class15.inputStream.pos = 0;
+				Client.worldConnection.method290(117, 0, Class15.inputStream.buffer, Entity.anInt3446);
 				Class38_Sub20_Sub8.anInt2857 = 0;
 				Class38_Sub20_Sub8.anInt2864 = Class15.anInt280;
 				Class15.anInt280 = Class38_Sub19.anInt2233;
-				Class38_Sub19.anInt2233 = Class23.anInt546;
+				Class38_Sub19.anInt2233 = Class23.packetId;
 				if (i != 30703)
 					Class25.method210(null, false, null, null, null);
-				if (Class23.anInt546 == 27) {
-					int i_42_ = Class15.inputStream.getUShortA();
-					NodeSub.anInt2252 = i_42_;
-					method1231(0, i_42_);
-					Class78.method566(NodeSub.anInt2252, 31);
+				if (Class23.packetId == 27) {
+					int windowId = Class15.inputStream.readUnsignedShortAdd();
+					NodeSub.windowId = windowId;
+					method1231(0, windowId);
+					Class78.method566(NodeSub.windowId, 31);
 					for (int i_43_ = 0; i_43_ < 100; i_43_++)
 						Class32.aBoolArray768[i_43_] = true;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 106) {
-					int i_44_ = Class15.inputStream.method759(true);
-					int i_45_ = Class15.inputStream.getUShort();
-					Class38_Sub6 class38_sub6;
+				if (Class23.packetId == 106) {
+					int i_44_ = Class15.inputStream.readInt(true);
+					int i_45_ = Class15.inputStream.readUnsignedShort();
+					WidgetComponent class38_sub6;
 					if (i_44_ >= 0)
 						class38_sub6 = Projectile.method1167(i_44_, 111);
 					else
@@ -774,7 +774,7 @@ public final class Client extends Applet_Sub1 {
 							class38_sub6.anIntArray1866[i_46_] = 0;
 						}
 					Class4.method23(i_45_, 88);
-					int i_47_ = Class15.inputStream.getUShort();
+					int i_47_ = Class15.inputStream.readUnsignedShort();
 					for (int i_48_ = 0; i_47_ > i_48_; i_48_++) {
 						int i_49_ = Class15.inputStream.getUByteC();
 						if (i_49_ == 255)
@@ -784,47 +784,47 @@ public final class Client extends Applet_Sub1 {
 							class38_sub6.anIntArray1947[i_48_] = i_50_;
 							class38_sub6.anIntArray1866[i_48_] = i_49_;
 						}
-						Class38_Sub6.method639(i_45_, i_48_, -31820, i_49_, i_50_ - 1);
+						WidgetComponent.method639(i_45_, i_48_, -31820, i_49_, i_50_ - 1);
 					}
 					if (class38_sub6 != null)
 						Class40.method340(class38_sub6, (byte) -127);
 					Applet_Sub1.method1218((byte) -70);
 					Class55.anIntArray1230[Class38_Sub10_Sub3.method941(Class38_Sub18.anInt2208++, 31)] = Class38_Sub10_Sub3.method941(32767, i_45_);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 42) {
+				if (Class23.packetId == 42) {
 					Class38_Sub20_Sub3_Sub2.anInt3250 = Entity.anInt3446 / 8;
 					for (int i_51_ = 0; Class38_Sub20_Sub3_Sub2.anInt3250 > i_51_; i_51_++) {
 						Class5.aLongArray97[i_51_] = Class15.inputStream.method748(-118);
 						Class54.aClass19Array1206[i_51_] = Class73.method520(Class5.aLongArray97[i_51_], 1);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					Class81.anInt1624 = Entity.anInt3513;
 					return true;
 				}
-				if (Class23.anInt546 == 210) {
+				if (Class23.packetId == 210) {
 					int i_52_ = Class15.inputStream.method730(53);
 					int i_53_ = Class15.inputStream.getULEShort();
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_52_, 75);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_52_, 75);
 					if (class38_sub6.anInt1883 != 2 || class38_sub6.anInt1962 != i_53_) {
 						class38_sub6.anInt1883 = 2;
 						class38_sub6.anInt1962 = i_53_;
 						Class40.method340(class38_sub6, (byte) -103);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 92) {
-					int i_54_ = Class15.inputStream.getUShort();
+				if (Class23.packetId == 92) {
+					int i_54_ = Class15.inputStream.readUnsignedShort();
 					if (i_54_ == 65535)
 						i_54_ = -1;
-					int i_55_ = Class15.inputStream.method759(true);
+					int i_55_ = Class15.inputStream.readInt(true);
 					int i_56_ = Class15.inputStream.method746(i - 30806);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_55_, 97);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_55_, 97);
 					if (!class38_sub6.aBool1961) {
 						if (i_54_ == -1) {
-							Class23.anInt546 = -1;
+							Class23.packetId = -1;
 							class38_sub6.anInt1883 = 0;
 							return true;
 						}
@@ -849,35 +849,35 @@ public final class Client extends Applet_Sub1 {
 						class38_sub6.anInt1964 = class38_sub20_sub6.modelOffsetY;
 						Class40.method340(class38_sub6, (byte) -115);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 175) {
+				if (Class23.packetId == 175) {
 					for (int i_57_ = 0; i_57_ < Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152.length; i_57_++)
 						if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_] != null)
-							((Entity) Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_]).currentAnimationId = -1;
+							Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_].currentAnimationId = -1;
 					for (int i_58_ = 0; Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164.length > i_58_; i_58_++)
 						if (Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_] != null)
-							((Entity) Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_]).currentAnimationId = -1;
-					Class23.anInt546 = -1;
+							Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_].currentAnimationId = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 89) {
+				if (Class23.packetId == 89) {
 					RSString class19 = Class15.inputStream.getUShort(1347418632);
 					Object[] objects = new Object[class19.method143((byte) 74) + 1];
 					for (int i_59_ = class19.method143((byte) 81) - 1; i_59_ >= 0; i_59_--)
 						if (class19.method163(114, i_59_) == 115)
 							objects[i_59_ + 1] = Class15.inputStream.getUShort(1347418632);
 						else
-							objects[i_59_ + 1] = new Integer(Class15.inputStream.method759(true));
-					objects[0] = new Integer(Class15.inputStream.method759(true));
+							objects[i_59_ + 1] = new Integer(Class15.inputStream.readInt(true));
+					objects[0] = new Integer(Class15.inputStream.readInt(true));
 					Class38_Sub19 class38_sub19 = new Class38_Sub19();
 					class38_sub19.anObjectArray2240 = objects;
 					Class15.method84(class38_sub19, (byte) -83);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 238) {
+				if (Class23.packetId == 238) {
 					RSString class19 = Class15.inputStream.getUShort(i + 1347387929);
 					if (class19.method169(0, Class77.aClass19_1508)) {
 						RSString class19_60_ = class19.method144((byte) 52, 0, class19.method170(1, Class16.aClass19_341));
@@ -944,18 +944,18 @@ public final class Client extends Applet_Sub1 {
 							Class62.method464((byte) 98, class19_71_, 8, class19_69_);
 						}
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 188) {
+				if (Class23.packetId == 188) {
 					Class41.method350(i - 40718);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return false;
 				}
-				if (Class23.anInt546 == 184) {
+				if (Class23.packetId == 184) {
 					long l = Class15.inputStream.method748(-109);
-					int i_72_ = Class15.inputStream.getUShort();
-					int i_73_ = Class15.inputStream.getUByte();
+					int i_72_ = Class15.inputStream.readUnsignedShort();
+					int i_73_ = Class15.inputStream.readUnsignedByte();
 					RSString class19 = Class73.method520(l, 1).method167((byte) 52);
 					for (int i_74_ = 0; Class81.anInt1618 > i_74_; i_74_++)
 						if (l == Class20.aLongArray499[i_74_]) {
@@ -1002,23 +1002,23 @@ public final class Client extends Applet_Sub1 {
 						if (bool)
 							break;
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 212) {
+				if (Class23.packetId == 212) {
 					int i_81_ = Class15.inputStream.method730(72);
 					Class38_Sub14.aClass65_2145 = Class38_Sub4.aClass56_1798.method435(i_81_, -117);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 68) {
+				if (Class23.packetId == 68) {
 					long l = Class15.inputStream.method748(-119);
-					Class15.inputStream.method765((byte) 120);
+					Class15.inputStream.readByte((byte) 120);
 					long l_82_ = Class15.inputStream.method748(-119);
 					boolean bool = false;
-					long l_83_ = Class15.inputStream.getUShort();
+					long l_83_ = Class15.inputStream.readUnsignedShort();
 					long l_84_ = Class15.inputStream.method738((byte) 119);
-					int i_85_ = Class15.inputStream.getUByte();
+					int i_85_ = Class15.inputStream.readUnsignedByte();
 					long l_86_ = (l_83_ << 489233312) - -l_84_;
 					for (int i_87_ = 0; i_87_ < 100; i_87_++)
 						if (Class51.aLongArray1123[i_87_] == l_86_) {
@@ -1042,25 +1042,25 @@ public final class Client extends Applet_Sub1 {
 						else
 							Sequence.method914(Class73.method520(l, i - 30702).method167((byte) 52), true, 9, class19, Class73.method520(l_82_, 1).method167((byte) 52));
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 111) {
-					int i_89_ = Class15.inputStream.method741(123);
-					int i_90_ = Class15.inputStream.getUShortA();
-					int i_91_ = Class15.inputStream.getMEInt();
-					Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_91_, (byte) -106);
+				if (Class23.packetId == 111) {
+					int i_89_ = Class15.inputStream.readUnsignedByte();
+					int i_90_ = Class15.inputStream.readUnsignedShort();
+					int widgetHash = Class15.inputStream.readInt(true);
+					Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(widgetHash);
 					if (class38_sub8 != null)
 						Class48.method388(class38_sub8.anInt2038 != i_90_, (byte) -14, class38_sub8);
-					Class60.method454(i_89_, i_90_, i_91_, 22878);
-					Class23.anInt546 = -1;
+					Class60.method454(i_89_, i_90_, widgetHash, 22878);
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 38) {
+				if (Class23.packetId == 38) {
 					int i_92_ = Class15.inputStream.method772(false);
-					int i_93_ = Class15.inputStream.method759(true);
+					int i_93_ = Class15.inputStream.readInt(true);
 					int i_94_ = Class15.inputStream.method772(false);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_93_, i - 30628);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_93_, i - 30628);
 					int i_95_ = i_92_ + class38_sub6.anInt1910;
 					int i_96_ = class38_sub6.anInt1882 + i_94_;
 					if (i_95_ != class38_sub6.anInt1942 || i_96_ != class38_sub6.anInt1968) {
@@ -1068,132 +1068,132 @@ public final class Client extends Applet_Sub1 {
 						class38_sub6.anInt1942 = i_95_;
 						Class40.method340(class38_sub6, (byte) -105);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 73) {
-					Class81.anInt1619 = Class15.inputStream.getUByte();
-					Class81.anInt1621 = Class15.inputStream.getUByte();
-					Class2_Sub1.anInt1996 = Class15.inputStream.getUByte();
-					Class23.anInt546 = -1;
+				if (Class23.packetId == 73) {
+					Class81.anInt1619 = Class15.inputStream.readUnsignedByte();
+					Class81.anInt1621 = Class15.inputStream.readUnsignedByte();
+					Class2_Sub1.anInt1996 = Class15.inputStream.readUnsignedByte();
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 41) {
-					int i_97_ = Class15.inputStream.method759(true);
+				if (Class23.packetId == 41) {
+					int i_97_ = Class15.inputStream.readInt(true);
 					RSString class19 = Class15.inputStream.getUShort(1347418632);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_97_, i - 30812);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_97_, i - 30812);
 					if (!class19.method175(true, class38_sub6.aClass19_1876)) {
 						class38_sub6.aClass19_1876 = class19;
 						Class40.method340(class38_sub6, (byte) -108);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 59) {
-					int i_98_ = Class15.inputStream.method759(true);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_98_, -98);
+				if (Class23.packetId == 59) {
+					int i_98_ = Class15.inputStream.readInt(true);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_98_, -98);
 					class38_sub6.anInt1883 = 3;
 					class38_sub6.anInt1962 = myPlayer.appearance.method137(-126);
 					Class40.method340(class38_sub6, (byte) -117);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 195 || Class23.anInt546 == 138 || Class23.anInt546 == 164 || Class23.anInt546 == 103 || Class23.anInt546 == 120 || Class23.anInt546 == 82 || Class23.anInt546 == 32 || Class23.anInt546 == 26 || Class23.anInt546 == 147 || Class23.anInt546 == 150 || Class23.anInt546 == 105) {
+				if (Class23.packetId == 195 || Class23.packetId == 138 || Class23.packetId == 164 || Class23.packetId == 103 || Class23.packetId == 120 || Class23.packetId == 82 || Class23.packetId == 32 || Class23.packetId == 26 || Class23.packetId == 147 || Class23.packetId == 150 || Class23.packetId == 105) {
 					Class60.method452(7);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 77) {
+				if (Class23.packetId == 77) {
 					long l = Class15.inputStream.method748(-120);
 					RSString class19 = Class38_Sub20_Sub9_Sub1.method1062(Class58.method443((byte) 33, Class15.inputStream).method161(97));
 					Class62.method464((byte) 98, class19, 6, Class73.method520(l, 1).method167((byte) 52));
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 142) {
+				if (Class23.packetId == 142) {
 					int i_99_ = Class15.inputStream.method749(-126);
 					int i_100_ = Class15.inputStream.method730(97);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_100_, -121);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_100_, -121);
 					if (class38_sub6.anInt1878 != i_99_ || i_99_ == -1) {
 						class38_sub6.anInt1952 = 0;
 						class38_sub6.anInt1878 = i_99_;
 						class38_sub6.anInt1875 = 0;
 						Class40.method340(class38_sub6, (byte) -105);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 108) {
+				if (Class23.packetId == 108) {
 					Applet_Sub1.method1218((byte) -106);
 					Class82.anInt1647 = Class15.inputStream.method772(false);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					Class38_Sub20_Sub3_Sub2.anInt3260 = Entity.anInt3513;
 					return true;
 				}
-				if (Class23.anInt546 == 137) {
+				if (Class23.packetId == 137) {
 					Client.systemUpdateTime = Class15.inputStream.getULEShort() * 30;
 					Class38_Sub20_Sub3_Sub2.anInt3260 = Entity.anInt3513;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 110) {
-					Class38_Sub20_Sub15.anInt3068 = Class15.inputStream.getUByte();
-					Class23.anInt546 = -1;
+				if (Class23.packetId == 110) {
+					Class38_Sub20_Sub15.anInt3068 = Class15.inputStream.readUnsignedByte();
+					Class23.packetId = -1;
 					Class81.anInt1624 = Entity.anInt3513;
 					return true;
 				}
-				if (Class23.anInt546 == 36) {
+				if (Class23.packetId == 36) {
 					Class38_Sub10_Sub3.method939(-3072);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 119) {
+				if (Class23.packetId == 119) {
 					Class53.method411(-127, Class15.inputStream);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 254) {
+				if (Class23.packetId == 254) {
 					int i_101_ = Class15.inputStream.method730(72);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_101_, -100);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_101_, -100);
 					for (int i_102_ = 0; i_102_ < class38_sub6.anIntArray1947.length; i_102_++) {
 						class38_sub6.anIntArray1947[i_102_] = -1;
 						class38_sub6.anIntArray1947[i_102_] = 0;
 					}
 					Class40.method340(class38_sub6, (byte) -111);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 122) {
-					Class38_Sub20_Sub17.anInt3129 = Class15.inputStream.getUByte();
-					Class23.anInt546 = -1;
+				if (Class23.packetId == 122) {
+					Class38_Sub20_Sub17.anInt3129 = Class15.inputStream.readUnsignedByte();
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 134) {
+				if (Class23.packetId == 134) {
 					destX = 0;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 171) {
-					int i_103_ = Class15.inputStream.getUShort();
-					int i_104_ = Class15.inputStream.getUShortA();
-					int i_105_ = Class15.inputStream.getUShortA();
-					int i_106_ = Class15.inputStream.method759(true);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_106_, -95);
+				if (Class23.packetId == 171) {
+					int i_103_ = Class15.inputStream.readUnsignedShort();
+					int i_104_ = Class15.inputStream.readUnsignedShortAdd();
+					int i_105_ = Class15.inputStream.readUnsignedShortAdd();
+					int i_106_ = Class15.inputStream.readInt(true);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_106_, -95);
 					if (class38_sub6.anInt1925 != i_104_ || class38_sub6.anInt1987 != i_103_ || class38_sub6.anInt1921 != i_105_) {
 						class38_sub6.anInt1987 = i_103_;
 						class38_sub6.anInt1921 = i_105_;
 						class38_sub6.anInt1925 = i_104_;
 						Class40.method340(class38_sub6, (byte) -122);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 169) {
+				if (Class23.packetId == 169) {
 					Class38_Sub20_Sub17.sendMapRegion(true, (byte) 92);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 213) {
+				if (Class23.packetId == 213) {
 					for (int i_107_ = 0; i_107_ < Class38_Sub20_Sub15.anInt3073; i_107_++) {
 						Class38_Sub20_Sub15 class38_sub20_sub15 = Class37.method326(16, i_107_);
 						if (class38_sub20_sub15 != null && class38_sub20_sub15.anInt3063 == 0) {
@@ -1203,14 +1203,14 @@ public final class Client extends Applet_Sub1 {
 					}
 					Applet_Sub1.method1218((byte) -65);
 					Class25.anInt591 += 32;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 208) {
+				if (Class23.packetId == 208) {
 					Applet_Sub1.method1218((byte) -63);
-					int i_108_ = Class15.inputStream.method756(i - 17418);
-					int i_109_ = Class15.inputStream.method759(true);
-					int i_110_ = Class15.inputStream.method756(13285);
+					int i_108_ = Class15.inputStream.readUnsignedByteC(i - 17418);
+					int i_109_ = Class15.inputStream.readInt(true);
+					int i_110_ = Class15.inputStream.readUnsignedByteC(13285);
 					Class38_Sub20_Sub3_Sub4.anIntArray3358[i_108_] = i_109_;
 					Class47.anIntArray1041[i_108_] = i_110_;
 					Class38_Sub2.anIntArray1770[i_108_] = 1;
@@ -1218,62 +1218,62 @@ public final class Client extends Applet_Sub1 {
 						if (i_109_ >= Class50.anIntArray1114[i_111_])
 							Class38_Sub2.anIntArray1770[i_108_] = i_111_ + 2;
 					Class51.anIntArray1125[Class38_Sub10_Sub3.method941(31, Class23.anInt553++)] = i_108_;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 55) {
+				if (Class23.packetId == 55) {
 					Class38_Sub21.aBool2280 = true;
-					Class35.anInt805 = Class15.inputStream.getUByte();
-					Class38_Sub20_Sub3_Sub2.anInt3274 = Class15.inputStream.getUByte();
-					Class38_Sub17.anInt2195 = Class15.inputStream.getUShort();
-					Class60.anInt1302 = Class15.inputStream.getUByte();
-					Class29.anInt706 = Class15.inputStream.getUByte();
+					Class35.anInt805 = Class15.inputStream.readUnsignedByte();
+					Class38_Sub20_Sub3_Sub2.anInt3274 = Class15.inputStream.readUnsignedByte();
+					Class38_Sub17.anInt2195 = Class15.inputStream.readUnsignedShort();
+					Class60.anInt1302 = Class15.inputStream.readUnsignedByte();
+					Class29.anInt706 = Class15.inputStream.readUnsignedByte();
 					if (Class29.anInt706 >= 100) {
 						Class2.anInt30 = Class38_Sub20_Sub3_Sub2.anInt3274 * 128 + 64;
 						Class11.anInt208 = Class35.anInt805 * 128 + 64;
 						Class38_Sub18.anInt2209 = Class35.method317(-5736, height, Class11.anInt208, Class2.anInt30) - Class38_Sub17.anInt2195;
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 190) {
+				if (Class23.packetId == 190) {
 					for (int i_112_ = 0; Class21.anIntArray528.length > i_112_; i_112_++)
 						if (Class21.anIntArray528[i_112_] != Class53.anIntArray1172[i_112_]) {
 							Class21.anIntArray528[i_112_] = Class53.anIntArray1172[i_112_];
 							Class76.method545(i_112_, -2);
 							Class43.anIntArray971[Class38_Sub10_Sub3.method941(31, Class25.anInt591++)] = i_112_;
 						}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 161) {
+				if (Class23.packetId == 161) {
 					int i_113_ = Class15.inputStream.method730(i ^ 0x77dc);
-					int i_114_ = Class15.inputStream.getUShort();
+					int i_114_ = Class15.inputStream.readUnsignedShort();
 					if (i_114_ == 65535)
 						i_114_ = -1;
 					int i_115_ = Class15.inputStream.method746(i ^ ~0x77ae);
-					int i_116_ = Class15.inputStream.getUShort();
+					int i_116_ = Class15.inputStream.readUnsignedShort();
 					if (i_116_ == 65535)
 						i_116_ = -1;
 					for (int i_117_ = i_114_; i_117_ <= i_116_; i_117_++) {
 						long l = ((long) i_113_ << -1122880480) - -(long) i_117_;
-						Node Node = Entity.aClass14_3514.method75(l, (byte) -106);
+						Node Node = Entity.aClass14_3514.method75(l);
 						if (Node != null)
 							Node.method330(0);
 						Entity.aClass14_3514.method80(true, l, new Class38_Sub11(i_115_));
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 124) {
-					if (NodeSub.anInt2252 != -1)
-						Class38_Sub4.method625(NodeSub.anInt2252, 0, (byte) 39);
-					Class23.anInt546 = -1;
+				if (Class23.packetId == 124) {
+					if (NodeSub.windowId != -1)
+						Class38_Sub4.method625(NodeSub.windowId, 0, (byte) 39);
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 39) {
+				if (Class23.packetId == 39) {
 					Class64.anInt1358 = Class15.inputStream.getUByteC();
-					Class2_Sub1.anInt2003 = Class15.inputStream.getUByte();
+					Class2_Sub1.anInt2003 = Class15.inputStream.readUnsignedByte();
 					for (int i_118_ = Class2_Sub1.anInt2003; Class2_Sub1.anInt2003 + 8 > i_118_; i_118_++)
 						for (int i_119_ = Class64.anInt1358; i_119_ < Class64.anInt1358 + 8; i_119_++)
 							if (Class38_Sub21.aClass13ArrayArrayArray2259[height][i_118_][i_119_] != null) {
@@ -1283,16 +1283,16 @@ public final class Client extends Applet_Sub1 {
 					for (Class38_Sub21 class38_sub21 = (Class38_Sub21) Class3.aClass13_71.method65(103); class38_sub21 != null; class38_sub21 = (Class38_Sub21) Class3.aClass13_71.method63(-3))
 						if (class38_sub21.anInt2267 >= Class2_Sub1.anInt2003 && Class2_Sub1.anInt2003 + 8 > class38_sub21.anInt2267 && Class64.anInt1358 <= class38_sub21.anInt2282 && class38_sub21.anInt2282 < Class64.anInt1358 + 8 && class38_sub21.anInt2263 == height)
 							class38_sub21.anInt2273 = 0;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 222) {
+				if (Class23.packetId == 222) {
 					long l = Class15.inputStream.method748(-102);
-					long l_120_ = Class15.inputStream.getUShort();
+					long l_120_ = Class15.inputStream.readUnsignedShort();
 					long l_121_ = Class15.inputStream.method738((byte) 90);
 					long l_122_ = (l_120_ << -1198720864) + l_121_;
 					boolean bool = false;
-					int i_123_ = Class15.inputStream.getUByte();
+					int i_123_ = Class15.inputStream.readUnsignedByte();
 					for (int i_124_ = 0; i_124_ < 100; i_124_++)
 						if (Class51.aLongArray1123[i_124_] == l_122_) {
 							bool = true;
@@ -1315,40 +1315,40 @@ public final class Client extends Applet_Sub1 {
 						else
 							Class62.method464((byte) 98, class19, 7, Class9.method43(new RSString[] { Class38_Sub20_Sub10.aClass19_2911, Class73.method520(l, 1).method167((byte) 52) }, (byte) -20));
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 207) {
-					int i_126_ = Class15.inputStream.getUShortA();
+				if (Class23.packetId == 207) {
+					int i_126_ = Class15.inputStream.readUnsignedShortAdd();
 					Class3.method18((byte) 68, i_126_);
 					Class55.anIntArray1230[Class38_Sub10_Sub3.method941(31, Class38_Sub18.anInt2208++)] = Class38_Sub10_Sub3.method941(i_126_, 32767);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 99) {
-					int i_127_ = Class15.inputStream.getUShort();
-					int i_128_ = Class15.inputStream.getUByte();
-					int i_129_ = Class15.inputStream.getUShort();
+				if (Class23.packetId == 99) {
+					int i_127_ = Class15.inputStream.readUnsignedShort();
+					int i_128_ = Class15.inputStream.readUnsignedByte();
+					int i_129_ = Class15.inputStream.readUnsignedShort();
 					Class38_Sub20_Sub17.method1035(i_127_, (byte) -61, i_129_, i_128_);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 244) {
+				if (Class23.packetId == 244) {
 					int i_130_ = Class15.inputStream.getULEShort();
-					int i_131_ = Class15.inputStream.method759(true);
+					int i_131_ = Class15.inputStream.readInt(true);
 					Class53.anIntArray1172[i_130_] = i_131_;
 					if (Class21.anIntArray528[i_130_] != i_131_) {
 						Class21.anIntArray528[i_130_] = i_131_;
 						Class76.method545(i_130_, -2);
 					}
 					Class43.anIntArray971[Class38_Sub10_Sub3.method941(31, Class25.anInt591++)] = i_130_;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 209) {
-					int i_132_ = Class15.inputStream.getUShortA();
-					int i_133_ = Class15.inputStream.method759(true);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_133_, -106);
+				if (Class23.packetId == 209) {
+					int i_132_ = Class15.inputStream.readUnsignedShortAdd();
+					int i_133_ = Class15.inputStream.readInt(true);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_133_, -106);
 					if (class38_sub6 != null && class38_sub6.anInt1868 == 0) {
 						if (i_132_ > -class38_sub6.anInt1886 + class38_sub6.anInt1933)
 							i_132_ = class38_sub6.anInt1933 - class38_sub6.anInt1886;
@@ -1359,25 +1359,25 @@ public final class Client extends Applet_Sub1 {
 							Class40.method340(class38_sub6, (byte) -101);
 						}
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 201) {
-					int i_134_ = Class15.inputStream.getUShortA();
-					int i_135_ = Class15.inputStream.method765((byte) 112);
+				if (Class23.packetId == 201) {
+					int i_134_ = Class15.inputStream.readUnsignedShortAdd();
+					int i_135_ = Class15.inputStream.readByte((byte) 112);
 					Class53.anIntArray1172[i_134_] = i_135_;
 					if (i_135_ != Class21.anIntArray528[i_134_]) {
 						Class21.anIntArray528[i_134_] = i_135_;
 						Class76.method545(i_134_, -2);
 					}
 					Class43.anIntArray971[Class38_Sub10_Sub3.method941(31, Class25.anInt591++)] = i_134_;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 232) {
-					Class42.anInt962 = Class15.inputStream.getUByte();
+				if (Class23.packetId == 232) {
+					Class42.anInt962 = Class15.inputStream.readUnsignedByte();
 					if (Class42.anInt962 == 1)
-						Class60.anInt1320 = Class15.inputStream.getUShort();
+						Class60.anInt1320 = Class15.inputStream.readUnsignedShort();
 					if (Class42.anInt962 >= 2 && Class42.anInt962 <= 6) {
 						if (Class42.anInt962 == 2) {
 							anInt3641 = 64;
@@ -1400,93 +1400,93 @@ public final class Client extends Applet_Sub1 {
 							Class47.anInt1062 = 64;
 						}
 						Class42.anInt962 = 2;
-						Class32.anInt770 = Class15.inputStream.getUShort();
-						Class5.anInt93 = Class15.inputStream.getUShort();
-						Class38_Sub20_Sub2.anInt2535 = Class15.inputStream.getUByte();
+						Class32.anInt770 = Class15.inputStream.readUnsignedShort();
+						Class5.anInt93 = Class15.inputStream.readUnsignedShort();
+						Class38_Sub20_Sub2.anInt2535 = Class15.inputStream.readUnsignedByte();
 					}
 					if (Class42.anInt962 == 10)
-						Class62.anInt1344 = Class15.inputStream.getUShort();
-					Class23.anInt546 = -1;
+						Class62.anInt1344 = Class15.inputStream.readUnsignedShort();
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 160) {
+				if (Class23.packetId == 160) {
 					Class38_Sub21.aBool2280 = false;
 					for (int i_136_ = 0; i_136_ < 5; i_136_++)
 						Class20.aBoolArray504[i_136_] = false;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 2) {
-					int i_137_ = Class15.inputStream.method759(true);
-					int i_138_ = Class15.inputStream.getUShort();
-					Class38_Sub6 class38_sub6;
+				if (Class23.packetId == 2) {
+					int i_137_ = Class15.inputStream.readInt(true);
+					int i_138_ = Class15.inputStream.readUnsignedShort();
+					WidgetComponent class38_sub6;
 					if (i_137_ >= 0)
 						class38_sub6 = Projectile.method1167(i_137_, i - 30825);
 					else
 						class38_sub6 = null;
 					if (i_137_ < -70000)
 						i_138_ += 32768;
-					while (((RS2Buffer) Class15.inputStream).pos < Entity.anInt3446) {
+					while (Class15.inputStream.pos < Entity.anInt3446) {
 						int i_139_ = Class15.inputStream.method726(true);
-						int i_140_ = Class15.inputStream.getUShort();
+						int i_140_ = Class15.inputStream.readUnsignedShort();
 						int i_141_ = 0;
 						if (i_140_ != 0) {
-							i_141_ = Class15.inputStream.getUByte();
+							i_141_ = Class15.inputStream.readUnsignedByte();
 							if (i_141_ == 255)
-								i_141_ = Class15.inputStream.method759(true);
+								i_141_ = Class15.inputStream.readInt(true);
 						}
 						if (class38_sub6 != null && i_139_ >= 0 && class38_sub6.anIntArray1947.length > i_139_) {
 							class38_sub6.anIntArray1947[i_139_] = i_140_;
 							class38_sub6.anIntArray1866[i_139_] = i_141_;
 						}
-						Class38_Sub6.method639(i_138_, i_139_, -31820, i_141_, i_140_ - 1);
+						WidgetComponent.method639(i_138_, i_139_, -31820, i_141_, i_140_ - 1);
 					}
 					if (class38_sub6 != null)
 						Class40.method340(class38_sub6, (byte) -102);
 					Applet_Sub1.method1218((byte) -105);
 					Class55.anIntArray1230[Class38_Sub10_Sub3.method941(31, Class38_Sub18.anInt2208++)] = Class38_Sub10_Sub3.method941(i_138_, 32767);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 239) {
+				if (Class23.packetId == 239) {
 					int i_142_ = Class15.inputStream.method746(-65);
 					int i_143_ = Class15.inputStream.method740((byte) 115);
-					int i_144_ = Class15.inputStream.getUShort();
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_142_, -114);
-					Class23.anInt546 = -1;
+					int i_144_ = Class15.inputStream.readUnsignedShort();
+					WidgetComponent class38_sub6 = Projectile.method1167(i_142_, -114);
+					Class23.packetId = -1;
 					class38_sub6.anInt1862 = i_143_ + (i_144_ << -842512208);
 					return true;
 				}
-				if (Class23.anInt546 == 74) {
-					Class41.method353((byte) 126);
-					Class23.anInt546 = -1;
+				if (Class23.packetId == 74) {
+					Class41.updatePlayer((byte) 126);
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 51) {
+				if (Class23.packetId == 51) {
 					NPC.method1200(Entity.anInt3446, Class15.inputStream, i - 30604, Class38_Sub4.aClass56_1798);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 10) {
+				if (Class23.packetId == 10) {
 					int i_145_ = Class15.inputStream.method740((byte) -49);
 					if (i_145_ == 65535)
 						i_145_ = -1;
 					Class4.method26(i_145_, i ^ ~0x5d7f);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 112) {
-					int i_146_ = Class15.inputStream.getUShortA();
+				if (Class23.packetId == 112) {
+					int i_146_ = Class15.inputStream.readUnsignedShortAdd();
 					if (i_146_ == 65535)
 						i_146_ = -1;
 					int i_147_ = Class15.inputStream.method738((byte) 74);
 					Class38_Sub11.method672(-112, i_146_, i_147_);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 94) {
-					int i_148_ = Class15.inputStream.method756(i - 17418);
-					int i_149_ = Class15.inputStream.method756(13285);
+				if (Class23.packetId == 94) {
+					int i_148_ = Class15.inputStream.readUnsignedByteC(i - 17418);
+					int i_149_ = Class15.inputStream.readUnsignedByteC(13285);
 					RSString class19 = Class15.inputStream.getUShort(1347418632);
 					if (i_148_ >= 1 && i_148_ <= 8) {
 						if (class19.method174((byte) 102, Class41.aClass19_948))
@@ -1494,37 +1494,37 @@ public final class Client extends Applet_Sub1 {
 						Class38_Sub11.aClass19Array2094[i_148_ - 1] = class19;
 						Class17_Sub1.aBoolArray1717[i_148_ - 1] = i_149_ == 0;
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 25) {
-					int i_150_ = Class15.inputStream.getUShort();
-					int i_151_ = Class15.inputStream.method759(true);
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_151_, i ^ 0x77c0);
+				if (Class23.packetId == 25) {
+					int i_150_ = Class15.inputStream.readUnsignedShort();
+					int i_151_ = Class15.inputStream.readInt(true);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_151_, i ^ 0x77c0);
 					if (class38_sub6.anInt1883 != 1 || i_150_ != class38_sub6.anInt1962) {
 						class38_sub6.anInt1962 = i_150_;
 						class38_sub6.anInt1883 = 1;
 						Class40.method340(class38_sub6, (byte) -105);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 224) {
-					int i_152_ = Entity.anInt3446 + ((RS2Buffer) Class15.inputStream).pos;
-					int i_153_ = Class15.inputStream.getUShort();
-					int i_154_ = Class15.inputStream.getUShort();
-					if (i_153_ != NodeSub.anInt2252) {
-						NodeSub.anInt2252 = i_153_;
-						method1231(i - 30703, NodeSub.anInt2252);
-						Class78.method566(NodeSub.anInt2252, 60);
+				if (Class23.packetId == 224) {
+					int i_152_ = Entity.anInt3446 + Class15.inputStream.pos;
+					int i_153_ = Class15.inputStream.readUnsignedShort();
+					int i_154_ = Class15.inputStream.readUnsignedShort();
+					if (i_153_ != NodeSub.windowId) {
+						NodeSub.windowId = i_153_;
+						method1231(i - 30703, NodeSub.windowId);
+						Class78.method566(NodeSub.windowId, 60);
 						for (int i_155_ = 0; i_155_ < 100; i_155_++)
 							Class32.aBoolArray768[i_155_] = true;
 					}
 					while (i_154_-- > 0) {
-						int i_156_ = Class15.inputStream.method759(true);
-						int i_157_ = Class15.inputStream.getUShort();
-						int i_158_ = Class15.inputStream.getUByte();
-						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_156_, (byte) -106);
+						int i_156_ = Class15.inputStream.readInt(true);
+						int i_157_ = Class15.inputStream.readUnsignedShort();
+						int i_158_ = Class15.inputStream.readUnsignedByte();
+						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_156_);
 						if (class38_sub8 != null && class38_sub8.anInt2038 != i_157_) {
 							Class48.method388(true, (byte) -62, class38_sub8);
 							class38_sub8 = null;
@@ -1539,26 +1539,26 @@ public final class Client extends Applet_Sub1 {
 						else
 							class38_sub8.aBool2042 = false;
 					Entity.aClass14_3514 = new Class14(512);
-					while (i_152_ > ((RS2Buffer) Class15.inputStream).pos) {
-						int i_159_ = Class15.inputStream.method759(true);
-						int i_160_ = Class15.inputStream.getUShort();
-						int i_161_ = Class15.inputStream.getUShort();
-						int i_162_ = Class15.inputStream.method759(true);
+					while (i_152_ > Class15.inputStream.pos) {
+						int i_159_ = Class15.inputStream.readInt(true);
+						int i_160_ = Class15.inputStream.readUnsignedShort();
+						int i_161_ = Class15.inputStream.readUnsignedShort();
+						int i_162_ = Class15.inputStream.readInt(true);
 						for (int i_163_ = i_160_; i_161_ >= i_163_; i_163_++) {
 							long l = ((long) i_159_ << -241787872) + i_163_;
 							Entity.aClass14_3514.method80(true, l, new Class38_Sub11(i_162_));
 						}
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 4) {
+				if (Class23.packetId == 4) {
 					Class33.anInt789 = Entity.anInt3513;
 					long l = Class15.inputStream.method748(-122);
 					if (l == 0L) {
 						Class61.aClass19_1331 = null;
 						NPC.aClass38_Sub9Array3557 = null;
-						Class23.anInt546 = -1;
+						Class23.packetId = -1;
 						Class59.aClass19_1292 = null;
 						Class15.anInt300 = 0;
 						return true;
@@ -1566,21 +1566,21 @@ public final class Client extends Applet_Sub1 {
 					long l_164_ = Class15.inputStream.method748(i - 30810);
 					Class59.aClass19_1292 = Class73.method520(l_164_, 1);
 					Class61.aClass19_1331 = Class73.method520(l, 1);
-					Class4.aByte79 = Class15.inputStream.method765((byte) 115);
-					int i_165_ = Class15.inputStream.getUByte();
+					Class4.aByte79 = Class15.inputStream.readByte((byte) 115);
+					int i_165_ = Class15.inputStream.readUnsignedByte();
 					if (i_165_ == 255) {
-						Class23.anInt546 = -1;
+						Class23.packetId = -1;
 						return true;
 					}
 					Class38_Sub9[] class38_sub9s = new Class38_Sub9[100];
 					Class15.anInt300 = i_165_;
 					for (int i_166_ = 0; i_166_ < Class15.anInt300; i_166_++) {
 						class38_sub9s[i_166_] = new Class38_Sub9();
-						((Node) class38_sub9s[i_166_]).aLong898 = Class15.inputStream.method748(-126);
-						class38_sub9s[i_166_].aClass19_2061 = Class73.method520(((Node) class38_sub9s[i_166_]).aLong898, 1);
-						class38_sub9s[i_166_].anInt2063 = Class15.inputStream.getUShort();
-						class38_sub9s[i_166_].aByte2056 = Class15.inputStream.method765((byte) 117);
-						if (Class38_Sub1.aLong1737 == ((Node) class38_sub9s[i_166_]).aLong898)
+						class38_sub9s[i_166_].aLong898 = Class15.inputStream.method748(-126);
+						class38_sub9s[i_166_].aClass19_2061 = Class73.method520(class38_sub9s[i_166_].aLong898, 1);
+						class38_sub9s[i_166_].anInt2063 = Class15.inputStream.readUnsignedShort();
+						class38_sub9s[i_166_].aByte2056 = Class15.inputStream.readByte((byte) 117);
+						if (Class38_Sub1.aLong1737 == class38_sub9s[i_166_].aLong898)
 							Class38_Sub20_Sub4.aByte2575 = class38_sub9s[i_166_].aByte2056;
 					}
 					boolean bool = false;
@@ -1599,46 +1599,46 @@ public final class Client extends Applet_Sub1 {
 							break;
 					}
 					NPC.aClass38_Sub9Array3557 = class38_sub9s;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 247) {
-					int i_169_ = Class15.inputStream.getUByte();
-					int i_170_ = Class15.inputStream.getUByte();
-					int i_171_ = Class15.inputStream.getUByte();
-					int i_172_ = Class15.inputStream.getUByte();
+				if (Class23.packetId == 247) {
+					int i_169_ = Class15.inputStream.readUnsignedByte();
+					int i_170_ = Class15.inputStream.readUnsignedByte();
+					int i_171_ = Class15.inputStream.readUnsignedByte();
+					int i_172_ = Class15.inputStream.readUnsignedByte();
 					Class20.aBoolArray504[i_169_] = true;
 					Class77.anIntArray1512[i_169_] = i_170_;
 					Class67.anIntArray1378[i_169_] = i_171_;
 					Class32.anIntArray765[i_169_] = i_172_;
 					shakingCycle[i_169_] = 0;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 33) {
+				if (Class23.packetId == 33) {
 					Class2_Sub1.anInt2003 = Class15.inputStream.method741(68);
 					Class64.anInt1358 = Class15.inputStream.getUByteC();
-					while (((RS2Buffer) Class15.inputStream).pos < Entity.anInt3446) {
-						Class23.anInt546 = Class15.inputStream.getUByte();
+					while (Class15.inputStream.pos < Entity.anInt3446) {
+						Class23.packetId = Class15.inputStream.readUnsignedByte();
 						Class60.method452(7);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 197) {
+				if (Class23.packetId == 197) {
 					Applet_Sub1.method1218((byte) -119);
-					Class38_Sub20_Sub3_Sub5.anInt3372 = Class15.inputStream.getUByte();
-					Class23.anInt546 = -1;
+					Class38_Sub20_Sub3_Sub5.anInt3372 = Class15.inputStream.readUnsignedByte();
+					Class23.packetId = -1;
 					Class38_Sub20_Sub3_Sub2.anInt3260 = Entity.anInt3513;
 					return true;
 				}
-				if (Class23.anInt546 == 76) {
+				if (Class23.packetId == 76) {
 					Class38_Sub21.aBool2280 = true;
-					Class23.anInt563 = Class15.inputStream.getUByte();
-					Class38_Sub9.anInt2072 = Class15.inputStream.getUByte();
-					Class38_Sub20_Sub15.anInt3071 = Class15.inputStream.getUShort();
-					Class44.anInt1002 = Class15.inputStream.getUByte();
-					Class62.anInt1338 = Class15.inputStream.getUByte();
+					Class23.anInt563 = Class15.inputStream.readUnsignedByte();
+					Class38_Sub9.anInt2072 = Class15.inputStream.readUnsignedByte();
+					Class38_Sub20_Sub15.anInt3071 = Class15.inputStream.readUnsignedShort();
+					Class44.anInt1002 = Class15.inputStream.readUnsignedByte();
+					Class62.anInt1338 = Class15.inputStream.readUnsignedByte();
 					if (Class62.anInt1338 >= 100) {
 						int i_173_ = Class23.anInt563 * 128 + 64;
 						int i_174_ = Class38_Sub9.anInt2072 * 128 + 64;
@@ -1654,43 +1654,43 @@ public final class Client extends Applet_Sub1 {
 						if (Class3.anInt44 > 383)
 							Class3.anInt44 = 383;
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 237) {
-					int i_180_ = Class15.inputStream.method759(true);
-					Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_180_, (byte) -106);
+				if (Class23.packetId == 237) {
+					int i_180_ = Class15.inputStream.readInt(true);
+					Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_180_);
 					if (class38_sub8 != null)
 						Class48.method388(true, (byte) -19, class38_sub8);
 					if (Class38_Sub2.aClass38_Sub6_1769 != null) {
 						Class40.method340(Class38_Sub2.aClass38_Sub6_1769, (byte) -108);
 						Class38_Sub2.aClass38_Sub6_1769 = null;
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 130) {
-					boolean bool = Class15.inputStream.getUByte() == 1;
-					int i_181_ = Class15.inputStream.getMEInt();
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_181_, i ^ 0x77c6);
+				if (Class23.packetId == 130) {
+					boolean bool = Class15.inputStream.readUnsignedByte() == 1;
+					int i_181_ = Class15.inputStream.readMEInt();
+					WidgetComponent class38_sub6 = Projectile.method1167(i_181_, i ^ 0x77c6);
 					if (!class38_sub6.aBool1853 != !bool) {
 						class38_sub6.aBool1853 = bool;
 						Class40.method340(class38_sub6, (byte) -124);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 46) {
+				if (Class23.packetId == 46) {
 					long l = Class15.inputStream.method748(-114);
-					int i_182_ = Class15.inputStream.getUShort();
-					byte i_183_ = Class15.inputStream.method765((byte) 89);
+					int i_182_ = Class15.inputStream.readUnsignedShort();
+					byte i_183_ = Class15.inputStream.readByte((byte) 89);
 					boolean bool = false;
 					if ((l & ~0x7fffffffffffffffL) != 0L)
 						bool = true;
 					if (!bool) {
 						Class38_Sub9 class38_sub9 = new Class38_Sub9();
-						((Node) class38_sub9).aLong898 = l;
-						class38_sub9.aClass19_2061 = Class73.method520(((Node) class38_sub9).aLong898, 1);
+						class38_sub9.aLong898 = l;
+						class38_sub9.aClass19_2061 = Class73.method520(class38_sub9.aLong898, 1);
 						class38_sub9.anInt2063 = i_182_;
 						class38_sub9.aByte2056 = i_183_;
 						int i_184_;
@@ -1702,14 +1702,14 @@ public final class Client extends Applet_Sub1 {
 								if (l == Class38_Sub1.aLong1737)
 									Class38_Sub20_Sub4.aByte2575 = i_183_;
 								Class33.anInt789 = Entity.anInt3513;
-								Class23.anInt546 = -1;
+								Class23.packetId = -1;
 								return true;
 							}
 							if (i_185_ < 0)
 								break;
 						}
 						if (Class15.anInt300 >= NPC.aClass38_Sub9Array3557.length) {
-							Class23.anInt546 = -1;
+							Class23.packetId = -1;
 							return true;
 						}
 						for (int i_186_ = Class15.anInt300 - 1; i_184_ < i_186_; i_186_--)
@@ -1722,14 +1722,14 @@ public final class Client extends Applet_Sub1 {
 						Class15.anInt300++;
 					} else {
 						if (Class15.anInt300 == 0) {
-							Class23.anInt546 = -1;
+							Class23.packetId = -1;
 							return true;
 						}
 						boolean bool_187_ = false;
 						l &= 0x7fffffffffffffffL;
 						int i_188_;
 						for (i_188_ = 0; Class15.anInt300 > i_188_; i_188_++)
-							if (((Node) NPC.aClass38_Sub9Array3557[i_188_]).aLong898 == l && i_182_ == NPC.aClass38_Sub9Array3557[i_188_].anInt2063)
+							if (NPC.aClass38_Sub9Array3557[i_188_].aLong898 == l && i_182_ == NPC.aClass38_Sub9Array3557[i_188_].anInt2063)
 								break;
 						if (Class15.anInt300 > i_188_) {
 							for (/**/; i_188_ < Class15.anInt300 - 1; i_188_++)
@@ -1739,52 +1739,52 @@ public final class Client extends Applet_Sub1 {
 						}
 					}
 					Class33.anInt789 = Entity.anInt3513;
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 45) {
-					int i_189_ = Class15.inputStream.method756(13285);
+				if (Class23.packetId == 45) {
+					int i_189_ = Class15.inputStream.readUnsignedByteC(13285);
 					int i_190_ = Class15.inputStream.getUByteC();
 					int i_191_ = Class15.inputStream.method741(107);
 					height = i_189_ >> -180644607;
 					myPlayer.updatePosition(i_190_, i_191_, (i_189_ & 0x1) == 1);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 5) {
-					int i_192_ = Class15.inputStream.getUShort();
+				if (Class23.packetId == 5) {
+					int i_192_ = Class15.inputStream.readUnsignedShort();
 					int i_193_ = i_192_ >> 1034379978 & 0x1f;
 					int i_194_ = Class15.inputStream.method730(i ^ 0x77bf);
 					int i_195_ = i_192_ & 0x1f;
 					int i_196_ = i_192_ >> 1790679013 & 0x1f;
-					Class38_Sub6 class38_sub6 = Projectile.method1167(i_194_, -114);
+					WidgetComponent class38_sub6 = Projectile.method1167(i_194_, -114);
 					int i_197_ = (i_196_ << -641268565) + (i_193_ << -1817172877) + (i_195_ << -190164253);
 					if (class38_sub6.anInt1889 != i_197_) {
 						class38_sub6.anInt1889 = i_197_;
 						Class40.method340(class38_sub6, (byte) -116);
 					}
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 231) {
+				if (Class23.packetId == 231) {
 					Class38_Sub20_Sub17.sendMapRegion(false, (byte) 112);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				if (Class23.anInt546 == 115) {
+				if (Class23.packetId == 115) {
 					Class64.anInt1358 = Class15.inputStream.getUByteC();
 					Class2_Sub1.anInt2003 = Class15.inputStream.method741(105);
-					Class23.anInt546 = -1;
+					Class23.packetId = -1;
 					return true;
 				}
-				Class38_Sub20_Sub2.method813(null, "T1 - " + Class23.anInt546 + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446, 95);
+				Class38_Sub20_Sub2.method813(null, "T1 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446, 95);
 				Class41.method350(-10015);
 			} catch (java.io.IOException ioexception) {
 				Client.dropClient();
 			} catch (Exception exception) {
-				String string = "T2 - " + Class23.anInt546 + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446 + "," + (currentBaseY + ((Entity) myPlayer).walkQueueX[0]) + "," + (currentBaseX + ((Entity) myPlayer).walkQueueY[0]) + " - ";
+				String string = "T2 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446 + "," + (currentBaseY + myPlayer.walkQueueX[0]) + "," + (currentBaseX + myPlayer.walkQueueY[0]) + " - ";
 				for (int i_198_ = 0; Entity.anInt3446 > i_198_ && i_198_ < 50; i_198_++)
-					string += ((RS2Buffer) Class15.inputStream).buffer[i_198_] + ",";
+					string += Class15.inputStream.buffer[i_198_] + ",";
 				Class38_Sub20_Sub2.method813(exception, string, 95);
 				Class41.method350(-10015);
 			}
@@ -1971,10 +1971,10 @@ public final class Client extends Applet_Sub1 {
 			destY = walkingQueueY[0];
 			for (int id = 1; maxPathSize > id; id++) {
 				currentIndex--;
-				outputBuffer.putByteC(-localX + walkingQueueX[currentIndex]);
+				outputBuffer.writeByteC(-localX + walkingQueueX[currentIndex]);
 				outputBuffer.putByteA(-localY + walkingQueueY[currentIndex]);
 			}
-			outputBuffer.putByteC(heldKeys[82] ? 1 : 0);
+			outputBuffer.writeByteC(heldKeys[82] ? 1 : 0);
 			outputBuffer.putShort(localY + currentBaseX);
 			return true;
 		}
@@ -2068,10 +2068,10 @@ public final class Client extends Applet_Sub1 {
 
 	static final void method1231(int i, int i_32_) {
 		try {
-			if (Class22.method196(i_32_, -18020)) {
-				Class38_Sub6[] class38_sub6s = Class62.aClass38_Sub6ArrayArray1339[i_32_];
+			if (Class22.loadWidget(i_32_)) {
+				WidgetComponent[] class38_sub6s = Class62.widgets[i_32_];
 				for (int i_33_ = i; i_33_ < class38_sub6s.length; i_33_++) {
-					Class38_Sub6 class38_sub6 = class38_sub6s[i_33_];
+					WidgetComponent class38_sub6 = class38_sub6s[i_33_];
 					if (class38_sub6 != null) {
 						class38_sub6.anInt1875 = 0;
 						class38_sub6.anInt1952 = 0;

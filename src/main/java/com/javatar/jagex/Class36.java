@@ -30,9 +30,9 @@ final class Class36 {
 	}
 
 	final void method319(RS2Buffer class38_sub23) {
-		this.anInt856 = class38_sub23.getUByte();
-		this.anInt853 = class38_sub23.method759(true);
-		this.anInt851 = class38_sub23.method759(true);
+		this.anInt856 = class38_sub23.readUnsignedByte();
+		this.anInt853 = class38_sub23.readInt(true);
+		this.anInt851 = class38_sub23.readInt(true);
 		method321(class38_sub23);
 	}
 
@@ -52,12 +52,12 @@ final class Class36 {
 	}
 
 	final void method321(RS2Buffer class38_sub23) {
-		anInt852 = class38_sub23.getUByte();
+		anInt852 = class38_sub23.readUnsignedByte();
 		anIntArray854 = new int[anInt852];
 		anIntArray855 = new int[anInt852];
 		for (int i = 0; i < anInt852; i++) {
-			anIntArray854[i] = class38_sub23.getUShort();
-			anIntArray855[i] = class38_sub23.getUShort();
+			anIntArray854[i] = class38_sub23.readUnsignedShort();
+			anIntArray855[i] = class38_sub23.readUnsignedShort();
 		}
 	}
 }

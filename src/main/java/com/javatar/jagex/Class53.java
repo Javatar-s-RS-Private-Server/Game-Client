@@ -221,7 +221,7 @@ final class Class53 {
 						int i_31_ = class38_sub23.method726(true);
 						if (i_31_ == 0)
 							break;
-						class38_sub23.getUByte();
+						class38_sub23.readUnsignedByte();
 					} else {
 						int i_32_ = class38_sub23.method726(true);
 						if (i_32_ == 0)
@@ -229,7 +229,7 @@ final class Class53 {
 						i_30_ += i_32_ - 1;
 						int i_33_ = i_30_ >> 1367686662 & 0x3f;
 						int i_34_ = i_33_ + i;
-						int i_35_ = class38_sub23.getUByte() >> 75082530;
+						int i_35_ = class38_sub23.readUnsignedByte() >> 75082530;
 						int i_36_ = i_30_ & 0x3f;
 						int i_37_ = i_36_ + i_25_;
 						if (i_34_ > 0 && i_37_ > 0 && i_34_ < 103 && i_37_ < 103) {
@@ -335,7 +335,7 @@ final class Class53 {
 						}
 					}
 					if (i_43_ == 8) {
-						Class38_Sub6 class38_sub6 = Class38_Sub20_Sub12.method987(i_41_, i_42_, (byte) -29);
+						WidgetComponent class38_sub6 = Class38_Sub20_Sub12.method987(i_41_, i_42_, (byte) -29);
 						if (class38_sub6 != null) {
 							Class11.method55(-8602);
 							Class60.method453((byte) -28, i_41_, i_42_, Class38_Sub1.method610(true, Class30.method283(-100, class38_sub6)));
@@ -373,7 +373,7 @@ final class Class53 {
 						}
 						if (i_43_ == 43) {
 							Client.outputBuffer.putOpcode(204);
-							Client.outputBuffer.putInt(Class2_Sub1.anInt2008);
+							Client.outputBuffer.writeInt(Class2_Sub1.anInt2008);
 							Client.outputBuffer.method747(i_42_, -2687);
 							Client.outputBuffer.method769(i_44_, 109);
 							Client.outputBuffer.putLEShortA(Node.anInt893);
@@ -448,8 +448,8 @@ final class Class53 {
 						if (i_43_ == 40) {
 							Class38_Sub20_Sub13.anInt3013++;
 							Client.outputBuffer.putOpcode(218);
-							Client.outputBuffer.putInt(i_42_);
-							Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -101);
+							Client.outputBuffer.writeInt(i_42_);
+							WidgetComponent class38_sub6 = Projectile.method1167(i_42_, -101);
 							if (class38_sub6.anIntArrayArray1955 != null && class38_sub6.anIntArrayArray1955[0][0] == 5) {
 								int i_45_ = class38_sub6.anIntArrayArray1955[0][1];
 								Class21.anIntArray528[i_45_] = -Class21.anIntArray528[i_45_] + 1;
@@ -500,7 +500,7 @@ final class Class53 {
 						}
 						if (i_43_ == 21) {
 							Class11.method55(-8602);
-							Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, 77);
+							WidgetComponent class38_sub6 = Projectile.method1167(i_42_, 77);
 							Class58.anInt1286 = i_44_;
 							Class38_Sub10_Sub3.anInt2837 = i_41_;
 							Class17_Sub1.anInt1713 = i_42_;
@@ -516,7 +516,7 @@ final class Class53 {
 								if (i_43_ == 38) {
 									Client.outputBuffer.putOpcode(215);
 									Client.outputBuffer.method767(-25680, i_41_);
-									Client.outputBuffer.putInt(i_42_);
+									Client.outputBuffer.writeInt(i_42_);
 									Client.outputBuffer.putLEShortA(i_44_);
 									Client.redrawTimer = 0;
 									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
@@ -586,7 +586,7 @@ final class Class53 {
 								}
 								if (i_43_ == 42) {
 									Client.outputBuffer.putOpcode(96);
-									Client.outputBuffer.putInt(i_42_);
+									Client.outputBuffer.writeInt(i_42_);
 									Client.outputBuffer.method767(-25680, i_41_);
 									Client.outputBuffer.method747(Class2_Sub1.anInt2008, -2687);
 									Client.outputBuffer.method769(Node.anInt893, 127);
@@ -595,7 +595,7 @@ final class Class53 {
 									Client.outputBuffer.putOpcode(117);
 									Client.outputBuffer.putShort(i_44_);
 									Client.outputBuffer.putShort(i_41_);
-									Client.outputBuffer.putInt(i_42_);
+									Client.outputBuffer.writeInt(i_42_);
 									Client.redrawTimer = 0;
 									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, -101);
 									Class38_Sub20_Sub8.anInt2883 = i_41_;
@@ -607,7 +607,7 @@ final class Class53 {
 									Client.outputBuffer.putLEShortA(Class38_Sub10_Sub3.anInt2837);
 									Client.outputBuffer.method769(Client.currentBaseY + i_41_, 74);
 									Client.outputBuffer.method767(-25680, Client.currentBaseX + i_42_);
-									Client.outputBuffer.putInt(Class17_Sub1.anInt1713);
+									Client.outputBuffer.writeInt(Class17_Sub1.anInt1713);
 								}
 								if (i_43_ == 2 && Class14.method79(i_42_, (byte) 90, i_41_, i_44_)) {
 									Client.outputBuffer.putOpcode(208);
@@ -627,8 +627,8 @@ final class Class53 {
 								if (i_43_ == 34) {
 									Class38_Sub20_Sub13.anInt3013++;
 									Client.outputBuffer.putOpcode(218);
-									Client.outputBuffer.putInt(i_42_);
-									Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -113);
+									Client.outputBuffer.writeInt(i_42_);
+									WidgetComponent class38_sub6 = Projectile.method1167(i_42_, -113);
 									if (class38_sub6.anIntArrayArray1955 != null && class38_sub6.anIntArrayArray1955[0][0] == 5) {
 										int i_46_ = class38_sub6.anIntArrayArray1955[0][1];
 										if (class38_sub6.anIntArray1898[0] != Class21.anIntArray528[i_46_]) {
@@ -667,13 +667,13 @@ final class Class53 {
 									Client.outputBuffer.method769(Client.currentBaseY + i_41_, 74);
 								}
 								if (i_43_ == 26) {
-									Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, -123);
+									WidgetComponent class38_sub6 = Projectile.method1167(i_42_, -123);
 									boolean bool = true;
 									if (class38_sub6.anInt1958 > 0)
 										bool = Client.method1229(-126, class38_sub6);
 									if (bool) {
 										Client.outputBuffer.putOpcode(218);
-										Client.outputBuffer.putInt(i_42_);
+										Client.outputBuffer.writeInt(i_42_);
 										Class38_Sub20_Sub13.anInt3013++;
 									}
 								}
@@ -767,7 +767,7 @@ final class Class53 {
 									}
 								}
 								if (i_43_ == 1004) {
-									Class38_Sub6 class38_sub6 = Projectile.method1167(i_42_, 50);
+									WidgetComponent class38_sub6 = Projectile.method1167(i_42_, 50);
 									if (class38_sub6 != null && class38_sub6.anIntArray1866[i_41_] >= 100000)
 										Class62.method464((byte) 98, Class9.method43(new RSString[] { RuntimeException_Sub1.method1098(class38_sub6.anIntArray1866[i_41_], 0), Class54.aClass19_1188, Node.forId(i_44_, 81).aClass19_2808 }, (byte) -20), 0, Class38_Sub22.aClass19_2312);
 									else {
@@ -809,7 +809,7 @@ final class Class53 {
 								}
 								if (i_43_ == 35) {
 									Client.outputBuffer.putOpcode(115);
-									Client.outputBuffer.putInt(i_42_);
+									Client.outputBuffer.writeInt(i_42_);
 									Client.outputBuffer.method767(-25680, i_41_);
 									Client.outputBuffer.method769(i_44_, 69);
 									Client.redrawTimer = 0;
@@ -868,7 +868,7 @@ final class Class53 {
 								if (i_43_ == 17) {
 									Client.outputBuffer.putOpcode(214);
 									Client.outputBuffer.method767(-25680, i_41_);
-									Client.outputBuffer.putInt(i_42_);
+									Client.outputBuffer.writeInt(i_42_);
 									Client.outputBuffer.putShort(i_44_);
 									Client.redrawTimer = 0;
 									Client.atInventoryInterfaceType = Projectile.method1167(i_42_, 123);

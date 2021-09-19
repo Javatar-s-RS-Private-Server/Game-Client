@@ -14,10 +14,10 @@ abstract class Class73 {
 	private static RSString aClass19_1432 = RSString
 			.createRSString("Loading interfaces )2 ");
 
-	static final void method515(byte i) {
+	static final void updateLocalPlayerLocations(byte i) {
 		do {
 			try {
-				int i_0_ = Class15.inputStream.method785(8, (byte) 69);
+				int i_0_ = Class15.inputStream.readBits(8, (byte) 69);
 				if (ItemDefinition.anInt2783 > i_0_)
 					for (int i_1_ = i_0_; ItemDefinition.anInt2783 > i_1_; i_1_++)
 						Class21.anIntArray519[Class4.anInt81++] = Class47.anIntArray1055[i_1_];
@@ -27,12 +27,12 @@ abstract class Class73 {
 				for (int i_2_ = 0; i_0_ > i_2_; i_2_++) {
 					int i_3_ = Class47.anIntArray1055[i_2_];
 					Player entity = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_3_];
-					int i_4_ = Class15.inputStream.method785(1, (byte) 69);
+					int i_4_ = Class15.inputStream.readBits(1, (byte) 69);
 					if (i_4_ == 0) {
 						Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
 						((Entity) entity).anInt3459 = Class45.anInt1016;
 					} else {
-						int i_5_ = Class15.inputStream.method785(2, (byte) 69);
+						int i_5_ = Class15.inputStream.readBits(2, (byte) 69);
 						if (i_5_ == 0) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
 							((Entity) entity).anInt3459 = Class45.anInt1016;
@@ -40,23 +40,23 @@ abstract class Class73 {
 						} else if (i_5_ == 1) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
 							((Entity) entity).anInt3459 = Class45.anInt1016;
-							int i_6_ = Class15.inputStream.method785(3,
+							int i_6_ = Class15.inputStream.readBits(3,
 									(byte) 69);
 							entity.move(i_6_, false);
-							int i_7_ = Class15.inputStream.method785(1,
+							int i_7_ = Class15.inputStream.readBits(1,
 									(byte) 69);
 							if (i_7_ == 1)
 								ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_3_;
 						} else if (i_5_ == 2) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
 							((Entity) entity).anInt3459 = Class45.anInt1016;
-							int i_8_ = Class15.inputStream.method785(3,
+							int i_8_ = Class15.inputStream.readBits(3,
 									(byte) 69);
 							entity.move(i_8_, true);
-							int i_9_ = Class15.inputStream.method785(3,
+							int i_9_ = Class15.inputStream.readBits(3,
 									(byte) 69);
 							entity.move(i_9_, true);
-							int i_10_ = Class15.inputStream.method785(1,
+							int i_10_ = Class15.inputStream.readBits(1,
 									(byte) 69);
 							if (i_10_ == 1)
 								ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_3_;
@@ -121,7 +121,7 @@ abstract class Class73 {
 			if (l % 37L == 0L)
 				return null;
 			if (i != 1)
-				Class73.method515((byte) 41);
+				Class73.updateLocalPlayerLocations((byte) 41);
 			int i_13_ = 0;
 			for (long l_14_ = l; l_14_ != 0L; l_14_ /= 37L)
 				i_13_++;

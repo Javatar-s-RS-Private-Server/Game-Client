@@ -56,12 +56,12 @@ final class Class78 {
 
 	static final void method566(int i, int i_0_) {
 		try {
-			if (i != -1 && Class22.method196(i, -18020)) {
-				Class38_Sub6[] class38_sub6s = Class62.aClass38_Sub6ArrayArray1339[i];
+			if (i != -1 && Class22.loadWidget(i)) {
+				WidgetComponent[] class38_sub6s = Class62.widgets[i];
 				int i_1_ = 0;
 				if (i_0_ >= 16)
 					for (/**/; i_1_ < class38_sub6s.length; i_1_++) {
-						Class38_Sub6 class38_sub6 = class38_sub6s[i_1_];
+						WidgetComponent class38_sub6 = class38_sub6s[i_1_];
 						if (class38_sub6.anObjectArray1980 != null) {
 							Class38_Sub19 class38_sub19 = new Class38_Sub19();
 							class38_sub19.aClass38_Sub6_2241 = class38_sub6;

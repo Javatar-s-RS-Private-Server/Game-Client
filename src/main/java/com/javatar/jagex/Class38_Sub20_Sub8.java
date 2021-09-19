@@ -19,7 +19,7 @@ final class Class38_Sub20_Sub8 extends NodeSub {
 	static int[] anIntArray2873;
 	static RSString aClass19_2875;
 	int anInt2876;
-	static Class38_Sub6 aClass38_Sub6_2877;
+	static WidgetComponent aClass38_Sub6_2877;
 	int anInt2878;
 	private static RSString aClass19_2881;
 	private static RSString aClass19_2882;
@@ -98,7 +98,7 @@ final class Class38_Sub20_Sub8 extends NodeSub {
 		}
 	}
 
-	static final void method951(int i, Class38_Sub6 class38_sub6) {
+	static final void method951(int i, WidgetComponent class38_sub6) {
 		try {
 			if (i != 1)
 				Class38_Sub20_Sub8.aClass19_2862 = null;
@@ -108,7 +108,7 @@ final class Class38_Sub20_Sub8 extends NodeSub {
 					Class38_Sub20_Sub15.anInt3070 = class38_sub6.anInt1957;
 					Player.anInt3569 = class38_sub6.anInt1932;
 				}
-				if (Class38_Sub20_Sub15.aClass18_3072.aBool410)
+				if (Class38_Sub20_Sub15.aClass18_3072.isFemale)
 					class38_sub6.anInt1932 = Player.anInt3569;
 				else
 					class38_sub6.anInt1932 = Class38_Sub20_Sub15.anInt3070;
@@ -117,7 +117,7 @@ final class Class38_Sub20_Sub8 extends NodeSub {
 					Player.anInt3569 = class38_sub6.anInt1932;
 					Class38_Sub20_Sub15.anInt3070 = class38_sub6.anInt1957;
 				}
-				if (!Class38_Sub20_Sub15.aClass18_3072.aBool410)
+				if (!Class38_Sub20_Sub15.aClass18_3072.isFemale)
 					class38_sub6.anInt1932 = Player.anInt3569;
 				else
 					class38_sub6.anInt1932 = Class38_Sub20_Sub15.anInt3070;
@@ -163,7 +163,7 @@ final class Class38_Sub20_Sub8 extends NodeSub {
 			if (bool)
 				Class38_Sub20_Sub8.anInt2857 = 81;
 			for (;;) {
-				int i_11_ = class38_sub23.getUByte();
+				int i_11_ = class38_sub23.readUnsignedByte();
 				if (i_11_ == 0)
 					break;
 				method956(i, 114, class38_sub23, i_11_);

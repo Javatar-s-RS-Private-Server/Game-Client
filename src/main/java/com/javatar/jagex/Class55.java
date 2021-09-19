@@ -55,7 +55,7 @@ final class Class55 {
 						i = -anInt1211 + 4;
 					anInt1211 += aDataInputStream1217.read(aByteArray1219, anInt1211, i);
 					if (anInt1211 == 4) {
-						int i_5_ = new RS2Buffer(aByteArray1219).method759(true);
+						int i_5_ = new RS2Buffer(aByteArray1219).readInt(true);
 						aByteArray1216 = new byte[i_5_];
 						anInt1220 = 2;
 					}

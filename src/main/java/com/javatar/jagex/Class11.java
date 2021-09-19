@@ -24,7 +24,7 @@ final class Class11 {
 		do {
 			try {
 				if (Class26.aBool614) {
-					Class38_Sub6 class38_sub6 = Class38_Sub20_Sub12.method987(Node.anInt893, Class2_Sub1.anInt2008, (byte) -29);
+					WidgetComponent class38_sub6 = Class38_Sub20_Sub12.method987(Node.anInt893, Class2_Sub1.anInt2008, (byte) -29);
 					if (class38_sub6 != null && class38_sub6.anObjectArray1915 != null) {
 						Class38_Sub19 class38_sub19 = new Class38_Sub19();
 						class38_sub19.aClass38_Sub6_2241 = class38_sub6;

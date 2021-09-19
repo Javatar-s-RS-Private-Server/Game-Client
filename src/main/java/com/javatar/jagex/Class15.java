@@ -22,7 +22,7 @@ final class Class15 {
 	private static RSString[] aClass19Array290;
 	static int anInt291;
 	static RSString aClass19_292;
-	static Class38_Sub6 aClass38_Sub6_293;
+	static WidgetComponent aClass38_Sub6_293;
 	int anInt294;
 	int anInt295;
 	int anInt297;
@@ -331,18 +331,18 @@ final class Class15 {
 									int i_32_ = Class38_Sub11.anIntArray2096[i_2_ + 2];
 									if (i_31_ == 0)
 										throw new RuntimeException();
-									Class38_Sub6 class38_sub6 = Projectile.method1167(i_30_, -104);
+									WidgetComponent class38_sub6 = Projectile.method1167(i_30_, -104);
 									if (class38_sub6.aClass38_Sub6Array1867 == null)
-										class38_sub6.aClass38_Sub6Array1867 = new Class38_Sub6[i_32_ + 1];
+										class38_sub6.aClass38_Sub6Array1867 = new WidgetComponent[i_32_ + 1];
 									if (i_32_ >= class38_sub6.aClass38_Sub6Array1867.length) {
-										Class38_Sub6[] class38_sub6s = new Class38_Sub6[i_32_ + 1];
+										WidgetComponent[] class38_sub6s = new WidgetComponent[i_32_ + 1];
 										for (int i_33_ = 0; i_33_ < class38_sub6.aClass38_Sub6Array1867.length; i_33_++)
 											class38_sub6s[i_33_] = class38_sub6.aClass38_Sub6Array1867[i_33_];
 										class38_sub6.aClass38_Sub6Array1867 = class38_sub6s;
 									}
 									if (i_32_ > 0 && class38_sub6.aClass38_Sub6Array1867[i_32_ - 1] == null)
 										throw new RuntimeException("Gap at:" + (i_32_ - 1));
-									Class38_Sub6 class38_sub6_34_ = new Class38_Sub6();
+									WidgetComponent class38_sub6_34_ = new WidgetComponent();
 									class38_sub6_34_.anInt1868 = i_31_;
 									class38_sub6_34_.aBool1961 = true;
 									class38_sub6_34_.anInt1941 = i_32_;
@@ -354,12 +354,12 @@ final class Class15 {
 										Class13.aClass38_Sub6_245 = class38_sub6_34_;
 									Class40.method340(class38_sub6, (byte) -127);
 								} else if (i_4_ == 101) {
-									Class38_Sub6 class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
-									Class38_Sub6 class38_sub6_35_ = Projectile.method1167(class38_sub6.anInt1856, 67);
+									WidgetComponent class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
+									WidgetComponent class38_sub6_35_ = Projectile.method1167(class38_sub6.anInt1856, 67);
 									class38_sub6_35_.aClass38_Sub6Array1867[class38_sub6.anInt1941] = null;
 									Class40.method340(class38_sub6_35_, (byte) -121);
 								} else if (i_4_ == 102) {
-									Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], -111);
+									WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], -111);
 									class38_sub6.aClass38_Sub6Array1867 = null;
 									Class40.method340(class38_sub6, (byte) -109);
 								} else {
@@ -368,7 +368,7 @@ final class Class15 {
 									i_2_ -= 2;
 									int i_36_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
 									int i_37_ = Class38_Sub11.anIntArray2096[i_2_];
-									Class38_Sub6 class38_sub6 = Class38_Sub20_Sub12.method987(i_36_, i_37_, (byte) -29);
+									WidgetComponent class38_sub6 = Class38_Sub20_Sub12.method987(i_36_, i_37_, (byte) -29);
 									if (class38_sub6 != null && i_36_ != -1) {
 										Class38_Sub11.anIntArray2096[i_2_++] = 1;
 										if (bool)
@@ -380,7 +380,7 @@ final class Class15 {
 								}
 							} else if ((i_4_ < 1000 || i_4_ >= 1100) && (i_4_ < 2000 || i_4_ >= 2100)) {
 								if (i_4_ >= 1100 && i_4_ < 1200 || i_4_ >= 2100 && i_4_ < 2200) {
-									Class38_Sub6 class38_sub6;
+									WidgetComponent class38_sub6;
 									if (i_4_ >= 2000) {
 										i_4_ -= 1000;
 										class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], -126);
@@ -483,7 +483,7 @@ final class Class15 {
 										Class40.method340(class38_sub6, (byte) -119);
 									}
 								} else if (i_4_ >= 1200 && i_4_ < 1300 || i_4_ >= 2200 && i_4_ < 2300) {
-									Class38_Sub6 class38_sub6;
+									WidgetComponent class38_sub6;
 									if (i_4_ < 2000)
 										class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
 									else {
@@ -517,7 +517,7 @@ final class Class15 {
 									}
 								} else if ((i_4_ < 1300 || i_4_ >= 1400) && (i_4_ < 2300 || i_4_ >= 2400)) {
 									if (i_4_ >= 1400 && i_4_ < 1500 || i_4_ >= 2400 && i_4_ < 2500) {
-										Class38_Sub6 class38_sub6;
+										WidgetComponent class38_sub6;
 										if (i_4_ < 2000)
 											class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
 										else {
@@ -603,7 +603,7 @@ final class Class15 {
 											class38_sub6.anObjectArray1879 = objects_43_;
 									} else if (i_4_ >= 1600) {
 										if (i_4_ < 1700) {
-											Class38_Sub6 class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
+											WidgetComponent class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
 											if (i_4_ == 1600)
 												Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1956;
 											else if (i_4_ == 1601)
@@ -626,7 +626,7 @@ final class Class15 {
 												Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1987;
 											}
 										} else if (i_4_ < 1800) {
-											Class38_Sub6 class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
+											WidgetComponent class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
 											if (i_4_ == 1700)
 												Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1917;
 											else if (i_4_ == 1701) {
@@ -641,7 +641,7 @@ final class Class15 {
 											}
 										} else if (i_4_ >= 1900) {
 											if (i_4_ < 2600) {
-												Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 31);
+												WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 31);
 												if (i_4_ == 2500)
 													Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1942;
 												else if (i_4_ == 2501)
@@ -660,10 +660,10 @@ final class Class15 {
 											} else if (i_4_ >= 2700) {
 												if (i_4_ < 2800) {
 													if (i_4_ == 2700) {
-														Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 33);
+														WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 33);
 														Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1917;
 													} else if (i_4_ == 2701) {
-														Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 103);
+														WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 103);
 														if (class38_sub6.anInt1917 != -1)
 															Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1899;
 														else
@@ -672,14 +672,14 @@ final class Class15 {
 														if (i_4_ != 2702)
 															break;
 														int i_46_ = Class38_Sub11.anIntArray2096[--i_2_];
-														Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_46_, (byte) -106);
+														Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(i_46_);
 														if (class38_sub8 != null)
 															Class38_Sub11.anIntArray2096[i_2_++] = 1;
 														else
 															Class38_Sub11.anIntArray2096[i_2_++] = 0;
 													}
 												} else if (i_4_ < 2900) {
-													Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 47);
+													WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 47);
 													if (i_4_ == 2800)
 														Class38_Sub11.anIntArray2096[i_2_++] = Class38_Sub1.method610(true, Class30.method283(-113, class38_sub6));
 													else if (i_4_ == 2801) {
@@ -948,7 +948,7 @@ final class Class15 {
 																	i_1_ -= 2;
 																	RSString class19 = Class37.aClass19Array875[i_1_ + 1];
 																	RSString class19_118_ = Class37.aClass19Array875[i_1_];
-																	if (Client.myPlayer.appearance == null || !Client.myPlayer.appearance.aBool410)
+																	if (Client.myPlayer.appearance == null || !Client.myPlayer.appearance.isFemale)
 																		Class37.aClass19Array875[i_1_++] = class19_118_;
 																	else
 																		Class37.aClass19Array875[i_1_++] = class19;
@@ -963,7 +963,7 @@ final class Class15 {
 																	RSString class19 = Class37.aClass19Array875[--i_1_];
 																	int i_120_ = Class38_Sub11.anIntArray2096[i_2_];
 																	int i_121_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
-																	byte[] is_122_ = Class13.aClass17_Sub1_237.method109(i_121_, 0, -117);
+																	byte[] is_122_ = Class13.aClass17_Sub1_237.getFileData(i_121_, 0, -117);
 																	Class38_Sub20_Sub9_Sub1_Sub1 class38_sub20_sub9_sub1_sub1 = new Class38_Sub20_Sub9_Sub1_Sub1(is_122_);
 																	Class38_Sub11.anIntArray2096[i_2_++] = class38_sub20_sub9_sub1_sub1.method1067(class19, i_120_);
 																} else if (i_4_ == 4109) {
@@ -971,7 +971,7 @@ final class Class15 {
 																	int i_123_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
 																	RSString class19 = Class37.aClass19Array875[--i_1_];
 																	int i_124_ = Class38_Sub11.anIntArray2096[i_2_];
-																	byte[] is_125_ = Class13.aClass17_Sub1_237.method109(i_123_, 0, -73);
+																	byte[] is_125_ = Class13.aClass17_Sub1_237.getFileData(i_123_, 0, -73);
 																	Class38_Sub20_Sub9_Sub1_Sub1 class38_sub20_sub9_sub1_sub1 = new Class38_Sub20_Sub9_Sub1_Sub1(is_125_);
 																	Class38_Sub11.anIntArray2096[i_2_++] = class38_sub20_sub9_sub1_sub1.method1082(class19, i_124_);
 																} else if (i_4_ == 4110) {
@@ -1057,21 +1057,21 @@ final class Class15 {
 																	int i_139_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
 																	int i_140_ = Class38_Sub11.anIntArray2096[i_2_];
 																	Client.outputBuffer.putOpcode(192);
-																	Client.outputBuffer.method762(class19.method162(0), (byte) 56);
+																	Client.outputBuffer.writeLong(class19.method162(0));
 																	Client.outputBuffer.putByte(i_140_ - 1);
 																	Client.outputBuffer.putByte(i_139_);
 																} else if (i_4_ == 5003) {
 																	int i_141_ = Class38_Sub11.anIntArray2096[--i_2_];
 																	RSString class19 = null;
 																	if (i_141_ < 100)
-																		class19 = Class38_Sub6.aClass19Array1945[i_141_];
+																		class19 = WidgetComponent.aClass19Array1945[i_141_];
 																	if (class19 == null)
 																		class19 = RuntimeException_Sub1.aClass19_3287;
 																	Class37.aClass19Array875[i_1_++] = class19;
 																} else if (i_4_ == 5004) {
 																	int i_142_ = Class38_Sub11.anIntArray2096[--i_2_];
 																	int i_143_ = -1;
-																	if (i_142_ < 100 && Class38_Sub6.aClass19Array1945[i_142_] != null)
+																	if (i_142_ < 100 && WidgetComponent.aClass19Array1945[i_142_] != null)
 																		i_143_ = Class38_Sub20_Sub3_Sub4.anIntArray3362[i_142_];
 																	Class38_Sub11.anIntArray2096[i_2_++] = i_143_;
 																} else if (i_4_ == 5005)
@@ -1232,7 +1232,7 @@ final class Class15 {
 																	Client.outputBuffer.putOpcode(164);
 																	Client.outputBuffer.putByte(0);
 																	int i_149_ = ((RS2Buffer) Client.outputBuffer).pos;
-																	Client.outputBuffer.method762(class19.method162(0), (byte) 56);
+																	Client.outputBuffer.writeLong(class19.method162(0));
 																	Class38_Sub4.method627(class19_148_, (byte) -48, Client.outputBuffer);
 																	Client.outputBuffer.putSizedByte(((RS2Buffer) Client.outputBuffer).pos - i_149_);
 																} else if (i_4_ == 5010) {
@@ -1343,10 +1343,10 @@ final class Class15 {
 															Class44.method371(i_165_, class19, (byte) 87);
 														} else if (i_4_ == 3605) {
 															RSString class19 = Class37.aClass19Array875[--i_1_];
-															Class41.method346(119, class19.method162(0));
+															Class41.method346(class19.method162(0));
 														} else if (i_4_ == 3606) {
 															RSString class19 = Class37.aClass19Array875[--i_1_];
-															Class38_Sub6.method640(class19.method162(0), 1);
+															WidgetComponent.method640(class19.method162(0), 1);
 														} else if (i_4_ == 3607) {
 															RSString class19 = Class37.aClass19Array875[--i_1_];
 															Class38_Sub21.method712(31, class19.method162(0));
@@ -1390,7 +1390,7 @@ final class Class15 {
 															Class38_Sub11.anIntArray2096[i_2_++] = Class4.aByte79;
 														else if (i_4_ == 3617) {
 															RSString class19 = Class37.aClass19Array875[--i_1_];
-															Class41.method352(class19, (byte) -123);
+															Class41.method352(class19);
 														} else if (i_4_ == 3618)
 															Class38_Sub11.anIntArray2096[i_2_++] = Class38_Sub20_Sub4.aByte2575;
 														else if (i_4_ == 3619) {
@@ -1453,11 +1453,11 @@ final class Class15 {
 													if (class19.method177((byte) -36))
 														i_171_ = class19.method164(19);
 													Client.outputBuffer.putOpcode(216);
-													Client.outputBuffer.putInt(i_171_);
+													Client.outputBuffer.writeInt(i_171_);
 												} else if (i_4_ == 3105) {
 													RSString class19 = Class37.aClass19Array875[--i_1_];
 													Client.outputBuffer.putOpcode(36);
-													Client.outputBuffer.method762(class19.method162(0), (byte) 56);
+													Client.outputBuffer.writeLong(class19.method162(0));
 												} else if (i_4_ == 3106) {
 													RSString class19 = Class37.aClass19Array875[--i_1_];
 													Client.outputBuffer.putOpcode(86);
@@ -1472,7 +1472,7 @@ final class Class15 {
 													int i_173_ = Class38_Sub11.anIntArray2096[i_2_];
 													int i_174_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
 													int i_175_ = Class38_Sub11.anIntArray2096[i_2_ + 2];
-													Class38_Sub6 class38_sub6 = Projectile.method1167(i_175_, -104);
+													WidgetComponent class38_sub6 = Projectile.method1167(i_175_, -104);
 													Class38_Sub20_Sub3_Sub4.method1153((byte) 37, class38_sub6, i_174_, i_173_);
 												} else {
 													if (i_4_ != 3109)
@@ -1480,11 +1480,11 @@ final class Class15 {
 													i_2_ -= 2;
 													int i_176_ = Class38_Sub11.anIntArray2096[i_2_];
 													int i_177_ = Class38_Sub11.anIntArray2096[i_2_ + 1];
-													Class38_Sub6 class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
+													WidgetComponent class38_sub6 = !bool ? Class13.aClass38_Sub6_245 : Class83.aClass38_Sub6_1657;
 													Class38_Sub20_Sub3_Sub4.method1153((byte) 118, class38_sub6, i_177_, i_176_);
 												}
 											} else {
-												Class38_Sub6 class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 40);
+												WidgetComponent class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 40);
 												if (i_4_ == 2600)
 													Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1956;
 												else if (i_4_ == 2601)
@@ -1508,7 +1508,7 @@ final class Class15 {
 												}
 											}
 										} else {
-											Class38_Sub6 class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
+											WidgetComponent class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
 											if (i_4_ == 1800)
 												Class38_Sub11.anIntArray2096[i_2_++] = Class38_Sub1.method610(true, Class30.method283(-108, class38_sub6));
 											else if (i_4_ == 1801) {
@@ -1528,7 +1528,7 @@ final class Class15 {
 											}
 										}
 									} else {
-										Class38_Sub6 class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
+										WidgetComponent class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
 										if (i_4_ == 1500)
 											Class38_Sub11.anIntArray2096[i_2_++] = class38_sub6.anInt1942;
 										else if (i_4_ == 1501)
@@ -1546,7 +1546,7 @@ final class Class15 {
 										}
 									}
 								} else {
-									Class38_Sub6 class38_sub6;
+									WidgetComponent class38_sub6;
 									if (i_4_ >= 2000) {
 										class38_sub6 = Projectile.method1167(Class38_Sub11.anIntArray2096[--i_2_], 87);
 										i_4_ -= 1000;
@@ -1580,7 +1580,7 @@ final class Class15 {
 									}
 								}
 							} else {
-								Class38_Sub6 class38_sub6;
+								WidgetComponent class38_sub6;
 								if (i_4_ < 2000)
 									class38_sub6 = bool ? Class83.aClass38_Sub6_1657 : Class13.aClass38_Sub6_245;
 								else {
@@ -1676,7 +1676,7 @@ final class Class15 {
 					int i_195_ = class38_sub23.method726(true);
 					if (i_195_ == 0)
 						break;
-					int i_196_ = class38_sub23.getUByte();
+					int i_196_ = class38_sub23.readUnsignedByte();
 					i_194_ += i_195_ - 1;
 					int i_197_ = (i_194_ & 0xff2) >> -888106714;
 					int i_198_ = i_194_ & 0x3f;

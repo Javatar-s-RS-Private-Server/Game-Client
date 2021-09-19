@@ -13,23 +13,23 @@ final class Class8 {
 	private int[][][] anIntArrayArrayArray148 = new int[2][2][4];
 
 	final void method37(RS2Buffer class38_sub23, Class36 class36) {
-		int i = class38_sub23.getUByte();
+		int i = class38_sub23.readUnsignedByte();
 		this.anIntArray142[0] = i >> 4;
 		this.anIntArray142[1] = i & 0xf;
 		if (i != 0) {
-			anIntArray147[0] = class38_sub23.getUShort();
-			anIntArray147[1] = class38_sub23.getUShort();
-			int i_0_ = class38_sub23.getUByte();
+			anIntArray147[0] = class38_sub23.readUnsignedShort();
+			anIntArray147[1] = class38_sub23.readUnsignedShort();
+			int i_0_ = class38_sub23.readUnsignedByte();
 			for (int i_1_ = 0; i_1_ < 2; i_1_++)
 				for (int i_2_ = 0; i_2_ < this.anIntArray142[i_1_]; i_2_++) {
-					anIntArrayArrayArray148[i_1_][0][i_2_] = class38_sub23.getUShort();
-					anIntArrayArrayArray143[i_1_][0][i_2_] = class38_sub23.getUShort();
+					anIntArrayArrayArray148[i_1_][0][i_2_] = class38_sub23.readUnsignedShort();
+					anIntArrayArrayArray143[i_1_][0][i_2_] = class38_sub23.readUnsignedShort();
 				}
 			for (int i_3_ = 0; i_3_ < 2; i_3_++)
 				for (int i_4_ = 0; i_4_ < this.anIntArray142[i_3_]; i_4_++)
 					if ((i_0_ & 1 << i_3_ * 4 << i_4_) != 0) {
-						anIntArrayArrayArray148[i_3_][1][i_4_] = class38_sub23.getUShort();
-						anIntArrayArrayArray143[i_3_][1][i_4_] = class38_sub23.getUShort();
+						anIntArrayArrayArray148[i_3_][1][i_4_] = class38_sub23.readUnsignedShort();
+						anIntArrayArrayArray143[i_3_][1][i_4_] = class38_sub23.readUnsignedShort();
 					} else {
 						anIntArrayArrayArray148[i_3_][1][i_4_] = anIntArrayArrayArray148[i_3_][0][i_4_];
 						anIntArrayArrayArray143[i_3_][1][i_4_] = anIntArrayArrayArray143[i_3_][0][i_4_];

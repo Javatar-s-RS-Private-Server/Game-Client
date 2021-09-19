@@ -41,7 +41,7 @@ final class Class38_Sub7 extends Node {
 
 	static final int method655(int i, int i_0_, boolean bool) {
 		try {
-			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i, (byte) -106);
+			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i);
 			if (class38_sub3 == null)
 				return 0;
 			if (i_0_ == -1)

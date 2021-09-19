@@ -159,8 +159,8 @@ final class Class26 {
 				NodeSub.method710(!Class38_Sub4.aBool1811, 22050, i - 14130, 2);
 				Class38_Sub10_Sub1 class38_sub10_sub1 = new Class38_Sub10_Sub1();
 				class38_sub10_sub1.method838((byte) -108, 9, 128);
-				Class38_Sub6.aClass77_1857 = Class78.method567(Class38_Sub4.aClass56_1798, 0, 22050, (byte) 62, Class38_Sub3.aCanvas1783);
-				Class38_Sub6.aClass77_1857.method550(class38_sub10_sub1, 256000);
+				WidgetComponent.aClass77_1857 = Class78.method567(Class38_Sub4.aClass56_1798, 0, 22050, (byte) 62, Class38_Sub3.aCanvas1783);
+				WidgetComponent.aClass77_1857.method550(class38_sub10_sub1, 256000);
 				PacketBuffer.method782(Class33.aClass17_Sub1_784, Class5.aClass17_Sub1_114, class38_sub10_sub1, (byte) 19, Node.aClass17_Sub1_891);
 				Class38_Sub7.aClass77_2025 = Class78.method567(Class38_Sub4.aClass56_1798, 1, 2048, (byte) 62, Class38_Sub3.aCanvas1783);
 				Class38_Sub9.aClass38_Sub10_Sub4_2057 = new Class38_Sub10_Sub4();

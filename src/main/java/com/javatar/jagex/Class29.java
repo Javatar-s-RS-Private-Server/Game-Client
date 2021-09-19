@@ -24,7 +24,7 @@ final class Class29 {
 		}
 	}
 
-	static final RSString method276(Class38_Sub6 class38_sub6, RSString class19, boolean bool) {
+	static final RSString method276(WidgetComponent class38_sub6, RSString class19, boolean bool) {
 		try {
 			if (class19.method170(1, Projectile.aClass19_3397) != -1) {
 				for (;;) {

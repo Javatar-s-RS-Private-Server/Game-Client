@@ -40,18 +40,18 @@ final class Class25 {
 			if (bool != true)
 				Class25.aClass19_584 = null;
 			Class38_Sub19.aClass17_2230 = class17;
-			Class62.aClass38_Sub6ArrayArray1339 = new Class38_Sub6[Class25.aClass17_589.method107(-51)][];
-			Class38_Sub14.aBoolArray2142 = new boolean[Class25.aClass17_589.method107(-84)];
+			Class62.widgets = new WidgetComponent[Class25.aClass17_589.method107(-51)][];
+			Class38_Sub14.isWidgetLoaded = new boolean[Class25.aClass17_589.method107(-84)];
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "mb.E(" + (class17 != null ? "{...}" : "null") + ',' + bool + ',' + (class17_4_ != null ? "{...}" : "null") + ',' + (class17_5_ != null ? "{...}" : "null") + ',' + (class17_6_ != null ? "{...}" : "null") + ')');
 		}
 	}
 
-	static final void method211(Class38_Sub6[] class38_sub6s, int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
+	static final void method211(WidgetComponent[] class38_sub6s, int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
 		try {
 			int i_14_ = i_12_;
 			for (/**/; i_14_ < class38_sub6s.length; i_14_++) {
-				Class38_Sub6 class38_sub6 = class38_sub6s[i_14_];
+				WidgetComponent class38_sub6 = class38_sub6s[i_14_];
 				if (class38_sub6 != null && (!class38_sub6.aBool1961 || class38_sub6.anInt1868 == 0 || class38_sub6.aBool1960 || Class30.method283(-119, class38_sub6) != 0 || class38_sub6 == Class74.aClass38_Sub6_1463) && class38_sub6.anInt1977 == i_13_ && (!class38_sub6.aBool1961 || !Class43.method362(true, class38_sub6))) {
 					int i_15_ = i + class38_sub6.anInt1942;
 					int i_16_ = class38_sub6.anInt1968 + i_10_;
@@ -109,7 +109,7 @@ final class Class25 {
 								Class25.method211(class38_sub6s, i_15_ - class38_sub6.anInt1956, i_17_, i_20_, i_18_, i_16_ - class38_sub6.anInt1985, i_19_, i_12_, class38_sub6.anInt1856);
 								if (class38_sub6.aClass38_Sub6Array1867 != null)
 									Class25.method211(class38_sub6.aClass38_Sub6Array1867, i_15_ - class38_sub6.anInt1956, i_17_, i_20_, i_18_, i_16_ - class38_sub6.anInt1985, i_19_, 0, class38_sub6.anInt1856);
-								Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856, (byte) -106);
+								Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856);
 								if (class38_sub8 != null)
 									Projectile.method1168(class38_sub8.anInt2038, i_17_, i_20_, i_19_, i_16_, i_18_, i_15_, 0);
 							}

@@ -84,7 +84,7 @@ final class Class21 implements Runnable {
 						}
 						Class81.anInt1624 = Entity.anInt3513;
 						Client.outputBuffer.putOpcode(239);
-						Client.outputBuffer.method762(l, (byte) 56);
+						Client.outputBuffer.writeLong(l);
 						break;
 					}
 				int i_5_ = -88 % ((64 - i) / 52);

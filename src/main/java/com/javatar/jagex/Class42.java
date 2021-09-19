@@ -108,7 +108,7 @@ final class Class42 {
 		}
 	}
 
-	static final void method356(int i, int i_20_, int i_21_, Class38_Sub6[] class38_sub6s, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_) {
+	static final void method356(int i, int i_20_, int i_21_, WidgetComponent[] class38_sub6s, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_) {
 		try {
 			Class38_Sub20_Sub9.method971(i_21_, i_26_, i_20_, i_27_);
 			Class38_Sub20_Sub9_Sub4.method1191();
@@ -116,7 +116,7 @@ final class Class42 {
 			if (i != 1)
 				Class42.method356(91, -79, -124, null, -18, 20, 127, 30, 76, 125);
 			for (/**/; class38_sub6s.length > i_28_; i_28_++) {
-				Class38_Sub6 class38_sub6 = class38_sub6s[i_28_];
+				WidgetComponent class38_sub6 = class38_sub6s[i_28_];
 				if (class38_sub6 != null && (i_22_ == class38_sub6.anInt1977 || i_22_ == -1412584499 && Class15.aClass38_Sub6_293 == class38_sub6)) {
 					int i_29_;
 					if (i_25_ != -1)
@@ -230,7 +230,7 @@ final class Class42 {
 								Class42.method356(1, i_37_, i_36_, class38_sub6s, class38_sub6.anInt1856, i_30_ - class38_sub6.anInt1956, -class38_sub6.anInt1985 + i_32_, i_29_, i_35_, i_38_);
 								if (class38_sub6.aClass38_Sub6Array1867 != null)
 									Class42.method356(1, i_37_, i_36_, class38_sub6.aClass38_Sub6Array1867, class38_sub6.anInt1856, -class38_sub6.anInt1956 + i_30_, -class38_sub6.anInt1985 + i_32_, i_29_, i_35_, i_38_);
-								Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856, (byte) -106);
+								Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856);
 								if (class38_sub8 != null) {
 									if (class38_sub8.anInt2049 == 0 && Class23.anInt543 >= i_36_ && Class45.anInt1015 >= i_35_ && Class23.anInt543 < i_37_ && i_38_ > Class45.anInt1015 && !SceneModel.aBool2553 && !Node.aBool892) {
 										Class72.anInt1417 = 1;
@@ -286,7 +286,7 @@ final class Class42 {
 																}
 																class38_sub20_sub9_sub3.method1120(i_52_ + i_56_, i_53_ + i_57_, 128);
 																if (i_22_ != -1) {
-																	Class38_Sub6 class38_sub6_58_ = class38_sub6s[i_22_ & 0xffff];
+																	WidgetComponent class38_sub6_58_ = class38_sub6s[i_22_ & 0xffff];
 																	if (Class38_Sub20_Sub9.anInt2885 > i_57_ + i_53_ && class38_sub6_58_.anInt1985 > 0) {
 																		int i_59_ = (Class38_Sub20_Sub9.anInt2885 + -i_53_ - i_57_) * Canvas_Sub1.anInt2529 / 3;
 																		if (i_59_ > Canvas_Sub1.anInt2529 * 10)
@@ -608,9 +608,9 @@ final class Class42 {
 				if (i == -7) {
 					if (Class38_Sub7.aClass77_2025 != null)
 						Class38_Sub7.aClass77_2025.method556(0);
-					if (Class38_Sub6.aClass77_1857 == null)
+					if (WidgetComponent.aClass77_1857 == null)
 						break;
-					Class38_Sub6.aClass77_1857.method556(0);
+					WidgetComponent.aClass77_1857.method556(0);
 				}
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "s.C(" + i + ')');

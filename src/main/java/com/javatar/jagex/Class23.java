@@ -7,7 +7,7 @@ final class Class23 {
 	static int anInt543;
 	static RSString aClass19_544;
 	static RSString aClass19_545;
-	static int anInt546 = 0;
+	static int packetId = 0;
 	static RSString aClass19_549;
 	static RSString aClass19_550;
 	static RSString aClass19_551;
@@ -145,7 +145,7 @@ final class Class23 {
 		}
 	}
 
-	static final void method200(int i, Class38_Sub6 class38_sub6, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
+	static final void method200(int i, WidgetComponent class38_sub6, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
 		do {
 			try {
 				if (i_23_ > 105) {

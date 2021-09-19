@@ -22,7 +22,7 @@ final class Class43 {
 	private static RSString aClass19_985 = RSString.createRSString("glow3:");
 	int anInt987;
 
-	static final boolean method362(boolean bool, Class38_Sub6 class38_sub6) {
+	static final boolean method362(boolean bool, WidgetComponent class38_sub6) {
 		try {
 			if (bool != true)
 				return true;
@@ -45,7 +45,7 @@ final class Class43 {
 			Class38_Sub9.anInt2055 = 0;
 			for (int i_0_ = 0; i_0_ < Class38_Sub17.aByteArrayArray2198.length; i_0_++) {
 				if (Class72.anIntArray1409[i_0_] != -1 && Class38_Sub17.aByteArrayArray2198[i_0_] == null) {
-					Class38_Sub17.aByteArrayArray2198[i_0_] = Class48.aClass17_Sub1_1070.method109(Class72.anIntArray1409[i_0_], 0, -110);
+					Class38_Sub17.aByteArrayArray2198[i_0_] = Class48.aClass17_Sub1_1070.getFileData(Class72.anIntArray1409[i_0_], 0, -110);
 					if (Class38_Sub17.aByteArrayArray2198[i_0_] == null) {
 						Class38_Sub9.anInt2055++;
 						bool = false;
@@ -203,7 +203,7 @@ final class Class43 {
 					Entity.aClass83_3466.method596(118);
 					if (Client.clientFrame != null) {
 						Client.outputBuffer.putOpcode(153);
-						Client.outputBuffer.putInt(1057001181);
+						Client.outputBuffer.writeInt(1057001181);
 					}
 					if (!Class37.secondMapRegion) {
 						int i_45_ = (ItemDefinition.anInt2801 + 6) / 8;
@@ -213,7 +213,7 @@ final class Class43 {
 						for (int i_49_ = i_47_ - 1; i_45_ + 1 >= i_49_; i_49_++)
 							for (int i_50_ = i_48_ - 1; i_46_ + 1 >= i_50_; i_50_++)
 								if (i_49_ < i_47_ || i_49_ > i_45_ || i_50_ < i_48_ || i_46_ < i_50_) {
-									Class48.aClass17_Sub1_1070.method115((byte) 95, Class9.method43(new RSString[] { Class38_Sub6.aClass19_1880, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0) }, (byte) -20));
+									Class48.aClass17_Sub1_1070.method115((byte) 95, Class9.method43(new RSString[] { WidgetComponent.aClass19_1880, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0) }, (byte) -20));
 									Class48.aClass17_Sub1_1070.method115((byte) 95, Class9.method43(new RSString[] { Class77.aClass19_1528, RuntimeException_Sub1.method1098(i_49_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_50_, 0) }, (byte) -20));
 								}
 					}

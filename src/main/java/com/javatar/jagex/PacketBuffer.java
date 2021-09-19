@@ -25,11 +25,11 @@ final class PacketBuffer extends RS2Buffer {
 		}
 	}
 
-	final int getOpcode() {
+	final int readIsaacByte() {
 		return ((RS2Buffer) this).buffer[((RS2Buffer) this).pos++] - isaac.nextVal() & 0xff;
 	}
 
-	final void method784(int i) {
+	final void setBitAccess(int i) {
 		try {
 			anInt2419 = i * ((RS2Buffer) this).pos;
 		} catch (RuntimeException runtimeexception) {
@@ -37,7 +37,7 @@ final class PacketBuffer extends RS2Buffer {
 		}
 	}
 
-	final int method785(int i, byte i_2_) {
+	final int readBits(int i, byte i_2_) {
 		try {
 			if (i_2_ != 69)
 				PacketBuffer.aClass19_2436 = null;

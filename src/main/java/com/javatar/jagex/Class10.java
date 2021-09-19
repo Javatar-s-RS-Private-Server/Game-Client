@@ -417,10 +417,10 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 
 	static final void method54(int i, int i_31_) {
 		try {
-			if (Class22.method196(i_31_, -18020)) {
+			if (Class22.loadWidget(i_31_)) {
 				if (i > -120)
 					Class10.method52(70);
-				Class38_Sub20_Sub3_Sub2.method1092(-1, Class62.aClass38_Sub6ArrayArray1339[i_31_], 2047);
+				Class38_Sub20_Sub3_Sub2.method1092(-1, Class62.widgets[i_31_], 2047);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "pe.A(" + i + ',' + i_31_ + ')');

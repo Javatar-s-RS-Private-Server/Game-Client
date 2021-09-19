@@ -35,7 +35,7 @@ final class Class4 {
 
 	static final void method23(int i, int i_0_) {
 		try {
-			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i, (byte) -106);
+			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i);
 			if (class38_sub3 != null) {
 				for (int i_1_ = 0; class38_sub3.anIntArray1781.length > i_1_; i_1_++) {
 					class38_sub3.anIntArray1781[i_1_] = -1;

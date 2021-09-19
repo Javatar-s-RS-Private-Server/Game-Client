@@ -4,7 +4,7 @@ package com.javatar.jagex;/* Class62 - Decompiled by JODE
 
 final class Class62 {
 	static int anInt1338;
-	static Class38_Sub6[][] aClass38_Sub6ArrayArray1339;
+	static WidgetComponent[][] widgets;
 	static Class17 aClass17_1342;
 	static int anInt1344 = 0;
 	static int[] anIntArray1345 = new int[2000];
@@ -84,7 +84,7 @@ final class Class62 {
 			Class62.aClass17_1342 = null;
 			if (i != 1)
 				Class62.aClass17_1342 = null;
-			Class62.aClass38_Sub6ArrayArray1339 = null;
+			Class62.widgets = null;
 			Class62.anIntArray1345 = null;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "lc.A(" + i + ')');

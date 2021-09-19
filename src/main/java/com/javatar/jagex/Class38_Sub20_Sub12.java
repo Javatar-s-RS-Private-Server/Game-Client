@@ -28,7 +28,7 @@ final class Class38_Sub20_Sub12 extends NodeSub {
 		try {
 			if (i == -23866)
 				for (;;) {
-					int i_0_ = class38_sub23.getUByte();
+					int i_0_ = class38_sub23.readUnsignedByte();
 					if (i_0_ == 0)
 						break;
 					readValues(i_0_, -3, class38_sub23);
@@ -38,11 +38,11 @@ final class Class38_Sub20_Sub12 extends NodeSub {
 		}
 	}
 
-	static final Class38_Sub6 method987(int i, int i_1_, byte i_2_) {
+	static final WidgetComponent method987(int i, int i_1_, byte i_2_) {
 		try {
 			if (i_2_ != -29)
 				Class38_Sub20_Sub12.method989(-82, true, null, null);
-			Class38_Sub6 class38_sub6 = Projectile.method1167(i_1_, i_2_ ^ ~0x7a);
+			WidgetComponent class38_sub6 = Projectile.method1167(i_1_, i_2_ ^ ~0x7a);
 			if (i == -1)
 				return class38_sub6;
 			if (class38_sub6 == null || class38_sub6.aClass38_Sub6Array1867 == null || class38_sub6.aClass38_Sub6Array1867.length <= i)
@@ -99,32 +99,32 @@ final class Class38_Sub20_Sub12 extends NodeSub {
 			if (i_3_ != -3)
 				Class38_Sub20_Sub12.method989(69, false, null, null);
 			if (i == 1)
-				this.anInt3006 = stream.getUByte();
+				this.anInt3006 = stream.readUnsignedByte();
 			else if (i != 2) {
 				if (i != 3) {
 					if (i == 4)
-						this.anInt2997 = stream.method759(true);
+						this.anInt2997 = stream.readInt(true);
 					else if (i == 5) {
-						this.anInt2992 = stream.getUShort();
+						this.anInt2992 = stream.readUnsignedShort();
 						this.aClass19Array2990 = new RSString[this.anInt2992];
 						this.anIntArray2986 = new int[this.anInt2992];
 						for (int i_4_ = 0; i_4_ < this.anInt2992; i_4_++) {
-							this.anIntArray2986[i_4_] = stream.method759(true);
+							this.anIntArray2986[i_4_] = stream.readInt(true);
 							this.aClass19Array2990[i_4_] = stream.getUShort(1347418632);
 						}
 					} else if (i == 6) {
-						this.anInt2992 = stream.getUShort();
+						this.anInt2992 = stream.readUnsignedShort();
 						this.anIntArray2989 = new int[this.anInt2992];
 						this.anIntArray2986 = new int[this.anInt2992];
 						for (int i_5_ = 0; this.anInt2992 > i_5_; i_5_++) {
-							this.anIntArray2986[i_5_] = stream.method759(true);
-							this.anIntArray2989[i_5_] = stream.method759(true);
+							this.anIntArray2986[i_5_] = stream.readInt(true);
+							this.anIntArray2989[i_5_] = stream.readInt(true);
 						}
 					}
 				} else
 					this.aClass19_2985 = stream.getUShort(1347418632);
 			} else
-				this.anInt3003 = stream.getUByte();
+				this.anInt3003 = stream.readUnsignedByte();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "se.F(" + i + ',' + i_3_ + ',' + (stream != null ? "{...}" : "null") + ')');
 		}

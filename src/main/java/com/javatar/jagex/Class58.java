@@ -59,7 +59,7 @@ final class Class58 {
 			if (!Class22.method197(i, class17_1_, -308039560, i_2_))
 				return null;
 			int i_3_ = 115 / ((i_0_ - 24) / 44);
-			return Class38_Sub10_Sub1.method853(class17.method109(i, i_2_, -109), true);
+			return Class38_Sub10_Sub1.method853(class17.getFileData(i, i_2_, -109), true);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "sd.B(" + i + ',' + (class17 != null ? "{...}" : "null") + ',' + i_0_ + ',' + (class17_1_ != null ? "{...}" : "null") + ',' + i_2_ + ')');
 		}

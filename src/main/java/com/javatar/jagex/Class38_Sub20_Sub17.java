@@ -43,7 +43,7 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 	final void method1031(RS2Buffer class38_sub23, int i) {
 		try {
 			for (;;) {
-				int i_2_ = class38_sub23.getUByte();
+				int i_2_ = class38_sub23.readUnsignedByte();
 				if (i_2_ == 0)
 					break;
 				method1032((byte) -114, i_2_, class38_sub23);
@@ -58,9 +58,9 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 	private final void method1032(byte i, int i_3_, RS2Buffer class38_sub23) {
 		try {
 			if (i_3_ == 1) {
-				this.anInt3132 = class38_sub23.getUShort();
-				this.anInt3123 = class38_sub23.getUByte();
-				this.anInt3135 = class38_sub23.getUByte();
+				this.anInt3132 = class38_sub23.readUnsignedShort();
+				this.anInt3123 = class38_sub23.readUnsignedByte();
+				this.anInt3135 = class38_sub23.readUnsignedByte();
 			}
 			if (i > -54)
 				Class38_Sub20_Sub17.aClass38_Sub20_Sub9_Sub2_3128 = null;
@@ -93,18 +93,18 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 				Class37.secondMapRegion = second;
 				if (!Class37.secondMapRegion) {
 					int height = Class15.inputStream.getUByteC();
-					int regionX = Class15.inputStream.getUShortA();
-					int regionY = Class15.inputStream.getUShort();
+					int regionX = Class15.inputStream.readUnsignedShortAdd();
+					int regionY = Class15.inputStream.readUnsignedShort();
 					int i_9_ = (-((RS2Buffer) Class15.inputStream).pos + Entity.anInt3446) / 16;
 					Class83.anIntArrayArray1664 = new int[i_9_][4];
 					for (int i_10_ = 0; i_10_ < i_9_; i_10_++)
 						for (int i_11_ = 0; i_11_ < 4; i_11_++)
-							Class83.anIntArrayArray1664[i_10_][i_11_] = Class15.inputStream.getMEInt();
+							Class83.anIntArrayArray1664[i_10_][i_11_] = Class15.inputStream.readMEInt();
 					int localX = Class15.inputStream.getULEShort();
 					boolean bool_13_ = false;
 					if ((regionY / 8 == 48 || regionY / 8 == 49) && regionX / 8 == 48)
 						bool_13_ = true;
-					int localY = Class15.inputStream.getUShort();
+					int localY = Class15.inputStream.readUnsignedShort();
 					Class51.anIntArray1131 = new int[i_9_];
 					Class38_Sub17.aByteArrayArray2198 = new byte[i_9_][];
 					Class21.aByteArrayArray507 = new byte[i_9_][];
@@ -118,26 +118,26 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 							int i_17_ = i_16_ + (i_15_ << -552129016);
 							if (!bool_13_ || i_16_ != 49 && i_16_ != 149 && i_16_ != 147 && i_15_ != 50 && (i_15_ != 49 || i_16_ != 47)) {
 								Class38_Sub12.anIntArray2115[i_9_] = i_17_;
-								Class72.anIntArray1409[i_9_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { Class38_Sub6.aClass19_1880, RuntimeException_Sub1.method1098(i_15_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_16_, 0) }, (byte) -20));
+								Class72.anIntArray1409[i_9_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { WidgetComponent.aClass19_1880, RuntimeException_Sub1.method1098(i_15_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_16_, 0) }, (byte) -20));
 								Class51.anIntArray1131[i_9_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { Class77.aClass19_1528, RuntimeException_Sub1.method1098(i_15_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_16_, 0) }, (byte) -20));
 								i_9_++;
 							}
 						}
 					Class38_Sub20_Sub13.updateRegion(height, regionX, regionY, localX, localY, (byte) -128);
 				} else {
-					int i_18_ = Class15.inputStream.getUShort();
+					int i_18_ = Class15.inputStream.readUnsignedShort();
 					int i_19_ = Class15.inputStream.method741(55);
-					int i_20_ = Class15.inputStream.getUShort();
-					int i_21_ = Class15.inputStream.getUShortA();
-					Class15.inputStream.method784(8);
+					int i_20_ = Class15.inputStream.readUnsignedShort();
+					int i_21_ = Class15.inputStream.readUnsignedShortAdd();
+					Class15.inputStream.setBitAccess(8);
 					for (int i_22_ = 0; i_22_ < 4; i_22_++)
 						for (int i_23_ = 0; i_23_ < 13; i_23_++)
 							for (int i_24_ = 0; i_24_ < 13; i_24_++) {
-								int i_25_ = Class15.inputStream.method785(1, (byte) 69);
+								int i_25_ = Class15.inputStream.readBits(1, (byte) 69);
 								if (i_25_ != 1)
 									RSString.anIntArrayArrayArray445[i_22_][i_23_][i_24_] = -1;
 								else
-									RSString.anIntArrayArrayArray445[i_22_][i_23_][i_24_] = Class15.inputStream.method785(26, (byte) 69);
+									RSString.anIntArrayArrayArray445[i_22_][i_23_][i_24_] = Class15.inputStream.readBits(26, (byte) 69);
 							}
 					Class15.inputStream.method788(7);
 					int i_26_ = (Entity.anInt3446 - ((RS2Buffer) Class15.inputStream).pos) / 16;
@@ -169,7 +169,7 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 										Class38_Sub12.anIntArray2115[i_26_] = i_36_;
 										int i_38_ = i_36_ & 0xff;
 										int i_39_ = i_36_ >> 2075088328 & 0xff;
-										Class72.anIntArray1409[i_26_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { Class38_Sub6.aClass19_1880, RuntimeException_Sub1.method1098(i_39_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_38_, 0) }, (byte) -20));
+										Class72.anIntArray1409[i_26_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { WidgetComponent.aClass19_1880, RuntimeException_Sub1.method1098(i_39_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_38_, 0) }, (byte) -20));
 										Class51.anIntArray1131[i_26_] = Class48.aClass17_Sub1_1070.method104(3, Class9.method43(new RSString[] { Class77.aClass19_1528, RuntimeException_Sub1.method1098(i_39_, 0), Class66.aClass19_1374, RuntimeException_Sub1.method1098(i_38_, 0) }, (byte) -20));
 										i_26_++;
 									}

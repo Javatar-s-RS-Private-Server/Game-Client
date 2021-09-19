@@ -166,7 +166,7 @@ final class Class80 {
 			int i_18_ = 48 % ((i + 63) / 63);
 			if (class38_sub20_sub1 != null)
 				return class38_sub20_sub1;
-			byte[] is = Class26.aClass17_600.method109(6, i_17_, -82);
+			byte[] is = Class26.aClass17_600.getFileData(6, i_17_, -82);
 			class38_sub20_sub1 = new ObjectDefinition();
 			class38_sub20_sub1.anInt2468 = i_17_;
 			if (is != null)

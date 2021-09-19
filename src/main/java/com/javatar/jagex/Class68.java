@@ -56,7 +56,7 @@ final class Class68 {
 	}
 
 	static final Class68 method484(Class17 class17, int i, int i_10_) {
-		byte[] is = class17.method109(i, i_10_, -69);
+		byte[] is = class17.getFileData(i, i_10_, -69);
 		if (is == null)
 			return null;
 		return new Class68(new RS2Buffer(is));
@@ -65,15 +65,15 @@ final class Class68 {
 	private Class68(RS2Buffer class38_sub23) {
 		aClass57Array1395 = new Class57[10];
 		for (int i = 0; i < 10; i++) {
-			int i_11_ = class38_sub23.getUByte();
+			int i_11_ = class38_sub23.readUnsignedByte();
 			if (i_11_ != 0) {
 				class38_sub23.pos--;
 				aClass57Array1395[i] = new Class57();
 				aClass57Array1395[i].method438(class38_sub23);
 			}
 		}
-		anInt1393 = class38_sub23.getUShort();
-		anInt1394 = class38_sub23.getUShort();
+		anInt1393 = class38_sub23.readUnsignedShort();
+		anInt1394 = class38_sub23.readUnsignedShort();
 	}
 
 	private Class68() {

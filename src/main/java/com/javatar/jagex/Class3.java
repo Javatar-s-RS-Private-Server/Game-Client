@@ -35,7 +35,7 @@ final class Class3 {
 		try {
 			if (i != 68)
 				Class3.anIntArray67 = null;
-			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_0_, (byte) -106);
+			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_0_);
 			if (class38_sub3 != null)
 				class38_sub3.method330(0);
 		} catch (RuntimeException runtimeexception) {

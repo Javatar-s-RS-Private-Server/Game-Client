@@ -49,7 +49,7 @@ final class Class24 {
 	static final void method207(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_) {
 		do {
 			try {
-				if (!Class22.method196(i_8_, -18020)) {
+				if (!Class22.loadWidget(i_8_)) {
 					if (i_10_ != -1)
 						Class32.aBoolArray768[i_10_] = true;
 					else
@@ -57,7 +57,7 @@ final class Class24 {
 							Class32.aBoolArray768[i_14_] = true;
 				} else {
 					Class38_Sub1.aClass38_Sub6Array1731 = null;
-					Class42.method356(1, i_11_, i_9_, Class62.aClass38_Sub6ArrayArray1339[i_8_], -1, i_7_, i_13_, i_10_, i, i_12_);
+					Class42.method356(1, i_11_, i_9_, Class62.widgets[i_8_], -1, i_7_, i_13_, i_10_, i, i_12_);
 					if (Class38_Sub1.aClass38_Sub6Array1731 != null) {
 						Class42.method356(1, i_11_, i_9_, Class38_Sub1.aClass38_Sub6Array1731, -1412584499, Class79.anInt1575, Class24.anInt566, i_10_, i, i_12_);
 						Class38_Sub1.aClass38_Sub6Array1731 = null;
@@ -73,7 +73,7 @@ final class Class24 {
 		} while (false);
 	}
 
-	static final boolean method208(Class38_Sub6 class38_sub6, int i) {
+	static final boolean method208(WidgetComponent class38_sub6, int i) {
 		try {
 			if (class38_sub6.anIntArray1891 == null)
 				return false;

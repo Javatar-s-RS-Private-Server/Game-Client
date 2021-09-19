@@ -122,7 +122,7 @@ final class Class5 {
 			Class23.aClass19_562 = Class13.aClass19_241;
 			Class44.aClass19_991 = Class38_Sub20_Sub13.aClass19_3021;
 			Class22.aClass19_531 = Class43.aClass19_983;
-			Class38_Sub6.aClass19_1970 = NodeSub.aClass19_2246;
+			WidgetComponent.aClass19_1970 = NodeSub.aClass19_2246;
 			Class54.aClass19_1187 = Class38_Sub21.aClass19_2279;
 			Canvas_Sub1.aClass19_2521 = Class38_Sub20_Sub3_Sub4.aClass19_3350;
 			RuntimeException_Sub1.aClass19_3290 = Class38_Sub20_Sub13.aClass19_3010;

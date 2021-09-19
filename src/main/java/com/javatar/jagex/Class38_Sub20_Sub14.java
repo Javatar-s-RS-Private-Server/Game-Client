@@ -101,7 +101,7 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 				} else
 					this.aBool3056 = false;
 			} else
-				this.anInt3054 = class38_sub23.getUByte();
+				this.anInt3054 = class38_sub23.readUnsignedByte();
 			if (i_6_ != -1)
 				method1000(-80, null, -37);
 		} catch (RuntimeException runtimeexception) {
@@ -128,7 +128,7 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 	final void method1000(int i, RS2Buffer class38_sub23, int i_8_) {
 		try {
 			for (;;) {
-				int i_9_ = class38_sub23.getUByte();
+				int i_9_ = class38_sub23.readUnsignedByte();
 				if (i_9_ == 0)
 					break;
 				method998(class38_sub23, i_9_, -1, i_8_);

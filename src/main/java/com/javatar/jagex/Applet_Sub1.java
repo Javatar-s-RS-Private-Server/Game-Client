@@ -261,9 +261,9 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 				Client.errorPinging = false;
 			for (Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method82((byte) 91); class38_sub8 != null; class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method78(-118)) {
 				int i_6_ = class38_sub8.anInt2038;
-				if (Class22.method196(i_6_, -18020)) {
+				if (Class22.loadWidget(i_6_)) {
 					boolean bool = true;
-					Class38_Sub6[] class38_sub6s = Class62.aClass38_Sub6ArrayArray1339[i_6_];
+					WidgetComponent[] class38_sub6s = Class62.widgets[i_6_];
 					for (int i_7_ = 0; class38_sub6s.length > i_7_; i_7_++)
 						if (class38_sub6s[i_7_] != null) {
 							bool = class38_sub6s[i_7_].aBool1961;
@@ -271,7 +271,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 						}
 					if (!bool) {
 						int i_8_ = (int) ((Node) class38_sub8).aLong898;
-						Class38_Sub6 class38_sub6 = Projectile.method1167(i_8_, 86);
+						WidgetComponent class38_sub6 = Projectile.method1167(i_8_, 86);
 						if (class38_sub6 != null)
 							Class40.method340(class38_sub6, (byte) -124);
 					}

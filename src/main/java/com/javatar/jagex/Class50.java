@@ -141,7 +141,7 @@ final class Class50 {
 			if (i_4_ < 0)
 				i_4_ = 0;
 			Class38_Sub20_Sub13.anInt3011 = i_5_;
-			Class38_Sub6.anInt1976 = i_4_;
+			WidgetComponent.anInt1976 = i_4_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "tc.D(" + i + ')');
 		}

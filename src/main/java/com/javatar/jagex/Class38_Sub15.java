@@ -40,21 +40,21 @@ final class Class38_Sub15 extends Node {
 
 	private final void method680(byte[] is) {
 		RS2Buffer class38_sub23 = new RS2Buffer(is);
-		anInt2150 = class38_sub23.method759(true);
-		anInt2161 = class38_sub23.method759(true);
-		anInt2162 = class38_sub23.method759(true);
-		anInt2167 = class38_sub23.method759(true);
+		anInt2150 = class38_sub23.readInt(true);
+		anInt2161 = class38_sub23.readInt(true);
+		anInt2162 = class38_sub23.readInt(true);
+		anInt2167 = class38_sub23.readInt(true);
 		if (anInt2167 < 0) {
 			anInt2167 = anInt2167 ^ 0xffffffff;
 			aBool2156 = true;
 		}
-		int i = class38_sub23.method759(true);
+		int i = class38_sub23.readInt(true);
 		aByteArrayArray2149 = new byte[i][];
 		for (int i_0_ = 0; i_0_ < i; i_0_++) {
 			int i_1_ = 0;
 			int i_2_;
 			do {
-				i_2_ = class38_sub23.getUByte();
+				i_2_ = class38_sub23.readUnsignedByte();
 				i_1_ += i_2_;
 			} while (i_2_ >= 255);
 			byte[] is_3_ = new byte[i_1_];
@@ -395,7 +395,7 @@ final class Class38_Sub15 extends Node {
 
 	private static final boolean method686(Class17 class17) {
 		if (!Class38_Sub15.aBool2170) {
-			byte[] is = class17.method109(0, 0, -109);
+			byte[] is = class17.getFileData(0, 0, -109);
 			if (is == null)
 				return false;
 			Class38_Sub15.method681(is);
@@ -415,7 +415,7 @@ final class Class38_Sub15 extends Node {
 			class17.method116(i, true, i_108_);
 			return null;
 		}
-		byte[] is = class17.method109(i, i_108_, -87);
+		byte[] is = class17.getFileData(i, i_108_, -87);
 		if (is == null)
 			return null;
 		return new Class38_Sub15(is);

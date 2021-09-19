@@ -28,8 +28,8 @@ class RS2Buffer extends Node {
 				RS2Buffer.aShortArray2380 = null;
 			int i = this.buffer[this.pos] & 0xff;
 			if (i < 128)
-				return getUByte();
-			return getUShort() - 32768;
+				return readUnsignedByte();
+			return readUnsignedShort() - 32768;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.CB(" + bool
 					+ ')');
@@ -67,9 +67,9 @@ class RS2Buffer extends Node {
 			if (i <= 27)
 				RS2Buffer.aLong2396 = 53L;
 			return (this.buffer[this.pos - 2] & 0xff)
-					+ ((this.buffer[this.pos - 3] & 0xff) << 366937592)
-					+ ((this.buffer[this.pos - 4] & 0xff) << 952748528)
-					+ (this.buffer[this.pos - 1] << 1347418632 & 0xff00);
+					+ ((this.buffer[this.pos - 3] & 0xff) << 24)
+					+ ((this.buffer[this.pos - 4] & 0xff) << 16)
+					+ (this.buffer[this.pos - 1] << 8 & 0xff00);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.DB(" + i + ')');
 		}
@@ -82,7 +82,7 @@ class RS2Buffer extends Node {
 			int i_3_ = this.buffer[this.pos++];
 			int i_4_ = 0;
 			for (/**/; i_3_ < 0; i_3_ = this.buffer[this.pos++])
-				i_4_ = (i_4_ | i_3_ & 0x7f) << -1592222329;
+				i_4_ = (i_4_ | i_3_ & 0x7f) << 7;
 			return i_3_ | i_4_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.J(" + i + ')');
@@ -102,7 +102,7 @@ class RS2Buffer extends Node {
 	final void method733(int i, long l) {
 		do {
 			try {
-				method747((int) (l >> 1983446112), -2687);
+				method747((int) (l >> 32), -2687);
 				method747((int) l, -2687);
 				if (i == 32)
 					break;
@@ -134,8 +134,8 @@ class RS2Buffer extends Node {
 				RS2Buffer.aLong2396 = 19L;
 			int i_7_ = this.buffer[this.pos] & 0xff;
 			if (i_7_ >= 128)
-				return getUShort() - 49152;
-			return getUByte() - 64;
+				return readUnsignedShort() - 49152;
+			return readUnsignedByte() - 64;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.RA(" + i + ')');
 		}
@@ -147,14 +147,14 @@ class RS2Buffer extends Node {
 			if (i <= 65)
 				method761(-67, true);
 			return (this.buffer[this.pos - 1] & 0xff)
-					+ (this.buffer[this.pos - 3] << -563786256 & 0xff0000)
-					+ (this.buffer[this.pos - 2] << -405604696 & 0xff00);
+					+ (this.buffer[this.pos - 3] << 16 & 0xff0000)
+					+ (this.buffer[this.pos - 2] << 8 & 0xff00);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.K(" + i + ')');
 		}
 	}
 
-	final int getUShortA() {
+	final int readUnsignedShortAdd() {
 		this.pos += 2;
 		return (this.buffer[this.pos - 1] - 128 & 0xff)
 				+ ((this.buffer[this.pos - 2] & 0xff) << 8);
@@ -164,7 +164,7 @@ class RS2Buffer extends Node {
 		try {
 			this.pos += 2;
 			int i_8_ = -36 / ((43 - i) / 63);
-			return ((this.buffer[this.pos - 1] & 0xff) << 393673672)
+			return ((this.buffer[this.pos - 1] & 0xff) << 8)
 					+ (this.buffer[this.pos - 2] - 128 & 0xff);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.BA(" + i + ')');
@@ -199,7 +199,7 @@ class RS2Buffer extends Node {
 					this.buffer);
 			if (i != 95)
 				return -88;
-			putInt(i_11_);
+			writeInt(i_11_);
 			return i_11_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.TA(" + i + ','
@@ -215,23 +215,23 @@ class RS2Buffer extends Node {
 			if (i_12_ != 478815268)
 				RS2Buffer.aClass19_2379 = null;
 			for (int i_16_ = 0; i_15_ > i_16_; i_16_++) {
-				int i_17_ = method759(true);
+				int i_17_ = readInt(true);
 				int i_18_ = -957401312;
-				int i_19_ = method759(true);
+				int i_19_ = readInt(true);
 				int i_20_ = -1640531527;
 				int i_21_ = 32;
 				while (i_21_-- > 0) {
-					i_19_ -= i_18_ + is[(i_18_ & 0x1c4f) >>> 1801140587]
-							^ (i_17_ >>> -508308251 ^ i_17_ << 478815268)
+					i_19_ -= i_18_ + is[(i_18_ & 0x1c4f) >>> 11]
+							^ (i_17_ >>> 5 ^ i_17_ << 4)
 							+ i_17_;
 					i_18_ -= i_20_;
 					i_17_ -= i_18_ + is[i_18_ & 0x3]
-							^ (i_19_ >>> -2130660475 ^ i_19_ << -22849916)
+							^ (i_19_ >>> 5 ^ i_19_ << 4)
 							+ i_19_;
 				}
 				this.pos -= 8;
-				putInt(i_17_);
-				putInt(i_19_);
+				writeInt(i_17_);
+				writeInt(i_19_);
 			}
 			this.pos = i_14_;
 		} catch (RuntimeException runtimeexception) {
@@ -251,10 +251,10 @@ class RS2Buffer extends Node {
 		try {
 			this.pos += 4;
 			if (i > -61)
-				getUShort();
-			return (this.buffer[this.pos - 3] << 1990354280 & 0xff00)
-					+ (this.buffer[this.pos - 2] << 1102577968 & 0xff0000)
-					+ ((this.buffer[this.pos - 1] & 0xff) << -963933832)
+				readUnsignedShort();
+			return (this.buffer[this.pos - 3] << 8 & 0xff00)
+					+ (this.buffer[this.pos - 2] << 16 & 0xff0000)
+					+ ((this.buffer[this.pos - 1] & 0xff) << 24)
 					+ (this.buffer[this.pos - 4] & 0xff);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.F(" + i + ')');
@@ -265,9 +265,9 @@ class RS2Buffer extends Node {
 		try {
 			if (i_22_ == -2687) {
 				this.buffer[this.pos++] = (byte) i;
-				this.buffer[this.pos++] = (byte) (i >> 1288331752);
-				this.buffer[this.pos++] = (byte) (i >> -2071005168);
-				this.buffer[this.pos++] = (byte) (i >> 1561686648);
+				this.buffer[this.pos++] = (byte) (i >> 8);
+				this.buffer[this.pos++] = (byte) (i >> 16);
+				this.buffer[this.pos++] = (byte) (i >> 24);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.U(" + i + ','
@@ -277,11 +277,11 @@ class RS2Buffer extends Node {
 
 	final long method748(int i) {
 		try {
-			long l = method759(true) & 0xffffffffL;
-			long l_23_ = method759(true) & 0xffffffffL;
+			long l = readInt(true) & 0xffffffffL;
+			long l_23_ = readInt(true) & 0xffffffffL;
 			if (i > -100)
 				RS2Buffer.anInt2416 = 104;
-			return (l << -90147232) - -l_23_;
+			return (l << 32) - -l_23_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.CA(" + i + ')');
 		}
@@ -293,7 +293,7 @@ class RS2Buffer extends Node {
 			if (i > -120)
 				method747(104, 6);
 			int i_24_ = (this.buffer[this.pos - 1] - 128 & 0xff)
-					+ ((this.buffer[this.pos - 2] & 0xff) << 315804424);
+					+ ((this.buffer[this.pos - 2] & 0xff) << 8);
 			if (i_24_ > 32767)
 				i_24_ -= 65536;
 			return i_24_;
@@ -306,28 +306,28 @@ class RS2Buffer extends Node {
 		return -this.buffer[this.pos++] & 0xff;
 	}
 
-	final void putInt(int value) {
+	final void writeInt(int value) {
 		this.buffer[this.pos++] = (byte) (value >> 24);
 		this.buffer[this.pos++] = (byte) (value >> 16);
 		this.buffer[this.pos++] = (byte) (value >> 8);
 		this.buffer[this.pos++] = (byte) value;
 	}
 
-	final int getUShort() {
+	final int readUnsignedShort() {
 		this.pos += 2;
 		return (this.buffer[this.pos - 1] & 0xff)
 				+ (this.buffer[this.pos - 2] << 8 & 0xff00);
 	}
 
-	final int getUByte() {
+	final int readUnsignedByte() {
 		return this.buffer[this.pos++] & 0xff;
 	}
 
-	final void putByteC(int value) {
+	final void writeByteC(int value) {
 		this.buffer[this.pos++] = (byte) -value;
 	}
 
-	final byte method755(int i) {
+	final byte readByteC(int i) {
 		try {
 			if (i != 0)
 				return (byte) -87;
@@ -337,7 +337,7 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	final int method756(int i) {
+	final int readUnsignedByteC(int i) {
 		try {
 			if (i != 13285)
 				putShort(117);
@@ -357,9 +357,9 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	static final void method758(int i, int i_25_, SceneGraph class27,
-			int i_26_, int i_27_, int i_28_, Class74 class74, int i_29_,
-			int i_30_, int i_31_) {
+	static void method758(int i, int i_25_, SceneGraph class27,
+						  int i_26_, int i_27_, int i_28_, Class74 class74, int i_29_,
+						  int i_30_, int i_31_) {
 		try {
 			ObjectDefinition class38_sub20_sub1 = Class80.method581(124, i);
 			int i_32_;
@@ -376,8 +376,8 @@ class RS2Buffer extends Node {
 			int i_34_;
 			int i_35_;
 			if (i_28_ + i_32_ <= 104) {
-				i_34_ = (i_32_ + 1 >> 1597480321) + i_28_;
-				i_35_ = (i_32_ >> 1786338465) + i_28_;
+				i_34_ = (i_32_ + 1 >> 1) + i_28_;
+				i_35_ = (i_32_ >> 1) + i_28_;
 			} else {
 				i_34_ = i_28_ + 1;
 				i_35_ = i_28_;
@@ -388,19 +388,19 @@ class RS2Buffer extends Node {
 				i_37_ = i_26_ + 1;
 				i_36_ = i_26_;
 			} else {
-				i_36_ = i_26_ + (i_33_ >> -1481543359);
-				i_37_ = (i_33_ + 1 >> 1450801889) + i_26_;
+				i_36_ = i_26_ + (i_33_ >> 1);
+				i_37_ = (i_33_ + 1 >> 1) + i_26_;
 			}
 			int[][] is = Player.anIntArrayArrayArray3566[i_27_];
 			int i_38_ = is[i_34_][i_37_] + is[i_34_][i_36_] + is[i_35_][i_36_]
-					+ is[i_35_][i_37_] >> 287326114;
-			int i_39_ = (i_33_ << 1725579750) + (i_26_ << 1129005639);
-			int i_40_ = (i_32_ << 693069062) + (i_28_ << 948927655);
-			int i_41_ = (i << 149200782) + (i_26_ << -925428025) + 1073741824
+					+ is[i_35_][i_37_] >> 2;
+			int i_39_ = (i_33_ << 6) + (i_26_ << 7);
+			int i_40_ = (i_32_ << 6) + (i_28_ << 7);
+			int i_41_ = (i << 14) + (i_26_ << 7) + 1073741824
 					+ i_28_;
 			if (class38_sub20_sub1.anInt2440 == 0)
 				i_41_ -= -2147483648;
-			int i_42_ = (i_30_ << 1231240870) + i_25_;
+			int i_42_ = (i_30_ << 6) + i_25_;
 			if (class38_sub20_sub1.anInt2499 == 1)
 				i_42_ += 256;
 			if (i_25_ == 22) {
@@ -557,7 +557,7 @@ class RS2Buffer extends Node {
 				int i_46_ = 16;
 				if (i_45_ != 0)
 					i_46_ = Class80.method581(-126,
-							(i_45_ & 0x1fffc540) >> -1412078322).anInt2492;
+							(i_45_ & 0x1fffc540) >> 14).anInt2492;
 				SceneModel class38_sub20_sub3;
 				if (class38_sub20_sub1.anInt2472 != -1
 						|| class38_sub20_sub1.anIntArray2498 != null)
@@ -577,7 +577,7 @@ class RS2Buffer extends Node {
 				int i_48_ = class27.method256(i_29_, i_28_, i_26_);
 				if (i_48_ != 0)
 					i_47_ = Class80.method581(29,
-							(i_48_ & 0x1ffff7a3) >> 1386371342).anInt2492 / 2;
+							(i_48_ & 0x1ffff7a3) >> 14).anInt2492 / 2;
 				SceneModel class38_sub20_sub3;
 				if (class38_sub20_sub1.anInt2472 != -1
 						|| class38_sub20_sub1.anIntArray2498 != null)
@@ -611,7 +611,7 @@ class RS2Buffer extends Node {
 				int i_51_ = class27.method256(i_29_, i_28_, i_26_);
 				if (i_51_ != 0)
 					i_50_ = Class80.method581(-128,
-							(i_51_ & 0x1fffe1b5) >> -1717326706).anInt2492 / 2;
+							(i_51_ & 0x1fffe1b5) >> 14).anInt2492 / 2;
 				int i_52_ = i_30_ + 2 & 0x3;
 				SceneModel class38_sub20_sub3;
 				SceneModel class38_sub20_sub3_53_;
@@ -644,38 +644,43 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	final int method759(boolean bool) {
+	final int readInt(boolean bool) {
 		try {
-			if (bool != true)
+			if (!bool)
 				method761(-61, true);
 			this.pos += 4;
 			return (this.buffer[this.pos - 1] & 0xff)
-					+ ((this.buffer[this.pos - 3] & 0xff) << 1644119952)
-					+ (this.buffer[this.pos - 4] << -1000672200 & ~0xffffff)
-					+ (this.buffer[this.pos - 2] << 2055064968 & 0xff00);
+					+ ((this.buffer[this.pos - 3] & 0xff) << 16)
+					+ (this.buffer[this.pos - 4] << 24 & ~0xffffff)
+					+ (this.buffer[this.pos - 2] << 8 & 0xff00);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1
 					.method607(runtimeexception, "jd.N(" + bool + ')');
 		}
 	}
 
-	final void method760(byte[] is, int i, byte i_54_, int i_55_) {
+	final void method760(byte[] data, int size) {
 		try {
-			if (i_54_ <= -102)
-				for (int i_56_ = i_55_ - 1 + i; i <= i_56_; i_56_--)
-					is[i_56_] = this.buffer[this.pos++];
+			for (int i_56_ = size - 1; 0 <= i_56_; i_56_--)
+				data[i_56_] = this.buffer[this.pos++];
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.C("
-					+ (is != null ? "{...}" : "null") + ',' + i + ',' + i_54_
-					+ ',' + i_55_ + ')');
+					+ (data != null ? "{...}" : "null") + ',' + 0 + ',' + (byte) -110
+					+ ',' + size + ')');
+		}
+	}
+
+	final void readBytes(byte[] buffer) {
+		for (int i = 0; i < buffer.length; i++) {
+			buffer[i] = this.buffer[pos++];
 		}
 	}
 
 	final void method761(int i, boolean bool) {
 		try {
-			this.buffer[this.pos + -i - 4] = (byte) (i >> -255863560);
-			this.buffer[-i - 3 + this.pos] = (byte) (i >> 221841808);
-			this.buffer[-i + this.pos - 2] = (byte) (i >> 1732701064);
+			this.buffer[this.pos + -i - 4] = (byte) (i >> 24);
+			this.buffer[-i - 3 + this.pos] = (byte) (i >> 16);
+			this.buffer[-i + this.pos - 2] = (byte) (i >> 8);
 			if (bool)
 				RS2Buffer.anInt2406 = 90;
 			this.buffer[this.pos - i - 1] = (byte) i;
@@ -685,21 +690,19 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	final void method762(long l, byte i) {
+	final void writeLong(long l) {
 		try {
-			this.buffer[this.pos++] = (byte) (int) (l >> -1158092488);
-			if (i != 56)
-				method746(89);
-			this.buffer[this.pos++] = (byte) (int) (l >> -2144754000);
-			this.buffer[this.pos++] = (byte) (int) (l >> 41513896);
-			this.buffer[this.pos++] = (byte) (int) (l >> 35183072);
-			this.buffer[this.pos++] = (byte) (int) (l >> -545820840);
-			this.buffer[this.pos++] = (byte) (int) (l >> -780742128);
-			this.buffer[this.pos++] = (byte) (int) (l >> -2060477560);
+			this.buffer[this.pos++] = (byte) (int) (l >> 56);
+			this.buffer[this.pos++] = (byte) (int) (l >> 48);
+			this.buffer[this.pos++] = (byte) (int) (l >> 40);
+			this.buffer[this.pos++] = (byte) (int) (l >> 32);
+			this.buffer[this.pos++] = (byte) (int) (l >> 24);
+			this.buffer[this.pos++] = (byte) (int) (l >> 16);
+			this.buffer[this.pos++] = (byte) (int) (l >> 8);
 			this.buffer[this.pos++] = (byte) (int) l;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.NA(" + l + ','
-					+ i + ')');
+					+ (byte) 56 + ')');
 		}
 	}
 
@@ -858,7 +861,7 @@ class RS2Buffer extends Node {
 								Class77.method551(false,
 										Class38_Sub20_Sub15.aClass19_3076,
 										Class38_Sub20_Sub11.aClass19_2976,
-										Class38_Sub6.aClass19_1970);
+										WidgetComponent.aClass19_1970);
 						} else
 							Class77.method551(false,
 									Class38_Sub20_Sub4.aClass19_2561,
@@ -900,7 +903,7 @@ class RS2Buffer extends Node {
 		} while (false);
 	}
 
-	final byte method765(byte i) {
+	final byte readByte(byte i) {
 		try {
 			if (i <= 79)
 				return (byte) 68;
@@ -932,7 +935,7 @@ class RS2Buffer extends Node {
 			this.buffer[this.pos++] = (byte) i_62_;
 			if (i != -25680)
 				method773(false, null, null);
-			this.buffer[this.pos++] = (byte) (i_62_ >> 2035831848);
+			this.buffer[this.pos++] = (byte) (i_62_ >> 8);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.DA(" + i + ','
 					+ i_62_ + ')');
@@ -945,7 +948,7 @@ class RS2Buffer extends Node {
 				this.buffer[this.pos++] = (byte) (-i + 128);
 				if (i_63_ < -120)
 					break;
-				method756(92);
+				readUnsignedByteC(92);
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "jd.LA(" + i
 						+ ',' + i_63_ + ')');
@@ -956,7 +959,7 @@ class RS2Buffer extends Node {
 
 	final void method769(int i, int i_64_) {
 		try {
-			this.buffer[this.pos++] = (byte) (i >> 1801040712);
+			this.buffer[this.pos++] = (byte) (i >> 8);
 			this.buffer[this.pos++] = (byte) (i + 128);
 			if (i_64_ <= 62)
 				RS2Buffer.method758(24, 0, null, -18, -13, 53, null, 97, -11,
@@ -967,7 +970,7 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	final int getMEInt() {
+	final int readMEInt() {
 		this.pos += 4;
 		return (this.buffer[this.pos - 3] & 0xff)
 				+ (this.buffer[this.pos - 2] << 24 & ~0xffffff)
@@ -978,8 +981,8 @@ class RS2Buffer extends Node {
 		try {
 			if (i != -31368)
 				method743((byte) -3, 125);
-			this.buffer[this.pos++] = (byte) (i_66_ >> -1127534480);
-			this.buffer[this.pos++] = (byte) (i_66_ >> -2119716664);
+			this.buffer[this.pos++] = (byte) (i_66_ >> 16);
+			this.buffer[this.pos++] = (byte) (i_66_ >> 8);
 			this.buffer[this.pos++] = (byte) i_66_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.EB(" + i + ','
@@ -990,7 +993,7 @@ class RS2Buffer extends Node {
 	final int method772(boolean bool) {
 		try {
 			this.pos += 2;
-			int i = (this.buffer[this.pos - 2] << -1707475992 & 0xff00)
+			int i = (this.buffer[this.pos - 2] << 8 & 0xff00)
 					+ (this.buffer[this.pos - 1] & 0xff);
 			if (bool)
 				RS2Buffer.anInt2416 = -127;
@@ -1032,12 +1035,12 @@ class RS2Buffer extends Node {
 
 	final void method774(int i, int i_71_) {
 		try {
-			this.buffer[this.pos++] = (byte) (i_71_ >> -217034352);
+			this.buffer[this.pos++] = (byte) (i_71_ >> 16);
 			if (i != 8)
 				RS2Buffer.aClass17_Sub1_2359 = null;
-			this.buffer[this.pos++] = (byte) (i_71_ >> 1087759608);
+			this.buffer[this.pos++] = (byte) (i_71_ >> 24);
 			this.buffer[this.pos++] = (byte) i_71_;
-			this.buffer[this.pos++] = (byte) (i_71_ >> 1431995272);
+			this.buffer[this.pos++] = (byte) (i_71_ >> 8);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.GB(" + i + ','
 					+ i_71_ + ')');
@@ -1051,12 +1054,12 @@ class RS2Buffer extends Node {
 					if ((i & ~0x3fff) != 0) {
 						if ((i & ~0x1fffff) != 0) {
 							if ((i & ~0xfffffff) != 0)
-								putByte(i >>> 1602538364 | 0x80);
-							putByte(i >>> 1472738773 | 0x80);
+								putByte(i >>> 28 | 0x80);
+							putByte(i >>> 21 | 0x80);
 						}
-						putByte(i >>> 631418542 | 0x80);
+						putByte(i >>> 14 | 0x80);
 					}
-					putByte(i >>> 328580391 | 0x80);
+					putByte(i >>> 7 | 0x80);
 				}
 				putByte(i & 0x7f);
 				if (!bool)
@@ -1088,10 +1091,10 @@ class RS2Buffer extends Node {
 	final void method777(int i, byte i_73_) {
 		try {
 			if (i_73_ == 29) {
-				this.buffer[this.pos++] = (byte) (i >> 1803056040);
+				this.buffer[this.pos++] = (byte) (i >> 8);
 				this.buffer[this.pos++] = (byte) i;
-				this.buffer[this.pos++] = (byte) (i >> 1474206872);
-				this.buffer[this.pos++] = (byte) (i >> 115676144);
+				this.buffer[this.pos++] = (byte) (i >> 24);
+				this.buffer[this.pos++] = (byte) (i >> 16);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.KA(" + i + ','

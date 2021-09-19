@@ -57,89 +57,89 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 					Class2_Sub1.aClass19_2002 = null;
 				if (Class9.anInt154 == 2) {
 					long l = Class38_Sub1.aLong1737 = Class51.aClass19_1135.method162(i ^ ~0x304e);
-					int i_0_ = (int) (l >> -866339952 & 0x1fL);
-					((RS2Buffer) Client.outputBuffer).pos = 0;
+					int i_0_ = (int) (l >> 16 & 0x1fL);
+					Client.outputBuffer.pos = 0;
 					Client.outputBuffer.putByte(14);
 					Client.outputBuffer.putByte(i_0_);
-					Client.worldConnection.write(((RS2Buffer) Client.outputBuffer).buffer, 2, 0, (byte) 121);
+					Client.worldConnection.write(Client.outputBuffer.buffer, 2, 0, (byte) 121);
 					Class9.anInt154 = 3;
-					((RS2Buffer) Class15.inputStream).pos = 0;
+					Class15.inputStream.pos = 0;
 				}
 				if (Class9.anInt154 == 3) {
-					if (Class38_Sub6.aClass77_1857 != null)
-						Class38_Sub6.aClass77_1857.method552(true);
+					if (WidgetComponent.aClass77_1857 != null)
+						WidgetComponent.aClass77_1857.method552(true);
 					if (Class38_Sub7.aClass77_2025 != null)
 						Class38_Sub7.aClass77_2025.method552(true);
 					int i_1_ = Client.worldConnection.method286(i ^ ~0x3312);
-					if (Class38_Sub6.aClass77_1857 != null)
-						Class38_Sub6.aClass77_1857.method552(true);
+					if (WidgetComponent.aClass77_1857 != null)
+						WidgetComponent.aClass77_1857.method552(true);
 					if (Class38_Sub7.aClass77_2025 != null)
 						Class38_Sub7.aClass77_2025.method552(true);
 					if (i_1_ != 0) {
 						RS2Buffer.method763(i_1_, -9034);
 						return;
 					}
-					((RS2Buffer) Class15.inputStream).pos = 0;
+					Class15.inputStream.pos = 0;
 					Class9.anInt154 = 4;
 				}
 				if (Class9.anInt154 == 4) {
-					if (((RS2Buffer) Class15.inputStream).pos < 8) {
+					if (Class15.inputStream.pos < 8) {
 						int i_2_ = Client.worldConnection.method291((byte) 116);
-						if (i_2_ > -((RS2Buffer) Class15.inputStream).pos + 8)
-							i_2_ = 8 - ((RS2Buffer) Class15.inputStream).pos;
+						if (i_2_ > -Class15.inputStream.pos + 8)
+							i_2_ = 8 - Class15.inputStream.pos;
 						if (i_2_ > 0) {
-							Client.worldConnection.method290(113, ((RS2Buffer) Class15.inputStream).pos, ((RS2Buffer) Class15.inputStream).buffer, i_2_);
-							((RS2Buffer) Class15.inputStream).pos += i_2_;
+							Client.worldConnection.method290(113, Class15.inputStream.pos, Class15.inputStream.buffer, i_2_);
+							Class15.inputStream.pos += i_2_;
 						}
 					}
-					if (((RS2Buffer) Class15.inputStream).pos == 8) {
-						((RS2Buffer) Class15.inputStream).pos = 0;
+					if (Class15.inputStream.pos == 8) {
+						Class15.inputStream.pos = 0;
 						Class5.aLong94 = Class15.inputStream.method748(-105);
 						Class9.anInt154 = 5;
 					}
 				}
 				if (Class9.anInt154 == 5) {
-					((RS2Buffer) Client.outputBuffer).pos = 0;
+					Client.outputBuffer.pos = 0;
 					int[] is = new int[4];
-					is[2] = (int) (Class5.aLong94 >> -109279264);
+					is[2] = (int) (Class5.aLong94 >> 32);
 					is[1] = (int) (Math.random() * 9.9999999E7);
 					is[0] = (int) (Math.random() * 9.9999999E7);
 					is[3] = (int) Class5.aLong94;
 					Client.outputBuffer.putByte(10);
-					Client.outputBuffer.putInt(is[0]);
-					Client.outputBuffer.putInt(is[1]);
-					Client.outputBuffer.putInt(is[2]);
-					Client.outputBuffer.putInt(is[3]);
-					Client.outputBuffer.method762(Class51.aClass19_1135.method162(0), (byte) 56);
+					Client.outputBuffer.writeInt(is[0]);
+					Client.outputBuffer.writeInt(is[1]);
+					Client.outputBuffer.writeInt(is[2]);
+					Client.outputBuffer.writeInt(is[3]);
+					Client.outputBuffer.writeLong(Class51.aClass19_1135.method162(0));
 					Client.outputBuffer.method742(Class51.aClass19_1122, (byte) -114);
 					Client.outputBuffer.method773(true, Class26.aBigInteger599, Class78.aBigInteger1553);
-					((RS2Buffer) Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843).pos = 0;
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.pos = 0;
 					if (Class48.anInt1069 == 40)
 						Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(18);
 					else
 						Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(16);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(((RS2Buffer) Client.outputBuffer).pos + 93);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(468);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(Client.outputBuffer.pos + 93);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(468);
 					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putByte(Class38_Sub4.aBool1811 ? 1 : 0);
 					Node.method332(Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843, (byte) -83);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class38_Sub14.aClass17_Sub1_2147).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class38_Sub11.aClass17_Sub1_2103).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class78.aClass17_Sub1_1555).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) RS2Buffer.aClass17_Sub1_2359).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class33.aClass17_Sub1_784).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class48.aClass17_Sub1_1070).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class67.aClass17_Sub1_1382).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class30.aClass17_Sub1_729).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class17.aClass17_Sub1_376).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Applet_Sub1.aClass17_Sub1_3639).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class52.aClass17_Sub1_1151).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class38_Sub1.aClass17_Sub1_1746).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class38_Sub1.aClass17_Sub1_1724).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class13.aClass17_Sub1_237).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Class5.aClass17_Sub1_114).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.putInt(((Class17) Node.aClass17_Sub1_891).anInt369);
-					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.method764(0, -25154, ((RS2Buffer) Client.outputBuffer).pos, ((RS2Buffer) Client.outputBuffer).buffer);
-					Client.worldConnection.write(((RS2Buffer) Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843).buffer, ((RS2Buffer) Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843).pos, 0, (byte) 126);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class38_Sub14.aClass17_Sub1_2147.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class38_Sub11.aClass17_Sub1_2103.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class78.aClass17_Sub1_1555.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(RS2Buffer.aClass17_Sub1_2359.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class33.aClass17_Sub1_784.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class48.aClass17_Sub1_1070.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class67.aClass17_Sub1_1382.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class30.aClass17_Sub1_729.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class17.aClass17_Sub1_376.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Applet_Sub1.aClass17_Sub1_3639.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class52.aClass17_Sub1_1151.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class38_Sub1.aClass17_Sub1_1746.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class38_Sub1.aClass17_Sub1_1724.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class13.aClass17_Sub1_237.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Class5.aClass17_Sub1_114.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.writeInt(Node.aClass17_Sub1_891.anInt369);
+					Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.method764(0, -25154, Client.outputBuffer.pos, Client.outputBuffer.buffer);
+					Client.worldConnection.write(Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.buffer, Class38_Sub20_Sub7.aClass38_Sub23_Sub1_2843.pos, 0, (byte) 126);
 					Client.outputBuffer.method792(is, (byte) -46);
 					for (int i_3_ = 0; i_3_ < 4; i_3_++)
 						is[i_3_] += 50;
@@ -182,22 +182,22 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 						Class38_Sub9.anInt2067 <<= 8;
 						Class38_Sub9.anInt2067 += Client.worldConnection.method286(i + 13227);
 						Class15.anInt272 = Client.worldConnection.method286(860);
-						Client.worldConnection.method290(123, 0, ((RS2Buffer) Class15.inputStream).buffer, 1);
-						((RS2Buffer) Class15.inputStream).pos = 0;
-						Class23.anInt546 = Class15.inputStream.getOpcode();
-						Client.worldConnection.method290(127, 0, ((RS2Buffer) Class15.inputStream).buffer, 2);
-						((RS2Buffer) Class15.inputStream).pos = 0;
-						Entity.anInt3446 = Class15.inputStream.getUShort();
+						Client.worldConnection.method290(123, 0, Class15.inputStream.buffer, 1);
+						Class15.inputStream.pos = 0;
+						Class23.packetId = Class15.inputStream.readIsaacByte();
+						Client.worldConnection.method290(127, 0, Class15.inputStream.buffer, 2);
+						Class15.inputStream.pos = 0;
+						Entity.anInt3446 = Class15.inputStream.readUnsignedShort();
 						Class9.anInt154 = 10;
 					}
 					if (Class9.anInt154 == 10) {
 						if (Client.worldConnection.method291((byte) 127) >= Entity.anInt3446) {
-							((RS2Buffer) Class15.inputStream).pos = 0;
-							Client.worldConnection.method290(114, 0, ((RS2Buffer) Class15.inputStream).buffer, Entity.anInt3446);
+							Class15.inputStream.pos = 0;
+							Client.worldConnection.method290(114, 0, Class15.inputStream.buffer, Entity.anInt3446);
 							Projectile.method1169(0);
 							ItemDefinition.anInt2801 = -1;
 							Class38_Sub20_Sub17.sendMapRegion(false, (byte) 87);
-							Class23.anInt546 = -1;
+							Class23.packetId = -1;
 						}
 					} else {
 						Class38_Sub12.anInt2118++;
@@ -229,16 +229,16 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 		}
 	}
 
-	static final void method649(int i) {
+	static void updatePlayerFlags(int i) {
 		do {
 			try {
 				for (int i_5_ = 0; Class38_Sub20_Sub15.anInt3064 > i_5_; i_5_++) {
-					int i_6_ = ItemDefinition.anIntArray2797[i_5_];
-					Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_6_];
-					int i_7_ = Class15.inputStream.getUByte();
-					if ((i_7_ & 0x80) != 0)
-						i_7_ += Class15.inputStream.getUByte() << 38121096;
-					Class2_Sub1.method652((byte) 93, class38_sub20_sub3_sub7_sub2, i_6_, i_7_);
+					int playerIndex = ItemDefinition.anIntArray2797[i_5_];
+					Player player = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[playerIndex];
+					int flags = Class15.inputStream.readUnsignedByte();
+					if ((flags & 0x80) != 0)
+						flags += Class15.inputStream.readUnsignedByte() << 8;
+					Class2_Sub1.decodeFlags(player, playerIndex, flags);
 				}
 				if (i == 19135)
 					break;
@@ -282,7 +282,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 	final void method13(Graphics graphics, int i, int i_9_, int i_10_) {
 		try {
 			method653(true);
-			graphics.drawImage(((Class2) this).anImage25, i_10_, i_9_, this);
+			graphics.drawImage(this.anImage25, i_10_, i_9_, this);
 			if (i != 29504)
 				return;
 		} catch (RuntimeException runtimeexception) {
@@ -304,7 +304,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 		try {
 			int i_15_ = 127 % ((i_13_ - 9) / 36);
 			if (anImageConsumer2005 != null) {
-				anImageConsumer2005.setPixels(i, i_14_, i_11_, i_12_, aColorModel1990, ((Class2) this).anIntArray28, ((Class2) this).anInt24 * i_14_ + i, ((Class2) this).anInt24);
+				anImageConsumer2005.setPixels(i, i_14_, i_11_, i_12_, aColorModel1990, this.anIntArray28, this.anInt24 * i_14_ + i, this.anInt24);
 				anImageConsumer2005.imageComplete(2);
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -330,44 +330,44 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 		/* empty */
 	}
 
-	private static final void method652(byte i, Player class38_sub20_sub3_sub7_sub2, int i_20_, int i_21_) {
+	private static void decodeFlags(Player player, int playerIndex, int flags) {
 		do {
 			try {
-				if ((i_21_ & 0x400) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3477 = Class15.inputStream.method740((byte) 116);
+				if ((flags & 0x400) != 0) {
+					player.anInt3477 = Class15.inputStream.method740((byte) 116);
 					int i_22_ = Class15.inputStream.method746(-93);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3450 = Class45.anInt1016 + (i_22_ & 0xffff);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3473 = i_22_ >> -140071696;
-					if (((Entity) class38_sub20_sub3_sub7_sub2).anInt3477 == 65535)
-						((Entity) class38_sub20_sub3_sub7_sub2).anInt3477 = -1;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3447 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3500 = 0;
-					if (Class45.anInt1016 < ((Entity) class38_sub20_sub3_sub7_sub2).anInt3450)
-						((Entity) class38_sub20_sub3_sub7_sub2).anInt3500 = -1;
+					player.anInt3450 = Class45.anInt1016 + (i_22_ & 0xffff);
+					player.anInt3473 = i_22_ >> 16;
+					if (player.anInt3477 == 65535)
+						player.anInt3477 = -1;
+					player.anInt3447 = 0;
+					player.anInt3500 = 0;
+					if (Class45.anInt1016 < player.anInt3450)
+						player.anInt3500 = -1;
 				}
-				if ((i_21_ & 0x20) != 0) {
+				if ((flags & 0x20) != 0) {
 					int i_23_ = Class15.inputStream.getUByteC();
-					int i_24_ = Class15.inputStream.getUByte();
-					class38_sub20_sub3_sub7_sub2.addHit(Class45.anInt1016, i_24_, i_23_);
-					((Entity) class38_sub20_sub3_sub7_sub2).hitCycle = Class45.anInt1016 + 300;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3501 = Class15.inputStream.method756(13285);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3484 = Class15.inputStream.getUByteC();
+					int i_24_ = Class15.inputStream.readUnsignedByte();
+					player.addHit(Class45.anInt1016, i_24_, i_23_);
+					player.hitCycle = Class45.anInt1016 + 300;
+					player.anInt3501 = Class15.inputStream.readUnsignedByteC(13285);
+					player.anInt3484 = Class15.inputStream.getUByteC();
 				}
-				if ((i_21_ & 0x4) != 0) {
-					int i_25_ = Class15.inputStream.getUShort();
+				if ((flags & 0x4) != 0) {
+					int i_25_ = Class15.inputStream.readUnsignedShort();
 					int i_26_ = Class15.inputStream.method741(126);
 					if (i_25_ == 65535)
 						i_25_ = -1;
-					Class48.method390((byte) -69, i_26_, class38_sub20_sub3_sub7_sub2, i_25_);
+					Class48.method390((byte) -69, i_26_, player, i_25_);
 				}
-				if ((i_21_ & 0x10) != 0) {
+				if ((flags & 0x10) != 0) {
 					int i_27_ = Class15.inputStream.method740((byte) 126);
-					int i_28_ = Class15.inputStream.getUByte();
-					int i_29_ = Class15.inputStream.method756(13285);
-					int i_30_ = ((RS2Buffer) Class15.inputStream).pos;
-					if (class38_sub20_sub3_sub7_sub2.name != null && class38_sub20_sub3_sub7_sub2.appearance != null) {
+					int i_28_ = Class15.inputStream.readUnsignedByte();
+					int i_29_ = Class15.inputStream.readUnsignedByteC(13285);
+					int i_30_ = Class15.inputStream.pos;
+					if (player.name != null && player.appearance != null) {
 						boolean bool = false;
-						long l = class38_sub20_sub3_sub7_sub2.name.method162(0);
+						long l = player.name.method162(0);
 						if (i_28_ <= 1)
 							for (int i_31_ = 0; i_31_ < Class38_Sub20_Sub3_Sub2.anInt3250; i_31_++)
 								if (l == Class5.aLongArray97[i_31_]) {
@@ -379,72 +379,70 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 							Class15.inputStream.method778(i_29_, 0, false, Class38_Sub20_Sub12.aClass38_Sub23_2991.buffer);
 							Class38_Sub20_Sub12.aClass38_Sub23_2991.pos = 0;
 							RSString class19 = Class38_Sub20_Sub9_Sub1.method1062(Class58.method443((byte) 33, Class38_Sub20_Sub12.aClass38_Sub23_2991).method161(97));
-							((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467 = class19.method178(-91);
-							((Entity) class38_sub20_sub3_sub7_sub2).anInt3452 = 150;
-							((Entity) class38_sub20_sub3_sub7_sub2).anInt3499 = i_27_ >> -801276888;
-							((Entity) class38_sub20_sub3_sub7_sub2).anInt3495 = i_27_ & 0xff;
+							player.aClass19_3467 = class19.method178(-91);
+							player.anInt3452 = 150;
+							player.anInt3499 = i_27_ >> 8;
+							player.anInt3495 = i_27_ & 0xff;
 							if (i_28_ != 2 && i_28_ != 3) {
 								if (i_28_ != 1)
-									Class62.method464((byte) 98, class19, 2, class38_sub20_sub3_sub7_sub2.name);
+									Class62.method464((byte) 98, class19, 2, player.name);
 								else
-									Class62.method464((byte) 98, class19, 1, Class9.method43(new RSString[] { Class38_Sub20_Sub10.aClass19_2911, class38_sub20_sub3_sub7_sub2.name }, (byte) -20));
+									Class62.method464((byte) 98, class19, 1, Class9.method43(new RSString[] { Class38_Sub20_Sub10.aClass19_2911, player.name }, (byte) -20));
 							} else
-								Class62.method464((byte) 98, class19, 1, Class9.method43(new RSString[] { Class32.aClass19_775, class38_sub20_sub3_sub7_sub2.name }, (byte) -20));
+								Class62.method464((byte) 98, class19, 1, Class9.method43(new RSString[] { Class32.aClass19_775, player.name }, (byte) -20));
 						}
 					}
-					((RS2Buffer) Class15.inputStream).pos = i_29_ + i_30_;
+					Class15.inputStream.pos = i_29_ + i_30_;
 				}
-				if ((i_21_ & 0x200) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3456 = Class15.inputStream.method741(66);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3463 = Class15.inputStream.method741(80);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3436 = Class15.inputStream.getUByte();
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3486 = Class15.inputStream.method741(88);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3476 = Class15.inputStream.method740((byte) 119) + Class45.anInt1016;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3470 = Class15.inputStream.getUShort() + Class45.anInt1016;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3497 = Class15.inputStream.getUByte();
-					((Entity) class38_sub20_sub3_sub7_sub2).walkQueueLocationIndex = 1;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3494 = 0;
+				if ((flags & 0x200) != 0) {
+					player.anInt3456 = Class15.inputStream.method741(66);
+					player.anInt3463 = Class15.inputStream.method741(80);
+					player.anInt3436 = Class15.inputStream.readUnsignedByte();
+					player.anInt3486 = Class15.inputStream.method741(88);
+					player.anInt3476 = Class15.inputStream.method740((byte) 119) + Class45.anInt1016;
+					player.anInt3470 = Class15.inputStream.readUnsignedShort() + Class45.anInt1016;
+					player.anInt3497 = Class15.inputStream.readUnsignedByte();
+					player.walkQueueLocationIndex = 1;
+					player.anInt3494 = 0;
 				}
-				if ((i_21_ & 0x100) != 0) {
-					int i_32_ = Class15.inputStream.method756(13285);
+				if ((flags & 0x100) != 0) {
+					int i_32_ = Class15.inputStream.readUnsignedByteC(13285);
 					int i_33_ = Class15.inputStream.method741(102);
-					class38_sub20_sub3_sub7_sub2.addHit(Class45.anInt1016, i_33_, i_32_);
-					((Entity) class38_sub20_sub3_sub7_sub2).hitCycle = Class45.anInt1016 + 300;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3501 = Class15.inputStream.getUByte();
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3484 = Class15.inputStream.getUByteC();
+					player.addHit(Class45.anInt1016, i_33_, i_32_);
+					player.hitCycle = Class45.anInt1016 + 300;
+					player.anInt3501 = Class15.inputStream.readUnsignedByte();
+					player.anInt3484 = Class15.inputStream.getUByteC();
 				}
-				if ((i_21_ & 0x2) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467 = Class15.inputStream.getUShort(1347418632);
-					if (((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467.method163(54, 0) == 126) {
-						((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467 = ((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467.method171((byte) -115, 1);
-						Class62.method464((byte) 98, ((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467, 2, class38_sub20_sub3_sub7_sub2.name);
-					} else if (class38_sub20_sub3_sub7_sub2 == Client.myPlayer)
-						Class62.method464((byte) 98, ((Entity) class38_sub20_sub3_sub7_sub2).aClass19_3467, 2, class38_sub20_sub3_sub7_sub2.name);
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3452 = 150;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3495 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3499 = 0;
+				if ((flags & 0x2) != 0) {
+					player.aClass19_3467 = Class15.inputStream.getUShort(1347418632);
+					if (player.aClass19_3467.method163(54, 0) == 126) {
+						player.aClass19_3467 = player.aClass19_3467.method171((byte) -115, 1);
+						Class62.method464((byte) 98, player.aClass19_3467, 2, player.name);
+					} else if (player == Client.myPlayer)
+						Class62.method464((byte) 98, player.aClass19_3467, 2, player.name);
+					player.anInt3452 = 150;
+					player.anInt3495 = 0;
+					player.anInt3499 = 0;
 				}
-				if (i < 42)
-					Class2_Sub1.method650(-69);
-				if ((i_21_ & 0x8) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3502 = Class15.inputStream.method740((byte) -95);
-					if (((Entity) class38_sub20_sub3_sub7_sub2).anInt3502 == 65535)
-						((Entity) class38_sub20_sub3_sub7_sub2).anInt3502 = -1;
+				if ((flags & 0x8) != 0) {
+					player.anInt3502 = Class15.inputStream.method740((byte) -95);
+					if (player.anInt3502 == 65535)
+						player.anInt3502 = -1;
 				}
-				if ((i_21_ & 0x40) != 0) {
-					int i_34_ = Class15.inputStream.method756(13285);
-					byte[] is = new byte[i_34_];
-					RS2Buffer class38_sub23 = new RS2Buffer(is);
-					Class15.inputStream.method760(is, 0, (byte) -110, i_34_);
-					Class38_Sub20_Sub10.aClass38_Sub23Array2895[i_20_] = class38_sub23;
-					class38_sub20_sub3_sub7_sub2.method1205((byte) 56, class38_sub23);
+				if ((flags & 0x40) != 0) {
+					int length = Class15.inputStream.readUnsignedByte();
+					byte[] buffer = new byte[length];
+					Class15.inputStream.readBytes(buffer);
+					RS2Buffer appearanceBuffer = new RS2Buffer(buffer);
+					Class38_Sub20_Sub10.appearanceCache[playerIndex] = appearanceBuffer;
+					player.decodeAppearance(appearanceBuffer);
 				}
-				if ((i_21_ & 0x1) == 0)
+				if ((flags & 0x1) == 0)
 					break;
-				((Entity) class38_sub20_sub3_sub7_sub2).anInt3487 = Class15.inputStream.method740((byte) -34);
-				((Entity) class38_sub20_sub3_sub7_sub2).anInt3443 = Class15.inputStream.getULEShort();
+				player.anInt3487 = Class15.inputStream.method740((byte) -34);
+				player.anInt3443 = Class15.inputStream.getULEShort();
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "g.H(" + i + ',' + (class38_sub20_sub3_sub7_sub2 != null ? "{...}" : "null") + ',' + i_20_ + ',' + i_21_ + ')');
+				throw Class38_Sub1.method607(runtimeexception, "g.H(" + (byte) 93 + ',' + (player != null ? "{...}" : "null") + ',' + playerIndex + ',' + flags + ')');
 			}
 			break;
 		} while (false);
@@ -455,7 +453,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 			if (bool != true)
 				Class2_Sub1.aClass19_2006 = null;
 			if (anImageConsumer2005 != null) {
-				anImageConsumer2005.setPixels(0, 0, ((Class2) this).anInt24, ((Class2) this).anInt26, aColorModel1990, ((Class2) this).anIntArray28, 0, ((Class2) this).anInt24);
+				anImageConsumer2005.setPixels(0, 0, this.anInt24, this.anInt26, aColorModel1990, this.anIntArray28, 0, this.anInt24);
 				anImageConsumer2005.imageComplete(2);
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -467,17 +465,17 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 	final void method15(int i, int i_35_, int i_36_, Component component) {
 		do {
 			try {
-				((Class2) this).anIntArray28 = new int[i_36_ * i_35_ + 1];
-				((Class2) this).anInt24 = i_36_;
-				((Class2) this).anInt26 = i_35_;
+				this.anIntArray28 = new int[i_36_ * i_35_ + 1];
+				this.anInt24 = i_36_;
+				this.anInt26 = i_35_;
 				aColorModel1990 = new DirectColorModel(32, 16711680, 65280, 255);
-				((Class2) this).anImage25 = component.createImage(this);
+				this.anImage25 = component.createImage(this);
 				method653(true);
-				component.prepareImage(((Class2) this).anImage25, this);
+				component.prepareImage(this.anImage25, this);
 				method653(true);
-				component.prepareImage(((Class2) this).anImage25, this);
+				component.prepareImage(this.anImage25, this);
 				method653(true);
-				component.prepareImage(((Class2) this).anImage25, this);
+				component.prepareImage(this.anImage25, this);
 				method12((byte) 47);
 				if (i <= -24)
 					break;
@@ -493,7 +491,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 	public final synchronized void addConsumer(ImageConsumer imageconsumer) {
 		try {
 			anImageConsumer2005 = imageconsumer;
-			imageconsumer.setDimensions(((Class2) this).anInt24, ((Class2) this).anInt26);
+			imageconsumer.setDimensions(this.anInt24, this.anInt26);
 			imageconsumer.setProperties(null);
 			imageconsumer.setColorModel(aColorModel1990);
 			imageconsumer.setHints(14);
@@ -508,7 +506,7 @@ final class Class2_Sub1 extends Class2 implements ImageProducer, ImageObserver {
 			method651(i_39_, i_37_, i_38_, 115, i_40_);
 			Shape shape = graphics.getClip();
 			graphics.clipRect(i_39_, i_40_, i_37_, i_38_);
-			graphics.drawImage(((Class2) this).anImage25, i, 0, this);
+			graphics.drawImage(this.anImage25, i, 0, this);
 			graphics.setClip(shape);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "g.I(" + i + ',' + (graphics != null ? "{...}" : "null") + ',' + i_37_ + ',' + i_38_ + ',' + i_39_ + ',' + i_40_ + ')');

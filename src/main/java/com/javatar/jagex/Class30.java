@@ -241,11 +241,11 @@ final class Class30 {
 		}
 	}
 
-	static final int method283(int i, Class38_Sub6 class38_sub6) {
+	static final int method283(int i, WidgetComponent class38_sub6) {
 		try {
 			if (i > -93)
 				return 7;
-			Class38_Sub11 class38_sub11 = (Class38_Sub11) Entity.aClass14_3514.method75(((long) class38_sub6.anInt1856 << 628721440) - -(long) class38_sub6.anInt1941, (byte) -106);
+			Class38_Sub11 class38_sub11 = (Class38_Sub11) Entity.aClass14_3514.method75(((long) class38_sub6.anInt1856 << 628721440) - -(long) class38_sub6.anInt1941);
 			if (class38_sub11 != null)
 				return class38_sub11.anInt2080;
 			return class38_sub6.anInt1881;

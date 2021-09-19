@@ -72,8 +72,8 @@ final class NPC extends Entity {
 		try {
 			int i_3_ = -42 % ((-43 - i_2_) / 48);
 			Class38_Sub7 class38_sub7 = new Class38_Sub7();
-			class38_sub7.anInt2035 = stream.getUByte();
-			class38_sub7.anInt2018 = stream.method759(true);
+			class38_sub7.anInt2035 = stream.readUnsignedByte();
+			class38_sub7.anInt2018 = stream.readInt(true);
 			class38_sub7.aClass65Array2034 = new Class65[class38_sub7.anInt2035];
 			class38_sub7.anIntArray2024 = new int[class38_sub7.anInt2035];
 			class38_sub7.aByteArrayArrayArray2033 = new byte[class38_sub7.anInt2035][][];
@@ -82,14 +82,14 @@ final class NPC extends Entity {
 			class38_sub7.aClass65Array2029 = new Class65[class38_sub7.anInt2035];
 			for (int i_4_ = 0; class38_sub7.anInt2035 > i_4_; i_4_++)
 				try {
-					int i_5_ = stream.getUByte();
+					int i_5_ = stream.readUnsignedByte();
 					if (i_5_ != 0 && i_5_ != 1 && i_5_ != 2) {
 						if (i_5_ == 3 || i_5_ == 4) {
 							String string = new String(stream.getUShort(
 									1347418632).method158(122));
 							String string_6_ = new String(stream
 									.getUShort(1347418632).method158(122));
-							int i_7_ = stream.getUByte();
+							int i_7_ = stream.readUnsignedByte();
 							String[] strings = new String[i_7_];
 							for (int i_8_ = 0; i_8_ < i_7_; i_8_++)
 								strings[i_8_] = new String(stream
@@ -97,7 +97,7 @@ final class NPC extends Entity {
 							byte[][] is = new byte[i_7_][];
 							if (i_5_ == 3)
 								for (int i_9_ = 0; i_9_ < i_7_; i_9_++) {
-									int i_10_ = stream.method759(true);
+									int i_10_ = stream.readInt(true);
 									is[i_9_] = new byte[i_10_];
 									stream.method778(i_10_, 0, false,
 											is[i_9_]);
@@ -119,7 +119,7 @@ final class NPC extends Entity {
 								1347418632).method158(122));
 						int i_13_ = 0;
 						if (i_5_ == 1)
-							i_13_ = stream.method759(true);
+							i_13_ = stream.readInt(true);
 						class38_sub7.anIntArray2032[i_4_] = i_5_;
 						class38_sub7.anIntArray2026[i_4_] = i_13_;
 						class38_sub7.aClass65Array2029[i_4_] = class56

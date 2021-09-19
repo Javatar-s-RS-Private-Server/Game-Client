@@ -13,7 +13,7 @@ final class Class38_Sub20_Sub7 extends NodeSub {
 		try {
 			int i_0_ = -107 / ((-61 - i) / 34);
 			for (;;) {
-				int i_1_ = class38_sub23.getUByte();
+				int i_1_ = class38_sub23.readUnsignedByte();
 				if (i_1_ == 0)
 					break;
 				method948(class38_sub23, 0, i_1_);
@@ -29,7 +29,7 @@ final class Class38_Sub20_Sub7 extends NodeSub {
 			Class38_Sub10_Sub1.aClass17_2646 = class17;
 			if (i != 5)
 				Class38_Sub20_Sub7.aClass19_2853 = null;
-			Class41.anInt928 = NodeSub.aClass17_2258.method103((byte) 53, 3);
+			Class41.anInt928 = NodeSub.aClass17_2258.getFileCount((byte) 53, 3);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "u.G(" + (class17 != null ? "{...}" : "null") + ',' + i + ',' + (class17_2_ != null ? "{...}" : "null") + ')');
 		}
@@ -38,7 +38,7 @@ final class Class38_Sub20_Sub7 extends NodeSub {
 	static final void method946(Class17 class17, int i) {
 		try {
 			Class17_Sub1.aClass17_1706 = class17;
-			Class38_Sub20_Sub15.anInt3073 = Class17_Sub1.aClass17_1706.method103((byte) 53, i);
+			Class38_Sub20_Sub15.anInt3073 = Class17_Sub1.aClass17_1706.getFileCount((byte) 53, i);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "u.H(" + (class17 != null ? "{...}" : "null") + ',' + i + ')');
 		}
@@ -65,7 +65,7 @@ final class Class38_Sub20_Sub7 extends NodeSub {
 				if (i == 0) {
 					if (i_3_ != 2)
 						break;
-					this.anInt2848 = class38_sub23.getUShort();
+					this.anInt2848 = class38_sub23.readUnsignedShort();
 				}
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "u.E(" + (class38_sub23 != null ? "{...}" : "null") + ',' + i + ',' + i_3_ + ')');

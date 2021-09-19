@@ -123,7 +123,7 @@ final class Class81 {
 				Class81.anInt1619 = 107;
 			int i_21_ = class17.method104(3, class19_20_);
 			int i_22_ = class17.method118(class19, i_21_, true);
-			return Class38_Sub6.method647(i_22_, class17, i_21_, -1);
+			return WidgetComponent.method647(i_22_, class17, i_21_, -1);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "aa.D(" + (class17 != null ? "{...}" : "null") + ',' + (class19 != null ? "{...}" : "null") + ',' + (class19_20_ != null ? "{...}" : "null") + ',' + i + ')');
 		}

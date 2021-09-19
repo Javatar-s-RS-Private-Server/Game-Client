@@ -267,7 +267,7 @@ final class Class37 {
 			Class38_Sub20_Sub15 class38_sub20_sub15 = (Class38_Sub20_Sub15) Class82.aClass83_1641.method591(i ^ ~0x7088, i_24_);
 			if (class38_sub20_sub15 != null)
 				return class38_sub20_sub15;
-			byte[] is = Class17_Sub1.aClass17_1706.method109(i, i_24_, -85);
+			byte[] is = Class17_Sub1.aClass17_1706.getFileData(i, i_24_, -85);
 			class38_sub20_sub15 = new Class38_Sub20_Sub15();
 			if (is != null)
 				class38_sub20_sub15.method1007(new RS2Buffer(is), (byte) -16);

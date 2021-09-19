@@ -161,8 +161,8 @@ final class Class44 {
 
 	static final void method373(int i) {
 		try {
-			Class15.inputStream.method784(i ^ 0xb);
-			int i_11_ = Class15.inputStream.method785(8, (byte) 69);
+			Class15.inputStream.setBitAccess(i ^ 0xb);
+			int i_11_ = Class15.inputStream.readBits(8, (byte) 69);
 			if (i_11_ < Class4.anInt87)
 				for (int i_12_ = i_11_; i_12_ < Class4.anInt87; i_12_++)
 					Class21.anIntArray519[Class4.anInt81++] = Class38_Sub10_Sub1.anIntArray2652[i_12_];
@@ -174,12 +174,12 @@ final class Class44 {
 			for (int i_13_ = 0; i_11_ > i_13_; i_13_++) {
 				int i_14_ = Class38_Sub10_Sub1.anIntArray2652[i_13_];
 				NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_14_];
-				int i_15_ = Class15.inputStream.method785(1, (byte) 69);
+				int i_15_ = Class15.inputStream.readBits(1, (byte) 69);
 				if (i_15_ == 0) {
 					Class38_Sub10_Sub1.anIntArray2652[Class4.anInt87++] = i_14_;
 					((Entity) class38_sub20_sub3_sub7_sub1).anInt3459 = Class45.anInt1016;
 				} else {
-					int i_16_ = Class15.inputStream.method785(2, (byte) 69);
+					int i_16_ = Class15.inputStream.readBits(2, (byte) 69);
 					if (i_16_ == 0) {
 						Class38_Sub10_Sub1.anIntArray2652[Class4.anInt87++] = i_14_;
 						((Entity) class38_sub20_sub3_sub7_sub1).anInt3459 = Class45.anInt1016;
@@ -187,19 +187,19 @@ final class Class44 {
 					} else if (i_16_ == 1) {
 						Class38_Sub10_Sub1.anIntArray2652[Class4.anInt87++] = i_14_;
 						((Entity) class38_sub20_sub3_sub7_sub1).anInt3459 = Class45.anInt1016;
-						int i_17_ = Class15.inputStream.method785(3, (byte) 69);
+						int i_17_ = Class15.inputStream.readBits(3, (byte) 69);
 						class38_sub20_sub3_sub7_sub1.move(i_17_, false);
-						int i_18_ = Class15.inputStream.method785(1, (byte) 69);
+						int i_18_ = Class15.inputStream.readBits(1, (byte) 69);
 						if (i_18_ == 1)
 							ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_14_;
 					} else if (i_16_ == 2) {
 						Class38_Sub10_Sub1.anIntArray2652[Class4.anInt87++] = i_14_;
 						((Entity) class38_sub20_sub3_sub7_sub1).anInt3459 = Class45.anInt1016;
-						int i_19_ = Class15.inputStream.method785(3, (byte) 69);
+						int i_19_ = Class15.inputStream.readBits(3, (byte) 69);
 						class38_sub20_sub3_sub7_sub1.move(i_19_, true);
-						int i_20_ = Class15.inputStream.method785(3, (byte) 69);
+						int i_20_ = Class15.inputStream.readBits(3, (byte) 69);
 						class38_sub20_sub3_sub7_sub1.move(i_20_, true);
-						int i_21_ = Class15.inputStream.method785(1, (byte) 69);
+						int i_21_ = Class15.inputStream.readBits(1, (byte) 69);
 						if (i_21_ == 1)
 							ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_14_;
 					} else if (i_16_ == 3)

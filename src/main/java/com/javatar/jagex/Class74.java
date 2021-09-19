@@ -15,7 +15,7 @@ final class Class74 {
 	static RSString aClass19_1453;
 	private int anInt1454;
 	static RSString aClass19_1462;
-	static Class38_Sub6 aClass38_Sub6_1463;
+	static WidgetComponent aClass38_Sub6_1463;
 	static RSString aClass19_1464;
 	static RSString aClass19_1465;
 	private static RSString aClass19_1466;
@@ -499,21 +499,21 @@ final class Class74 {
 
 	static final void method533(byte i, int i_49_) {
 		try {
-			if (i_49_ != -1 && Class38_Sub14.aBoolArray2142[i_49_]) {
+			if (i_49_ != -1 && Class38_Sub14.isWidgetLoaded[i_49_]) {
 				if (i <= 67)
 					Class74.aClass19_1462 = null;
 				Class25.aClass17_589.method124(i_49_, false);
-				if (Class62.aClass38_Sub6ArrayArray1339[i_49_] != null) {
+				if (Class62.widgets[i_49_] != null) {
 					boolean bool = true;
-					for (int i_50_ = 0; Class62.aClass38_Sub6ArrayArray1339[i_49_].length > i_50_; i_50_++)
-						if (Class62.aClass38_Sub6ArrayArray1339[i_49_][i_50_] != null)
-							if (Class62.aClass38_Sub6ArrayArray1339[i_49_][i_50_].anInt1868 == 2)
+					for (int i_50_ = 0; Class62.widgets[i_49_].length > i_50_; i_50_++)
+						if (Class62.widgets[i_49_][i_50_] != null)
+							if (Class62.widgets[i_49_][i_50_].anInt1868 == 2)
 								bool = false;
 							else
-								Class62.aClass38_Sub6ArrayArray1339[i_49_][i_50_] = null;
+								Class62.widgets[i_49_][i_50_] = null;
 					if (bool)
-						Class62.aClass38_Sub6ArrayArray1339[i_49_] = null;
-					Class38_Sub14.aBoolArray2142[i_49_] = false;
+						Class62.widgets[i_49_] = null;
+					Class38_Sub14.isWidgetLoaded[i_49_] = false;
 				}
 			}
 		} catch (RuntimeException runtimeexception) {

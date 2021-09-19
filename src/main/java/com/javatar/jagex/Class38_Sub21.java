@@ -70,7 +70,7 @@ final class Class38_Sub21 extends Node {
 						if (i < 16)
 							Class38_Sub21.method714((byte) -120, -78);
 						Client.outputBuffer.putOpcode(38);
-						Client.outputBuffer.method762(l, (byte) 56);
+						Client.outputBuffer.writeLong(l);
 					}
 				}
 		} catch (RuntimeException runtimeexception) {

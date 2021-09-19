@@ -60,7 +60,7 @@ final class Class38_Sub20_Sub16 extends NodeSub {
 	final void method1023(byte i, RS2Buffer class38_sub23) {
 		try {
 			for (;;) {
-				int i_2_ = class38_sub23.getUByte();
+				int i_2_ = class38_sub23.readUnsignedByte();
 				if (i_2_ == 0)
 					break;
 				method1027(i_2_, class38_sub23, (byte) -125);
@@ -422,36 +422,36 @@ final class Class38_Sub20_Sub16 extends NodeSub {
 			try {
 				if (i != 1) {
 					if (i == 2) {
-						int i_111_ = class38_sub23.getUByte();
+						int i_111_ = class38_sub23.readUnsignedByte();
 						anIntArray3097 = new int[i_111_];
 						for (int i_112_ = 0; i_112_ < i_111_; i_112_++)
-							anIntArray3097[i_112_] = class38_sub23.getUShort();
+							anIntArray3097[i_112_] = class38_sub23.readUnsignedShort();
 					} else if (i == 3)
 						this.aBool3091 = true;
 					else if (i != 40) {
 						if (i != 41) {
 							if (i >= 60 && i < 70)
-								anIntArray3082[i - 60] = class38_sub23.getUShort();
+								anIntArray3082[i - 60] = class38_sub23.readUnsignedShort();
 						} else {
-							int i_113_ = class38_sub23.getUByte();
+							int i_113_ = class38_sub23.readUnsignedByte();
 							aShortArray3090 = new short[i_113_];
 							aShortArray3105 = new short[i_113_];
 							for (int i_114_ = 0; i_114_ < i_113_; i_114_++) {
-								aShortArray3105[i_114_] = (short) class38_sub23.getUShort();
-								aShortArray3090[i_114_] = (short) class38_sub23.getUShort();
+								aShortArray3105[i_114_] = (short) class38_sub23.readUnsignedShort();
+								aShortArray3090[i_114_] = (short) class38_sub23.readUnsignedShort();
 							}
 						}
 					} else {
-						int i_115_ = class38_sub23.getUByte();
+						int i_115_ = class38_sub23.readUnsignedByte();
 						aShortArray3103 = new short[i_115_];
 						aShortArray3083 = new short[i_115_];
 						for (int i_116_ = 0; i_115_ > i_116_; i_116_++) {
-							aShortArray3083[i_116_] = (short) class38_sub23.getUShort();
-							aShortArray3103[i_116_] = (short) class38_sub23.getUShort();
+							aShortArray3083[i_116_] = (short) class38_sub23.readUnsignedShort();
+							aShortArray3103[i_116_] = (short) class38_sub23.readUnsignedShort();
 						}
 					}
 				} else
-					this.anInt3102 = class38_sub23.getUByte();
+					this.anInt3102 = class38_sub23.readUnsignedByte();
 				if (i_110_ <= -122)
 					break;
 				this.aBool3091 = false;

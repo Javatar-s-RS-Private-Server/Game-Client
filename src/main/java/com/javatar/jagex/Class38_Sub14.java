@@ -17,7 +17,7 @@ final class Class38_Sub14 extends Node {
 	static int anInt2139;
 	static RSString aClass19_2140;
 	static byte aByte2141;
-	static boolean[] aBoolArray2142;
+	static boolean[] isWidgetLoaded;
 	static int[] anIntArray2143;
 	static int anInt2144;
 	static Class65 aClass65_2145;
@@ -33,10 +33,10 @@ final class Class38_Sub14 extends Node {
 			Class38_Sub14.aByteArrayArray2148 = null;
 			Class38_Sub14.anObject2126 = null;
 			if (i != -1)
-				Class38_Sub14.aBoolArray2142 = null;
+				Class38_Sub14.isWidgetLoaded = null;
 			Class38_Sub14.aClass19_2127 = null;
 			Class38_Sub14.aClass19_2146 = null;
-			Class38_Sub14.aBoolArray2142 = null;
+			Class38_Sub14.isWidgetLoaded = null;
 			Class38_Sub14.aClass17_Sub1_2147 = null;
 			Class38_Sub14.aClass19_2138 = null;
 			Class38_Sub14.anIntArray2143 = null;
@@ -51,16 +51,16 @@ final class Class38_Sub14 extends Node {
 		try {
 			this.anInt2131 = i;
 			RS2Buffer class38_sub23 = new RS2Buffer(is);
-			anInt2134 = class38_sub23.getUByte();
+			anInt2134 = class38_sub23.readUnsignedByte();
 			this.anIntArrayArray2125 = new int[anInt2134][];
 			this.anIntArray2129 = new int[anInt2134];
 			for (int i_0_ = 0; i_0_ < anInt2134; i_0_++)
-				this.anIntArray2129[i_0_] = class38_sub23.getUByte();
+				this.anIntArray2129[i_0_] = class38_sub23.readUnsignedByte();
 			for (int i_1_ = 0; anInt2134 > i_1_; i_1_++)
-				this.anIntArrayArray2125[i_1_] = new int[class38_sub23.getUByte()];
+				this.anIntArrayArray2125[i_1_] = new int[class38_sub23.readUnsignedByte()];
 			for (int i_2_ = 0; anInt2134 > i_2_; i_2_++)
 				for (int i_3_ = 0; i_3_ < this.anIntArrayArray2125[i_2_].length; i_3_++)
-					this.anIntArrayArray2125[i_2_][i_3_] = class38_sub23.getUByte();
+					this.anIntArrayArray2125[i_2_][i_3_] = class38_sub23.readUnsignedByte();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "nb.<init>(" + i + ',' + (is != null ? "{...}" : "null") + ')');
 		}

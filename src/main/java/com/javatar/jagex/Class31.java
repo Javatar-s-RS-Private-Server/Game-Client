@@ -26,33 +26,33 @@ final class Class31 implements Runnable {
 	static RSString aClass19_761 = Class31.aClass19_760;
 	private int anInt763 = 0;
 
-	static final void method285(int i) {
+	static final void addLocalPlayers(int i) {
 		try {
 			while (Class15.inputStream.method787((byte) -122, Entity.anInt3446) >= 11) {
-				int i_0_ = Class15.inputStream.method785(11, (byte) 69);
+				int i_0_ = Class15.inputStream.readBits(11, (byte) 69);
 				if (i_0_ == 2047)
 					break;
 				boolean bool = false;
 				if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_0_] == null) {
 					Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_0_] = new Player();
-					if (Class38_Sub20_Sub10.aClass38_Sub23Array2895[i_0_] != null)
-						Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_0_].method1205((byte) 120, Class38_Sub20_Sub10.aClass38_Sub23Array2895[i_0_]);
+					if (Class38_Sub20_Sub10.appearanceCache[i_0_] != null)
+						Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_0_].decodeAppearance(Class38_Sub20_Sub10.appearanceCache[i_0_]);
 					bool = true;
 				}
 				Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_0_;
 				Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_0_];
 				((Entity) class38_sub20_sub3_sub7_sub2).anInt3459 = Class45.anInt1016;
-				int i_1_ = Class15.inputStream.method785(5, (byte) 69);
+				int i_1_ = Class15.inputStream.readBits(5, (byte) 69);
 				if (i_1_ > 15)
 					i_1_ -= 32;
-				int i_2_ = Class15.inputStream.method785(5, (byte) 69);
+				int i_2_ = Class15.inputStream.readBits(5, (byte) 69);
 				if (i_2_ > 15)
 					i_2_ -= 32;
-				int i_3_ = PlayerAppearance.anIntArray418[Class15.inputStream.method785(3, (byte) 69)];
+				int i_3_ = PlayerAppearance.anIntArray418[Class15.inputStream.readBits(3, (byte) 69)];
 				if (bool)
 					((Entity) class38_sub20_sub3_sub7_sub2).anInt3488 = ((Entity) class38_sub20_sub3_sub7_sub2).anInt3491 = i_3_;
-				int i_4_ = Class15.inputStream.method785(1, (byte) 69);
-				int i_5_ = Class15.inputStream.method785(1, (byte) 69);
+				int i_4_ = Class15.inputStream.readBits(1, (byte) 69);
+				int i_5_ = Class15.inputStream.readBits(1, (byte) 69);
 				if (i_5_ == 1)
 					ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_0_;
 				class38_sub20_sub3_sub7_sub2.updatePosition(((Entity) Client.myPlayer).walkQueueX[0] + i_1_, ((Entity) Client.myPlayer).walkQueueY[0] + i_2_, i_4_ == 1);

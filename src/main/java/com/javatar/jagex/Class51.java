@@ -105,7 +105,7 @@ final class Class51 {
 										Client.outputBuffer.method771(-31368, (Client.coordCounter << 938583731) + 8388608 + coords);
 										Client.coordCounter = 0;
 									} else {
-										Client.outputBuffer.putInt(coords + (Client.coordCounter << -1469099117) - 1073741824);
+										Client.outputBuffer.writeInt(coords + (Client.coordCounter << -1469099117) - 1073741824);
 										Client.coordCounter = 0;
 									}
 								}
@@ -145,7 +145,7 @@ final class Class51 {
 					else if (y > 502)
 						y = 502;
 					int coords = y * 765 + x;
-					Client.outputBuffer.putInt((timeAsInt << -163920492) + (button << 1999454611) + coords);
+					Client.outputBuffer.writeInt((timeAsInt << -163920492) + (button << 1999454611) + coords);
 				}
 				if (Client.cameraPacketDelay > 0)
 					Client.cameraPacketDelay--;
@@ -172,7 +172,7 @@ final class Class51 {
 				}
 				Class38_Sub20_Sub14.method1002((byte) -66);
 				if (Class48.anInt1069 == 30) {
-					Class41.method348(25682);
+					Class41.method348();
 					Class64.method474(false);
 					Class38_Sub20_Sub8.anInt2857++;
 					if (Class38_Sub20_Sub8.anInt2857 > 750)
@@ -204,7 +204,7 @@ final class Class51 {
 							if (Class23.anInt558 == 0) {
 								if (Class52.aBool1143 && Class10.anInt188 >= 5) {
 									if (Class38_Sub20_Sub8.aClass38_Sub6_2877 == Class2.aClass38_Sub6_27 && Class38_Sub3.anInt1786 != Class73_Sub2.anInt2287) {
-										Class38_Sub6 class38_sub6 = Class38_Sub20_Sub8.aClass38_Sub6_2877;
+										WidgetComponent class38_sub6 = Class38_Sub20_Sub8.aClass38_Sub6_2877;
 										int i_18_ = 0;
 										if (Class67.anInt1380 == 1 && class38_sub6.anInt1958 == 206)
 											i_18_ = 1;
@@ -237,7 +237,7 @@ final class Class51 {
 										}
 										Client.outputBuffer.putOpcode(56);
 										Client.outputBuffer.method769(Class73_Sub2.anInt2287, 122);
-										Client.outputBuffer.putByteC(i_18_);
+										Client.outputBuffer.writeByteC(i_18_);
 										Client.outputBuffer.method774(8, Class38_Sub20_Sub8.aClass38_Sub6_2877.anInt1856);
 										Client.outputBuffer.method767(-25680, Class38_Sub3.anInt1786);
 									}
@@ -255,23 +255,23 @@ final class Class51 {
 						ObjectDefinition.anInt2496 = 0;
 						Class67.aClass38_Sub6_1381 = null;
 						Class76.aBool1491 = false;
-						Class38_Sub6 class38_sub6 = Class38_Sub2.aClass38_Sub6_1774;
+						WidgetComponent class38_sub6 = Class38_Sub2.aClass38_Sub6_1774;
 						Class38_Sub2.aClass38_Sub6_1774 = null;
-						Class38_Sub6 class38_sub6_23_ = Class54.aClass38_Sub6_1186;
+						WidgetComponent class38_sub6_23_ = Class54.aClass38_Sub6_1186;
 						Class54.aClass38_Sub6_1186 = null;
 						for (/**/; Class32.method300((byte) -125) && ObjectDefinition.anInt2496 < 128; ObjectDefinition.anInt2496++) {
 							Class38_Sub18.anIntArray2223[ObjectDefinition.anInt2496] = NodeSub.anInt2256;
 							Class55.anIntArray1227[ObjectDefinition.anInt2496] = Class10.anInt181;
 						}
-						Projectile.method1168(NodeSub.anInt2252, 0, 0, 503, 0, 765, 0, 0);
+						Projectile.method1168(NodeSub.windowId, 0, 0, 503, 0, 765, 0, 0);
 						Entity.anInt3513++;
 						for (;;) {
 							Class38_Sub19 class38_sub19 = (Class38_Sub19) NPC.aClass13_3546.method69((byte) -42);
 							if (class38_sub19 == null)
 								break;
-							Class38_Sub6 class38_sub6_24_ = class38_sub19.aClass38_Sub6_2241;
+							WidgetComponent class38_sub6_24_ = class38_sub19.aClass38_Sub6_2241;
 							if (class38_sub6_24_.anInt1941 >= 0) {
-								Class38_Sub6 class38_sub6_25_ = Projectile.method1167(class38_sub6_24_.anInt1977, 112);
+								WidgetComponent class38_sub6_25_ = Projectile.method1167(class38_sub6_24_.anInt1977, 112);
 								if (class38_sub6_25_ == null || class38_sub6_25_.aClass38_Sub6Array1867 == null || class38_sub6_24_.anInt1941 >= class38_sub6_25_.aClass38_Sub6Array1867.length || class38_sub6_24_ != class38_sub6_25_.aClass38_Sub6Array1867[class38_sub6_24_.anInt1941])
 									continue;
 							}
@@ -281,9 +281,9 @@ final class Class51 {
 							Class38_Sub19 class38_sub19 = (Class38_Sub19) Class60.aClass13_1304.method69((byte) -52);
 							if (class38_sub19 == null)
 								break;
-							Class38_Sub6 class38_sub6_26_ = class38_sub19.aClass38_Sub6_2241;
+							WidgetComponent class38_sub6_26_ = class38_sub19.aClass38_Sub6_2241;
 							if (class38_sub6_26_.anInt1941 >= 0) {
-								Class38_Sub6 class38_sub6_27_ = Projectile.method1167(class38_sub6_26_.anInt1977, -101);
+								WidgetComponent class38_sub6_27_ = Projectile.method1167(class38_sub6_26_.anInt1977, -101);
 								if (class38_sub6_27_ == null || class38_sub6_27_.aClass38_Sub6Array1867 == null || class38_sub6_27_.aClass38_Sub6Array1867.length <= class38_sub6_26_.anInt1941 || class38_sub6_27_.aClass38_Sub6Array1867[class38_sub6_26_.anInt1941] != class38_sub6_26_)
 									continue;
 							}
@@ -293,9 +293,9 @@ final class Class51 {
 							Class38_Sub19 class38_sub19 = (Class38_Sub19) Class55.aClass13_1215.method69((byte) 100);
 							if (class38_sub19 == null)
 								break;
-							Class38_Sub6 class38_sub6_28_ = class38_sub19.aClass38_Sub6_2241;
+							WidgetComponent class38_sub6_28_ = class38_sub19.aClass38_Sub6_2241;
 							if (class38_sub6_28_.anInt1941 >= 0) {
-								Class38_Sub6 class38_sub6_29_ = Projectile.method1167(class38_sub6_28_.anInt1977, -100);
+								WidgetComponent class38_sub6_29_ = Projectile.method1167(class38_sub6_28_.anInt1977, -100);
 								if (class38_sub6_29_ == null || class38_sub6_29_.aClass38_Sub6Array1867 == null || class38_sub6_29_.aClass38_Sub6Array1867.length <= class38_sub6_28_.anInt1941 || class38_sub6_28_ != class38_sub6_29_.aClass38_Sub6Array1867[class38_sub6_28_.anInt1941])
 									continue;
 							}

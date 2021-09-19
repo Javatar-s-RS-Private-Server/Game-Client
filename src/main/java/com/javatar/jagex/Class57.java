@@ -35,7 +35,7 @@ final class Class57 {
 		aClass36_1253.method319(class38_sub23);
 		aClass36_1263 = new Class36();
 		aClass36_1263.method319(class38_sub23);
-		int i = class38_sub23.getUByte();
+		int i = class38_sub23.readUnsignedByte();
 		if (i != 0) {
 			class38_sub23.pos--;
 			aClass36_1258 = new Class36();
@@ -43,7 +43,7 @@ final class Class57 {
 			aClass36_1261 = new Class36();
 			aClass36_1261.method319(class38_sub23);
 		}
-		i = class38_sub23.getUByte();
+		i = class38_sub23.readUnsignedByte();
 		if (i != 0) {
 			class38_sub23.pos--;
 			aClass36_1257 = new Class36();
@@ -51,7 +51,7 @@ final class Class57 {
 			aClass36_1270 = new Class36();
 			aClass36_1270.method319(class38_sub23);
 		}
-		i = class38_sub23.getUByte();
+		i = class38_sub23.readUnsignedByte();
 		if (i != 0) {
 			class38_sub23.pos--;
 			aClass36_1266 = new Class36();
@@ -69,8 +69,8 @@ final class Class57 {
 		}
 		anInt1272 = class38_sub23.method726(true);
 		anInt1268 = class38_sub23.method726(true);
-		this.anInt1275 = class38_sub23.getUShort();
-		this.anInt1262 = class38_sub23.getUShort();
+		this.anInt1275 = class38_sub23.readUnsignedShort();
+		this.anInt1262 = class38_sub23.readUnsignedShort();
 		aClass8_1256 = new Class8();
 		aClass36_1264 = new Class36();
 		aClass8_1256.method37(class38_sub23, aClass36_1264);

@@ -247,14 +247,14 @@ final class ObjectDefinition extends NodeSub {
 		try {
 			if (i == 125)
 				if (i_28_ == 1) {
-					int size = Stream.getUByte();
+					int size = Stream.readUnsignedByte();
 					if (size > 0)
 						if (models == null || Class38_Sub9.objectLowMem) {
 							models = new int[size];
 							types = new int[size];
 							for (int id = 0; id < size; id++) {
-								models[id] = Stream.getUShort();
-								types[id] = Stream.getUByte();
+								models[id] = Stream.readUnsignedShort();
+								types[id] = Stream.readUnsignedByte();
 							}
 						} else
 							Stream.pos += size * 3;
@@ -262,20 +262,20 @@ final class ObjectDefinition extends NodeSub {
 					if (i_28_ != 5) {
 						if (i_28_ != 14) {
 							if (i_28_ == 15)
-								this.anInt2480 = Stream.getUByte();
+								this.anInt2480 = Stream.readUnsignedByte();
 							else if (i_28_ == 17) {
 								this.aBool2466 = false;
 								this.anInt2482 = 0;
 							} else if (i_28_ != 18) {
 								if (i_28_ == 19)
-									this.anInt2440 = Stream.getUByte();
+									this.anInt2440 = Stream.readUnsignedByte();
 								else if (i_28_ != 21) {
 									if (i_28_ == 22)
 										aBool2441 = true;
 									else if (i_28_ == 23)
 										this.aBool2457 = true;
 									else if (i_28_ == 24) {
-										this.anInt2472 = Stream.getUShort();
+										this.anInt2472 = Stream.readUnsignedShort();
 										if (this.anInt2472 == 65535)
 											this.anInt2472 = -1;
 									} else if (i_28_ != 27) {
@@ -288,12 +288,12 @@ final class ObjectDefinition extends NodeSub {
 															this.actions[i_28_ - 30] = null;
 													} else if (i_28_ != 40) {
 														if (i_28_ == 41) {
-															int i_31_ = Stream.getUByte();
+															int i_31_ = Stream.readUnsignedByte();
 															aShortArray2444 = new short[i_31_];
 															aShortArray2458 = new short[i_31_];
 															for (int i_32_ = 0; i_32_ < i_31_; i_32_++) {
-																aShortArray2458[i_32_] = (short) Stream.getUShort();
-																aShortArray2444[i_32_] = (short) Stream.getUShort();
+																aShortArray2458[i_32_] = (short) Stream.readUnsignedShort();
+																aShortArray2444[i_32_] = (short) Stream.readUnsignedShort();
 															}
 														} else if (i_28_ != 60) {
 															if (i_28_ != 62) {
@@ -301,9 +301,9 @@ final class ObjectDefinition extends NodeSub {
 																	if (i_28_ != 65) {
 																		if (i_28_ != 66) {
 																			if (i_28_ == 67)
-																				scaleZ = Stream.getUShort();
+																				scaleZ = Stream.readUnsignedShort();
 																			else if (i_28_ == 68)
-																				this.anInt2473 = Stream.getUShort();
+																				this.anInt2473 = Stream.readUnsignedShort();
 																			else if (i_28_ != 69) {
 																				if (i_28_ == 70)
 																					anInt2452 = Stream.method772(false);
@@ -314,69 +314,69 @@ final class ObjectDefinition extends NodeSub {
 																						else if (i_28_ == 74)
 																							this.aBool2445 = true;
 																						else if (i_28_ == 75)
-																							this.anInt2499 = Stream.getUByte();
+																							this.anInt2499 = Stream.readUnsignedByte();
 																						else if (i_28_ == 77) {
-																							anInt2501 = Stream.getUShort();
+																							anInt2501 = Stream.readUnsignedShort();
 																							if (anInt2501 == 65535)
 																								anInt2501 = -1;
-																							anInt2483 = Stream.getUShort();
+																							anInt2483 = Stream.readUnsignedShort();
 																							if (anInt2483 == 65535)
 																								anInt2483 = -1;
-																							int i_33_ = Stream.getUByte();
+																							int i_33_ = Stream.readUnsignedByte();
 																							this.anIntArray2498 = new int[i_33_ + 1];
 																							for (int i_34_ = 0; i_33_ >= i_34_; i_34_++) {
-																								this.anIntArray2498[i_34_] = Stream.getUShort();
+																								this.anIntArray2498[i_34_] = Stream.readUnsignedShort();
 																								if (this.anIntArray2498[i_34_] == 65535)
 																									this.anIntArray2498[i_34_] = -1;
 																							}
 																						} else if (i_28_ != 78) {
 																							if (i_28_ != 79) {
 																								if (i_28_ == 81)
-																									anInt2493 = Stream.getUByte() * 256;
+																									anInt2493 = Stream.readUnsignedByte() * 256;
 																							} else {
-																								this.anInt2506 = Stream.getUShort();
-																								this.anInt2497 = Stream.getUShort();
-																								this.anInt2487 = Stream.getUByte();
-																								int i_35_ = Stream.getUByte();
+																								this.anInt2506 = Stream.readUnsignedShort();
+																								this.anInt2497 = Stream.readUnsignedShort();
+																								this.anInt2487 = Stream.readUnsignedByte();
+																								int i_35_ = Stream.readUnsignedByte();
 																								this.anIntArray2465 = new int[i_35_];
 																								for (int i_36_ = 0; i_35_ > i_36_; i_36_++)
-																									this.anIntArray2465[i_36_] = Stream.getUShort();
+																									this.anIntArray2465[i_36_] = Stream.readUnsignedShort();
 																							}
 																						} else {
-																							this.anInt2503 = Stream.getUShort();
-																							this.anInt2487 = Stream.getUByte();
+																							this.anInt2503 = Stream.readUnsignedShort();
+																							this.anInt2487 = Stream.readUnsignedByte();
 																						}
 																					} else
 																						anInt2479 = Stream.method772(false);
 																				} else
 																					anInt2470 = Stream.method772(false);
 																			} else
-																				this.anInt2439 = Stream.getUByte();
+																				this.anInt2439 = Stream.readUnsignedByte();
 																		} else
-																			scaleY = Stream.getUShort();
+																			scaleY = Stream.readUnsignedShort();
 																	} else
-																		scaleX = Stream.getUShort();
+																		scaleX = Stream.readUnsignedShort();
 																} else
 																	this.aBool2500 = false;
 															} else
 																aBool2504 = true;
 														} else
-															this.anInt2456 = Stream.getUShort();
+															this.anInt2456 = Stream.readUnsignedShort();
 													} else {
-														int i_37_ = Stream.getUByte();
+														int i_37_ = Stream.readUnsignedByte();
 														aShortArray2450 = new short[i_37_];
 														aShortArray2508 = new short[i_37_];
 														for (int i_38_ = 0; i_38_ < i_37_; i_38_++) {
-															aShortArray2450[i_38_] = (short) Stream.getUShort();
-															aShortArray2508[i_38_] = (short) Stream.getUShort();
+															aShortArray2450[i_38_] = (short) Stream.readUnsignedShort();
+															aShortArray2508[i_38_] = (short) Stream.readUnsignedShort();
 														}
 													}
 												} else
-													anInt2489 = Stream.method765((byte) 102) * 5;
+													anInt2489 = Stream.readByte((byte) 102) * 5;
 											} else
-												anInt2478 = Stream.method765((byte) 109);
+												anInt2478 = Stream.readByte((byte) 109);
 										} else
-											this.anInt2492 = Stream.getUByte();
+											this.anInt2492 = Stream.readUnsignedByte();
 									} else
 										this.anInt2482 = 1;
 								} else
@@ -384,15 +384,15 @@ final class ObjectDefinition extends NodeSub {
 							} else
 								this.aBool2466 = false;
 						} else
-							this.anInt2469 = Stream.getUByte();
+							this.anInt2469 = Stream.readUnsignedByte();
 					} else {
-						int i_39_ = Stream.getUByte();
+						int i_39_ = Stream.readUnsignedByte();
 						if (i_39_ > 0)
 							if (models == null || Class38_Sub9.objectLowMem) {
 								types = null;
 								models = new int[i_39_];
 								for (int i_40_ = 0; i_40_ < i_39_; i_40_++)
-									models[i_40_] = Stream.getUShort();
+									models[i_40_] = Stream.readUnsignedShort();
 							} else
 								Stream.pos += i_39_ * 2;
 					}
@@ -425,7 +425,7 @@ final class ObjectDefinition extends NodeSub {
 			SceneModel.aBool2553 = false;
 			Class72.anInt1417 = 0;
 			Class38_Sub20_Sub17.anInt3129 = 0;
-			Class23.anInt546 = -1;
+			Class23.packetId = -1;
 			Entity.anInt3446 = 0;
 			if (i != 104)
 				ObjectDefinition.method801((byte) 31);
@@ -455,7 +455,7 @@ final class ObjectDefinition extends NodeSub {
 	final void method802(RS2Buffer stream, boolean bool) {
 		try {
 			for (;;) {
-				int opcode = stream.getUByte();
+				int opcode = stream.readUnsignedByte();
 				if (opcode == 0)
 					break;
 				readValues((byte) 125, stream, opcode);

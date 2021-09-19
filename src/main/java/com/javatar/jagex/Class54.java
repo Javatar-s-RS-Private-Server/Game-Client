@@ -5,7 +5,7 @@ package com.javatar.jagex;/* Class54 - Decompiled by JODE
 final class Class54 {
 	static RSString aClass19_1184;
 	static RSString aClass19_1185;
-	static Class38_Sub6 aClass38_Sub6_1186;
+	static WidgetComponent aClass38_Sub6_1186;
 	static RSString aClass19_1187;
 	static RSString aClass19_1188 = RSString.createRSString(" x ");
 	static RSString aClass19_1189;
@@ -96,7 +96,7 @@ final class Class54 {
 		}
 	}
 
-	static final RSString method421(Class38_Sub6 class38_sub6, int i, int i_22_) {
+	static final RSString method421(WidgetComponent class38_sub6, int i, int i_22_) {
 		try {
 			if (i_22_ != 12874)
 				Class54.method419(-49, -116, -108, -125, -109, 41, 113);

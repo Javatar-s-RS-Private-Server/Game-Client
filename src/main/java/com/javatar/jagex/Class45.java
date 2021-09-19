@@ -159,9 +159,9 @@ final class Class45 implements Interface3 {
 			anInt1030 = anInt1029;
 			int[] is = class17.method110(0, 62);
 			int i_8_ = is.length;
-			aClass38_Sub5Array1025 = new Class38_Sub5[class17.method103((byte) 53, 0)];
+			aClass38_Sub5Array1025 = new Class38_Sub5[class17.getFileCount((byte) 53, 0)];
 			for (int i_9_ = 0; i_8_ > i_9_; i_9_++) {
-				RS2Buffer class38_sub23 = new RS2Buffer(class17.method109(0, is[i_9_], -70));
+				RS2Buffer class38_sub23 = new RS2Buffer(class17.getFileData(0, is[i_9_], -70));
 				aClass38_Sub5Array1025[is[i_9_]] = new Class38_Sub5(class38_sub23);
 			}
 		} catch (RuntimeException runtimeexception) {

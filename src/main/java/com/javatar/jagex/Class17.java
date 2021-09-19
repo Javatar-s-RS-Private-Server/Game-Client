@@ -77,7 +77,7 @@ abstract class Class17 {
 				for (int i_9_ = 0; i_9_ < i_7_; i_9_++) {
 					int i_10_ = 0;
 					for (int i_11_ = 0; i_1_ > i_11_; i_11_++) {
-						i_10_ += class38_sub23.method759(true);
+						i_10_ += class38_sub23.readInt(true);
 						is_8_[i_11_] += i_10_;
 					}
 				}
@@ -91,7 +91,7 @@ abstract class Class17 {
 				for (int i_15_ = 0; i_7_ > i_15_; i_15_++) {
 					int i_16_ = 0;
 					for (int i_17_ = 0; i_1_ > i_17_; i_17_++) {
-						i_16_ += class38_sub23.method759(true);
+						i_16_ += class38_sub23.readInt(true);
 						Class71.method510(is_5_, i_14_, is_12_[i_17_], is_8_[i_17_], i_16_);
 						i_14_ += i_16_;
 						is_8_[i_17_] += i_16_;
@@ -112,13 +112,13 @@ abstract class Class17 {
 	void method102(int i, int i_19_) {
 		try {
 			if (i_19_ != 5)
-				method106(55, -111);
+				exists(55, -111);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ea.J(" + i + ',' + i_19_ + ')');
 		}
 	}
 
-	final int method103(byte i, int i_20_) {
+	final int getFileCount(byte i, int i_20_) {
 		try {
 			if (i != 53)
 				aClass44_383 = null;
@@ -155,7 +155,7 @@ abstract class Class17 {
 		}
 	}
 
-	final boolean method106(int i, int i_21_) {
+	final boolean exists(int i, int i_21_) {
 		try {
 			if (this.anObjectArray346[i] != null)
 				return true;
@@ -173,7 +173,7 @@ abstract class Class17 {
 	final int method107(int i) {
 		try {
 			if (i > -47)
-				method106(-111, 16);
+				exists(-111, 16);
 			return anObjectArrayArray356.length;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ea.R(" + i + ')');
@@ -189,7 +189,7 @@ abstract class Class17 {
 		}
 	}
 
-	final byte[] method109(int i, int i_23_, int i_24_) {
+	final byte[] getFileData(int i, int i_23_, int i_24_) {
 		try {
 			if (i_24_ > -67)
 				return null;
@@ -231,20 +231,20 @@ abstract class Class17 {
 			try {
 				this.anInt369 = Class67.method477((byte) 111, is.length, is);
 				RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(31535, is));
-				int i_30_ = class38_sub23.getUByte();
+				int i_30_ = class38_sub23.readUnsignedByte();
 				if (i_30_ != 5 && i_30_ != 6)
 					throw new RuntimeException("Incorrect JS5 protocol number: " + i_30_);
 				if (i_30_ >= 6)
-					class38_sub23.method759(true);
+					class38_sub23.readInt(true);
 				int i_31_ = 0;
-				int i_32_ = class38_sub23.getUByte();
-				anInt344 = class38_sub23.getUShort();
+				int i_32_ = class38_sub23.readUnsignedByte();
+				anInt344 = class38_sub23.readUnsignedShort();
 				anIntArray378 = new int[anInt344];
 				if (i != -14702)
-					method109(-8, 28, 44);
+					getFileData(-8, 28, 44);
 				int i_33_ = -1;
 				for (int i_34_ = 0; anInt344 > i_34_; i_34_++) {
-					anIntArray378[i_34_] = i_31_ += class38_sub23.getUShort();
+					anIntArray378[i_34_] = i_31_ += class38_sub23.readUnsignedShort();
 					if (i_33_ < anIntArray378[i_34_])
 						i_33_ = anIntArray378[i_34_];
 				}
@@ -257,15 +257,15 @@ abstract class Class17 {
 				if (i_32_ != 0) {
 					anIntArray362 = new int[i_33_ + 1];
 					for (int i_35_ = 0; i_35_ < anInt344; i_35_++)
-						anIntArray362[anIntArray378[i_35_]] = class38_sub23.method759(true);
+						anIntArray362[anIntArray378[i_35_]] = class38_sub23.readInt(true);
 					aClass44_383 = new Class44(anIntArray362);
 				}
 				for (int i_36_ = 0; anInt344 > i_36_; i_36_++)
-					this.anIntArray368[anIntArray378[i_36_]] = class38_sub23.method759(true);
+					this.anIntArray368[anIntArray378[i_36_]] = class38_sub23.readInt(true);
 				for (int i_37_ = 0; anInt344 > i_37_; i_37_++)
-					this.anIntArray349[anIntArray378[i_37_]] = class38_sub23.method759(true);
+					this.anIntArray349[anIntArray378[i_37_]] = class38_sub23.readInt(true);
 				for (int i_38_ = 0; i_38_ < anInt344; i_38_++)
-					this.anIntArray352[anIntArray378[i_38_]] = class38_sub23.getUShort();
+					this.anIntArray352[anIntArray378[i_38_]] = class38_sub23.readUnsignedShort();
 				for (int i_39_ = 0; anInt344 > i_39_; i_39_++) {
 					i_31_ = 0;
 					int i_40_ = -1;
@@ -273,7 +273,7 @@ abstract class Class17 {
 					int i_42_ = this.anIntArray352[i_41_];
 					anIntArrayArray386[i_41_] = new int[i_42_];
 					for (int i_43_ = 0; i_42_ > i_43_; i_43_++) {
-						int i_44_ = anIntArrayArray386[i_41_][i_43_] = i_31_ += class38_sub23.getUShort();
+						int i_44_ = anIntArrayArray386[i_41_][i_43_] = i_31_ += class38_sub23.readUnsignedShort();
 						if (i_40_ < i_44_)
 							i_40_ = i_44_;
 					}
@@ -288,7 +288,7 @@ abstract class Class17 {
 					int i_47_ = this.anIntArray352[i_46_];
 					anIntArrayArray389[i_46_] = new int[anObjectArrayArray356[i_46_].length];
 					for (int i_48_ = 0; i_47_ > i_48_; i_48_++)
-						anIntArrayArray389[i_46_][anIntArrayArray386[i_46_][i_48_]] = class38_sub23.method759(true);
+						anIntArrayArray389[i_46_][anIntArrayArray386[i_46_][i_48_]] = class38_sub23.readInt(true);
 					aClass44Array372[i_46_] = new Class44(anIntArrayArray389[i_46_]);
 				}
 			} catch (RuntimeException runtimeexception) {
@@ -551,9 +551,9 @@ abstract class Class17 {
 	final byte[] method121(int i, int i_85_) {
 		try {
 			if (anObjectArrayArray356.length == 1)
-				return method109(0, i_85_, -76);
+				return getFileData(0, i_85_, -76);
 			if (anObjectArrayArray356[i_85_].length == 1)
-				return method109(i_85_, 0, -103);
+				return getFileData(i_85_, 0, -103);
 			int i_86_ = 93 % ((72 - i) / 44);
 			throw new RuntimeException();
 		} catch (RuntimeException runtimeexception) {
@@ -569,7 +569,7 @@ abstract class Class17 {
 			if (i != 2560)
 				method124(-113, false);
 			int i_89_ = aClass44Array372[i_88_].method370((byte) 46, class19_87_.method150(-44));
-			return method109(i_88_, i_89_, -117);
+			return getFileData(i_88_, i_89_, -117);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ea.EA(" + (class19 != null ? "{...}" : "null") + ',' + i + ',' + (class19_87_ != null ? "{...}" : "null") + ')');
 		}

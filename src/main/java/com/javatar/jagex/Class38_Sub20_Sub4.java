@@ -41,7 +41,7 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 		try {
 			int i_0_ = 52 % ((i - 4) / 41);
 			for (;;) {
-				int i_1_ = class38_sub23.getUByte();
+				int i_1_ = class38_sub23.readUnsignedByte();
 				if (i_1_ == 0)
 					break;
 				method826(class38_sub23, i_1_, (byte) 93);
@@ -135,55 +135,55 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 			if (i_8_ <= 22)
 				method831(93);
 			if (i == 1) {
-				int i_9_ = stream.getUShort();
+				int i_9_ = stream.readUnsignedShort();
 				this.anIntArray2568 = new int[i_9_];
 				for (int i_10_ = 0; i_10_ < i_9_; i_10_++)
-					this.anIntArray2568[i_10_] = stream.getUShort();
+					this.anIntArray2568[i_10_] = stream.readUnsignedShort();
 				this.anIntArray2585 = new int[i_9_];
 				for (int i_11_ = 0; i_9_ > i_11_; i_11_++)
-					this.anIntArray2585[i_11_] = stream.getUShort();
+					this.anIntArray2585[i_11_] = stream.readUnsignedShort();
 				for (int i_12_ = 0; i_12_ < i_9_; i_12_++)
-					this.anIntArray2585[i_12_] = (stream.getUShort() << 941735120) + this.anIntArray2585[i_12_];
+					this.anIntArray2585[i_12_] = (stream.readUnsignedShort() << 941735120) + this.anIntArray2585[i_12_];
 			} else if (i == 2)
-				this.anInt2578 = stream.getUShort();
+				this.anInt2578 = stream.readUnsignedShort();
 			else if (i == 3) {
-				int i_13_ = stream.getUByte();
+				int i_13_ = stream.readUnsignedByte();
 				anIntArray2577 = new int[i_13_ + 1];
 				for (int i_14_ = 0; i_14_ < i_13_; i_14_++)
-					anIntArray2577[i_14_] = stream.getUByte();
+					anIntArray2577[i_14_] = stream.readUnsignedByte();
 				anIntArray2577[i_13_] = 9999999;
 			} else if (i == 4)
 				this.aBool2563 = true;
 			else if (i == 5)
-				this.anInt2576 = stream.getUByte();
+				this.anInt2576 = stream.readUnsignedByte();
 			else if (i != 6) {
 				if (i == 7)
-					this.anInt2558 = stream.getUShort();
+					this.anInt2558 = stream.readUnsignedShort();
 				else if (i == 8)
-					this.anInt2581 = stream.getUByte();
+					this.anInt2581 = stream.readUnsignedByte();
 				else if (i == 9)
-					this.anInt2574 = stream.getUByte();
+					this.anInt2574 = stream.readUnsignedByte();
 				else if (i != 10) {
 					if (i != 11) {
 						if (i == 12) {
-							int i_15_ = stream.getUByte();
+							int i_15_ = stream.readUnsignedByte();
 							anIntArray2579 = new int[i_15_];
 							for (int i_16_ = 0; i_15_ > i_16_; i_16_++)
-								anIntArray2579[i_16_] = stream.getUShort();
+								anIntArray2579[i_16_] = stream.readUnsignedShort();
 							for (int i_17_ = 0; i_15_ > i_17_; i_17_++)
-								anIntArray2579[i_17_] = (stream.getUShort() << -2009092688) + anIntArray2579[i_17_];
+								anIntArray2579[i_17_] = (stream.readUnsignedShort() << -2009092688) + anIntArray2579[i_17_];
 						} else if (i == 13) {
-							int i_18_ = stream.getUByte();
+							int i_18_ = stream.readUnsignedByte();
 							this.anIntArray2560 = new int[i_18_];
 							for (int i_19_ = 0; i_18_ > i_19_; i_19_++)
 								this.anIntArray2560[i_19_] = stream.method738((byte) 67);
 						}
 					} else
-						this.anInt2587 = stream.getUByte();
+						this.anInt2587 = stream.readUnsignedByte();
 				} else
-					this.walkProperties = stream.getUByte();
+					this.walkProperties = stream.readUnsignedByte();
 			} else
-				this.anInt2582 = stream.getUShort();
+				this.anInt2582 = stream.readUnsignedShort();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "vc.O(" + (stream != null ? "{...}" : "null") + ',' + i + ',' + i_8_ + ')');
 		}
@@ -213,7 +213,7 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 			if (l != 0L) {
 				Client.outputBuffer.putOpcode(23);
 				Class28.anInt689++;
-				Client.outputBuffer.method762(l, (byte) 56);
+				Client.outputBuffer.writeLong(l);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "vc.J(" + l + ',' + i + ')');

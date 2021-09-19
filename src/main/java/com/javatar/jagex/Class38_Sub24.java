@@ -53,7 +53,7 @@ final class Class38_Sub24 extends Node {
 						int i_13_ = i_4_ >> 16 & 0x7f;
 						if (i_13_ > 0) {
 							int i_14_ = is_0_[i_11_];
-							Class38_Sub2 class38_sub2 = (Class38_Sub2) this.aClass14_2417.method75(i_14_, (byte) -106);
+							Class38_Sub2 class38_sub2 = (Class38_Sub2) this.aClass14_2417.method75(i_14_);
 							if (class38_sub2 == null) {
 								class38_sub2 = new Class38_Sub2(new byte[128]);
 								this.aClass14_2417.method80(true, i_14_, class38_sub2);
@@ -73,7 +73,7 @@ final class Class38_Sub24 extends Node {
 	}
 
 	static final Class38_Sub24 method781(Class17 class17, int i, int i_15_) {
-		byte[] is = class17.method109(i, i_15_, -122);
+		byte[] is = class17.getFileData(i, i_15_, -122);
 		if (is == null)
 			return null;
 		return new Class38_Sub24(new RS2Buffer(is));
@@ -81,8 +81,8 @@ final class Class38_Sub24 extends Node {
 
 	private Class38_Sub24(RS2Buffer class38_sub23) {
 		class38_sub23.pos = class38_sub23.buffer.length - 3;
-		int i = class38_sub23.getUByte();
-		int i_16_ = class38_sub23.getUShort();
+		int i = class38_sub23.readUnsignedByte();
+		int i_16_ = class38_sub23.readUnsignedShort();
 		int i_17_ = i * 10 + 14;
 		class38_sub23.pos = 0;
 		int i_18_ = 0;
@@ -96,7 +96,7 @@ final class Class38_Sub24 extends Node {
 		while_20_: for (int i_26_ = 0; i_26_ < i; i_26_++) {
 			int i_27_ = -1;
 			for (;;) {
-				int i_28_ = class38_sub23.getUByte();
+				int i_28_ = class38_sub23.readUnsignedByte();
 				if (i_28_ != i_27_)
 					i_17_++;
 				i_27_ = i_28_ & 0xf;
@@ -147,7 +147,7 @@ final class Class38_Sub24 extends Node {
 		int i_44_ = 0;
 		int i_45_ = 0;
 		for (int i_46_ = 0; i_46_ < i_19_; i_46_++) {
-			i_45_ = i_45_ + class38_sub23.getUByte() & 0x7f;
+			i_45_ = i_45_ + class38_sub23.readUnsignedByte() & 0x7f;
 			if (i_45_ == 0 || i_45_ == 32)
 				i_25_++;
 			else if (i_45_ == 1)
@@ -220,8 +220,8 @@ final class Class38_Sub24 extends Node {
 		class38_sub23.pos += i_18_ * 3;
 		this.aByteArray2418 = new byte[i_17_];
 		RS2Buffer class38_sub23_69_ = new RS2Buffer(this.aByteArray2418);
-		class38_sub23_69_.putInt(1297377380);
-		class38_sub23_69_.putInt(6);
+		class38_sub23_69_.writeInt(1297377380);
+		class38_sub23_69_.writeInt(6);
 		class38_sub23_69_.putShort(i > 1 ? 1 : 0);
 		class38_sub23_69_.putShort(i);
 		class38_sub23_69_.putShort(i_16_);
@@ -236,7 +236,7 @@ final class Class38_Sub24 extends Node {
 		int[] is = new int[128];
 		i_45_ = 0;
 		for (int i_77_ = 0; i_77_ < i; i_77_++) {
-			class38_sub23_69_.putInt(1297379947);
+			class38_sub23_69_.writeInt(1297379947);
 			class38_sub23_69_.pos += 4;
 			int i_78_ = class38_sub23_69_.pos;
 			int i_79_ = -1;

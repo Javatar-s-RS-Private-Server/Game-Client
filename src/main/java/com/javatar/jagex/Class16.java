@@ -119,7 +119,7 @@ final class Class16 {
 				return class38_sub20_sub8;
 			if (i != -1)
 				Class16.method98(-42);
-			byte[] is = Class41.aClass17_933.method109(1, i_6_, -128);
+			byte[] is = Class41.aClass17_933.getFileData(1, i_6_, -128);
 			class38_sub20_sub8 = new Class38_Sub20_Sub8();
 			if (is != null)
 				class38_sub20_sub8.method953(false, i_6_, new RS2Buffer(is));

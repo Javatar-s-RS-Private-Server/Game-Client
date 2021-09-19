@@ -12,7 +12,7 @@ final class Class38_Sub1 extends Node {
 	ObjectDefinition aClass38_Sub20_Sub1_1728;
 	int anInt1729;
 	static Class38_Sub20_Sub9_Sub2[] aClass38_Sub20_Sub9_Sub2Array1730;
-	static Class38_Sub6[] aClass38_Sub6Array1731;
+	static WidgetComponent[] aClass38_Sub6Array1731;
 	private static RSString aClass19_1732 = RSString.createRSString("go back to the main RuneScape webpage");
 	int anInt1733;
 	int anInt1734;

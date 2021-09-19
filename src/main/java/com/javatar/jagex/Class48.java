@@ -112,7 +112,7 @@ final class Class48 {
 			Class38_Sub20_Sub16 class38_sub20_sub16 = (Class38_Sub20_Sub16) Class38_Sub9.aClass83_2062.method591(-28825, i_9_);
 			if (class38_sub20_sub16 != null)
 				return class38_sub20_sub16;
-			byte[] is = NodeSub.aClass17_2258.method109(3, i_9_, -102);
+			byte[] is = NodeSub.aClass17_2258.getFileData(3, i_9_, -102);
 			class38_sub20_sub16 = new Class38_Sub20_Sub16();
 			if (is != null)
 				class38_sub20_sub16.method1023((byte) 84, new RS2Buffer(is));
@@ -132,17 +132,17 @@ final class Class48 {
 				if (bool)
 					Class74.method533((byte) 71, i_11_);
 				Class38_Sub3.method619(4590, i_11_);
-				Class38_Sub6 class38_sub6 = Projectile.method1167(i_10_, 62);
+				WidgetComponent class38_sub6 = Projectile.method1167(i_10_, 62);
 				if (class38_sub6 != null)
 					Class40.method340(class38_sub6, (byte) -123);
 				if (i > -2)
 					Class48.aByteArrayArrayArray1084 = null;
 				SceneModel.aBool2553 = false;
 				Class72.anInt1417 = 0;
-				ItemDefinition.method931(-73, Class38_Sub6.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
-				if (NodeSub.anInt2252 == -1)
+				ItemDefinition.method931(-73, WidgetComponent.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
+				if (NodeSub.windowId == -1)
 					break;
-				Class38_Sub4.method625(NodeSub.anInt2252, 1, (byte) 47);
+				Class38_Sub4.method625(NodeSub.windowId, 1, (byte) 47);
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "tb.D(" + bool + ',' + i + ',' + (class38_sub8 != null ? "{...}" : "null") + ')');
 			}
@@ -257,20 +257,20 @@ final class Class48 {
 			if (i_28_ == -32565)
 				if (i_31_ < 0 || i_31_ >= 104 || i_30_ < 0 || i_30_ >= 104)
 					for (;;) {
-						int i_33_ = class38_sub23.getUByte();
+						int i_33_ = class38_sub23.readUnsignedByte();
 						if (i_33_ == 0)
 							break;
 						if (i_33_ == 1) {
-							class38_sub23.getUByte();
+							class38_sub23.readUnsignedByte();
 							break;
 						}
 						if (i_33_ <= 49)
-							class38_sub23.getUByte();
+							class38_sub23.readUnsignedByte();
 					}
 				else {
 					Class82.aByteArrayArrayArray1648[i][i_31_][i_30_] = (byte) 0;
 					for (;;) {
-						int i_34_ = class38_sub23.getUByte();
+						int i_34_ = class38_sub23.readUnsignedByte();
 						if (i_34_ == 0) {
 							if (i == 0)
 								Player.anIntArrayArrayArray3566[0][i_31_][i_30_] = -Class53.method417(false, i_27_ + 556238 + i_30_, i_31_ + 932731 + i_32_) * 8;
@@ -281,7 +281,7 @@ final class Class48 {
 							break;
 						}
 						if (i_34_ == 1) {
-							int i_35_ = class38_sub23.getUByte();
+							int i_35_ = class38_sub23.readUnsignedByte();
 							if (i_35_ == 1)
 								i_35_ = 0;
 							if (i == 0)
@@ -293,7 +293,7 @@ final class Class48 {
 							break;
 						}
 						if (i_34_ <= 49) {
-							NPC.aByteArrayArrayArray3560[i][i_31_][i_30_] = class38_sub23.method765((byte) 116);
+							NPC.aByteArrayArrayArray3560[i][i_31_][i_30_] = class38_sub23.readByte((byte) 116);
 							Class48.aByteArrayArrayArray1084[i][i_31_][i_30_] = (byte) ((i_34_ - 2) / 4);
 							Class48.aByteArrayArrayArray1078[i][i_31_][i_30_] = (byte) Class38_Sub10_Sub3.method941(i_29_ + i_34_ - 2, 3);
 						} else if (i_34_ <= 81)

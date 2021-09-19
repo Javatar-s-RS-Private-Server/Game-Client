@@ -18,7 +18,7 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 	static RSString aClass19_3076;
 	static RSString aClass19_3077;
 
-	static final RSString method1006(byte i, Class38_Sub6 class38_sub6) {
+	static final RSString method1006(byte i, WidgetComponent class38_sub6) {
 		try {
 			int i_0_ = 45 / ((55 - i) / 47);
 			if (Class38_Sub1.method610(true, Class30.method283(-94, class38_sub6)) == 0)
@@ -38,7 +38,7 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 		do {
 			try {
 				for (;;) {
-					int i_1_ = class38_sub23.getUByte();
+					int i_1_ = class38_sub23.readUnsignedByte();
 					if (i_1_ == 0)
 						break;
 					method1010(class38_sub23, -6, i_1_);
@@ -76,8 +76,8 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 				Class72.anInt1417 = 1;
 				Class17_Sub1.anIntArray1709[0] = 1007;
 			}
-			if (NodeSub.anInt2252 != -1)
-				Class10.method54(i - 230, NodeSub.anInt2252);
+			if (NodeSub.windowId != -1)
+				Class10.method54(i - 230, NodeSub.windowId);
 			for (int i_2_ = 0; i_2_ < Class38_Sub20_Sub11.anInt2957; i_2_++) {
 				if (Class32.aBoolArray768[i_2_])
 					Class73_Sub2.aBoolArray2294[i_2_] = true;
@@ -90,9 +90,9 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 			Class38_Sub4.anInt1795 = -1;
 			Class17.anInt367 = Class45.anInt1016;
 			RSString.anInt481 = -1;
-			if (NodeSub.anInt2252 != -1) {
+			if (NodeSub.windowId != -1) {
 				Class38_Sub20_Sub11.anInt2957 = 0;
-				Class24.method207(0, -101, 0, NodeSub.anInt2252, 0, -1, 765, 503, 0);
+				Class24.method207(0, -101, 0, NodeSub.windowId, 0, -1, 765, 503, 0);
 			}
 			Class38_Sub20_Sub9.method961();
 			Class16.method100(7965);
@@ -118,7 +118,7 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 	private final void method1010(RS2Buffer class38_sub23, int i, int i_4_) {
 		try {
 			if (i == (i_4_ ^ 0xffffffff))
-				this.anInt3063 = class38_sub23.getUShort();
+				this.anInt3063 = class38_sub23.readUnsignedShort();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ie.F(" + (class38_sub23 != null ? "{...}" : "null") + ',' + i + ',' + i_4_ + ')');
 		}

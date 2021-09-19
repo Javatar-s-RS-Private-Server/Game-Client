@@ -397,7 +397,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 					}
 			if (bool != true)
 				method857(null, true, -97, null, -122);
-			Class38_Sub18 class38_sub18 = (Class38_Sub18) aClass14_2651.method75(anIntArray2609[i_49_], (byte) -106);
+			Class38_Sub18 class38_sub18 = (Class38_Sub18) aClass14_2651.method75(anIntArray2609[i_49_]);
 			if (class38_sub18 != null) {
 				Class38_Sub16_Sub1 class38_sub16_sub1 = class38_sub18.aClass38_Sub16_Sub1Array2201[i_50_];
 				if (class38_sub16_sub1 != null) {
@@ -457,7 +457,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 				is = new int[] { i };
 			for (Class38_Sub2 class38_sub2 = (Class38_Sub2) class38_sub24.aClass14_2417.method82((byte) 122); class38_sub2 != null; class38_sub2 = (Class38_Sub2) class38_sub24.aClass14_2417.method78(116)) {
 				int i_58_ = (int) ((Node) class38_sub2).aLong898;
-				Class38_Sub18 class38_sub18 = (Class38_Sub18) aClass14_2651.method75(i_58_, (byte) -106);
+				Class38_Sub18 class38_sub18 = (Class38_Sub18) aClass14_2651.method75(i_58_);
 				if (class38_sub18 == null) {
 					class38_sub18 = Class38_Sub20_Sub14.method1001(i_58_, class17, 0);
 					if (class38_sub18 == null) {
@@ -620,9 +620,9 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 							RuntimeException_Sub1.aClass27_3292.method246(Client.height, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3493, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, 60, class38_sub20_sub3_sub7_sub2, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3491, i_76_, class38_sub20_sub3_sub7_sub2.anInt3568, class38_sub20_sub3_sub7_sub2.anInt3581, class38_sub20_sub3_sub7_sub2.anInt3578, class38_sub20_sub3_sub7_sub2.anInt3572);
 						} else {
 							if ((((Entity) class38_sub20_sub3_sub7_sub2).anInt3493 & 0x7f) == 64 && (((Entity) class38_sub20_sub3_sub7_sub2).anInt3444 & 0x7f) == 64) {
-								if (RuntimeException_Sub1.anInt3293 == Class38_Sub6.anIntArrayArray1902[i_78_][i_77_])
+								if (RuntimeException_Sub1.anInt3293 == WidgetComponent.anIntArrayArray1902[i_78_][i_77_])
 									continue;
-								Class38_Sub6.anIntArrayArray1902[i_78_][i_77_] = RuntimeException_Sub1.anInt3293;
+								WidgetComponent.anIntArrayArray1902[i_78_][i_77_] = RuntimeException_Sub1.anInt3293;
 							}
 							class38_sub20_sub3_sub7_sub2.anInt3579 = Class35.method317(-5736, Client.height, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3493, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3444);
 							RuntimeException_Sub1.aClass27_3292.method249(Client.height, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3493, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3444, class38_sub20_sub3_sub7_sub2.anInt3579, 60, class38_sub20_sub3_sub7_sub2, ((Entity) class38_sub20_sub3_sub7_sub2).anInt3491, i_76_, ((Entity) class38_sub20_sub3_sub7_sub2).aBool3481);
@@ -819,7 +819,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 		}
 	}
 
-	static final Class38_Sub6 method860(int i, Class38_Sub6 class38_sub6) {
+	static final WidgetComponent method860(int i, WidgetComponent class38_sub6) {
 		try {
 			int i_87_ = Class38_Sub2.method615(Class30.method283(-101, class38_sub6), i ^ 0x56000db0);
 			if (i_87_ == 0)

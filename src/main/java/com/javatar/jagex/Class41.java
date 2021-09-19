@@ -43,7 +43,7 @@ final class Class41 {
 			Class41.aClass19_930 = null;
 			Class41.aClass19_945 = null;
 			if (i != 0)
-				Class41.method353((byte) -11);
+				Class41.updatePlayer((byte) -11);
 			Class41.aClass17_933 = null;
 			Class41.aClass19_948 = null;
 			Class41.aClass19_939 = null;
@@ -58,7 +58,7 @@ final class Class41 {
 		}
 	}
 
-	static final void method346(int i, long l) {
+	static final void method346(long l) {
 		try {
 			if (l != 0L)
 				if (Class81.anInt1618 >= 100 && Class15.anInt272 != 1 || Class81.anInt1618 >= 200)
@@ -78,8 +78,6 @@ final class Class41 {
 					if (class19.method175(true, Client.myPlayer.name))
 						Class62.method464((byte) 98, Class80.aClass19_1599, 0, Class38_Sub22.aClass19_2312);
 					else {
-						if (i <= 52)
-							Class41.method345(-32);
 						Class53.aClass19Array1173[Class81.anInt1618] = class19;
 						Class20.aLongArray499[Class81.anInt1618] = l;
 						Class41.anIntArray941[Class81.anInt1618] = 0;
@@ -87,11 +85,11 @@ final class Class41 {
 						Class81.anInt1624 = Entity.anInt3513;
 						Class81.anInt1618++;
 						Client.outputBuffer.putOpcode(28);
-						Client.outputBuffer.method762(l, (byte) 56);
+						Client.outputBuffer.writeLong(l);
 					}
 				}
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "na.G(" + i + ',' + l + ')');
+			throw Class38_Sub1.method607(runtimeexception, "na.G(" + 119 + ',' + l + ')');
 		}
 	}
 
@@ -104,7 +102,7 @@ final class Class41 {
 		}
 	}
 
-	static final void method348(int i) {
+	static final void method348() {
 		do {
 			try {
 				for (Class38_Sub21 class38_sub21 = (Class38_Sub21) Class3.aClass13_71.method65(95); class38_sub21 != null; class38_sub21 = (Class38_Sub21) Class3.aClass13_71.method63(-3)) {
@@ -120,20 +118,17 @@ final class Class41 {
 								if (class38_sub21.anInt2268 == class38_sub21.anInt2276 && class38_sub21.anInt2272 == class38_sub21.anInt2275 && class38_sub21.anInt2266 == class38_sub21.anInt2270)
 									class38_sub21.method330(0);
 							} else
-								class38_sub21.method330(i - 25682);
+								class38_sub21.method330(25682 - 25682);
 						}
 					} else if (class38_sub21.anInt2268 < 0 || Class20.method189((byte) 76, class38_sub21.anInt2268, class38_sub21.anInt2270)) {
 						Client.method1227(class38_sub21.anInt2270, class38_sub21.anInt2260, class38_sub21.anInt2267, (byte) 114, class38_sub21.anInt2268, class38_sub21.anInt2272, class38_sub21.anInt2263, class38_sub21.anInt2282);
 						class38_sub21.method330(0);
 					}
 				}
-				if (i == 25682)
-					break;
-				Class41.method345(-11);
+				break;
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "na.B(" + i + ')');
+				throw Class38_Sub1.method607(runtimeexception, "na.B(" + 25682 + ')');
 			}
-			break;
 		} while (false);
 	}
 
@@ -237,7 +232,7 @@ final class Class41 {
 				return class38_sub20_sub7;
 			if (i_12_ != 17093)
 				return null;
-			byte[] is = Class58.aClass17_1278.method109(5, i, -68);
+			byte[] is = Class58.aClass17_1278.getFileData(5, i, -68);
 			class38_sub20_sub7 = new Class38_Sub20_Sub7();
 			if (is != null)
 				class38_sub20_sub7.method944(new RS2Buffer(is), 110);
@@ -248,7 +243,7 @@ final class Class41 {
 		}
 	}
 
-	static final void method352(RSString class19, byte i) {
+	static final void method352(RSString class19) {
 		try {
 			if (NPC.aClass38_Sub9Array3557 != null) {
 				int i_13_ = 0;
@@ -259,32 +254,30 @@ final class Class41 {
 							break;
 					if (NPC.aClass38_Sub9Array3557.length > i_13_ && NPC.aClass38_Sub9Array3557[i_13_] != null) {
 						Client.outputBuffer.putOpcode(194);
-						if (i != -123)
-							Class41.method346(-29, -106L);
-						Client.outputBuffer.method762(((Node) NPC.aClass38_Sub9Array3557[i_13_]).aLong898, (byte) 56);
+						Client.outputBuffer.writeLong(((Node) NPC.aClass38_Sub9Array3557[i_13_]).aLong898);
 					}
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "na.I(" + (class19 != null ? "{...}" : "null") + ',' + i + ')');
+			throw Class38_Sub1.method607(runtimeexception, "na.I(" + (class19 != null ? "{...}" : "null") + ',' + (byte) -123 + ')');
 		}
 	}
 
-	static final void method353(byte i) {
+	static void updatePlayer(byte i) {
 		do {
 			try {
 				Class38_Sub20_Sub15.anInt3064 = 0;
 				Class4.anInt81 = 0;
-				Class14.method76(true);
-				Class73.method515((byte) 127);
-				Class31.method285(11);
-				Class2_Sub1.method649(19135);
+				Class14.updateLocation();
+				Class73.updateLocalPlayerLocations((byte) 127);
+				Class31.addLocalPlayers(11);
+				Class2_Sub1.updatePlayerFlags(19135);
 				for (int i_14_ = 0; Class4.anInt81 > i_14_; i_14_++) {
 					int i_15_ = Class21.anIntArray519[i_14_];
-					if (((Entity) Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_15_]).anInt3459 != Class45.anInt1016)
+					if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_15_].anInt3459 != Class45.anInt1016)
 						Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_15_] = null;
 				}
-				if (Entity.anInt3446 != ((RS2Buffer) Class15.inputStream).pos)
+				if (Entity.anInt3446 != Class15.inputStream.pos)
 					throw new RuntimeException("gpp1 pos:" + ((RS2Buffer) Class15.inputStream).pos + " psize:" + Entity.anInt3446);
 				for (int i_16_ = 0; i_16_ < ItemDefinition.anInt2783; i_16_++)
 					if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[Class47.anIntArray1055[i_16_]] == null)
@@ -293,6 +286,7 @@ final class Class41 {
 					break;
 				Class41.anIntArrayArray926 = null;
 			} catch (RuntimeException runtimeexception) {
+				runtimeexception.printStackTrace();
 				throw Class38_Sub1.method607(runtimeexception, "na.D(" + i + ')');
 			}
 			break;

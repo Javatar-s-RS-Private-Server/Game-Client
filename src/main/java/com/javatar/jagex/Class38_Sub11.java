@@ -52,7 +52,7 @@ final class Class38_Sub11 extends Node {
 			if (class38_sub20_sub11 != null)
 				return class38_sub20_sub11;
 			int i_3_ = -22 % ((i_2_ - 63) / 63);
-			byte[] is = Class38_Sub10_Sub3.aClass17_2841.method109(13, i, -83);
+			byte[] is = Class38_Sub10_Sub3.aClass17_2841.getFileData(13, i, -83);
 			class38_sub20_sub11 = new Class38_Sub20_Sub11();
 			class38_sub20_sub11.anInt2946 = i;
 			if (is != null)

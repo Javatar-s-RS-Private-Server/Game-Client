@@ -10,7 +10,7 @@ final class Class83 {
 	static RSString aClass19_1654;
 	static RSString aClass19_1655 = RSString.createRSString(")1p");
 	static int[] anIntArray1656;
-	static Class38_Sub6 aClass38_Sub6_1657;
+	static WidgetComponent aClass38_Sub6_1657;
 	private NodeSub aClass38_Sub20_1658 = new NodeSub();
 	static RSString[] aClass19Array1662;
 	private static RSString aClass19_1663;
@@ -77,7 +77,7 @@ final class Class83 {
 
 	final NodeSub method591(int i, long l) {
 		try {
-			NodeSub class38_sub20 = (NodeSub) aClass14_1685.method75(l, (byte) -106);
+			NodeSub class38_sub20 = (NodeSub) aClass14_1685.method75(l);
 			if (i != -28825)
 				return null;
 			if (class38_sub20 != null)
@@ -88,19 +88,17 @@ final class Class83 {
 		}
 	}
 
-	final void method592(long l, boolean bool) {
+	final void method592(long l) {
 		do {
 			try {
-				if (bool)
-					Class83.anIntArray1650 = null;
-				NodeSub class38_sub20 = (NodeSub) aClass14_1685.method75(l, (byte) -106);
+				NodeSub class38_sub20 = (NodeSub) aClass14_1685.method75(l);
 				if (class38_sub20 == null)
 					break;
 				class38_sub20.method330(0);
 				class38_sub20.method707(false);
 				anInt1681++;
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "ja.H(" + l + ',' + bool + ')');
+				throw Class38_Sub1.method607(runtimeexception, "ja.H(" + l + ',' + false + ')');
 			}
 			break;
 		} while (false);

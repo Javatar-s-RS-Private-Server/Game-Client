@@ -30,7 +30,7 @@ final class Class66 {
 			if (i < 57)
 				Class66.method475(-21);
 			Class55.aBool1232 = bool;
-			Class38_Sub10_Sub3.aClass17_2833.method103((byte) 53, 10);
+			Class38_Sub10_Sub3.aClass17_2833.getFileCount((byte) 53, 10);
 			Canvas_Sub1.aClass38_Sub20_Sub9_Sub1_Sub1_2525 = class38_sub20_sub9_sub1_sub1;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "cd.B(" + (class17 != null ? "{...}" : "null") + ',' + (class17_0_ != null ? "{...}" : "null") + ',' + bool + ',' + (class38_sub20_sub9_sub1_sub1 != null ? "{...}" : "null") + ',' + i + ')');

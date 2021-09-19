@@ -109,7 +109,7 @@ final class Class72 {
 				Class72.aClass19_1411 = null;
 			if (class38_sub20_sub12 != null)
 				return class38_sub20_sub12;
-			byte[] is = Class2.aClass17_37.method109(8, i, -70);
+			byte[] is = Class2.aClass17_37.getFileData(8, i, -70);
 			class38_sub20_sub12 = new Class38_Sub20_Sub12();
 			if (is != null)
 				class38_sub20_sub12.method986(new RS2Buffer(is), -23866);

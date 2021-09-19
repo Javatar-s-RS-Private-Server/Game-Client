@@ -12,11 +12,11 @@ final class Class38_Sub2 extends Node {
 	static int anInt1764;
 	static RSString aClass19_1766;
 	static Class2 aClass2_1768;
-	static Class38_Sub6 aClass38_Sub6_1769;
+	static WidgetComponent aClass38_Sub6_1769;
 	static int[] anIntArray1770 = new int[25];
 	static int anInt1771;
 	static RSString aClass19_1773;
-	static Class38_Sub6 aClass38_Sub6_1774;
+	static WidgetComponent aClass38_Sub6_1774;
 
 	public static void method611(byte i) {
 		try {
@@ -306,7 +306,7 @@ final class Class38_Sub2 extends Node {
 			Class38_Sub20_Sub14 class38_sub20_sub14 = (Class38_Sub20_Sub14) Class80.aClass83_1608.method591(i - 28829, i_31_);
 			if (class38_sub20_sub14 != null)
 				return class38_sub20_sub14;
-			byte[] is = Class38_Sub20_Sub17.aClass17_3113.method109(i, i_31_, i ^ ~0x4e);
+			byte[] is = Class38_Sub20_Sub17.aClass17_3113.getFileData(i, i_31_, i ^ ~0x4e);
 			class38_sub20_sub14 = new Class38_Sub20_Sub14();
 			if (is != null)
 				class38_sub20_sub14.method1000(-28563, new RS2Buffer(is), i_31_);

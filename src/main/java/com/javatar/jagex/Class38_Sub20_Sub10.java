@@ -6,7 +6,7 @@ final class Class38_Sub20_Sub10 extends NodeSub {
 	static RSString aClass19_2891;
 	int anInt2892;
 	RSString aClass19_2894;
-	static RS2Buffer[] aClass38_Sub23Array2895 = new RS2Buffer[2048];
+	static RS2Buffer[] appearanceCache = new RS2Buffer[2048];
 	int anInt2896;
 	int anInt2897;
 	int[] anIntArray2898;
@@ -65,7 +65,7 @@ final class Class38_Sub20_Sub10 extends NodeSub {
 			Class38_Sub20_Sub10.anIntArray2912 = null;
 			Client.worldConnection = null;
 			if (i == 22755) {
-				Class38_Sub20_Sub10.aClass38_Sub23Array2895 = null;
+				Class38_Sub20_Sub10.appearanceCache = null;
 				Class38_Sub20_Sub10.aClass83_2902 = null;
 				Class38_Sub20_Sub10.aClass19_2909 = null;
 				Class38_Sub20_Sub10.aClass19_2911 = null;

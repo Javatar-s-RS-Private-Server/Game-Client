@@ -112,7 +112,7 @@ final class Class38_Sub18 extends Node {
 
 	static final int method703(int i, int i_10_, int i_11_) {
 		try {
-			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_11_, (byte) -106);
+			Class38_Sub3 class38_sub3 = (Class38_Sub3) Class38_Sub20_Sub8.aClass14_2863.method75(i_11_);
 			if (class38_sub3 == null)
 				return -1;
 			if (i != 0)
@@ -145,7 +145,7 @@ final class Class38_Sub18 extends Node {
 			}
 			byte[] is_12_ = new byte[i];
 			for (int i_13_ = 0; i_13_ < i; i_13_++)
-				is_12_[i_13_] = class38_sub23.method765((byte) 100);
+				is_12_[i_13_] = class38_sub23.readByte((byte) 100);
 			class38_sub23.pos++;
 			i++;
 			int i_14_ = class38_sub23.pos;
@@ -155,7 +155,7 @@ final class Class38_Sub18 extends Node {
 			}
 			byte[] is_16_ = new byte[i_15_];
 			for (int i_17_ = 0; i_15_ > i_17_; i_17_++)
-				is_16_[i_17_] = class38_sub23.method765((byte) 95);
+				is_16_[i_17_] = class38_sub23.readByte((byte) 95);
 			i_15_++;
 			int i_18_ = 0;
 			class38_sub23.pos++;
@@ -165,7 +165,7 @@ final class Class38_Sub18 extends Node {
 			}
 			byte[] is_20_ = new byte[i_18_];
 			for (int i_21_ = 0; i_21_ < i_18_; i_21_++)
-				is_20_[i_21_] = class38_sub23.method765((byte) 107);
+				is_20_[i_21_] = class38_sub23.readByte((byte) 107);
 			class38_sub23.pos++;
 			byte[] is_22_ = new byte[++i_18_];
 			int i_23_;
@@ -176,7 +176,7 @@ final class Class38_Sub18 extends Node {
 				int i_24_ = 1;
 				is_22_[1] = (byte) 1;
 				for (int i_25_ = 2; i_25_ < i_18_; i_25_++) {
-					int i_26_ = class38_sub23.getUByte();
+					int i_26_ = class38_sub23.readUnsignedByte();
 					if (i_26_ != 0) {
 						if (i_24_ >= i_26_)
 							i_26_--;
@@ -189,36 +189,36 @@ final class Class38_Sub18 extends Node {
 			Class52[] class52s = new Class52[i_23_];
 			for (int i_27_ = 0; class52s.length > i_27_; i_27_++) {
 				Class52 class52 = class52s[i_27_] = new Class52();
-				int i_28_ = class38_sub23.getUByte();
+				int i_28_ = class38_sub23.readUnsignedByte();
 				if (i_28_ > 0)
 					class52.aByteArray1139 = new byte[i_28_ * 2];
-				i_28_ = class38_sub23.getUByte();
+				i_28_ = class38_sub23.readUnsignedByte();
 				if (i_28_ > 0) {
 					class52.aByteArray1153 = new byte[i_28_ * 2 + 2];
 					class52.aByteArray1153[1] = (byte) 64;
 				}
 			}
-			int i_29_ = class38_sub23.getUByte();
+			int i_29_ = class38_sub23.readUnsignedByte();
 			byte[] is_30_ = i_29_ <= 0 ? null : new byte[i_29_ * 2];
 			int i_31_ = 0;
-			i_29_ = class38_sub23.getUByte();
+			i_29_ = class38_sub23.readUnsignedByte();
 			byte[] is_32_ = i_29_ <= 0 ? null : new byte[i_29_ * 2];
 			for (/**/; class38_sub23.buffer[i_31_ + class38_sub23.pos] != 0; i_31_++) {
 				/* empty */
 			}
 			byte[] is_33_ = new byte[i_31_];
 			for (int i_34_ = 0; i_31_ > i_34_; i_34_++)
-				is_33_[i_34_] = class38_sub23.method765((byte) 99);
+				is_33_[i_34_] = class38_sub23.readByte((byte) 99);
 			i_31_++;
 			class38_sub23.pos++;
 			int i_35_ = 0;
 			for (int i_36_ = 0; i_36_ < 128; i_36_++) {
-				i_35_ += class38_sub23.getUByte();
+				i_35_ += class38_sub23.readUnsignedByte();
 				this.aShortArray2212[i_36_] = (short) i_35_;
 			}
 			i_35_ = 0;
 			for (int i_37_ = 0; i_37_ < 128; i_37_++) {
-				i_35_ += class38_sub23.getUByte();
+				i_35_ += class38_sub23.readUnsignedByte();
 				this.aShortArray2212[i_37_] += i_35_ << 1243250600;
 			}
 			int i_38_ = 0;
@@ -291,33 +291,33 @@ final class Class38_Sub18 extends Node {
 					else
 						i_38_ = is_33_[i_40_++];
 					if (anIntArray2222[i_48_] > 0)
-						i_47_ = class38_sub23.getUByte() + 1;
+						i_47_ = class38_sub23.readUnsignedByte() + 1;
 				}
 				i_38_--;
 				this.aByteArray2211[i_48_] = (byte) i_47_;
 			}
-			this.anInt2204 = class38_sub23.getUByte() + 1;
+			this.anInt2204 = class38_sub23.readUnsignedByte() + 1;
 			for (int i_49_ = 0; i_49_ < i_23_; i_49_++) {
 				Class52 class52_50_ = class52s[i_49_];
 				if (class52_50_.aByteArray1139 != null)
 					for (int i_51_ = 1; i_51_ < class52_50_.aByteArray1139.length; i_51_ += 2)
-						class52_50_.aByteArray1139[i_51_] = class38_sub23.method765((byte) 95);
+						class52_50_.aByteArray1139[i_51_] = class38_sub23.readByte((byte) 95);
 				if (class52_50_.aByteArray1153 != null)
 					for (int i_52_ = 3; i_52_ < class52_50_.aByteArray1153.length - 2; i_52_ += 2)
-						class52_50_.aByteArray1153[i_52_] = class38_sub23.method765((byte) 123);
+						class52_50_.aByteArray1153[i_52_] = class38_sub23.readByte((byte) 123);
 			}
 			if (is_30_ != null)
 				for (int i_53_ = 1; i_53_ < is_30_.length; i_53_ += 2)
-					is_30_[i_53_] = class38_sub23.method765((byte) 118);
+					is_30_[i_53_] = class38_sub23.readByte((byte) 118);
 			if (is_32_ != null)
 				for (int i_54_ = 1; is_32_.length > i_54_; i_54_ += 2)
-					is_32_[i_54_] = class38_sub23.method765((byte) 106);
+					is_32_[i_54_] = class38_sub23.readByte((byte) 106);
 			for (int i_55_ = 0; i_23_ > i_55_; i_55_++) {
 				Class52 class52_56_ = class52s[i_55_];
 				if (class52_56_.aByteArray1153 != null) {
 					i_35_ = 0;
 					for (int i_57_ = 2; i_57_ < class52_56_.aByteArray1153.length; i_57_ += 2) {
-						i_35_ -= -class38_sub23.getUByte() - 1;
+						i_35_ -= -class38_sub23.readUnsignedByte() - 1;
 						class52_56_.aByteArray1153[i_57_] = (byte) i_35_;
 					}
 				}
@@ -327,16 +327,16 @@ final class Class38_Sub18 extends Node {
 				if (class52_59_.aByteArray1139 != null) {
 					i_35_ = 0;
 					for (int i_60_ = 2; i_60_ < class52_59_.aByteArray1139.length; i_60_ += 2) {
-						i_35_ = class38_sub23.getUByte() + i_35_ + 1;
+						i_35_ = class38_sub23.readUnsignedByte() + i_35_ + 1;
 						class52_59_.aByteArray1139[i_60_] = (byte) i_35_;
 					}
 				}
 			}
 			if (is_30_ != null) {
-				i_35_ = class38_sub23.getUByte();
+				i_35_ = class38_sub23.readUnsignedByte();
 				is_30_[0] = (byte) i_35_;
 				for (int i_61_ = 2; i_61_ < is_30_.length; i_61_ += 2) {
-					i_35_ = i_35_ + 1 + class38_sub23.getUByte();
+					i_35_ = i_35_ + 1 + class38_sub23.readUnsignedByte();
 					is_30_[i_61_] = (byte) i_35_;
 				}
 				int i_62_ = is_30_[0];
@@ -362,10 +362,10 @@ final class Class38_Sub18 extends Node {
 					this.aByteArray2211[i_71_] = (byte) (this.aByteArray2211[i_71_] * i_63_ + 32 >> -1453945178);
 			}
 			if (is_32_ != null) {
-				i_35_ = class38_sub23.getUByte();
+				i_35_ = class38_sub23.readUnsignedByte();
 				is_32_[0] = (byte) i_35_;
 				for (int i_72_ = 2; is_32_.length > i_72_; i_72_ += 2) {
-					i_35_ = class38_sub23.getUByte() + i_35_ + 1;
+					i_35_ = class38_sub23.readUnsignedByte() + i_35_ + 1;
 					is_32_[i_72_] = (byte) i_35_;
 				}
 				int i_73_ = is_32_[0];
@@ -408,27 +408,27 @@ final class Class38_Sub18 extends Node {
 				Object object = null;
 			}
 			for (int i_86_ = 0; i_23_ > i_86_; i_86_++)
-				class52s[i_86_].anInt1152 = class38_sub23.getUByte();
+				class52s[i_86_].anInt1152 = class38_sub23.readUnsignedByte();
 			for (int i_87_ = 0; i_87_ < i_23_; i_87_++) {
 				Class52 class52_88_ = class52s[i_87_];
 				if (class52_88_.aByteArray1139 != null)
-					class52_88_.anInt1141 = class38_sub23.getUByte();
+					class52_88_.anInt1141 = class38_sub23.readUnsignedByte();
 				if (class52_88_.aByteArray1153 != null)
-					class52_88_.anInt1157 = class38_sub23.getUByte();
+					class52_88_.anInt1157 = class38_sub23.readUnsignedByte();
 				if (class52_88_.anInt1152 > 0)
-					class52_88_.anInt1148 = class38_sub23.getUByte();
+					class52_88_.anInt1148 = class38_sub23.readUnsignedByte();
 			}
 			for (int i_89_ = 0; i_89_ < i_23_; i_89_++)
-				class52s[i_89_].anInt1147 = class38_sub23.getUByte();
+				class52s[i_89_].anInt1147 = class38_sub23.readUnsignedByte();
 			for (int i_90_ = 0; i_23_ > i_90_; i_90_++) {
 				Class52 class52_91_ = class52s[i_90_];
 				if (class52_91_.anInt1147 > 0)
-					class52_91_.anInt1160 = class38_sub23.getUByte();
+					class52_91_.anInt1160 = class38_sub23.readUnsignedByte();
 			}
 			for (int i_92_ = 0; i_92_ < i_23_; i_92_++) {
 				Class52 class52_93_ = class52s[i_92_];
 				if (class52_93_.anInt1160 > 0)
-					class52_93_.anInt1140 = class38_sub23.getUByte();
+					class52_93_.anInt1140 = class38_sub23.readUnsignedByte();
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "kd.<init>(" + (is != null ? "{...}" : "null") + ')');

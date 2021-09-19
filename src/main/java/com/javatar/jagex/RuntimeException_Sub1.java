@@ -185,7 +185,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
 		this.aString3278 = string;
 	}
 
-	static final void method1099(boolean bool, int i, Class38_Sub6 class38_sub6, int i_24_) {
+	static final void method1099(boolean bool, int i, WidgetComponent class38_sub6, int i_24_) {
 		do {
 			try {
 				if (class38_sub6.anInt1903 == 1)

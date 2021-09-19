@@ -8,7 +8,7 @@ class NodeSub extends Node {
 	NodeSub aClass38_Sub20_2248;
 	static Class81 aClass81_2249 = new Class81();
 	static boolean aBool2251;
-	static int anInt2252 = -1;
+	static int windowId = -1;
 	static int anInt2253 = 0;
 	static RSString aClass19_2254 = RSString.createRSString("Mem:");
 	static int js5Port;

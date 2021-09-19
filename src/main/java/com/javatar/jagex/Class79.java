@@ -87,15 +87,15 @@ final class Class79 {
 							break;
 						if (Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564 == null) {
 							Class38_Sub20_Sub15.aClass38_Sub23_3066.pos = 0;
-							int i_6_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.getUByte();
-							int i_7_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.getUShort();
+							int i_6_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.readUnsignedByte();
+							int i_7_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.readUnsignedShort();
 							long l_8_ = i_7_ + (i_6_ << 1690050704);
-							int i_9_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.getUByte();
-							int i_10_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.method759(true);
-							Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Class76.aClass14_1485.method75(l_8_, (byte) -106);
+							int i_9_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.readUnsignedByte();
+							int i_10_ = Class38_Sub20_Sub15.aClass38_Sub23_3066.readInt(true);
+							Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Class76.aClass14_1485.method75(l_8_);
 							NodeSub.aBool2251 = true;
 							if (class38_sub20_sub2 == null) {
-								class38_sub20_sub2 = (Class38_Sub20_Sub2) PlayerAppearance.aClass14_397.method75(l_8_, (byte) -106);
+								class38_sub20_sub2 = (Class38_Sub20_Sub2) PlayerAppearance.aClass14_397.method75(l_8_);
 								NodeSub.aBool2251 = false;
 							}
 							if (class38_sub20_sub2 == null)
@@ -104,7 +104,7 @@ final class Class79 {
 							int i_11_ = i_9_ != 0 ? 9 : 5;
 							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275 = new RS2Buffer(Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564.aByte2542 + (i_10_ + i_11_));
 							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.putByte(i_9_);
-							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.putInt(i_10_);
+							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.writeInt(i_10_);
 							Class38_Sub20_Sub15.aClass38_Sub23_3066.pos = 0;
 							Class38_Sub11.anInt2101 = 8;
 						} else if (Class38_Sub11.anInt2101 == 0)
@@ -152,8 +152,8 @@ final class Class79 {
 									Class17_Sub1 class17_sub1 = Class28.aClass17_Sub1Array695[i_16_];
 									if (class17_sub1 != null) {
 										Class72.aClass38_Sub23_1414.pos = i_16_ * 8 + 5;
-										int i_17_ = Class72.aClass38_Sub23_1414.method759(true);
-										int i_18_ = Class72.aClass38_Sub23_1414.method759(true);
+										int i_17_ = Class72.aClass38_Sub23_1414.readInt(true);
+										int i_18_ = Class72.aClass38_Sub23_1414.readInt(true);
 										class17_sub1.method598(i_18_, i_17_, 16782);
 									}
 								}
@@ -213,7 +213,7 @@ final class Class79 {
 			int i_21_ = ((i_20_ & ~0x5ffff000) << -1931131932 | i_20_ >>> -1950442324) ^ i_19_;
 			i_21_ |= i_20_ << 2106961520;
 			long l = i_21_;
-			Class38_Sub16_Sub1 class38_sub16_sub1 = (Class38_Sub16_Sub1) aClass14_1585.method75(l, (byte) -106);
+			Class38_Sub16_Sub1 class38_sub16_sub1 = (Class38_Sub16_Sub1) aClass14_1585.method75(l);
 			if (i != -24259)
 				return null;
 			if (class38_sub16_sub1 != null)
@@ -251,7 +251,7 @@ final class Class79 {
 				return null;
 			if (aClass17_1584.method107(-101) == 1)
 				return method570(-24259, i, is, 0);
-			if (aClass17_1584.method103((byte) 53, i) == 1)
+			if (aClass17_1584.getFileCount((byte) 53, i) == 1)
 				return method570(-24259, 0, is, i);
 			throw new RuntimeException();
 		} catch (RuntimeException runtimeexception) {
@@ -265,7 +265,7 @@ final class Class79 {
 				return null;
 			if (aClass17_1578.method107(-115) == 1)
 				return method576(i_23_, 0, (byte) -29, is);
-			if (aClass17_1578.method103((byte) 53, i_23_) == 1)
+			if (aClass17_1578.getFileCount((byte) 53, i_23_) == 1)
 				return method576(0, i_23_, (byte) -82, is);
 			throw new RuntimeException();
 		} catch (RuntimeException runtimeexception) {
@@ -309,13 +309,13 @@ final class Class79 {
 			int i_28_ = i ^ (i_26_ >>> -1702358452 | i_26_ << 1106843460 & 0xffff);
 			i_28_ |= i_26_ << 593754768;
 			long l = i_28_ ^ 0x100000000L;
-			Class38_Sub16_Sub1 class38_sub16_sub1 = (Class38_Sub16_Sub1) aClass14_1585.method75(l, (byte) -106);
+			Class38_Sub16_Sub1 class38_sub16_sub1 = (Class38_Sub16_Sub1) aClass14_1585.method75(l);
 			int i_29_ = -58 % ((68 - i_27_) / 43);
 			if (class38_sub16_sub1 != null)
 				return class38_sub16_sub1;
 			if (is != null && is[0] <= 0)
 				return null;
-			Class38_Sub15 class38_sub15 = (Class38_Sub15) aClass14_1582.method75(l, (byte) -106);
+			Class38_Sub15 class38_sub15 = (Class38_Sub15) aClass14_1582.method75(l);
 			if (class38_sub15 == null) {
 				class38_sub15 = Class38_Sub15.method688(aClass17_1578, i_26_, i);
 				if (class38_sub15 == null)

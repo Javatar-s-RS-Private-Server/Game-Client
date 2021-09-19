@@ -70,7 +70,7 @@ final class Class38_Sub22 extends Node {
 			int i_3_) {
 		do {
 			try {
-				Class38_Sub6 class38_sub6 = Class38_Sub20_Sub12.method987(i_3_,
+				WidgetComponent class38_sub6 = Class38_Sub20_Sub12.method987(i_3_,
 						i_1_, (byte) -29);
 				if (class38_sub6 != null) {
 					if (class38_sub6.anObjectArray1907 != null) {
@@ -91,7 +91,7 @@ final class Class38_Sub22 extends Node {
 						if (i == 1) {
 							Client.outputBuffer.putOpcode(221); // ok here's the
 																// packet id
-							Client.outputBuffer.putInt(i_1_); // int = 4 bytes
+							Client.outputBuffer.writeInt(i_1_); // int = 4 bytes
 							Client.outputBuffer.putShort(i_3_); // short = 2
 																// bytes
 							// byte = 1
@@ -104,48 +104,48 @@ final class Class38_Sub22 extends Node {
 						}
 						if (i == 2) {
 							Client.outputBuffer.putOpcode(108);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 3) {
 							Client.outputBuffer.putOpcode(181);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 4) {
 							Client.outputBuffer.putOpcode(143);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 5) {
 							Client.outputBuffer.putOpcode(167);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 6) {
 							Client.outputBuffer.putOpcode(175);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 7) {
 							Client.outputBuffer.putOpcode(162);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 8) {
 							Client.outputBuffer.putOpcode(98);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i == 9) {
 							Client.outputBuffer.putOpcode(103);
-							Client.outputBuffer.putInt(i_1_);
+							Client.outputBuffer.writeInt(i_1_);
 							Client.outputBuffer.putShort(i_3_);
 						}
 						if (i != 10)
 							break;
 						Client.outputBuffer.putOpcode(150);
-						Client.outputBuffer.putInt(i_1_);
+						Client.outputBuffer.writeInt(i_1_);
 						Client.outputBuffer.putShort(i_3_);
 					}
 				}

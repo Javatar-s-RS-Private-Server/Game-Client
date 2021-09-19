@@ -30,7 +30,7 @@ final class Class40 implements Runnable {
 		}
 	}
 
-	static final void method340(Class38_Sub6 class38_sub6, byte i) {
+	static final void method340(WidgetComponent class38_sub6, byte i) {
 		do {
 			try {
 				if (class38_sub6.anInt1953 == Class17.anInt367)

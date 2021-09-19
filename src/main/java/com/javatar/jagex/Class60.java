@@ -29,20 +29,20 @@ final class Class60 implements KeyListener, FocusListener {
 
 	static final void method452(int i) {
 		try {
-			if (Class23.anInt546 == 164) {
+			if (Class23.packetId == 164) {
 				int i_0_ = Class15.inputStream.getULEShort();
-				int i_1_ = Class15.inputStream.method755(i ^ 0x7);
+				int i_1_ = Class15.inputStream.readByteC(i ^ 0x7);
 				int i_2_ = Class15.inputStream.getULEShort();
-				int i_3_ = Class15.inputStream.method756(13285);
+				int i_3_ = Class15.inputStream.readUnsignedByteC(13285);
 				int i_4_ = i_3_ >> 1601788738;
 				int i_5_ = Class50.anIntArray1103[i_4_];
 				int i_6_ = i_3_ & 0x3;
 				int i_7_ = Class15.inputStream.method757(-124);
-				int i_8_ = Class15.inputStream.getUShortA();
+				int i_8_ = Class15.inputStream.readUnsignedShortAdd();
 				int i_9_ = Class15.inputStream.method732(127);
-				int i_10_ = Class15.inputStream.getUShort();
+				int i_10_ = Class15.inputStream.readUnsignedShort();
 				int i_11_ = Class15.inputStream.method757(-75);
-				int i_12_ = Class15.inputStream.method756(13285);
+				int i_12_ = Class15.inputStream.readUnsignedByteC(13285);
 				int i_13_ = ((i_12_ & 0x70) >> 2014847492) + Class2_Sub1.anInt2003;
 				int i_14_ = Class64.anInt1358 + (i_12_ & 0x7);
 				Player class38_sub20_sub3_sub7_sub2;
@@ -95,9 +95,9 @@ final class Class60 implements KeyListener, FocusListener {
 					}
 				}
 			}
-			if (Class23.anInt546 == 26) {
+			if (Class23.packetId == 26) {
 				int i_26_ = Class15.inputStream.getULEShort();
-				int i_27_ = Class15.inputStream.getUByte();
+				int i_27_ = Class15.inputStream.readUnsignedByte();
 				int i_28_ = Class2_Sub1.anInt2003 + (i_27_ >> -1739409724 & 0x7);
 				int i_29_ = Class64.anInt1358 + (i_27_ & 0x7);
 				int i_30_ = Class15.inputStream.method740((byte) -49);
@@ -110,15 +110,15 @@ final class Class60 implements KeyListener, FocusListener {
 					Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_28_][i_29_].method68(class38_sub20_sub3_sub4, (byte) 114);
 					Class13.method59(-1, i_29_, i_28_);
 				}
-			} else if (Class23.anInt546 == 147) {
-				int i_31_ = Class15.inputStream.getUByte();
+			} else if (Class23.packetId == 147) {
+				int i_31_ = Class15.inputStream.readUnsignedByte();
 				int i_32_ = i_31_ & 0x3;
 				int i_33_ = i_31_ >> -1111641758;
 				int i_34_ = Class50.anIntArray1103[i_33_];
 				int i_35_ = Class15.inputStream.getUByteC();
 				int i_36_ = (i_35_ & 0x7) + Class64.anInt1358;
 				int i_37_ = (i_35_ >> 649837028 & 0x7) + Class2_Sub1.anInt2003;
-				int i_38_ = Class15.inputStream.getUShortA();
+				int i_38_ = Class15.inputStream.readUnsignedShortAdd();
 				if (i_37_ >= 0 && i_36_ >= 0 && i_37_ < 103 && i_36_ < 103) {
 					if (i_34_ == 0) {
 						Class82 class82 = RuntimeException_Sub1.aClass27_3292.method226(Client.height, i_37_, i_36_);
@@ -162,7 +162,7 @@ final class Class60 implements KeyListener, FocusListener {
 							class49.aClass38_Sub20_Sub3_1101 = new Class38_Sub20_Sub3_Sub2((class49.anInt1097 & 0x1ffff451) >> -1352332818, 22, i_32_, Client.height, i_37_, i_36_, i_38_, false, class49.aClass38_Sub20_Sub3_1101);
 					}
 				}
-			} else if (Class23.anInt546 == 32) {
+			} else if (Class23.packetId == 32) {
 				int i_41_ = Class15.inputStream.getUByteC();
 				int i_42_ = (i_41_ >> -192343452 & 0x7) + Class2_Sub1.anInt2003;
 				int i_43_ = (i_41_ & 0x7) + Class64.anInt1358;
@@ -180,13 +180,13 @@ final class Class60 implements KeyListener, FocusListener {
 						Class13.method59(-1, i_43_, i_42_);
 					}
 				}
-			} else if (Class23.anInt546 == 138) {
-				int i_45_ = Class15.inputStream.getUByte();
+			} else if (Class23.packetId == 138) {
+				int i_45_ = Class15.inputStream.readUnsignedByte();
 				int i_46_ = (i_45_ >> -245246332 & 0x7) + Class2_Sub1.anInt2003;
 				int i_47_ = (i_45_ & 0x7) + Class64.anInt1358;
-				int i_48_ = Class15.inputStream.getUShort();
-				int i_49_ = Class15.inputStream.getUShort();
-				int i_50_ = Class15.inputStream.getUShort();
+				int i_48_ = Class15.inputStream.readUnsignedShort();
+				int i_49_ = Class15.inputStream.readUnsignedShort();
+				int i_50_ = Class15.inputStream.readUnsignedShort();
 				if (i_46_ >= 0 && i_47_ >= 0 && i_46_ < 104 && i_47_ < 104) {
 					Class13 class13 = Class38_Sub21.aClass13ArrayArrayArray2259[Client.height][i_46_][i_47_];
 					if (class13 != null) {
@@ -198,7 +198,7 @@ final class Class60 implements KeyListener, FocusListener {
 						Class13.method59(-1, i_47_, i_46_);
 					}
 				}
-			} else if (Class23.anInt546 == 150) {
+			} else if (Class23.packetId == 150) {
 				int i_51_ = Class15.inputStream.method741(88);
 				int i_52_ = i_51_ >> -662039070;
 				int i_53_ = i_51_ & 0x3;
@@ -208,23 +208,23 @@ final class Class60 implements KeyListener, FocusListener {
 				int i_57_ = Class64.anInt1358 + (i_55_ & 0x7);
 				if (i_56_ >= 0 && i_57_ >= 0 && i_56_ < 104 && i_57_ < 104)
 					Class38_Sub8.method658(i_57_, 0, i_56_, -88, i_54_, i_53_, Client.height, -1, i_52_, -1);
-			} else if (Class23.anInt546 == 120) {
-				int i_58_ = Class15.inputStream.getUByte();
+			} else if (Class23.packetId == 120) {
+				int i_58_ = Class15.inputStream.readUnsignedByte();
 				int i_59_ = Class64.anInt1358 + (i_58_ & 0x7);
 				int i_60_ = (i_58_ >> -1935562332 & 0x7) + Class2_Sub1.anInt2003;
-				int i_61_ = Class15.inputStream.getUShort();
-				int i_62_ = Class15.inputStream.getUByte();
-				int i_63_ = Class15.inputStream.getUShort();
+				int i_61_ = Class15.inputStream.readUnsignedShort();
+				int i_62_ = Class15.inputStream.readUnsignedByte();
+				int i_63_ = Class15.inputStream.readUnsignedShort();
 				if (i_60_ >= 0 && i_59_ >= 0 && i_60_ < 104 && i_59_ < 104) {
 					i_59_ = i_59_ * 128 + 64;
 					i_60_ = i_60_ * 128 + 64;
 					Class38_Sub20_Sub3_Sub5 class38_sub20_sub3_sub5 = new Class38_Sub20_Sub3_Sub5(i_61_, Client.height, i_60_, i_59_, Class35.method317(-5736, Client.height, i_60_, i_59_) - i_62_, i_63_, Class45.anInt1016);
 					Class13.aClass13_235.method68(class38_sub20_sub3_sub5, (byte) 97);
 				}
-			} else if (Class23.anInt546 == 103) {
+			} else if (Class23.packetId == 103) {
 				int i_64_ = Class15.inputStream.getULEShort();
-				int i_65_ = Class15.inputStream.getUShortA();
-				int i_66_ = Class15.inputStream.method756(i + 13278);
+				int i_65_ = Class15.inputStream.readUnsignedShortAdd();
+				int i_66_ = Class15.inputStream.readUnsignedByteC(i + 13278);
 				int i_67_ = Class2_Sub1.anInt2003 + ((i_66_ & 0x7a) >> 128125092);
 				int i_68_ = Class64.anInt1358 + (i_66_ & 0x7);
 				int i_69_ = Class15.inputStream.method740((byte) 112);
@@ -240,25 +240,25 @@ final class Class60 implements KeyListener, FocusListener {
 			} else {
 				if (i != 7)
 					Class60.aClass13_1304 = null;
-				if (Class23.anInt546 == 105) {
+				if (Class23.packetId == 105) {
 					int i_70_ = Class15.inputStream.getUByteC();
 					int i_71_ = i_70_ >> 1989585314;
 					int i_72_ = i_70_ & 0x3;
 					int i_73_ = Class50.anIntArray1103[i_71_];
-					int i_74_ = Class15.inputStream.getUShortA();
+					int i_74_ = Class15.inputStream.readUnsignedShortAdd();
 					int i_75_ = Class15.inputStream.method741(122);
 					int i_76_ = (i_75_ >> -145377596 & 0x7) + Class2_Sub1.anInt2003;
 					int i_77_ = (i_75_ & 0x7) + Class64.anInt1358;
 					if (i_76_ >= 0 && i_77_ >= 0 && i_76_ < 104 && i_77_ < 104)
 						Class38_Sub8.method658(i_77_, 0, i_76_, -99, i_73_, i_72_, Client.height, -1, i_71_, i_74_);
 				} else {
-					if (Class23.anInt546 == 195) {
-						int i_78_ = Class15.inputStream.getUByte();
+					if (Class23.packetId == 195) {
+						int i_78_ = Class15.inputStream.readUnsignedByte();
 						int i_79_ = Class2_Sub1.anInt2003 + (i_78_ >> 1335300804 & 0x7);
 						int i_80_ = (i_78_ & 0x7) + Class64.anInt1358;
-						int i_81_ = Class15.inputStream.getUShort();
-						int i_82_ = Class15.inputStream.getUByte();
-						int i_83_ = Class15.inputStream.getUByte();
+						int i_81_ = Class15.inputStream.readUnsignedShort();
+						int i_82_ = Class15.inputStream.readUnsignedByte();
+						int i_83_ = Class15.inputStream.readUnsignedByte();
 						int i_84_ = i_82_ & 0x7;
 						int i_85_ = i_82_ >> 717836100 & 0xf;
 						if (i_79_ >= 0 && i_80_ >= 0 && i_79_ < 104 && i_80_ < 104) {
@@ -273,20 +273,20 @@ final class Class60 implements KeyListener, FocusListener {
 							}
 						}
 					}
-					if (Class23.anInt546 == 82) {
-						int i_87_ = Class15.inputStream.getUByte();
+					if (Class23.packetId == 82) {
+						int i_87_ = Class15.inputStream.readUnsignedByte();
 						int i_88_ = ((i_87_ & 0x71) >> -1941656828) + Class2_Sub1.anInt2003;
 						int i_89_ = Class64.anInt1358 + (i_87_ & 0x7);
-						int i_90_ = i_88_ + Class15.inputStream.method765((byte) 123);
-						int i_91_ = Class15.inputStream.method765((byte) 123) + i_89_;
+						int i_90_ = i_88_ + Class15.inputStream.readByte((byte) 123);
+						int i_91_ = Class15.inputStream.readByte((byte) 123) + i_89_;
 						int i_92_ = Class15.inputStream.method772(false);
-						int i_93_ = Class15.inputStream.getUShort();
-						int i_94_ = Class15.inputStream.getUByte() * 4;
-						int i_95_ = Class15.inputStream.getUByte() * 4;
-						int i_96_ = Class15.inputStream.getUShort();
-						int i_97_ = Class15.inputStream.getUShort();
-						int i_98_ = Class15.inputStream.getUByte();
-						int i_99_ = Class15.inputStream.getUByte();
+						int i_93_ = Class15.inputStream.readUnsignedShort();
+						int i_94_ = Class15.inputStream.readUnsignedByte() * 4;
+						int i_95_ = Class15.inputStream.readUnsignedByte() * 4;
+						int i_96_ = Class15.inputStream.readUnsignedShort();
+						int i_97_ = Class15.inputStream.readUnsignedShort();
+						int i_98_ = Class15.inputStream.readUnsignedByte();
+						int i_99_ = Class15.inputStream.readUnsignedByte();
 						if (i_88_ >= 0 && i_89_ >= 0 && i_88_ < 104 && i_89_ < 104 && i_90_ >= 0 && i_91_ >= 0 && i_90_ < 104 && i_91_ < 104 && i_93_ != 65535) {
 							i_89_ = i_89_ * 128 + 64;
 							i_88_ = i_88_ * 128 + 64;
@@ -310,7 +310,7 @@ final class Class60 implements KeyListener, FocusListener {
 
 	static final void method453(byte i, int i_100_, int i_101_, int i_102_) {
 		try {
-			Class38_Sub6 class38_sub6 = Class38_Sub20_Sub12.method987(i_100_, i_101_, (byte) -29);
+			WidgetComponent class38_sub6 = Class38_Sub20_Sub12.method987(i_100_, i_101_, (byte) -29);
 			if (class38_sub6 != null && class38_sub6.anObjectArray1950 != null) {
 				Class38_Sub19 class38_sub19 = new Class38_Sub19();
 				class38_sub19.aClass38_Sub6_2241 = class38_sub6;
@@ -343,7 +343,7 @@ final class Class60 implements KeyListener, FocusListener {
 			if (i_106_ != 22878)
 				Class60.aClass13_1304 = null;
 			Class78.method566(i_104_, 50);
-			Class38_Sub6 class38_sub6 = Projectile.method1167(i_105_, 125);
+			WidgetComponent class38_sub6 = Projectile.method1167(i_105_, 125);
 			if (class38_sub6 != null)
 				Class40.method340(class38_sub6, (byte) -113);
 			if (Class38_Sub2.aClass38_Sub6_1769 != null) {
@@ -352,9 +352,9 @@ final class Class60 implements KeyListener, FocusListener {
 			}
 			SceneModel.aBool2553 = false;
 			Class72.anInt1417 = 0;
-			ItemDefinition.method931(100, Class38_Sub6.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
-			if (NodeSub.anInt2252 != -1)
-				Class38_Sub4.method625(NodeSub.anInt2252, 1, (byte) 105);
+			ItemDefinition.method931(100, WidgetComponent.anInt1976, Class38_Sub20_Sub13.anInt3011, Class3.anInt66, Class38_Sub20_Sub2.anInt2540);
+			if (NodeSub.windowId != -1)
+				Class38_Sub4.method625(NodeSub.windowId, 1, (byte) 105);
 			return class38_sub8;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ld.E(" + i + ',' + i_104_ + ',' + i_105_ + ',' + i_106_ + ')');
@@ -395,7 +395,7 @@ final class Class60 implements KeyListener, FocusListener {
 					int i_113_ = i_111_ >> 324996550 & 0x3f;
 					int i_114_ = i_111_ & 0x3f;
 					int i_115_ = i_111_ >> -1617286804;
-					int i_116_ = class38_sub23.getUByte();
+					int i_116_ = class38_sub23.readUnsignedByte();
 					int i_117_ = i_116_ >> 1665888290;
 					int i_118_ = i_116_ & 0x3;
 					int i_119_ = i + i_113_;
@@ -479,7 +479,7 @@ final class Class60 implements KeyListener, FocusListener {
 			int i_124_ = 27 / ((-60 - i_123_) / 39);
 			if (class38_sub20_sub17 != null)
 				return class38_sub20_sub17;
-			byte[] is = Class38_Sub18.aClass17_2205.method109(14, i, -122);
+			byte[] is = Class38_Sub18.aClass17_2205.getFileData(14, i, -122);
 			class38_sub20_sub17 = new Class38_Sub20_Sub17();
 			if (is != null)
 				class38_sub20_sub17.method1031(new RS2Buffer(is), 109);

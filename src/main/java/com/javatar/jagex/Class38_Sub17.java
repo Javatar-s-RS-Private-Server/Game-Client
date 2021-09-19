@@ -34,7 +34,7 @@ final class Class38_Sub17 extends Node {
 				int i_2_ = Class3.anInt66;
 				int i_3_ = Class38_Sub20_Sub2.anInt2540;
 				int i_4_ = 6116423;
-				int i_5_ = Class38_Sub6.anInt1976;
+				int i_5_ = WidgetComponent.anInt1976;
 				Class38_Sub20_Sub9.method958(i_5_, i_1_, i_2_, i_3_, i_4_);
 				Class38_Sub20_Sub9.method958(i_5_ + 1, i_1_ + 1, i_2_ - 2, 16, 0);
 				Class38_Sub20_Sub9.method963(i_5_ + 1, i_1_ + 18, i_2_ - 2, i_3_ - 19, 0);
@@ -48,7 +48,7 @@ final class Class38_Sub17 extends Node {
 						i_9_ = 16776960;
 					Class38_Sub11.aClass38_Sub20_Sub9_Sub1_Sub1_2093.method1084(NPC.method1204(true, i_8_), i_5_ + 3, i_10_, i_9_, 0);
 				}
-				RSString.method168(Class3.anInt66, Class38_Sub20_Sub13.anInt3011, Class38_Sub6.anInt1976, Class38_Sub20_Sub2.anInt2540, (byte) -121);
+				RSString.method168(Class3.anInt66, Class38_Sub20_Sub13.anInt3011, WidgetComponent.anInt1976, Class38_Sub20_Sub2.anInt2540, (byte) -121);
 				if (i >= 21)
 					break;
 				Class38_Sub17.anInt2193 = -122;
@@ -108,7 +108,7 @@ final class Class38_Sub17 extends Node {
 	static final void method695(boolean bool) {
 		try {
 			while (Class15.inputStream.method787((byte) -95, Entity.anInt3446) >= 27) {
-				int i = Class15.inputStream.method785(15, (byte) 69);
+				int i = Class15.inputStream.readBits(15, (byte) 69);
 				if (i == 32767)
 					break;
 				boolean bool_13_ = false;
@@ -119,18 +119,18 @@ final class Class38_Sub17 extends Node {
 				NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i];
 				Class38_Sub10_Sub1.anIntArray2652[Class4.anInt87++] = i;
 				((Entity) class38_sub20_sub3_sub7_sub1).anInt3459 = Class45.anInt1016;
-				int i_14_ = PlayerAppearance.anIntArray418[Class15.inputStream.method785(3, (byte) 69)];
+				int i_14_ = PlayerAppearance.anIntArray418[Class15.inputStream.readBits(3, (byte) 69)];
 				if (bool_13_)
 					((Entity) class38_sub20_sub3_sub7_sub1).anInt3488 = ((Entity) class38_sub20_sub3_sub7_sub1).anInt3491 = i_14_;
-				int i_15_ = Class15.inputStream.method785(5, (byte) 69);
-				int i_16_ = Class15.inputStream.method785(1, (byte) 69);
+				int i_15_ = Class15.inputStream.readBits(5, (byte) 69);
+				int i_16_ = Class15.inputStream.readBits(1, (byte) 69);
 				if (i_15_ > 15)
 					i_15_ -= 32;
 				if (i_16_ == 1)
 					ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i;
-				class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543 = Class38_Sub20_Sub3_Sub4.method1156(-103, Class15.inputStream.method785(14, (byte) 69));
-				int i_17_ = Class15.inputStream.method785(1, (byte) 69);
-				int i_18_ = Class15.inputStream.method785(5, (byte) 69);
+				class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543 = Class38_Sub20_Sub3_Sub4.method1156(-103, Class15.inputStream.readBits(14, (byte) 69));
+				int i_17_ = Class15.inputStream.readBits(1, (byte) 69);
+				int i_18_ = Class15.inputStream.readBits(5, (byte) 69);
 				((Entity) class38_sub20_sub3_sub7_sub1).anInt3439 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2719;
 				((Entity) class38_sub20_sub3_sub7_sub1).turn90CWAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2720;
 				((Entity) class38_sub20_sub3_sub7_sub1).anInt3457 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2697;

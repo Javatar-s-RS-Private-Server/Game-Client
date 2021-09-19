@@ -205,7 +205,7 @@ abstract class Entity extends SceneModel {
 		try {
 			Client.outputBuffer.putOpcode(23);
 			Class28.anInt689++;
-			Client.outputBuffer.method762(i, (byte) 56);
+			Client.outputBuffer.writeLong(i);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "qd.L(" + i + ')');
 		}

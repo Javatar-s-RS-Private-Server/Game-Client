@@ -9,7 +9,7 @@ abstract class Class2 {
 	int anInt24;
 	Image anImage25;
 	int anInt26;
-	static Class38_Sub6 aClass38_Sub6_27;
+	static WidgetComponent aClass38_Sub6_27;
 	int[] anIntArray28;
 	static Class83 aClass83_29;
 	static int anInt30;

@@ -149,9 +149,9 @@ final class Class28 {
 				Class38_Sub20_Sub9.method958(i_2_ + 93 + 4, i + 82 - 4, 3, 3, 16777215);
 			}
 			if (Class38_Sub20_Sub17.anInt3129 < 3)
-				Class82.aClass38_Sub20_Sub9_Sub3_1644.method1102(i_2_, i, 33, 33, 25, 25, Class38_Sub20_Sub11.anInt2930, 256, Class38_Sub6.anIntArray1967, Class40.anIntArray919);
+				Class82.aClass38_Sub20_Sub9_Sub3_1644.method1102(i_2_, i, 33, 33, 25, 25, Class38_Sub20_Sub11.anInt2930, 256, WidgetComponent.anIntArray1967, Class40.anIntArray919);
 			else
-				Class38_Sub20_Sub9.method974(i_2_, i, 0, Class38_Sub6.anIntArray1967, Class40.anIntArray919);
+				Class38_Sub20_Sub9.method974(i_2_, i, 0, WidgetComponent.anIntArray1967, Class40.anIntArray919);
 			if (Class38_Sub20_Sub14.aBoolArray3036[i_3_])
 				Class64.aClass38_Sub20_Sub9_Sub2_1359.method1089(i_2_, i);
 			if (i_4_ > -62)

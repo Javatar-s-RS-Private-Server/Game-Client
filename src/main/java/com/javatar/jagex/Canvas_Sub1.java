@@ -91,24 +91,24 @@ final class Canvas_Sub1 extends Canvas {
 		try {
 			RS2Buffer class38_sub23 = new RS2Buffer(is);
 			class38_sub23.pos = is.length - 2;
-			Class38_Sub14.anInt2133 = class38_sub23.getUShort();
+			Class38_Sub14.anInt2133 = class38_sub23.readUnsignedShort();
 			Class61.anIntArray1332 = new int[Class38_Sub14.anInt2133];
 			Player.anIntArray3574 = new int[Class38_Sub14.anInt2133];
 			Class38_Sub20_Sub8.anIntArray2873 = new int[Class38_Sub14.anInt2133];
 			Class30.aByteArrayArray727 = new byte[Class38_Sub14.anInt2133][];
 			Class51.anIntArray1130 = new int[Class38_Sub14.anInt2133];
 			class38_sub23.pos = is.length - 7 - Class38_Sub14.anInt2133 * 8;
-			Class16.anInt339 = class38_sub23.getUShort();
-			Projectile.anInt3426 = class38_sub23.getUShort();
-			int i = (class38_sub23.getUByte() & 0xff) + 1;
+			Class16.anInt339 = class38_sub23.readUnsignedShort();
+			Projectile.anInt3426 = class38_sub23.readUnsignedShort();
+			int i = (class38_sub23.readUnsignedByte() & 0xff) + 1;
 			for (int i_1_ = 0; Class38_Sub14.anInt2133 > i_1_; i_1_++)
-				Player.anIntArray3574[i_1_] = class38_sub23.getUShort();
+				Player.anIntArray3574[i_1_] = class38_sub23.readUnsignedShort();
 			for (int i_2_ = 0; i_2_ < Class38_Sub14.anInt2133; i_2_++)
-				Class51.anIntArray1130[i_2_] = class38_sub23.getUShort();
+				Class51.anIntArray1130[i_2_] = class38_sub23.readUnsignedShort();
 			for (int i_3_ = 0; Class38_Sub14.anInt2133 > i_3_; i_3_++)
-				Class61.anIntArray1332[i_3_] = class38_sub23.getUShort();
+				Class61.anIntArray1332[i_3_] = class38_sub23.readUnsignedShort();
 			for (int i_4_ = 0; i_4_ < Class38_Sub14.anInt2133; i_4_++)
-				Class38_Sub20_Sub8.anIntArray2873[i_4_] = class38_sub23.getUShort();
+				Class38_Sub20_Sub8.anIntArray2873[i_4_] = class38_sub23.readUnsignedShort();
 			class38_sub23.pos = -(Class38_Sub14.anInt2133 * 8) - 7 + is.length - (i - 1) * 3;
 			PlayerAppearance.anIntArray420 = new int[i];
 			for (int i_5_ = 1; i > i_5_; i_5_++) {
@@ -124,14 +124,14 @@ final class Canvas_Sub1 extends Canvas {
 					int i_9_ = i_7_ * i_8_;
 					byte[] is_10_ = new byte[i_9_];
 					Class30.aByteArrayArray727[i_6_] = is_10_;
-					int i_11_ = class38_sub23.getUByte();
+					int i_11_ = class38_sub23.readUnsignedByte();
 					if (i_11_ == 0)
 						for (int i_12_ = 0; i_9_ > i_12_; i_12_++)
-							is_10_[i_12_] = class38_sub23.method765((byte) 96);
+							is_10_[i_12_] = class38_sub23.readByte((byte) 96);
 					else if (i_11_ == 1)
 						for (int i_13_ = 0; i_13_ < i_7_; i_13_++)
 							for (int i_14_ = 0; i_8_ > i_14_; i_14_++)
-								is_10_[i_13_ + i_7_ * i_14_] = class38_sub23.method765((byte) 83);
+								is_10_[i_13_ + i_7_ * i_14_] = class38_sub23.readByte((byte) 83);
 				}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "he.C(" + bool + ',' + (is != null ? "{...}" : "null") + ')');
@@ -146,18 +146,18 @@ final class Canvas_Sub1 extends Canvas {
 		}
 	}
 
-	static final void method811(byte i, Class38_Sub6[] class38_sub6s, int i_15_) {
+	static final void method811(byte i, WidgetComponent[] class38_sub6s, int i_15_) {
 		try {
 			if (i != 40)
 				Canvas_Sub1.method810(false, null);
 			int i_16_ = 0;
 			for (/**/; class38_sub6s.length > i_16_; i_16_++) {
-				Class38_Sub6 class38_sub6 = class38_sub6s[i_16_];
+				WidgetComponent class38_sub6 = class38_sub6s[i_16_];
 				if (class38_sub6 != null) {
 					if (class38_sub6.anInt1868 == 0) {
 						if (class38_sub6.aClass38_Sub6Array1867 != null)
 							Canvas_Sub1.method811((byte) 40, class38_sub6.aClass38_Sub6Array1867, i_15_);
-						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856, (byte) -106);
+						Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method75(class38_sub6.anInt1856);
 						if (class38_sub8 != null)
 							Class38_Sub4.method625(class38_sub8.anInt2038, i_15_, (byte) 120);
 					}
@@ -169,7 +169,7 @@ final class Canvas_Sub1 extends Canvas {
 					}
 					if (i_15_ == 1 && class38_sub6.anObjectArray1908 != null) {
 						if (class38_sub6.anInt1941 >= 0) {
-							Class38_Sub6 class38_sub6_17_ = Projectile.method1167(class38_sub6.anInt1856, -118);
+							WidgetComponent class38_sub6_17_ = Projectile.method1167(class38_sub6.anInt1856, -118);
 							if (class38_sub6_17_ == null || class38_sub6_17_.aClass38_Sub6Array1867 == null || class38_sub6_17_.aClass38_Sub6Array1867.length <= class38_sub6.anInt1941 || class38_sub6_17_.aClass38_Sub6Array1867[class38_sub6.anInt1941] != class38_sub6)
 								continue;
 						}

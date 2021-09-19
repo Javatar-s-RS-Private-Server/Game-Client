@@ -44,7 +44,7 @@ final class Class38_Sub3 extends Node {
 	static final void method620(byte i) {
 		try {
 			Class40.anIntArray919 = new int[33];
-			Class38_Sub6.anIntArray1967 = new int[33];
+			WidgetComponent.anIntArray1967 = new int[33];
 			Class81.anIntArray1625 = new int[151];
 			Class38_Sub1.anIntArray1751 = new int[151];
 			for (int i_2_ = 0; i_2_ < 33; i_2_++) {
@@ -58,7 +58,7 @@ final class Class38_Sub3 extends Node {
 						i_4_ = i_5_;
 						break;
 					}
-				Class38_Sub6.anIntArray1967[i_2_] = i_3_;
+				WidgetComponent.anIntArray1967[i_2_] = i_3_;
 				Class40.anIntArray919[i_2_] = i_4_ - i_3_;
 			}
 			int i_6_ = 5;

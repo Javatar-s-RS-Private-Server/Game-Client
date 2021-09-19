@@ -22,37 +22,38 @@ final class Class22 {
 		}
 	}
 
-	static final boolean method196(int i, int i_1_) {
+	static boolean loadWidget(int parentId) {
 		try {
-			if (Class38_Sub14.aBoolArray2142[i])
-				return true;
-			if (i_1_ != -18020)
-				Class22.method195(-22, -52);
-			if (!Class25.aClass17_589.method106(i, 24624))
+			if(parentId == -1)
 				return false;
-			int i_2_ = Class25.aClass17_589.method103((byte) 53, i);
-			if (i_2_ == 0) {
-				Class38_Sub14.aBoolArray2142[i] = true;
+			if (Class38_Sub14.isWidgetLoaded[parentId])
+				return true;
+			if (!Class25.aClass17_589.exists(parentId, 24624))
+				return false;
+			int componentCount = Class25.aClass17_589.getFileCount((byte) 53, parentId);
+			if (componentCount == 0) {
+				Class38_Sub14.isWidgetLoaded[parentId] = true;
 				return true;
 			}
-			if (Class62.aClass38_Sub6ArrayArray1339[i] == null)
-				Class62.aClass38_Sub6ArrayArray1339[i] = new Class38_Sub6[i_2_];
-			for (int i_3_ = 0; i_3_ < i_2_; i_3_++)
-				if (Class62.aClass38_Sub6ArrayArray1339[i][i_3_] == null) {
-					byte[] is = Class25.aClass17_589.method109(i, i_3_, -121);
+			if (Class62.widgets[parentId] == null)
+				Class62.widgets[parentId] = new WidgetComponent[componentCount];
+			for (int compId = 0; compId < componentCount; compId++)
+				if (Class62.widgets[parentId][compId] == null) {
+					byte[] is = Class25.aClass17_589.getFileData(parentId, compId, -121);
 					if (is != null) {
-						Class62.aClass38_Sub6ArrayArray1339[i][i_3_] = new Class38_Sub6();
-						Class62.aClass38_Sub6ArrayArray1339[i][i_3_].anInt1856 = (i << -32774224) + i_3_;
+						Class62.widgets[parentId][compId] = new WidgetComponent();
+						Class62.widgets[parentId][compId].anInt1856 = (parentId << 16) + compId;
 						if (is[0] != -1)
-							Class62.aClass38_Sub6ArrayArray1339[i][i_3_].method643(new RS2Buffer(is), (byte) 115);
+							Class62.widgets[parentId][compId].decodeLegacyWidget(new RS2Buffer(is), (byte) 115);
 						else
-							Class62.aClass38_Sub6ArrayArray1339[i][i_3_].method646(new RS2Buffer(is), -65536);
+							Class62.widgets[parentId][compId].decodeWidget(new RS2Buffer(is), -65536);
 					}
 				}
-			Class38_Sub14.aBoolArray2142[i] = true;
+			Class38_Sub14.isWidgetLoaded[parentId] = true;
 			return true;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "df.B(" + i + ',' + i_1_ + ')');
+			runtimeexception.printStackTrace();
+			throw Class38_Sub1.method607(runtimeexception, "df.B(" + parentId + ',' + -18020 + ')');
 		}
 	}
 
@@ -60,7 +61,7 @@ final class Class22 {
 		try {
 			if (i_4_ != -308039560)
 				return false;
-			byte[] is = class17.method109(i, i_5_, i_4_ + 308039462);
+			byte[] is = class17.getFileData(i, i_5_, i_4_ + 308039462);
 			if (is == null)
 				return false;
 			Canvas_Sub1.method810(false, is);

@@ -6,14 +6,14 @@ final class Class38_Sub19 extends Node {
 	static Class17 aClass17_2230;
 	int anInt2231;
 	static int anInt2233;
-	Class38_Sub6 aClass38_Sub6_2234;
+	WidgetComponent aClass38_Sub6_2234;
 	RSString aClass19_2235;
 	int anInt2236;
 	int anInt2237;
 	static int anInt2238 = -1;
 	int anInt2239;
 	Object[] anObjectArray2240;
-	Class38_Sub6 aClass38_Sub6_2241;
+	WidgetComponent aClass38_Sub6_2241;
 	int anInt2242;
 
 	static final void method704(int i) {

@@ -43,7 +43,7 @@ class Node {
 				return null;
 			if (class38_sub20_sub6 != null)
 				return class38_sub20_sub6;
-			byte[] is = Class38_Sub10_Sub3.aClass17_2833.method109(10, i, -125);
+			byte[] is = Class38_Sub10_Sub3.aClass17_2833.getFileData(10, i, -125);
 			class38_sub20_sub6 = new ItemDefinition();
 			class38_sub20_sub6.anInt2778 = i;
 			if (is != null)

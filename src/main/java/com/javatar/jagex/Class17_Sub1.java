@@ -188,12 +188,12 @@ final class Class17_Sub1 extends Class17 {
 					Class48.aCRC32_1075.update(is, 0, is.length);
 					int i_14_ = (int) Class48.aCRC32_1075.getValue();
 					RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(31535, is));
-					int i_15_ = class38_sub23.getUByte();
+					int i_15_ = class38_sub23.readUnsignedByte();
 					if (i_15_ != 5 && i_15_ != 6)
 						throw new RuntimeException("Incorrect JS5 protocol number: " + i_15_);
 					int i_16_ = 0;
 					if (i_15_ >= 6)
-						i_16_ = class38_sub23.method759(true);
+						i_16_ = class38_sub23.readInt(true);
 					if (anInt1698 != i_14_ || i_16_ != anInt1696)
 						Class61.method458(true, (byte) -117, (byte) 0, anInt1693, 255, this, anInt1698);
 					else {
