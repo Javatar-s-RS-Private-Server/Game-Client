@@ -16,15 +16,78 @@ import java.lang.reflect.Method;
 import java.net.URL;
 
 public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListener, WindowListener {
-	private boolean aBool3606 = false;
 	static RSString aClass19_3610 = RSString.createRSString("Geben Sie Ihren Benutzernamen");
 	static RSString aClass19_3625 = RSString.createRSString("title)3jpg");
 	static int anInt3627 = 0;
 	static Class83 aClass83_3633 = new Class83(64);
 	static RSString aClass19_3635;
 	static volatile int clickMode2;
-	private static RSString aClass19_3638;
 	static Class17_Sub1 aClass17_Sub1_3639;
+	private static RSString aClass19_3638;
+
+	static {
+		Applet_Sub1.clickMode2 = 0;
+		Applet_Sub1.aClass19_3638 = RSString.createRSString("Please subscribe)1 or use a different world)3");
+		Applet_Sub1.aClass19_3635 = Applet_Sub1.aClass19_3638;
+	}
+
+	private boolean aBool3606 = false;
+
+	private static Class73 method1213(byte i) {
+		try {
+			if (i < 119)
+				return null;
+			try {
+				return (Class73) Class.forName("pd").newInstance();
+			} catch (Throwable throwable) {
+				return new Class73_Sub2();
+			}
+		} catch (RuntimeException runtimeexception) {
+			throw Class38_Sub1.method607(runtimeexception, "lf.L(" + i + ')');
+		}
+	}
+
+	static void method1218(byte i) {
+		try {
+			if (i >= -54)
+				Client.errorPinging = false;
+			for (Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method82((byte) 91); class38_sub8 != null; class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method78(-118)) {
+				int i_6_ = class38_sub8.anInt2038;
+				if (Class22.loadWidget(i_6_)) {
+					boolean bool = true;
+					WidgetComponent[] class38_sub6s = Class62.widgets[i_6_];
+					for (WidgetComponent class38Sub6 : class38_sub6s)
+						if (class38Sub6 != null) {
+							bool = class38Sub6.aBool1961;
+							break;
+						}
+					if (!bool) {
+						int i_8_ = (int) ((Node) class38_sub8).aLong898;
+						WidgetComponent class38_sub6 = Projectile.method1167(i_8_, 86);
+						if (class38_sub6 != null)
+							Class40.method340(class38_sub6, (byte) -124);
+					}
+				}
+			}
+		} catch (RuntimeException runtimeexception) {
+			throw Class38_Sub1.method607(runtimeexception, "lf.G(" + i + ')');
+		}
+	}
+
+	public static void method1222(boolean bool) {
+		try {
+			Applet_Sub1.aClass19_3635 = null;
+			Applet_Sub1.aClass19_3625 = null;
+			Applet_Sub1.aClass17_Sub1_3639 = null;
+			if (bool)
+				Applet_Sub1.aClass19_3625 = null;
+			Applet_Sub1.aClass83_3633 = null;
+			Applet_Sub1.aClass19_3610 = null;
+			Applet_Sub1.aClass19_3638 = null;
+		} catch (RuntimeException runtimeexception) {
+			throw Class38_Sub1.method607(runtimeexception, "lf.J(" + bool + ')');
+		}
+	}
 
 	@Override
 	public final void windowIconified(WindowEvent windowevent) {
@@ -58,7 +121,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		}
 	}
 
-	abstract void method1209(int i);
+	abstract void method1209();
 
 	@Override
 	public final void start() {
@@ -139,20 +202,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		}
 	}
 
-	private static final Class73 method1213(byte i) {
-		try {
-			if (i < 119)
-				return null;
-			try {
-				return (Class73) Class.forName("pd").newInstance();
-			} catch (Throwable throwable) {
-				return new Class73_Sub2();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "lf.L(" + i + ')');
-		}
-	}
-
 	abstract void method1214(int i);
 
 	@Override
@@ -183,7 +232,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		}
 	}
 
-	private final synchronized void method1215(int i) {
+	private synchronized void method1215(int i) {
 		try {
 			if (!ItemDefinition.aBool2768) {
 				ItemDefinition.aBool2768 = true;
@@ -223,7 +272,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		/* empty */
 	}
 
-	private final void method1216(byte i) {
+	private void method1216(byte i) {
 		try {
 			long l = Class9.method48((byte) -119);
 			long l_5_ = Class42.aLongArray954[Node.anInt895];
@@ -237,7 +286,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			synchronized (this) {
 				Client.awtFocused = Class21.aBool508;
 			}
-			method1209(1000);
+			method1209();
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "lf.H(" + i + ')');
 		}
@@ -252,33 +301,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			Class33.aBool781 = true;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "lf.focusGained(" + (focusevent != null ? "{...}" : "null") + ')');
-		}
-	}
-
-	static final void method1218(byte i) {
-		try {
-			if (i >= -54)
-				Client.errorPinging = false;
-			for (Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method82((byte) 91); class38_sub8 != null; class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method78(-118)) {
-				int i_6_ = class38_sub8.anInt2038;
-				if (Class22.loadWidget(i_6_)) {
-					boolean bool = true;
-					WidgetComponent[] class38_sub6s = Class62.widgets[i_6_];
-					for (int i_7_ = 0; class38_sub6s.length > i_7_; i_7_++)
-						if (class38_sub6s[i_7_] != null) {
-							bool = class38_sub6s[i_7_].aBool1961;
-							break;
-						}
-					if (!bool) {
-						int i_8_ = (int) ((Node) class38_sub8).aLong898;
-						WidgetComponent class38_sub6 = Projectile.method1167(i_8_, 86);
-						if (class38_sub6 != null)
-							Class40.method340(class38_sub6, (byte) -124);
-					}
-				}
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "lf.G(" + i + ')');
 		}
 	}
 
@@ -299,14 +321,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 			}
 			break;
 		} while (false);
-	}
-
-	public static final void providesignlink(Class56 class56) {
-		try {
-			Class23.aClass56_552 = Class38_Sub4.aClass56_1798 = class56;
-		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "lf.providesignlink(" + (class56 != null ? "{...}" : "null") + ')');
-		}
 	}
 
 	@Override
@@ -389,7 +403,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		}
 	}
 
-	private final void method1220(int i) {
+	private void method1220(int i) {
 		try {
 			long l = Class9.method48((byte) -62);
 			if (i != 0)
@@ -472,21 +486,6 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		}
 	}
 
-	public static void method1222(boolean bool) {
-		try {
-			Applet_Sub1.aClass19_3635 = null;
-			Applet_Sub1.aClass19_3625 = null;
-			Applet_Sub1.aClass17_Sub1_3639 = null;
-			if (bool)
-				Applet_Sub1.aClass19_3625 = null;
-			Applet_Sub1.aClass83_3633 = null;
-			Applet_Sub1.aClass19_3610 = null;
-			Applet_Sub1.aClass19_3638 = null;
-		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "lf.J(" + bool + ')');
-		}
-	}
-
 	abstract void method1223(int i);
 
 	@Override
@@ -528,11 +527,5 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "lf.update(" + (graphics != null ? "{...}" : "null") + ')');
 		}
-	}
-
-	static {
-		Applet_Sub1.clickMode2 = 0;
-		Applet_Sub1.aClass19_3638 = RSString.createRSString("Please subscribe)1 or use a different world)3");
-		Applet_Sub1.aClass19_3635 = Applet_Sub1.aClass19_3638;
 	}
 }

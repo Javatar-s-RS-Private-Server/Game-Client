@@ -53,11 +53,11 @@ public final class Client extends Applet_Sub1 {
 	static Frame clientFrame;
 
 	@Override
-	final void method1209(int i) {
+	final void method1209() {
 		try {
 			Class45.anInt1016++;
 			method1230(false);
-			Class38_Sub20_Sub15.method1013(i - 1001);
+			Class38_Sub20_Sub15.method1013(1000 - 1001);
 			Class15.method83(true);
 			Class42.method357(-7);
 			Class38_Sub20_Sub13.method992(103);
@@ -66,7 +66,7 @@ public final class Client extends Applet_Sub1 {
 				int i_0_ = Class4.aClass32_91.method297((byte) 12);
 				Class52.anInt1145 = i_0_;
 			}
-			if (i == 1000) {
+			if (1000 == 1000) {
 				if (Class48.anInt1069 == 0) {
 					Class26.method218((byte) -92);
 					Class75.method540(0);
@@ -74,7 +74,7 @@ public final class Client extends Applet_Sub1 {
 					if (Class48.anInt1069 != 10) {
 						if (Class48.anInt1069 == 20) {
 							Class38_Sub21.method713((byte) 93, this);
-							Class2_Sub1.method648(i - 13367);
+							Class2_Sub1.method648(1000 - 13367);
 						} else if (Class48.anInt1069 == 25)
 							Class43.method363((byte) -22);
 					} else
@@ -91,7 +91,7 @@ public final class Client extends Applet_Sub1 {
 					Class51.method404((byte) -114);
 			}
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "client.O(" + i + ')');
+			throw Class38_Sub1.method607(runtimeexception, "client.O(" + 1000 + ')');
 		}
 	}
 
