@@ -38,7 +38,7 @@ final class Class74 {
 				if (i_5_ >= 0 && anInt1441 > i_5_)
 					for (int i_6_ = i_1_; i_6_ < i_1_ + i; i_6_++)
 						if (i_6_ >= 0 && anInt1454 > i_6_)
-							method536(i_4_, i_6_, (byte) 43, i_5_);
+							method536(i_4_, i_6_, i_5_);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "qf.D(" + i + ',' + bool + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + i_3_ + ')');
 		}
@@ -116,7 +116,7 @@ final class Class74 {
 			i_16_ -= anInt1452;
 			if (i_17_ != 0)
 				method523(-48, 113, 66);
-			this.clippingFlags[i][i_16_] = Class38_Sub3.method618(this.clippingFlags[i][i_16_], 2097152);
+			this.clippingFlags[i][i_16_] = Class38_Sub3.setClippingFlag(this.clippingFlags[i][i_16_], 2097152);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "qf.N(" + i + ',' + i_16_ + ',' + i_17_ + ')');
 		}
@@ -166,133 +166,135 @@ final class Class74 {
 		}
 	}
 
-	final void method527(boolean bool, int i, int i_27_, boolean bool_28_, int i_29_, int i_30_) {
+	final void method527(boolean bool, int i, int x, boolean bool_28_, int y, int i_30_) {
 		do {
 			try {
-				i_27_ -= anInt1447;
-				i_29_ -= anInt1452;
+				x -= anInt1447;
+				y -= anInt1452;
 				if (i == 0) {
 					if (i_30_ == 0) {
-						method536(128, i_29_, (byte) 43, i_27_);
-						method536(8, i_29_, (byte) 43, i_27_ - 1);
+						method536(128, y, x);
+						method536(8, y, x - 1);
 					}
 					if (i_30_ == 1) {
-						method536(2, i_29_, (byte) 43, i_27_);
-						method536(32, i_29_ + 1, (byte) 43, i_27_);
+						method536(2, y, x);
+						method536(32, y + 1, x);
 					}
 					if (i_30_ == 2) {
-						method536(8, i_29_, (byte) 43, i_27_);
-						method536(128, i_29_, (byte) 43, i_27_ + 1);
+						method536(8, y, x);
+						method536(128, y, x + 1);
 					}
 					if (i_30_ == 3) {
-						method536(32, i_29_, (byte) 43, i_27_);
-						method536(2, i_29_ - 1, (byte) 43, i_27_);
+						method536(32, y, x);
+						method536(2, y - 1, x);
 					}
 				}
 				if (i == 1 || i == 3) {
 					if (i_30_ == 0) {
-						method536(1, i_29_, (byte) 43, i_27_);
-						method536(16, i_29_ + 1, (byte) 43, i_27_ - 1);
+						method536(1, y, x);
+						method536(16, y + 1, x - 1);
 					}
 					if (i_30_ == 1) {
-						method536(4, i_29_, (byte) 43, i_27_);
-						method536(64, i_29_ + 1, (byte) 43, i_27_ + 1);
+						method536(4, y, x);
+						method536(64, y + 1, x + 1);
 					}
 					if (i_30_ == 2) {
-						method536(16, i_29_, (byte) 43, i_27_);
-						method536(1, i_29_ - 1, (byte) 43, i_27_ + 1);
+						method536(16, y, x);
+						method536(1, y - 1, x + 1);
 					}
 					if (i_30_ == 3) {
-						method536(64, i_29_, (byte) 43, i_27_);
-						method536(4, i_29_ - 1, (byte) 43, i_27_ - 1);
+						method536(64, y, x);
+						method536(4, y - 1, x - 1);
 					}
 				}
 				if (i == 2) {
 					if (i_30_ == 0) {
-						method536(130, i_29_, (byte) 43, i_27_);
-						method536(8, i_29_, (byte) 43, i_27_ - 1);
-						method536(32, i_29_ + 1, (byte) 43, i_27_);
+						method536(130, y, x);
+						method536(8, y, x - 1);
+						method536(32, y + 1, x);
 					}
 					if (i_30_ == 1) {
-						method536(10, i_29_, (byte) 43, i_27_);
-						method536(32, i_29_ + 1, (byte) 43, i_27_);
-						method536(128, i_29_, (byte) 43, i_27_ + 1);
+						method536(10, y, x);
+						method536(32, y + 1, x);
+						method536(128, y, x + 1);
 					}
 					if (i_30_ == 2) {
-						method536(40, i_29_, (byte) 43, i_27_);
-						method536(128, i_29_, (byte) 43, i_27_ + 1);
-						method536(2, i_29_ - 1, (byte) 43, i_27_);
+						method536(40, y, x);
+						method536(128, y, x + 1);
+						method536(2, y - 1, x);
 					}
 					if (i_30_ == 3) {
-						method536(160, i_29_, (byte) 43, i_27_);
-						method536(2, i_29_ - 1, (byte) 43, i_27_);
-						method536(8, i_29_, (byte) 43, i_27_ - 1);
+						method536(160, y, x);
+						method536(2, y - 1, x);
+						method536(8, y, x - 1);
 					}
 				}
-				if (bool_28_ != true)
+				if (!bool_28_)
 					method527(true, -69, 110, false, 67, 125);
-				if (!bool)
-					break;
-				if (i == 0) {
+				if (bool) {
+					if (i == 0) {
+						if (i_30_ == 0) {
+							method536(65536, y, x);
+							method536(4096, y, x - 1);
+						}
+						if (i_30_ == 1) {
+							method536(1024, y, x);
+							method536(16384, y + 1, x);
+						}
+						if (i_30_ == 2) {
+							method536(4096, y, x);
+							method536(65536, y, x + 1);
+						}
+						if (i_30_ == 3) {
+							method536(16384, y, x);
+							method536(1024, y - 1, x);
+						}
+					}
+					if (i == 1 || i == 3) {
+						if (i_30_ == 0) {
+							method536(512, y, x);
+							method536(8192, y + 1, x - 1);
+						}
+						if (i_30_ == 1) {
+							method536(2048, y, x);
+							method536(32768, y + 1, x + 1);
+						}
+						if (i_30_ == 2) {
+							method536(8192, y, x);
+							method536(512, y - 1, x + 1);
+						}
+						if (i_30_ == 3) {
+							method536(32768, y, x);
+							method536(2048, y - 1, x - 1);
+						}
+					}
+					if (i != 2)
+						break;
 					if (i_30_ == 0) {
-						method536(65536, i_29_, (byte) 43, i_27_);
-						method536(4096, i_29_, (byte) 43, i_27_ - 1);
+						method536(66560, y, x);
+						method536(4096, y, x - 1);
+						method536(16384, y + 1, x);
 					}
 					if (i_30_ == 1) {
-						method536(1024, i_29_, (byte) 43, i_27_);
-						method536(16384, i_29_ + 1, (byte) 43, i_27_);
+						method536(5120, y, x);
+						method536(16384, y + 1, x);
+						method536(65536, y, x + 1);
 					}
 					if (i_30_ == 2) {
-						method536(4096, i_29_, (byte) 43, i_27_);
-						method536(65536, i_29_, (byte) 43, i_27_ + 1);
+						method536(20480, y, x);
+						method536(65536, y, x + 1);
+						method536(1024, y - 1, x);
 					}
-					if (i_30_ == 3) {
-						method536(16384, i_29_, (byte) 43, i_27_);
-						method536(1024, i_29_ - 1, (byte) 43, i_27_);
-					}
-				}
-				if (i == 1 || i == 3) {
-					if (i_30_ == 0) {
-						method536(512, i_29_, (byte) 43, i_27_);
-						method536(8192, i_29_ + 1, (byte) 43, i_27_ - 1);
-					}
-					if (i_30_ == 1) {
-						method536(2048, i_29_, (byte) 43, i_27_);
-						method536(32768, i_29_ + 1, (byte) 43, i_27_ + 1);
-					}
-					if (i_30_ == 2) {
-						method536(8192, i_29_, (byte) 43, i_27_);
-						method536(512, i_29_ - 1, (byte) 43, i_27_ + 1);
-					}
-					if (i_30_ == 3) {
-						method536(32768, i_29_, (byte) 43, i_27_);
-						method536(2048, i_29_ - 1, (byte) 43, i_27_ - 1);
-					}
-				}
-				if (i != 2)
+					if (i_30_ != 3)
+						break;
+					method536(81920, y, x);
+					method536(1024, y - 1, x);
+					method536(4096, y, x - 1);
+				} else {
 					break;
-				if (i_30_ == 0) {
-					method536(66560, i_29_, (byte) 43, i_27_);
-					method536(4096, i_29_, (byte) 43, i_27_ - 1);
-					method536(16384, i_29_ + 1, (byte) 43, i_27_);
 				}
-				if (i_30_ == 1) {
-					method536(5120, i_29_, (byte) 43, i_27_);
-					method536(16384, i_29_ + 1, (byte) 43, i_27_);
-					method536(65536, i_29_, (byte) 43, i_27_ + 1);
-				}
-				if (i_30_ == 2) {
-					method536(20480, i_29_, (byte) 43, i_27_);
-					method536(65536, i_29_, (byte) 43, i_27_ + 1);
-					method536(1024, i_29_ - 1, (byte) 43, i_27_);
-				}
-				if (i_30_ != 3)
-					break;
-				method536(81920, i_29_, (byte) 43, i_27_);
-				method536(1024, i_29_ - 1, (byte) 43, i_27_);
-				method536(4096, i_29_, (byte) 43, i_27_ - 1);
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "qf.H(" + bool + ',' + i + ',' + i_27_ + ',' + bool_28_ + ',' + i_29_ + ',' + i_30_ + ')');
+				throw Class38_Sub1.method607(runtimeexception, "qf.H(" + bool + ',' + i + ',' + x + ',' + bool_28_ + ',' + y + ',' + i_30_ + ')');
 			}
 			break;
 		} while (false);
@@ -556,15 +558,13 @@ final class Class74 {
 		} while (false);
 	}
 
-	private final void method536(int i, int i_54_, byte i_55_, int i_56_) {
+	private final void method536(int mask, int y, int x) {
 		do {
 			try {
-				this.clippingFlags[i_56_][i_54_] = Class38_Sub3.method618(this.clippingFlags[i_56_][i_54_], i);
-				if (i_55_ == 43)
-					break;
-				anInt1452 = 77;
+				this.clippingFlags[x][y] = Class38_Sub3.setClippingFlag(this.clippingFlags[x][y], mask);
+				break;
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "qf.Q(" + i + ',' + i_54_ + ',' + i_55_ + ',' + i_56_ + ')');
+				throw Class38_Sub1.method607(runtimeexception, "qf.Q(" + mask + ',' + y + ',' + (byte) 43 + ',' + x + ')');
 			}
 			break;
 		} while (false);
@@ -672,7 +672,7 @@ final class Class74 {
 			if (bool != true)
 				Class74.method525(-71);
 			i -= anInt1447;
-			this.clippingFlags[i][i_63_] = Class38_Sub3.method618(this.clippingFlags[i][i_63_], 262144);
+			this.clippingFlags[i][i_63_] = Class38_Sub3.setClippingFlag(this.clippingFlags[i][i_63_], 262144);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "qf.F(" + i + ',' + i_63_ + ',' + bool + ')');
 		}

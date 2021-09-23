@@ -96,12 +96,12 @@ final class Class42 {
 	private static final RSString method355(int i, int i_18_) {
 		try {
 			RSString class19 = RuntimeException_Sub1.method1098(i, i_18_ ^ i_18_);
-			for (int i_19_ = class19.method143((byte) 32) - 3; i_19_ > 0; i_19_ -= 3)
-				class19 = Class9.method43(new RSString[] { class19.method144((byte) -120, 0, i_19_), Class49.aClass19_1100, class19.method171((byte) -64, i_19_) }, (byte) -20);
-			if (class19.method143((byte) 36) > 9)
-				return Class9.method43(new RSString[] { Class50.aClass19_1110, class19.method144((byte) 57, 0, class19.method143((byte) 88) - 8), Class17_Sub1.aClass19_1719, Class38_Sub10_Sub3.aClass19_2825, class19, Class38_Sub20_Sub3_Sub2.aClass19_3247 }, (byte) -20);
-			if (class19.method143((byte) 95) > 6)
-				return Class9.method43(new RSString[] { Class38_Sub11.aClass19_2107, class19.method144((byte) -128, 0, class19.method143((byte) 60) - 4), Class29.aClass19_698, Class38_Sub10_Sub3.aClass19_2825, class19, Class38_Sub20_Sub3_Sub2.aClass19_3247 }, (byte) -20);
+			for (int i_19_ = class19.length((byte) 32) - 3; i_19_ > 0; i_19_ -= 3)
+				class19 = Class9.method43(new RSString[] { class19.method144((byte) -120, 0, i_19_), Class49.aClass19_1100, class19.substring((byte) -64, i_19_) }, (byte) -20);
+			if (class19.length((byte) 36) > 9)
+				return Class9.method43(new RSString[] { Class50.aClass19_1110, class19.method144((byte) 57, 0, class19.length((byte) 88) - 8), Class17_Sub1.aClass19_1719, Class38_Sub10_Sub3.aClass19_2825, class19, Class38_Sub20_Sub3_Sub2.aClass19_3247 }, (byte) -20);
+			if (class19.length((byte) 95) > 6)
+				return Class9.method43(new RSString[] { Class38_Sub11.aClass19_2107, class19.method144((byte) -128, 0, class19.length((byte) 60) - 4), Class29.aClass19_698, Class38_Sub10_Sub3.aClass19_2825, class19, Class38_Sub20_Sub3_Sub2.aClass19_3247 }, (byte) -20);
 			return Class9.method43(new RSString[] { Class26.aClass19_612, class19, Class38_Sub20_Sub16.aClass19_3095 }, (byte) -20);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "s.D(" + i + ',' + i_18_ + ')');
@@ -358,7 +358,7 @@ final class Class42 {
 												i_62_ = class38_sub6.anInt1982;
 												if (Class38_Sub2.aClass38_Sub6_1774 == class38_sub6 && class38_sub6.anInt1896 != 0)
 													i_62_ = class38_sub6.anInt1896;
-												if (class38_sub6.aClass19_1887.method143((byte) 83) > 0)
+												if (class38_sub6.aClass19_1887.length((byte) 83) > 0)
 													class19 = class38_sub6.aClass19_1887;
 											}
 											if (class38_sub6.aBool1961 && class38_sub6.anInt1917 != -1) {
@@ -513,12 +513,12 @@ final class Class42 {
 											RSString class19 = class38_sub6.aClass19_1876;
 											class19 = Class29.method276(class38_sub6, class19, false);
 											int i_80_ = 0;
-											while (class19.method143((byte) 74) > 0) {
+											while (class19.length((byte) 74) > 0) {
 												int i_81_ = class19.method170(1, Class38_Sub4.aClass19_1820);
 												RSString class19_82_;
 												if (i_81_ != -1) {
 													class19_82_ = class19.method144((byte) -127, 0, i_81_);
-													class19 = class19.method171((byte) -36, i_81_ + 4);
+													class19 = class19.substring((byte) -36, i_81_ + 4);
 												} else {
 													class19_82_ = class19;
 													class19 = Class38_Sub22.aClass19_2312;
@@ -543,12 +543,12 @@ final class Class42 {
 											int i_86_ = i_85_ - (-((Class38_Sub20_Sub9_Sub1) class38_sub20_sub9_sub1_sub1).anInt3216 - 2);
 											class19 = class38_sub6.aClass19_1876;
 											class19 = Class29.method276(class38_sub6, class19, false);
-											while (class19.method143((byte) 125) > 0) {
+											while (class19.length((byte) 125) > 0) {
 												int i_87_ = class19.method170(i, Class38_Sub4.aClass19_1820);
 												RSString class19_88_;
 												if (i_87_ != -1) {
 													class19_88_ = class19.method144((byte) -119, 0, i_87_);
-													class19 = class19.method171((byte) -2, i_87_ + 4);
+													class19 = class19.substring((byte) -2, i_87_ + 4);
 												} else {
 													class19_88_ = class19;
 													class19 = Class38_Sub22.aClass19_2312;

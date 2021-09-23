@@ -181,16 +181,16 @@ final class Class47 implements Runnable {
 	static final void method384(int i) {
 		try {
 			synchronized (Class38_Sub11.aClass10_2089) {
-				Class23.anInt558 = Applet_Sub1.anInt3636;
+				Class23.anInt558 = Applet_Sub1.clickMode2;
 				Class23.anInt543 = Class61.anInt1322;
 				Class45.anInt1015 = Class17_Sub1.anInt1712;
 				if (i != -18075)
 					Class47.method384(121);
-				Client.lastMouseAction = Class15.anInt277;
+				Client.lastMouseAction = Class15.clickMode1;
 				Class73.anInt1429 = Class26.anInt613;
 				RS2Buffer.anInt2416 = Class38_Sub10_Sub1.anInt2627;
 				Client.lastClickTime = PlayerAppearance.aLong414;
-				Class15.anInt277 = 0;
+				Class15.clickMode1 = 0;
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "te.D(" + i + ')');

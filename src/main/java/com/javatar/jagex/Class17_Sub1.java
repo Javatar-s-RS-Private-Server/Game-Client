@@ -187,7 +187,7 @@ final class Class17_Sub1 extends Class17 {
 					Class48.aCRC32_1075.reset();
 					Class48.aCRC32_1075.update(is, 0, is.length);
 					int i_14_ = (int) Class48.aCRC32_1075.getValue();
-					RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(31535, is));
+					RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(is));
 					int i_15_ = class38_sub23.readUnsignedByte();
 					if (i_15_ != 5 && i_15_ != 6)
 						throw new RuntimeException("Incorrect JS5 protocol number: " + i_15_);

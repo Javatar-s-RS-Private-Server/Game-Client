@@ -40,7 +40,7 @@ final class Class44 {
 			if (Class38_Sub20_Sub17.aClass31_3138 != null)
 				try {
 					RS2Buffer class38_sub23 = new RS2Buffer(4);
-					class38_sub23.putByte(!bool ? 3 : 2);
+					class38_sub23.writeByte(!bool ? 3 : 2);
 					class38_sub23.method771(-31368, i);
 					Class38_Sub20_Sub17.aClass31_3138.write(
 							class38_sub23.buffer, 4, 0, (byte) 127);
@@ -112,7 +112,7 @@ final class Class44 {
 
 	static final void method371(int i, RSString class19, byte i_7_) {
 		try {
-			Client.outputBuffer.putOpcode(205);
+			Client.outputBuffer.writeIsaacByte(205);
 			if (i_7_ >= 62) {
 				Client.outputBuffer.method768(i, (byte) -121);
 				Client.outputBuffer.method733(32, class19.method162(0));

@@ -81,7 +81,7 @@ final class Class61 {
 				component.removeMouseListener(Class38_Sub11.aClass10_2089);
 				component.removeMouseMotionListener(Class38_Sub11.aClass10_2089);
 				component.removeFocusListener(Class38_Sub11.aClass10_2089);
-				Applet_Sub1.anInt3636 = 0;
+				Applet_Sub1.clickMode2 = 0;
 				if (i == -1)
 					break;
 				Class61.anInt1337 = 29;

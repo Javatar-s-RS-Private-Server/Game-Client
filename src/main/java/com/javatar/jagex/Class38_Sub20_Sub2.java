@@ -52,7 +52,7 @@ final class Class38_Sub20_Sub2 extends NodeSub {
 	static final void method814(int i) {
 		do {
 			try {
-				Client.outputBuffer.putOpcode(113);
+				Client.outputBuffer.writeIsaacByte(113);
 				if (i != -4)
 					Class38_Sub20_Sub2.anInt2532 = -128;
 				for (Class38_Sub8 class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method82((byte) 91); class38_sub8 != null; class38_sub8 = (Class38_Sub8) Class10.aClass14_190.method78(45))
@@ -75,8 +75,8 @@ final class Class38_Sub20_Sub2 extends NodeSub {
 				if (bool)
 					Class38_Sub20_Sub2.anIntArray2536 = null;
 				Sequence.anInt2731 = 0;
-				int i = (((Entity) Client.myPlayer).anInt3493 >> 1378596711) + Client.currentBaseY;
-				int i_1_ = (((Entity) Client.myPlayer).anInt3444 >> 620505127) + Client.currentBaseX;
+				int i = (((Entity) Client.myPlayer).anInt3493 >> 1378596711) + Client.currentBaseX;
+				int i_1_ = (((Entity) Client.myPlayer).anInt3444 >> 620505127) + Client.currentBaseY;
 				if (i >= 3053 && i <= 3156 && i_1_ >= 3056 && i_1_ <= 3136)
 					Sequence.anInt2731 = 1;
 				if (i >= 3072 && i <= 3118 && i_1_ >= 9492 && i_1_ <= 9535)

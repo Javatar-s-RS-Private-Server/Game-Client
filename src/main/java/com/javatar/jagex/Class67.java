@@ -75,7 +75,7 @@ final class Class67 {
 				is[i_7_ - i_8_ - 1] = (byte) (i_9_ + 48);
 			}
 			RSString class19 = new RSString();
-			class19.anInt478 = i_7_;
+			class19.length = i_7_;
 			class19.buffer = is;
 			return class19;
 		} catch (RuntimeException runtimeexception) {

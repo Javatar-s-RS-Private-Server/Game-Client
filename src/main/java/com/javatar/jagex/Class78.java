@@ -26,7 +26,7 @@ final class Class78 {
 				return null;
 			RSString class19 = new RSString();
 			class19.buffer = new byte[i];
-			class19.anInt478 = 0;
+			class19.length = 0;
 			return class19;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jb.B(" + bool + ',' + i + ')');

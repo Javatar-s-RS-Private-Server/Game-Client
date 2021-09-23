@@ -11,10 +11,10 @@ abstract class Entity extends SceneModel {
 	int anInt3439 = 32;
 	int anInt3440;
 	int walkQueueLocationIndex;
-	int anInt3443 = 0;
+	int faceY = 0;
 	int anInt3444;
 	static RSString aClass19_3445;
-	static int anInt3446 = 0;
+	static int packetLength = 0;
 	int anInt3447;
 	private static RSString aClass19_3448 = RSString.createRSString("Drop");
 	int anInt3450;
@@ -24,10 +24,10 @@ abstract class Entity extends SceneModel {
 	int walkAnimation;
 	int anInt3456;
 	int anInt3457;
-	int currentAnimationId;
+	int animationId;
 	int anInt3459;
 	int anInt3460;
-	int anInt3461;
+	int animationDelay;
 	int anInt3462;
 	int anInt3463;
 	static int anInt3464;
@@ -51,7 +51,7 @@ abstract class Entity extends SceneModel {
 	int anInt3484;
 	static RSString aClass19_3485 = Entity.aClass19_3448;
 	int anInt3486;
-	int anInt3487;
+	int faceX;
 	int anInt3488;
 	static int anInt3489 = 0;
 	int turnAnimation;
@@ -65,7 +65,7 @@ abstract class Entity extends SceneModel {
 	int anInt3499;
 	int anInt3500;
 	int anInt3501;
-	int anInt3502;
+	int facingEntityIndex;
 	int anInt3503;
 	int[] hitValues;
 	int[] walkQueueX;
@@ -124,9 +124,9 @@ abstract class Entity extends SceneModel {
 			y++;
 			x--;
 		}
-		if (this.currentAnimationId != -1
-				&& Sequence.forID((byte) 111, this.currentAnimationId).walkProperties == 1)
-			this.currentAnimationId = -1;
+		if (this.animationId != -1
+				&& Sequence.forID((byte) 111, this.animationId).walkProperties == 1)
+			this.animationId = -1;
 		if (direction == 1)
 			y++;
 		if (this.walkQueueLocationIndex < 9)
@@ -172,9 +172,9 @@ abstract class Entity extends SceneModel {
 	}
 
 	final void updatePosition(int x, int y, boolean stop) {
-		if (this.currentAnimationId != -1
-				&& Sequence.forID((byte) 94, this.currentAnimationId).walkProperties == 1)
-			this.currentAnimationId = -1;
+		if (this.animationId != -1
+				&& Sequence.forID((byte) 94, this.animationId).walkProperties == 1)
+			this.animationId = -1;
 		if (!stop) {
 			int i_9_ = -this.walkQueueY[0] + y;
 			int i_10_ = x - this.walkQueueX[0];
@@ -203,7 +203,7 @@ abstract class Entity extends SceneModel {
 
 	static final void method1176(int i) {
 		try {
-			Client.outputBuffer.putOpcode(23);
+			Client.outputBuffer.writeIsaacByte(23);
 			Class28.anInt689++;
 			Client.outputBuffer.writeLong(i);
 		} catch (RuntimeException runtimeexception) {
@@ -254,7 +254,7 @@ abstract class Entity extends SceneModel {
 		this.anInt3434 = 200;
 		this.aClass19_3467 = null;
 		this.walkQueueY = new int[10];
-		this.anInt3461 = 0;
+		this.animationDelay = 0;
 		this.anInt3474 = 0;
 		this.anInt3440 = 0;
 		this.hitCycle = -1000;
@@ -265,17 +265,17 @@ abstract class Entity extends SceneModel {
 		this.anInt3494 = 0;
 		this.anInt3498 = 0;
 		this.anInt3471 = 0;
-		this.currentAnimationId = -1;
+		this.animationId = -1;
 		this.runningFlags = new boolean[10];
 		this.anInt3500 = 0;
 		this.anInt3483 = 0;
 		this.anInt3499 = 0;
 		this.anInt3459 = 0;
-		this.anInt3487 = 0;
+		this.faceX = 0;
 		this.runAnimation = -1;
 		this.walkAnimation = -1;
 		this.anInt3495 = 0;
-		this.anInt3502 = -1;
+		this.facingEntityIndex = -1;
 		this.walkQueueX = new int[10];
 		this.anInt3503 = 0;
 		this.hitValues = new int[4];

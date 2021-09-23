@@ -23,7 +23,7 @@ final class Class38_Sub20_Sub15 extends NodeSub {
 			int i_0_ = 45 / ((55 - i) / 47);
 			if (Class38_Sub1.method610(true, Class30.method283(-94, class38_sub6)) == 0)
 				return null;
-			if (class38_sub6.aClass19_1938 == null || class38_sub6.aClass19_1938.method178(-91).method143((byte) 76) == 0) {
+			if (class38_sub6.aClass19_1938 == null || class38_sub6.aClass19_1938.method178(-91).length((byte) 76) == 0) {
 				if (Node.aBool892)
 					return Class59.aClass19_1293;
 				return null;

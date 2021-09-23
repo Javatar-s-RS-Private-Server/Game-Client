@@ -83,7 +83,7 @@ final class Class21 implements Runnable {
 							Class54.aClass19Array1206[i_4_] = Class54.aClass19Array1206[i_4_ + 1];
 						}
 						Class81.anInt1624 = Entity.anInt3513;
-						Client.outputBuffer.putOpcode(239);
+						Client.outputBuffer.writeIsaacByte(239);
 						Client.outputBuffer.writeLong(l);
 						break;
 					}

@@ -160,8 +160,8 @@ final class Class38_Sub4 extends Node {
 			if (i != -48)
 				Class38_Sub4.aClass56_1798 = null;
 			int i_19_ = class38_sub23.pos;
-			class38_sub23.method766(class19.anInt478, -64);
-			class38_sub23.pos += Class41.aClass53_935.method412(0, class19.anInt478, class38_sub23.pos, class19.buffer, class38_sub23.buffer, 112);
+			class38_sub23.method766(class19.length, -64);
+			class38_sub23.pos += Class41.aClass53_935.method412(0, class19.length, class38_sub23.pos, class19.buffer, class38_sub23.buffer, 112);
 			return class38_sub23.pos - i_19_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "wa.E(" + (class19 != null ? "{...}" : "null") + ',' + i + ',' + (class38_sub23 != null ? "{...}" : "null") + ')');

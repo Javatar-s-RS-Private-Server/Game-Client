@@ -118,13 +118,13 @@ final class Class14 {
 
 	static final boolean method79(int i, byte i_13_, int i_14_, int i_15_) {
 		try {
-			int i_16_ = i_15_ >> 210118990 & 0x7fff;
+			int i_16_ = i_15_ >> 14 & 0x7fff;
 			int i_17_ = RuntimeException_Sub1.aClass27_3292.method224(
 					Client.height, i_14_, i, i_15_);
 			if (i_17_ == -1)
 				return false;
 			int i_18_ = i_17_ & 0x1f;
-			int i_19_ = i_17_ >> -657328026 & 0x3;
+			int i_19_ = i_17_ >> 6 & 0x3;
 			if (i_18_ != 10 && i_18_ != 11 && i_18_ != 22)
 				Client.calculatePath(true, i_19_,
 						((Entity) Client.myPlayer).walkQueueY[0], i_18_ + 1, 0,

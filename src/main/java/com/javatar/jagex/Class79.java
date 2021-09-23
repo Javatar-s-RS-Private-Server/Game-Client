@@ -45,7 +45,7 @@ final class Class79 {
 						break;
 					Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Sequence.aClass14_2713.method82((byte) 50);
 					RS2Buffer class38_sub23 = new RS2Buffer(4);
-					class38_sub23.putByte(1);
+					class38_sub23.writeByte(1);
 					class38_sub23.method771(-31368, (int) ((Node) class38_sub20_sub2).aLong898);
 					Class38_Sub20_Sub17.aClass31_3138.write(class38_sub23.buffer, 4, 0, (byte) 125);
 					Class76.aClass14_1485.method80(true, ((Node) class38_sub20_sub2).aLong898, class38_sub20_sub2);
@@ -55,7 +55,7 @@ final class Class79 {
 				for (/**/; RS2Buffer.anInt2406 < 20 && Class20.anInt502 > 0; Class20.anInt502--) {
 					Class38_Sub20_Sub2 class38_sub20_sub2 = (Class38_Sub20_Sub2) Class61.aClass26_1325.method216((byte) -127);
 					RS2Buffer class38_sub23 = new RS2Buffer(4);
-					class38_sub23.putByte(0);
+					class38_sub23.writeByte(0);
 					class38_sub23.method771(-31368, (int) ((Node) class38_sub20_sub2).aLong898);
 					Class38_Sub20_Sub17.aClass31_3138.write(class38_sub23.buffer, 4, 0, (byte) 122);
 					class38_sub20_sub2.method707(false);
@@ -103,7 +103,7 @@ final class Class79 {
 							Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564 = class38_sub20_sub2;
 							int i_11_ = i_9_ != 0 ? 9 : 5;
 							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275 = new RS2Buffer(Class38_Sub20_Sub4.aClass38_Sub20_Sub2_2564.aByte2542 + (i_10_ + i_11_));
-							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.putByte(i_9_);
+							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.writeByte(i_9_);
 							Class38_Sub20_Sub3_Sub2.aClass38_Sub23_3275.writeInt(i_10_);
 							Class38_Sub20_Sub15.aClass38_Sub23_3066.pos = 0;
 							Class38_Sub11.anInt2101 = 8;

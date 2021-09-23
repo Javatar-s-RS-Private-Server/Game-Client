@@ -22,7 +22,7 @@ abstract class Class73 {
 					for (int i_1_ = i_0_; ItemDefinition.anInt2783 > i_1_; i_1_++)
 						Class21.anIntArray519[Class4.anInt81++] = Class47.anIntArray1055[i_1_];
 				if (ItemDefinition.anInt2783 < i_0_)
-					throw new RuntimeException("gppov1");
+					throw new RuntimeException("gppov1 " + ItemDefinition.anInt2783 + " Player Count " + i_0_);
 				ItemDefinition.anInt2783 = 0;
 				for (int i_2_ = 0; i_0_ > i_2_; i_2_++) {
 					int i_3_ = Class47.anIntArray1055[i_2_];
@@ -30,16 +30,16 @@ abstract class Class73 {
 					int i_4_ = Class15.inputStream.readBits(1, (byte) 69);
 					if (i_4_ == 0) {
 						Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
-						((Entity) entity).anInt3459 = Class45.anInt1016;
+						entity.anInt3459 = Class45.anInt1016;
 					} else {
 						int i_5_ = Class15.inputStream.readBits(2, (byte) 69);
 						if (i_5_ == 0) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
-							((Entity) entity).anInt3459 = Class45.anInt1016;
+							entity.anInt3459 = Class45.anInt1016;
 							ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_3_;
 						} else if (i_5_ == 1) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
-							((Entity) entity).anInt3459 = Class45.anInt1016;
+							entity.anInt3459 = Class45.anInt1016;
 							int i_6_ = Class15.inputStream.readBits(3,
 									(byte) 69);
 							entity.move(i_6_, false);
@@ -49,7 +49,7 @@ abstract class Class73 {
 								ItemDefinition.anIntArray2797[Class38_Sub20_Sub15.anInt3064++] = i_3_;
 						} else if (i_5_ == 2) {
 							Class47.anIntArray1055[ItemDefinition.anInt2783++] = i_3_;
-							((Entity) entity).anInt3459 = Class45.anInt1016;
+							entity.anInt3459 = Class45.anInt1016;
 							int i_8_ = Class15.inputStream.readBits(3,
 									(byte) 69);
 							entity.move(i_8_, true);
@@ -68,6 +68,7 @@ abstract class Class73 {
 					break;
 				Class73.method520(-22L, 38);
 			} catch (RuntimeException runtimeexception) {
+				runtimeexception.printStackTrace();
 				throw Class38_Sub1.method607(runtimeexception, "ba.E(" + i
 						+ ')');
 			}
@@ -133,7 +134,7 @@ abstract class Class73 {
 			}
 			RSString class19 = new RSString();
 			class19.buffer = is;
-			class19.anInt478 = is.length;
+			class19.length = is.length;
 			return class19;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ba.H(" + l + ','

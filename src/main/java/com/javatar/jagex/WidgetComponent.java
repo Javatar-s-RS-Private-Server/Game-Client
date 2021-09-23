@@ -287,7 +287,7 @@ final class WidgetComponent extends Node {
 							Class80.anIntArray1606[i_13_] = Class80.anIntArray1606[i_13_ + 1];
 						}
 						Class81.anInt1624 = Entity.anInt3513;
-						Client.outputBuffer.putOpcode(135);
+						Client.outputBuffer.writeIsaacByte(135);
 						Client.outputBuffer.writeLong(l);
 						break;
 					}
@@ -466,8 +466,8 @@ final class WidgetComponent extends Node {
 					}
 					this.aClass19Array1869 = new RSString[5];
 					for (int i_31_ = 0; i_31_ < 5; i_31_++) {
-						RSString class19 = class38_sub23.getUShort(1347418632);
-						if (class19.method143((byte) 118) > 0) {
+						RSString class19 = class38_sub23.readString(1347418632);
+						if (class19.length((byte) 118) > 0) {
 							this.aClass19Array1869[i_31_] = class19;
 							this.anInt1881 |= 1 << i_31_ + 23;
 						}
@@ -485,8 +485,8 @@ final class WidgetComponent extends Node {
 					this.aBool1969 = class38_sub23.readUnsignedByte() == 1;
 				}
 				if (this.anInt1868 == 4) {
-					this.aClass19_1876 = class38_sub23.getUShort(1347418632);
-					this.aClass19_1887 = class38_sub23.getUShort(1347418632);
+					this.aClass19_1876 = class38_sub23.readString(1347418632);
+					this.aClass19_1887 = class38_sub23.readString(1347418632);
 				}
 				if (this.anInt1868 == 1 || this.anInt1868 == 3 || this.anInt1868 == 4)
 					this.anInt1889 = class38_sub23.readInt(true);
@@ -536,24 +536,24 @@ final class WidgetComponent extends Node {
 					if (i_32_ == 1)
 						this.anInt1881 |= 0x40000000;
 					for (int i_33_ = 0; i_33_ < 5; i_33_++) {
-						RSString class19 = class38_sub23.getUShort(1347418632);
-						if (class19.method143((byte) 16) > 0) {
+						RSString class19 = class38_sub23.readString(1347418632);
+						if (class19.length((byte) 16) > 0) {
 							this.aClass19Array1869[i_33_] = class19;
 							this.anInt1881 |= 1 << i_33_ + 23;
 						}
 					}
 				}
 				if (this.anInt1868 == 8)
-					this.aClass19_1876 = class38_sub23.getUShort(1347418632);
+					this.aClass19_1876 = class38_sub23.readString(1347418632);
 				if (this.anInt1903 == 2 || this.anInt1868 == 2) {
-					this.aClass19_1938 = class38_sub23.getUShort(1347418632);
-					this.aClass19_1946 = class38_sub23.getUShort(1347418632);
+					this.aClass19_1938 = class38_sub23.readString(1347418632);
+					this.aClass19_1946 = class38_sub23.readString(1347418632);
 					int i_34_ = class38_sub23.readUnsignedShort() & 0x3f;
 					this.anInt1881 |= i_34_ << 1056473867;
 				}
 				if (this.anInt1903 == 1 || this.anInt1903 == 4 || this.anInt1903 == 5 || this.anInt1903 == 6) {
-					this.aClass19_1904 = class38_sub23.getUShort(1347418632);
-					if (this.aClass19_1904.method143((byte) 36) == 0) {
+					this.aClass19_1904 = class38_sub23.readString(1347418632);
+					if (this.aClass19_1904.length((byte) 36) == 0) {
 						if (this.anInt1903 == 1)
 							this.aClass19_1904 = ObjectDefinition.aClass19_2449;
 						if (this.anInt1903 == 4)
@@ -603,7 +603,7 @@ final class WidgetComponent extends Node {
 				int i_39_ = class38_sub23.readUnsignedByte();
 				if (i_39_ != 0) {
 					if (i_39_ == 1)
-						objects[i_38_] = class38_sub23.getUShort(1347418632);
+						objects[i_38_] = class38_sub23.readString(1347418632);
 				} else
 					objects[i_38_] = new Integer(class38_sub23.readInt(true));
 			}
@@ -667,7 +667,7 @@ final class WidgetComponent extends Node {
 				this.anInt1920 = class38_sub23.readUnsignedShort();
 				if (this.anInt1920 == 65535)
 					this.anInt1920 = -1;
-				this.aClass19_1876 = class38_sub23.getUShort(i + 1347484168);
+				this.aClass19_1876 = class38_sub23.readString(i + 1347484168);
 				this.anInt1951 = class38_sub23.readUnsignedByte();
 				this.anInt1954 = class38_sub23.readUnsignedByte();
 				this.anInt1912 = class38_sub23.readUnsignedByte();
@@ -684,17 +684,17 @@ final class WidgetComponent extends Node {
 				this.anInt1889 = class38_sub23.readInt(true);
 			}
 			this.anInt1881 = class38_sub23.method738((byte) 127);
-			this.aClass19_1926 = class38_sub23.getUShort(1347418632);
+			this.aClass19_1926 = class38_sub23.readString(1347418632);
 			int i_40_ = class38_sub23.readUnsignedByte();
 			if (i_40_ > 0) {
 				this.aClass19Array1851 = new RSString[i_40_];
 				for (int i_41_ = 0; i_41_ < i_40_; i_41_++)
-					this.aClass19Array1851[i_41_] = class38_sub23.getUShort(1347418632);
+					this.aClass19Array1851[i_41_] = class38_sub23.readString(1347418632);
 			}
 			this.anInt1873 = class38_sub23.readUnsignedByte();
 			this.anInt1859 = class38_sub23.readUnsignedByte();
 			this.aBool1975 = class38_sub23.readUnsignedByte() == 1;
-			this.aClass19_1938 = class38_sub23.getUShort(1347418632);
+			this.aClass19_1938 = class38_sub23.readString(1347418632);
 			this.anObjectArray1980 = method645(i + 65625, class38_sub23);
 			this.anObjectArray1963 = method645(121, class38_sub23);
 			this.anObjectArray1888 = method645(100, class38_sub23);

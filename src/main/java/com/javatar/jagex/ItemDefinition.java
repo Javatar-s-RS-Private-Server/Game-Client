@@ -76,9 +76,9 @@ final class ItemDefinition extends NodeSub {
 			boolean cached = true;
 			if (i != -114)
 				ItemDefinition.method935((byte) 34);
-			if (!Class20.itemModelFetcher.method116(head, true, 0))
+			if (!Class20.itemModelFetcher.method116(head, 0))
 				cached = false;
-			if (hat != -1 && !Class20.itemModelFetcher.method116(hat, true, 0))
+			if (hat != -1 && !Class20.itemModelFetcher.method116(hat, 0))
 				cached = false;
 			return cached;
 		} catch (RuntimeException runtimeexception) {
@@ -326,7 +326,7 @@ final class ItemDefinition extends NodeSub {
 			if (opcode == 1)
 				anInt2786 = stream.readUnsignedShort();
 			else if (opcode == 2)
-				this.aClass19_2808 = stream.getUShort(1347418632);
+				this.aClass19_2808 = stream.readString(1347418632);
 			else if (opcode == 4)
 				this.anInt2770 = stream.readUnsignedShort();
 			else if (opcode != 5) {
@@ -352,7 +352,7 @@ final class ItemDefinition extends NodeSub {
 									else if (opcode < 30 || opcode >= 35) {
 										if (opcode >= 35 && opcode < 40)
 											this.aClass19Array2807[opcode - 35] = stream
-													.getUShort(1347418632);
+													.readString(1347418632);
 										else if (opcode != 40) {
 											if (opcode == 41) {
 												int len = stream.readUnsignedByte();
@@ -435,7 +435,7 @@ final class ItemDefinition extends NodeSub {
 										}
 									} else {
 										this.aClass19Array2789[opcode - 30] = stream
-												.getUShort(1347418632);
+												.readString(1347418632);
 										if (this.aClass19Array2789[opcode - 30]
 												.method174(
 														(byte) 119,
@@ -497,13 +497,13 @@ final class ItemDefinition extends NodeSub {
 			if (i_44_ == -1)
 				return true;
 			boolean bool_47_ = true;
-			if (!Class20.itemModelFetcher.method116(i_44_, true, 0))
+			if (!Class20.itemModelFetcher.method116(i_44_, 0))
 				bool_47_ = false;
 			if (i_45_ != -1
-					&& !Class20.itemModelFetcher.method116(i_45_, true, 0))
+					&& !Class20.itemModelFetcher.method116(i_45_, 0))
 				bool_47_ = false;
 			if (i_46_ != -1
-					&& !Class20.itemModelFetcher.method116(i_46_, true, 0))
+					&& !Class20.itemModelFetcher.method116(i_46_, 0))
 				bool_47_ = false;
 			return bool_47_;
 		} catch (RuntimeException runtimeexception) {

@@ -21,19 +21,19 @@ final class PlayerAppearance {
 
 	final void method125(RS2Buffer stream, int i) {
 		try {
-			stream.putByte(this.isFemale ? 1 : 0);
+			stream.writeByte(this.isFemale ? 1 : 0);
 			int i_0_ = 0;
 			if (i >= -83)
 				colors = null;
 			for (/**/; i_0_ < 7; i_0_++) {
 				int i_1_ = equipmentIds[Class4.anIntArray90[i_0_]];
 				if (i_1_ == 0)
-					stream.putByte(-1);
+					stream.writeByte(-1);
 				else
-					stream.putByte(i_1_ - 256);
+					stream.writeByte(i_1_ - 256);
 			}
 			for (int i_2_ = 0; i_2_ < 5; i_2_++)
-				stream.putByte(colors[i_2_]);
+				stream.writeByte(colors[i_2_]);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "eb.C(" + (stream != null ? "{...}" : "null") + ',' + i + ')');
 		}
@@ -97,7 +97,7 @@ final class PlayerAppearance {
 			if (class38_sub20_sub3_sub7.anInt3493 < 128 || class38_sub20_sub3_sub7.anInt3444 < 128 || class38_sub20_sub3_sub7.anInt3493 >= 13184 || class38_sub20_sub3_sub7.anInt3444 >= 13184) {
 				class38_sub20_sub3_sub7.anInt3493 = class38_sub20_sub3_sub7.walkQueueX[0] * 128 + class38_sub20_sub3_sub7.anInt3457 * 64;
 				class38_sub20_sub3_sub7.anInt3444 = class38_sub20_sub3_sub7.anInt3457 * 64 + class38_sub20_sub3_sub7.walkQueueY[0] * 128;
-				class38_sub20_sub3_sub7.currentAnimationId = -1;
+				class38_sub20_sub3_sub7.animationId = -1;
 				class38_sub20_sub3_sub7.anInt3470 = 0;
 				class38_sub20_sub3_sub7.anInt3477 = -1;
 				class38_sub20_sub3_sub7.anInt3476 = 0;
@@ -109,7 +109,7 @@ final class PlayerAppearance {
 				class38_sub20_sub3_sub7.anInt3477 = -1;
 				class38_sub20_sub3_sub7.anInt3476 = 0;
 				class38_sub20_sub3_sub7.anInt3444 = class38_sub20_sub3_sub7.anInt3457 * 64 + class38_sub20_sub3_sub7.walkQueueY[0] * 128;
-				class38_sub20_sub3_sub7.currentAnimationId = -1;
+				class38_sub20_sub3_sub7.animationId = -1;
 				class38_sub20_sub3_sub7.resetWalkingQueue();
 			}
 			Class38_Sub20_Sub14.method997(false, class38_sub20_sub3_sub7);

@@ -19,18 +19,16 @@ final class RSString implements Interface2 {
 	private static RSString aClass19_459 = RSString.createRSString("Welcome to RuneScape");
 	static Font aFont460;
 	private static RSString aClass19_461 = RSString.createRSString("Free world");
-	int anInt478;
+	int length;
 	static int anInt481 = -1;
 	/* synthetic */static Class aClass484;
 
-	final int method138(byte i, int i_0_, int i_1_, int i_2_, byte[] is) {
+	int method138(int offset, int size, byte[] buffer) {
 		try {
-			Class71.method510(this.buffer, i_1_, is, i_0_, i_2_ - i_1_);
-			if (i != -126)
-				RSString.aClass19_459 = null;
-			return i_2_ - i_1_;
+			Class71.arrayCopy(this.buffer, 0, buffer, offset, size);
+			return size;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "ec.HA(" + i + ',' + i_0_ + ',' + i_1_ + ',' + i_2_ + ',' + (is != null ? "{...}" : "null") + ')');
+			throw Class38_Sub1.method607(runtimeexception, "ec.HA(" + (byte) -126 + ',' + offset + ',' + 0 + ',' + size + ',' + (buffer != null ? "{...}" : "null") + ')');
 		}
 	}
 
@@ -43,7 +41,7 @@ final class RSString implements Interface2 {
 			boolean bool_5_ = false;
 			if (i > -117)
 				method151(-61);
-			for (int i_6_ = 0; i_6_ < this.anInt478; i_6_++) {
+			for (int i_6_ = 0; i_6_ < this.length; i_6_++) {
 				int i_7_ = this.buffer[i_6_] & 0xff;
 				if (i_6_ == 0) {
 					if (i_7_ == 45) {
@@ -110,21 +108,21 @@ final class RSString implements Interface2 {
 	final int method141(int i, RSString class19_11_) {
 		try {
 			int i_12_;
-			if (class19_11_.anInt478 < this.anInt478)
-				i_12_ = class19_11_.anInt478;
+			if (class19_11_.length < this.length)
+				i_12_ = class19_11_.length;
 			else
-				i_12_ = this.anInt478;
+				i_12_ = this.length;
 			for (int i_13_ = 0; i_12_ > i_13_; i_13_++) {
 				if ((class19_11_.buffer[i_13_] & 0xff) > (this.buffer[i_13_] & 0xff))
 					return -1;
 				if ((this.buffer[i_13_] & 0xff) > (class19_11_.buffer[i_13_] & 0xff))
 					return 1;
 			}
-			if (this.anInt478 < class19_11_.anInt478)
+			if (this.length < class19_11_.length)
 				return -1;
 			if (i != -39)
 				return 45;
-			if (class19_11_.anInt478 < this.anInt478)
+			if (class19_11_.length < this.length)
 				return 1;
 			return 0;
 		} catch (RuntimeException runtimeexception) {
@@ -147,11 +145,11 @@ final class RSString implements Interface2 {
 		}
 	}
 
-	final int method143(byte i) {
+	final int length(byte i) {
 		try {
 			if (i <= 8)
 				method149(-8);
-			return this.anInt478;
+			return this.length;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.OA(" + i + ')');
 		}
@@ -161,9 +159,9 @@ final class RSString implements Interface2 {
 		try {
 			int i_17_ = -32 % ((-62 - i) / 49);
 			RSString class19_18_ = new RSString();
-			class19_18_.anInt478 = i_16_ - i_15_;
+			class19_18_.length = i_16_ - i_15_;
 			class19_18_.buffer = new byte[-i_15_ + i_16_];
-			Class71.method510(this.buffer, i_15_, class19_18_.buffer, 0, class19_18_.anInt478);
+			Class71.arrayCopy(this.buffer, i_15_, class19_18_.buffer, 0, class19_18_.length);
 			return class19_18_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.D(" + i + ',' + i_15_ + ',' + i_16_ + ')');
@@ -175,86 +173,86 @@ final class RSString implements Interface2 {
 			int i_19_ = -67 / ((-62 - i) / 38);
 			for (int i_20_ = 0; i_20_ < Class38_Sub20_Sub15.anInt3064; i_20_++) {
 				int i_21_ = ItemDefinition.anIntArray2797[i_20_];
-				NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_21_];
+				NPC npc = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_21_];
 				int i_22_ = Class15.inputStream.readUnsignedByte();
 				if ((i_22_ & 0x1) != 0) {
-					class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543 = Class38_Sub20_Sub3_Sub4.method1156(-99, Class15.inputStream.getULEShort());
-					((Entity) class38_sub20_sub3_sub7_sub1).turn90CCAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2712;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3457 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2697;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3462 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2686;
-					((Entity) class38_sub20_sub3_sub7_sub1).turn90CWAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2720;
-					((Entity) class38_sub20_sub3_sub7_sub1).idleAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2696;
-					((Entity) class38_sub20_sub3_sub7_sub1).walkAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2703;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3439 = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2719;
-					((Entity) class38_sub20_sub3_sub7_sub1).turn180Animation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2702;
-					((Entity) class38_sub20_sub3_sub7_sub1).turnAnimation = class38_sub20_sub3_sub7_sub1.aClass38_Sub20_Sub5_3543.anInt2710;
+					npc.aClass38_Sub20_Sub5_3543 = Class38_Sub20_Sub3_Sub4.method1156(-99, Class15.inputStream.getULEShort());
+					npc.turn90CCAnimation = npc.aClass38_Sub20_Sub5_3543.anInt2712;
+					npc.anInt3457 = npc.aClass38_Sub20_Sub5_3543.anInt2697;
+					npc.anInt3462 = npc.aClass38_Sub20_Sub5_3543.anInt2686;
+					npc.turn90CWAnimation = npc.aClass38_Sub20_Sub5_3543.anInt2720;
+					npc.idleAnimation = npc.aClass38_Sub20_Sub5_3543.anInt2696;
+					npc.walkAnimation = npc.aClass38_Sub20_Sub5_3543.anInt2703;
+					npc.anInt3439 = npc.aClass38_Sub20_Sub5_3543.anInt2719;
+					npc.turn180Animation = npc.aClass38_Sub20_Sub5_3543.anInt2702;
+					npc.turnAnimation = npc.aClass38_Sub20_Sub5_3543.anInt2710;
 				}
 				if ((i_22_ & 0x8) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3477 = Class15.inputStream.method740((byte) 126);
+					npc.anInt3477 = Class15.inputStream.method740((byte) 126);
 					int i_23_ = Class15.inputStream.method730(34);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3450 = (i_23_ & 0xffff) + Class45.anInt1016;
-					if (((Entity) class38_sub20_sub3_sub7_sub1).anInt3477 == 65535)
-						((Entity) class38_sub20_sub3_sub7_sub1).anInt3477 = -1;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3473 = i_23_ >> -470597776;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3447 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3500 = 0;
-					if (((Entity) class38_sub20_sub3_sub7_sub1).anInt3450 > Class45.anInt1016)
-						((Entity) class38_sub20_sub3_sub7_sub1).anInt3500 = -1;
+					npc.anInt3450 = (i_23_ & 0xffff) + Class45.anInt1016;
+					if (npc.anInt3477 == 65535)
+						npc.anInt3477 = -1;
+					npc.anInt3473 = i_23_ >> -470597776;
+					npc.anInt3447 = 0;
+					npc.anInt3500 = 0;
+					if (npc.anInt3450 > Class45.anInt1016)
+						npc.anInt3500 = -1;
 				}
 				if ((i_22_ & 0x4) != 0) {
 					int i_24_ = Class15.inputStream.getUByteC();
 					int i_25_ = Class15.inputStream.getUByteC();
-					class38_sub20_sub3_sub7_sub1.addHit(Class45.anInt1016, i_25_, i_24_);
-					((Entity) class38_sub20_sub3_sub7_sub1).hitCycle = Class45.anInt1016 + 300;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3501 = Class15.inputStream.method741(67);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.readUnsignedByteC(13285);
+					npc.addHit(Class45.anInt1016, i_25_, i_24_);
+					npc.hitCycle = Class45.anInt1016 + 300;
+					npc.anInt3501 = Class15.inputStream.method741(67);
+					npc.anInt3484 = Class15.inputStream.readUnsignedByteC(13285);
 				}
 				if ((i_22_ & 0x40) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub1).aClass19_3467 = Class15.inputStream.getUShort(1347418632);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3452 = 100;
+					npc.aClass19_3467 = Class15.inputStream.readString(1347418632);
+					npc.anInt3452 = 100;
 				}
 				if ((i_22_ & 0x20) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3502 = Class15.inputStream.getULEShort();
-					if (((Entity) class38_sub20_sub3_sub7_sub1).anInt3502 == 65535)
-						((Entity) class38_sub20_sub3_sub7_sub1).anInt3502 = -1;
+					npc.facingEntityIndex = Class15.inputStream.getULEShort();
+					if (npc.facingEntityIndex == 65535)
+						npc.facingEntityIndex = -1;
 				}
 				if ((i_22_ & 0x80) != 0) {
 					int i_26_ = Class15.inputStream.readUnsignedByte();
 					int i_27_ = Class15.inputStream.method741(64);
-					class38_sub20_sub3_sub7_sub1.addHit(Class45.anInt1016, i_27_, i_26_);
-					((Entity) class38_sub20_sub3_sub7_sub1).hitCycle = Class45.anInt1016 + 300;
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3501 = Class15.inputStream.method741(100);
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3484 = Class15.inputStream.readUnsignedByte();
+					npc.addHit(Class45.anInt1016, i_27_, i_26_);
+					npc.hitCycle = Class45.anInt1016 + 300;
+					npc.anInt3501 = Class15.inputStream.method741(100);
+					npc.anInt3484 = Class15.inputStream.readUnsignedByte();
 				}
 				if ((i_22_ & 0x10) != 0) {
 					int i_28_ = Class15.inputStream.method740((byte) 113);
 					int i_29_ = Class15.inputStream.method741(81);
 					if (i_28_ == 65535)
 						i_28_ = -1;
-					if (i_28_ != ((Entity) class38_sub20_sub3_sub7_sub1).currentAnimationId || i_28_ == -1) {
-						if (i_28_ == -1 || ((Entity) class38_sub20_sub3_sub7_sub1).currentAnimationId == -1 || Sequence.forID((byte) 90, i_28_).anInt2576 >= Sequence.forID((byte) 90, ((Entity) class38_sub20_sub3_sub7_sub1).currentAnimationId).anInt2576) {
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3494 = ((Entity) class38_sub20_sub3_sub7_sub1).walkQueueLocationIndex;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3460 = 0;
-							((Entity) class38_sub20_sub3_sub7_sub1).currentAnimationId = i_28_;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3471 = 0;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3461 = i_29_;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3483 = 0;
+					if (i_28_ != npc.animationId || i_28_ == -1) {
+						if (i_28_ == -1 || npc.animationId == -1 || Sequence.forID((byte) 90, i_28_).anInt2576 >= Sequence.forID((byte) 90, npc.animationId).anInt2576) {
+							npc.anInt3494 = npc.walkQueueLocationIndex;
+							npc.anInt3460 = 0;
+							npc.animationId = i_28_;
+							npc.anInt3471 = 0;
+							npc.animationDelay = i_29_;
+							npc.anInt3483 = 0;
 						}
 					} else {
 						int i_30_ = Sequence.forID((byte) 108, i_28_).anInt2587;
 						if (i_30_ == 1) {
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3483 = 0;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3460 = 0;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3461 = i_29_;
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3471 = 0;
+							npc.anInt3483 = 0;
+							npc.anInt3460 = 0;
+							npc.animationDelay = i_29_;
+							npc.anInt3471 = 0;
 						}
 						if (i_30_ == 2)
-							((Entity) class38_sub20_sub3_sub7_sub1).anInt3460 = 0;
+							npc.anInt3460 = 0;
 					}
 				}
 				if ((i_22_ & 0x2) != 0) {
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3487 = Class15.inputStream.getULEShort();
-					((Entity) class38_sub20_sub3_sub7_sub1).anInt3443 = Class15.inputStream.method740((byte) 122);
+					npc.faceX = Class15.inputStream.getULEShort();
+					npc.faceY = Class15.inputStream.method740((byte) 122);
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -267,18 +265,18 @@ final class RSString implements Interface2 {
 			if (!aBool455)
 				throw new IllegalArgumentException();
 			anInt423 = 0;
-			if (this.anInt478 + class19_31_.anInt478 > this.buffer.length) {
+			if (this.length + class19_31_.length > this.buffer.length) {
 				int i_32_;
-				for (i_32_ = 1; i_32_ < class19_31_.anInt478 + this.anInt478; i_32_ += i_32_) {
+				for (i_32_ = 1; i_32_ < class19_31_.length + this.length; i_32_ += i_32_) {
 					/* empty */
 				}
 				byte[] is = new byte[i_32_];
-				Class71.method510(this.buffer, 0, is, 0, this.anInt478);
+				Class71.arrayCopy(this.buffer, 0, is, 0, this.length);
 				this.buffer = is;
 			}
-			Class71.method510(class19_31_.buffer, 0, this.buffer, this.anInt478, class19_31_.anInt478);
+			Class71.arrayCopy(class19_31_.buffer, 0, this.buffer, this.length, class19_31_.length);
 			int i_33_ = 38 / ((i - 54) / 36);
-			this.anInt478 += class19_31_.anInt478;
+			this.length += class19_31_.length;
 			return this;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.SA(" + (class19_31_ != null ? "{...}" : "null") + ',' + i + ')');
@@ -301,19 +299,19 @@ final class RSString implements Interface2 {
 			RSString class19_34_ = new RSString();
 			class19_34_.buffer = new byte[12];
 			int i_35_ = 0;
-			class19_34_.anInt478 = 0;
-			for (int i_36_ = 0; i_36_ < this.anInt478; i_36_++) {
+			class19_34_.length = 0;
+			for (int i_36_ = 0; i_36_ < this.length; i_36_++) {
 				if (this.buffer[i_36_] < 65 || this.buffer[i_36_] > 90) {
 					if ((this.buffer[i_36_] < 97 || this.buffer[i_36_] > 122) && (this.buffer[i_36_] < 48 || this.buffer[i_36_] > 57)) {
 						if (i_35_ > 0)
 							class19_34_.buffer[i_35_++] = (byte) 95;
 					} else {
 						class19_34_.buffer[i_35_++] = this.buffer[i_36_];
-						class19_34_.anInt478 = i_35_;
+						class19_34_.length = i_35_;
 					}
 				} else {
 					class19_34_.buffer[i_35_++] = (byte) (this.buffer[i_36_] + 97 - 65);
-					class19_34_.anInt478 = i_35_;
+					class19_34_.length = i_35_;
 				}
 				if (i_35_ == 12)
 					break;
@@ -327,10 +325,10 @@ final class RSString implements Interface2 {
 	final int method148(int i, RSString class19_37_) {
 		try {
 			int i_38_;
-			if (this.anInt478 > class19_37_.anInt478)
-				i_38_ = class19_37_.anInt478;
+			if (this.length > class19_37_.length)
+				i_38_ = class19_37_.length;
 			else
-				i_38_ = this.anInt478;
+				i_38_ = this.length;
 			if (i != 1)
 				method167((byte) 61);
 			for (int i_39_ = 0; i_39_ < i_38_; i_39_++) {
@@ -339,9 +337,9 @@ final class RSString implements Interface2 {
 				if (Class38_Sub22.anIntArray2333[this.buffer[i_39_] & 0xff] > Class38_Sub22.anIntArray2333[class19_37_.buffer[i_39_] & 0xff])
 					return 1;
 			}
-			if (this.anInt478 < class19_37_.anInt478)
+			if (this.length < class19_37_.length)
 				return -1;
-			if (class19_37_.anInt478 < this.anInt478)
+			if (class19_37_.length < this.length)
 				return 1;
 			return 0;
 		} catch (RuntimeException runtimeexception) {
@@ -355,7 +353,7 @@ final class RSString implements Interface2 {
 			int i_40_ = 0;
 			if (i <= 80)
 				method150(3);
-			for (/**/; this.anInt478 > i_40_; i_40_++)
+			for (/**/; this.length > i_40_; i_40_++)
 				l = -l + (l << -167279291) - -(long) (this.buffer[i_40_] & 0xff);
 			return l;
 		} catch (RuntimeException runtimeexception) {
@@ -368,7 +366,7 @@ final class RSString implements Interface2 {
 			int i_41_ = 0;
 			if (i != -44)
 				method150(30);
-			for (int i_42_ = 0; i_42_ < this.anInt478; i_42_++)
+			for (int i_42_ = 0; i_42_ < this.length; i_42_++)
 				i_41_ = -i_41_ + (i_41_ << -846823035) + (this.buffer[i_42_] & 0xff);
 			return i_41_;
 		} catch (RuntimeException runtimeexception) {
@@ -379,11 +377,11 @@ final class RSString implements Interface2 {
 	final RSString method151(int i) {
 		try {
 			RSString class19_43_ = new RSString();
-			class19_43_.anInt478 = this.anInt478;
+			class19_43_.length = this.length;
 			if (i != -7726)
 				method172(-85);
-			class19_43_.buffer = new byte[this.anInt478];
-			for (int i_44_ = 0; i_44_ < this.anInt478; i_44_++)
+			class19_43_.buffer = new byte[this.length];
+			for (int i_44_ = 0; i_44_ < this.length; i_44_++)
 				class19_43_.buffer[i_44_] = (byte) 42;
 			return class19_43_;
 		} catch (RuntimeException runtimeexception) {
@@ -393,28 +391,28 @@ final class RSString implements Interface2 {
 
 	private final int method152(RSString class19_45_, int i, int i_46_) {
 		try {
-			int[] is = new int[class19_45_.anInt478];
+			int[] is = new int[class19_45_.length];
 			int[] is_47_ = new int[256];
-			int[] is_48_ = new int[class19_45_.anInt478];
+			int[] is_48_ = new int[class19_45_.length];
 			int i_49_ = 36 / ((i_46_ - 29) / 56);
 			for (int i_50_ = 0; i_50_ < is_47_.length; i_50_++)
-				is_47_[i_50_] = class19_45_.anInt478;
-			for (int i_51_ = 1; i_51_ <= class19_45_.anInt478; i_51_++) {
-				is[i_51_ - 1] = -i_51_ + (class19_45_.anInt478 << 1885284545);
-				is_47_[Class38_Sub10_Sub3.method941(255, class19_45_.buffer[i_51_ - 1])] = -i_51_ + class19_45_.anInt478;
+				is_47_[i_50_] = class19_45_.length;
+			for (int i_51_ = 1; i_51_ <= class19_45_.length; i_51_++) {
+				is[i_51_ - 1] = -i_51_ + (class19_45_.length << 1885284545);
+				is_47_[Class38_Sub10_Sub3.method941(255, class19_45_.buffer[i_51_ - 1])] = -i_51_ + class19_45_.length;
 			}
-			int i_52_ = class19_45_.anInt478 + 1;
-			for (int i_53_ = class19_45_.anInt478; i_53_ > 0; i_53_--) {
+			int i_52_ = class19_45_.length + 1;
+			for (int i_53_ = class19_45_.length; i_53_ > 0; i_53_--) {
 				is_48_[i_53_ - 1] = i_52_;
-				for (/**/; class19_45_.anInt478 >= i_52_ && class19_45_.buffer[i_52_ - 1] != class19_45_.buffer[i_53_ - 1]; i_52_ = is_48_[i_52_ - 1])
-					if (is[i_52_ - 1] >= -i_53_ + class19_45_.anInt478)
-						is[i_52_ - 1] = -i_53_ + class19_45_.anInt478;
+				for (/**/; class19_45_.length >= i_52_ && class19_45_.buffer[i_52_ - 1] != class19_45_.buffer[i_53_ - 1]; i_52_ = is_48_[i_52_ - 1])
+					if (is[i_52_ - 1] >= -i_53_ + class19_45_.length)
+						is[i_52_ - 1] = -i_53_ + class19_45_.length;
 				i_52_--;
 			}
 			int i_54_ = i_52_;
 			int i_55_ = 0;
 			int i_56_ = 1;
-			i_52_ = -i_54_ + class19_45_.anInt478 + 1;
+			i_52_ = -i_54_ + class19_45_.length + 1;
 			int i_57_ = 1;
 			while (i_52_ >= i_57_) {
 				is_48_[i_57_ - 1] = i_55_;
@@ -424,17 +422,17 @@ final class RSString implements Interface2 {
 				i_57_++;
 				i_55_++;
 			}
-			while (class19_45_.anInt478 > i_54_) {
+			while (class19_45_.length > i_54_) {
 				for (int i_58_ = i_56_; i_54_ >= i_58_; i_58_++)
-					if (-i_58_ + class19_45_.anInt478 + i_54_ <= is[i_58_ - 1])
-						is[i_58_ - 1] = -i_58_ + i_54_ + class19_45_.anInt478;
+					if (-i_58_ + class19_45_.length + i_54_ <= is[i_58_ - 1])
+						is[i_58_ - 1] = -i_58_ + i_54_ + class19_45_.length;
 				i_56_ = i_54_ + 1;
 				i_54_ = i_52_ + i_54_ - is_48_[i_52_ - 1];
 				i_52_ = is_48_[i_52_ - 1];
 			}
 			int i_59_;
-			for (int i_60_ = class19_45_.anInt478 + i - 1; i_60_ < this.anInt478; i_60_ += Math.max(is_47_[this.buffer[i_60_] & 0xff], is[i_59_])) {
-				for (i_59_ = class19_45_.anInt478 - 1; i_59_ >= 0 && class19_45_.buffer[i_59_] == this.buffer[i_60_]; i_59_--)
+			for (int i_60_ = class19_45_.length + i - 1; i_60_ < this.length; i_60_ += Math.max(is_47_[this.buffer[i_60_] & 0xff], is[i_59_])) {
+				for (i_59_ = class19_45_.length - 1; i_59_ >= 0 && class19_45_.buffer[i_59_] == this.buffer[i_60_]; i_59_--)
 					i_60_--;
 				if (i_59_ == -1)
 					return i_60_ + 1;
@@ -450,7 +448,7 @@ final class RSString implements Interface2 {
 			byte i_63_ = (byte) i_61_;
 			if (i_62_ != -34)
 				return -110;
-			for (int i_64_ = i; i_64_ < this.anInt478; i_64_++)
+			for (int i_64_ = i; i_64_ < this.length; i_64_++)
 				if (this.buffer[i_64_] == i_63_)
 					return i_64_;
 			return -1;
@@ -536,9 +534,9 @@ final class RSString implements Interface2 {
 		try {
 			String string;
 			try {
-				string = new String(this.buffer, i, this.anInt478, "ISO-8859-1");
+				string = new String(this.buffer, i, this.length, "ISO-8859-1");
 			} catch (java.io.UnsupportedEncodingException unsupportedencodingexception) {
-				string = new String(this.buffer, 0, this.anInt478);
+				string = new String(this.buffer, 0, this.length);
 			}
 			return fontmetrics.stringWidth(string);
 		} catch (RuntimeException runtimeexception) {
@@ -550,9 +548,9 @@ final class RSString implements Interface2 {
 		try {
 			String string;
 			try {
-				string = new String(this.buffer, i_74_, this.anInt478, "ISO-8859-1");
+				string = new String(this.buffer, i_74_, this.length, "ISO-8859-1");
 			} catch (java.io.UnsupportedEncodingException unsupportedencodingexception) {
-				string = new String(this.buffer, 0, this.anInt478);
+				string = new String(this.buffer, 0, this.length);
 			}
 			graphics.drawString(string, i, i_73_);
 		} catch (RuntimeException runtimeexception) {
@@ -587,8 +585,8 @@ final class RSString implements Interface2 {
 		try {
 			if (i != 122)
 				return null;
-			byte[] is = new byte[this.anInt478];
-			Class71.method510(this.buffer, 0, is, 0, this.anInt478);
+			byte[] is = new byte[this.length];
+			Class71.arrayCopy(this.buffer, 0, is, 0, this.length);
 			return is;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.BA(" + i + ')');
@@ -602,7 +600,7 @@ final class RSString implements Interface2 {
 			boolean bool_75_ = bool;
 			int i_76_ = 0;
 			boolean bool_77_ = false;
-			for (int i_78_ = 0; this.anInt478 > i_78_; i_78_++) {
+			for (int i_78_ = 0; this.length > i_78_; i_78_++) {
 				int i_79_ = this.buffer[i_78_] & 0xff;
 				if (i_78_ == 0) {
 					if (i_79_ == 45) {
@@ -670,9 +668,9 @@ final class RSString implements Interface2 {
 			if (i != 97)
 				return null;
 			int i_89_ = 2;
-			class19_88_.anInt478 = this.anInt478;
-			class19_88_.buffer = new byte[this.anInt478];
-			for (int i_90_ = 0; this.anInt478 > i_90_; i_90_++) {
+			class19_88_.length = this.length;
+			class19_88_.buffer = new byte[this.length];
+			for (int i_90_ = 0; this.length > i_90_; i_90_++) {
 				byte i_91_ = this.buffer[i_90_];
 				if ((i_91_ < 97 || i_91_ > 122) && (i_91_ < -32 || i_91_ > -2 || i_91_ == -9)) {
 					if (i_91_ >= 65 && i_91_ <= 90 || i_91_ >= -64 && i_91_ <= -34 && i_91_ != -41) {
@@ -701,7 +699,7 @@ final class RSString implements Interface2 {
 	final long method162(int i) {
 		try {
 			long l = 0L;
-			for (int i_92_ = i; this.anInt478 > i_92_; i_92_++) {
+			for (int i_92_ = i; this.length > i_92_; i_92_++) {
 				if (i_92_ >= 12)
 					break;
 				l *= 37L;
@@ -740,18 +738,16 @@ final class RSString implements Interface2 {
 		}
 	}
 
-	final boolean method165(RSString class19_97_, boolean bool) {
+	boolean equals(RSString text) {
 		try {
-			if (this.anInt478 < class19_97_.anInt478)
+			if (this.length < text.length)
 				return false;
-			if (bool != true)
-				return false;
-			for (int i = 0; class19_97_.anInt478 > i; i++)
-				if (class19_97_.buffer[i] != this.buffer[i])
+			for (int i = 0; text.length > i; i++)
+				if (text.buffer[i] != this.buffer[i])
 					return false;
 			return true;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "ec.RA(" + (class19_97_ != null ? "{...}" : "null") + ',' + bool + ')');
+			throw Class38_Sub1.method607(runtimeexception, "ec.RA(" + (text != null ? "{...}" : "null") + ',' + true + ')');
 		}
 	}
 
@@ -768,10 +764,10 @@ final class RSString implements Interface2 {
 	final RSString method167(byte i) {
 		try {
 			RSString class19_99_ = new RSString();
-			class19_99_.anInt478 = this.anInt478;
+			class19_99_.length = this.length;
 			boolean bool = true;
-			class19_99_.buffer = new byte[this.anInt478];
-			for (int i_100_ = 0; i_100_ < this.anInt478; i_100_++) {
+			class19_99_.buffer = new byte[this.length];
+			for (int i_100_ = 0; i_100_ < this.length; i_100_++) {
 				byte i_101_ = this.buffer[i_100_];
 				if (i_101_ != 95) {
 					if (i_101_ >= 97 && i_101_ <= 122 && bool) {
@@ -808,10 +804,10 @@ final class RSString implements Interface2 {
 
 	final boolean method169(int i, RSString class19_107_) {
 		try {
-			if (this.anInt478 < class19_107_.anInt478)
+			if (this.length < class19_107_.length)
 				return false;
-			int i_108_ = -class19_107_.anInt478 + this.anInt478;
-			for (int i_109_ = i; class19_107_.anInt478 > i_109_; i_109_++)
+			int i_108_ = -class19_107_.length + this.length;
+			for (int i_109_ = i; class19_107_.length > i_109_; i_109_++)
 				if (this.buffer[i_108_ + i_109_] != class19_107_.buffer[i_109_])
 					return false;
 			return true;
@@ -830,11 +826,11 @@ final class RSString implements Interface2 {
 		}
 	}
 
-	final RSString method171(byte i, int i_111_) {
+	final RSString substring(byte i, int i_111_) {
 		try {
 			if (i >= -1)
 				method169(9, null);
-			return method144((byte) -125, i_111_, this.anInt478);
+			return method144((byte) -125, i_111_, this.length);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.UA(" + i + ',' + i_111_ + ')');
 		}
@@ -845,9 +841,9 @@ final class RSString implements Interface2 {
 			if (!aBool455)
 				throw new IllegalArgumentException();
 			anInt423 = 0;
-			if (this.buffer.length != this.anInt478) {
-				byte[] is = new byte[this.anInt478];
-				Class71.method510(this.buffer, 0, is, 0, this.anInt478);
+			if (this.buffer.length != this.length) {
+				byte[] is = new byte[this.length];
+				Class71.arrayCopy(this.buffer, 0, is, 0, this.length);
 				this.buffer = is;
 			}
 			if (i != -8087)
@@ -863,9 +859,9 @@ final class RSString implements Interface2 {
 			if (bool)
 				this.buffer = null;
 			RSString class19_112_ = new RSString();
-			class19_112_.anInt478 = this.anInt478;
-			class19_112_.buffer = new byte[this.anInt478];
-			for (int i = 0; i < this.anInt478; i++) {
+			class19_112_.length = this.length;
+			class19_112_.buffer = new byte[this.length];
+			for (int i = 0; i < this.length; i++) {
 				byte i_113_ = this.buffer[i];
 				if (i_113_ >= 65 && i_113_ <= 90 || i_113_ >= -64 && i_113_ <= -34 && i_113_ != -41)
 					i_113_ += 32;
@@ -881,9 +877,9 @@ final class RSString implements Interface2 {
 		try {
 			if (class19_114_ == null)
 				return false;
-			if (class19_114_.anInt478 != this.anInt478)
+			if (class19_114_.length != this.length)
 				return false;
-			for (int i_115_ = 0; i_115_ < this.anInt478; i_115_++) {
+			for (int i_115_ = 0; i_115_ < this.length; i_115_++) {
 				byte i_116_ = class19_114_.buffer[i_115_];
 				if (i_116_ >= 65 && i_116_ <= 90 || i_116_ >= -64 && i_116_ <= -34 && i_116_ != -41)
 					i_116_ += 32;
@@ -905,7 +901,7 @@ final class RSString implements Interface2 {
 		try {
 			if (class19_118_ == null)
 				return false;
-			if (class19_118_.anInt478 != this.anInt478)
+			if (class19_118_.length != this.length)
 				return false;
 			if (!aBool455 || !class19_118_.aBool455) {
 				if (anInt423 == 0) {
@@ -923,7 +919,7 @@ final class RSString implements Interface2 {
 			}
 			if (bool != true)
 				method178(85);
-			for (int i = 0; this.anInt478 > i; i++)
+			for (int i = 0; this.length > i; i++)
 				if (class19_118_.buffer[i] != this.buffer[i])
 					return false;
 			return true;
@@ -941,16 +937,16 @@ final class RSString implements Interface2 {
 			if (!aBool455)
 				throw new IllegalArgumentException();
 			anInt423 = 0;
-			if (this.anInt478 == this.buffer.length) {
+			if (this.length == this.buffer.length) {
 				int i_120_;
-				for (i_120_ = 1; this.anInt478 >= i_120_; i_120_ += i_120_) {
+				for (i_120_ = 1; this.length >= i_120_; i_120_ += i_120_) {
 					/* empty */
 				}
 				byte[] is = new byte[i_120_];
-				Class71.method510(this.buffer, 0, is, 0, this.anInt478);
+				Class71.arrayCopy(this.buffer, 0, is, 0, this.length);
 				this.buffer = is;
 			}
-			this.buffer[this.anInt478++] = (byte) i;
+			this.buffer[this.length++] = (byte) i;
 			return this;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.R(" + i + ',' + i_119_ + ')');
@@ -972,19 +968,19 @@ final class RSString implements Interface2 {
 			int i_121_ = 0;
 			if (i != -91)
 				method148(97, null);
-			for (/**/; this.anInt478 > i_121_ && (this.buffer[i_121_] >= 0 && this.buffer[i_121_] <= 32 || (this.buffer[i_121_] & 0xff) == 160); i_121_++) {
+			for (/**/; this.length > i_121_ && (this.buffer[i_121_] >= 0 && this.buffer[i_121_] <= 32 || (this.buffer[i_121_] & 0xff) == 160); i_121_++) {
 				/* empty */
 			}
 			int i_122_;
-			for (i_122_ = this.anInt478; i_121_ < i_122_ && (this.buffer[i_122_ - 1] >= 0 && this.buffer[i_122_ - 1] <= 32 || (this.buffer[i_122_ - 1] & 0xff) == 160); i_122_--) {
+			for (i_122_ = this.length; i_121_ < i_122_ && (this.buffer[i_122_ - 1] >= 0 && this.buffer[i_122_ - 1] <= 32 || (this.buffer[i_122_ - 1] & 0xff) == 160); i_122_--) {
 				/* empty */
 			}
-			if (i_121_ == 0 && i_122_ == this.anInt478)
+			if (i_121_ == 0 && i_122_ == this.length)
 				return this;
 			RSString class19_123_ = new RSString();
-			class19_123_.anInt478 = -i_121_ + i_122_;
-			class19_123_.buffer = new byte[class19_123_.anInt478];
-			for (int i_124_ = 0; i_124_ < class19_123_.anInt478; i_124_++)
+			class19_123_.length = -i_121_ + i_122_;
+			class19_123_.buffer = new byte[class19_123_.length];
+			for (int i_124_ = 0; i_124_ < class19_123_.length; i_124_++)
 				class19_123_.buffer[i_124_] = this.buffer[i_124_ + i_121_];
 			return class19_123_;
 		} catch (RuntimeException runtimeexception) {
@@ -1017,7 +1013,7 @@ final class RSString implements Interface2 {
 			while (class38_sub23.buffer.length - 12 > class38_sub23.pos) {
 				int i_127_ = class38_sub23.readUnsignedShort();
 				if (i_127_ == 3)
-					class38_sub20_sub10.aClass19Array2901[i_125_] = class38_sub23.getUShort(1347418632);
+					class38_sub20_sub10.aClass19Array2901[i_125_] = class38_sub23.readString(1347418632);
 				else if (i_127_ >= 100 || i_127_ == 21 || i_127_ == 38 || i_127_ == 39)
 					class38_sub20_sub10.anIntArray2903[i_125_] = class38_sub23.readUnsignedByte();
 				else
@@ -1038,10 +1034,10 @@ final class RSString implements Interface2 {
 			if (i_128_ <= 0 || i_128_ > 255)
 				throw new IllegalArgumentException("invalid char");
 			RSString class19_129_ = new RSString();
-			class19_129_.buffer = new byte[this.anInt478 + 1];
-			class19_129_.anInt478 = this.anInt478 + 1;
-			Class71.method510(this.buffer, 0, class19_129_.buffer, 0, this.anInt478);
-			class19_129_.buffer[this.anInt478] = (byte) i_128_;
+			class19_129_.buffer = new byte[this.length + 1];
+			class19_129_.length = this.length + 1;
+			Class71.arrayCopy(this.buffer, 0, class19_129_.buffer, 0, this.length);
+			class19_129_.buffer[this.length] = (byte) i_128_;
 			return class19_129_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.AA(" + i + ',' + i_128_ + ')');
@@ -1052,7 +1048,7 @@ final class RSString implements Interface2 {
 		try {
 			if (i > -76)
 				RSString.anIntArrayArrayArray445 = null;
-			return new URL(new String(this.buffer, 0, this.anInt478));
+			return new URL(new String(this.buffer, 0, this.length));
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ec.IA(" + i + ')');
 		}
@@ -1070,9 +1066,9 @@ final class RSString implements Interface2 {
 				if (offset >= strBytesLen)
 					break;
 				int i_3_ = strBytes[offset++] & 0xff;
-				instance.buffer[instance.anInt478++] = (byte) (i_3_ - 48 + (i_2_ - 40) * 43);
+				instance.buffer[instance.length++] = (byte) (i_3_ - 48 + (i_2_ - 40) * 43);
 			} else if (i_2_ != 0)
-				instance.buffer[instance.anInt478++] = (byte) i_2_;
+				instance.buffer[instance.length++] = (byte) i_2_;
 		}
 		instance.method172(-8087);
 		return instance.method157((byte) 10);

@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 final class Class16 {
+	public static final int CHEAT_PACKET = 89;
 	private long aLong308 = -1L;
 	private byte[] aByteArray310;
 	private static RSString aClass19_311 = RSString.createRSString(" from your ignore list first");
@@ -49,7 +50,7 @@ final class Class16 {
 				if (aLong316 != -1L && i_0_ + aLong315 > aByteArray310.length + aLong316) {
 					int i_2_ = (int) (aByteArray310.length - -aLong316 - aLong315);
 					i_0_ -= i_2_;
-					Class71.method510(is, i_1_, aByteArray310, (int) (aLong315 + -aLong316), i_2_);
+					Class71.arrayCopy(is, i_1_, aByteArray310, (int) (aLong315 + -aLong316), i_2_);
 					aLong315 += i_2_;
 					i_1_ += i_2_;
 					anInt331 = aByteArray310.length;
@@ -76,13 +77,13 @@ final class Class16 {
 						aLong334 = aLong317;
 					if (l > -1L && l < l_3_) {
 						int i_4_ = (int) (l_3_ - l);
-						Class71.method510(is, (int) (l + i_1_ - aLong315), aByteArray321, (int) (l + -aLong308), i_4_);
+						Class71.arrayCopy(is, (int) (l + i_1_ - aLong315), aByteArray321, (int) (l + -aLong308), i_4_);
 					}
 					aLong315 += i_0_;
 				} else if (i_0_ > 0) {
 					if (aLong316 == -1L)
 						aLong316 = aLong315;
-					Class71.method510(is, i_1_, aByteArray310, (int) (aLong315 + -aLong316), i_0_);
+					Class71.arrayCopy(is, i_1_, aByteArray310, (int) (aLong315 + -aLong316), i_0_);
 					aLong315 += i_0_;
 					if (-aLong316 + aLong315 > anInt331)
 						anInt331 = (int) (-aLong316 + aLong315);
@@ -162,7 +163,7 @@ final class Class16 {
 				if (i + i_8_ > is.length)
 					throw new ArrayIndexOutOfBoundsException(i + i_8_ - is.length);
 				if (aLong316 != -1L && aLong315 >= aLong316 && aLong316 + anInt331 >= i + aLong315) {
-					Class71.method510(aByteArray310, (int) (aLong315 - aLong316), is, i_8_, i);
+					Class71.arrayCopy(aByteArray310, (int) (aLong315 - aLong316), is, i_8_, i);
 					aLong315 += i;
 					return;
 				}
@@ -176,7 +177,7 @@ final class Class16 {
 					if (i_11_ > i)
 						i_11_ = i;
 					i -= i_11_;
-					Class71.method510(aByteArray321, (int) (-aLong308 + aLong315), is, i_8_, i_11_);
+					Class71.arrayCopy(aByteArray321, (int) (-aLong308 + aLong315), is, i_8_, i_11_);
 					i_8_ += i_11_;
 					aLong315 += i_11_;
 				}
@@ -186,7 +187,7 @@ final class Class16 {
 						int i_12_ = i;
 						if (i_12_ > anInt313)
 							i_12_ = anInt313;
-						Class71.method510(aByteArray321, 0, is, i_8_, i_12_);
+						Class71.arrayCopy(aByteArray321, 0, is, i_8_, i_12_);
 						i -= i_12_;
 						aLong315 += i_12_;
 						i_8_ += i_12_;
@@ -229,7 +230,7 @@ final class Class16 {
 						l_16_ = aLong316;
 					if (l_16_ > -1L && l_16_ < l_15_) {
 						int i_17_ = (int) (-l_16_ + l_15_);
-						Class71.method510(aByteArray310, (int) (-aLong316 + l_16_), is, i_9_ + (int) (l_16_ - l), i_17_);
+						Class71.arrayCopy(aByteArray310, (int) (-aLong316 + l_16_), is, i_9_ + (int) (l_16_ - l), i_17_);
 						if (aLong315 < l_15_) {
 							i -= l_15_ - aLong315;
 							aLong315 = l_15_;
@@ -272,7 +273,7 @@ final class Class16 {
 						l_18_ = anInt331 + aLong316;
 					if (l > -1L && l_18_ > l) {
 						int i_19_ = (int) (-l + l_18_);
-						Class71.method510(aByteArray310, (int) (l - aLong316), aByteArray321, (int) (-aLong308 + l), i_19_);
+						Class71.arrayCopy(aByteArray310, (int) (l - aLong316), aByteArray321, (int) (-aLong308 + l), i_19_);
 					}
 					aLong316 = -1L;
 					anInt331 = 0;
@@ -343,38 +344,36 @@ final class Class16 {
 		}
 	}
 
-	static final void method99(RSString class19, int i) {
+	static final void sendCheat(RSString text) {
 		try {
-			if (Class32.anInt772 >= 2) {
-				if (class19.method174((byte) 105, Class81.aClass19_1626))
+			if (Class32.clientRights >= 2) {
+				if (text.method174((byte) 105, Class81.aClass19_1626))
 					System.gc();
-				if (class19.method174((byte) 126, Class23.aClass19_555))
+				if (text.method174((byte) 126, Class23.aClass19_555))
 					Client.dropClient();
-				if (class19.method174((byte) 117, Class24.aClass19_567))
+				if (text.method174((byte) 117, Class24.aClass19_567))
 					Class13.aBool246 = true;
-				if (class19.method174((byte) 112, Class79.aClass19_1565))
+				if (text.method174((byte) 112, Class79.aClass19_1565))
 					Class13.aBool246 = false;
-				if (class19.method174((byte) 126, Class64.aClass19_1362))
+				if (text.method174((byte) 126, Class64.aClass19_1362))
 					for (int i_23_ = 0; i_23_ < 4; i_23_++)
 						for (int i_24_ = 1; i_24_ < 103; i_24_++)
 							for (int i_25_ = 1; i_25_ < 103; i_25_++)
 								Client.clippingHeights[i_23_].clippingFlags[i_24_][i_25_] = 0;
-				if (class19.method174((byte) 119, Class2_Sub1.aClass19_2006) && Player.anInt3582 == 2)
+				if (text.method174((byte) 119, Class2_Sub1.aClass19_2006) && Player.anInt3582 == 2)
 					throw new RuntimeException();
-				if (class19.method165(Class45.aClass19_1022, true)) {
-					Class38_Sub14.anInt2139 = class19.method171((byte) -15, 12).method178(-91).method164(48);
+				if (text.equals(Class45.aClass19_1022)) {
+					Class38_Sub14.anInt2139 = text.substring((byte) -15, 12).method178(-91).method164(48);
 					Class62.method464((byte) 98, Class9.method43(new RSString[] { Class83.aClass19_1651, RuntimeException_Sub1.method1098(Class38_Sub14.anInt2139, 0) }, (byte) -20), 0, null);
 				}
-				if (class19.method174((byte) 102, Class38_Sub20_Sub10.aClass19_2909))
+				if (text.method174((byte) 102, Class38_Sub20_Sub10.aClass19_2909))
 					Node.aBool892 = true;
 			}
-			Client.outputBuffer.putOpcode(89);
-			if (i < -16) {
-				Client.outputBuffer.putByte(class19.method143((byte) 24) - 1);
-				Client.outputBuffer.method742(class19.method171((byte) -58, 2), (byte) 115);
-			}
+			Client.outputBuffer.writeIsaacByte(CHEAT_PACKET);
+			Client.outputBuffer.writeByte(text.length((byte) 24) - 1);
+			Client.outputBuffer.writeStringCP1252(text.substring((byte) -58, 2), (byte) 115);
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "vf.C(" + (class19 != null ? "{...}" : "null") + ',' + i + ')');
+			throw Class38_Sub1.method607(runtimeexception, "vf.C(" + (text != null ? "{...}" : "null") + ',' + -103 + ')');
 		}
 	}
 

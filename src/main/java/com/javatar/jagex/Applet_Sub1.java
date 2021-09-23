@@ -22,7 +22,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	static int anInt3627 = 0;
 	static Class83 aClass83_3633 = new Class83(64);
 	static RSString aClass19_3635;
-	static volatile int anInt3636;
+	static volatile int clickMode2;
 	private static RSString aClass19_3638;
 	static Class17_Sub1 aClass17_Sub1_3639;
 
@@ -531,7 +531,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 	}
 
 	static {
-		Applet_Sub1.anInt3636 = 0;
+		Applet_Sub1.clickMode2 = 0;
 		Applet_Sub1.aClass19_3638 = RSString.createRSString("Please subscribe)1 or use a different world)3");
 		Applet_Sub1.aClass19_3635 = Applet_Sub1.aClass19_3638;
 	}

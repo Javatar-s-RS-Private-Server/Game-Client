@@ -177,7 +177,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 						anIntArray2639[i_29_] = i_27_ + Class38_Sub10_Sub3.method941(anIntArray2639[i_29_], -128);
 					if (i_28_ == 64)
 						if (i_27_ >= 64)
-							this.anIntArray2636[i_29_] = Class38_Sub3.method618(this.anIntArray2636[i_29_], 1);
+							this.anIntArray2636[i_29_] = Class38_Sub3.setClippingFlag(this.anIntArray2636[i_29_], 1);
 						else
 							this.anIntArray2636[i_29_] = Class38_Sub10_Sub3.method941(this.anIntArray2636[i_29_], -2);
 					if (i_28_ == 65)
@@ -185,7 +185,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 							method844(i_29_, i ^ 0x50);
 							this.anIntArray2636[i_29_] = Class38_Sub10_Sub3.method941(this.anIntArray2636[i_29_], -3);
 						} else
-							this.anIntArray2636[i_29_] = Class38_Sub3.method618(this.anIntArray2636[i_29_], 2);
+							this.anIntArray2636[i_29_] = Class38_Sub3.setClippingFlag(this.anIntArray2636[i_29_], 2);
 					if (i_28_ == 99)
 						anIntArray2605[i_29_] = Class38_Sub10_Sub3.method941(127, anIntArray2605[i_29_]) + (i_27_ << 831003783);
 					if (i_28_ == 98)
@@ -219,7 +219,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 							method849(i_29_, (byte) -114);
 							this.anIntArray2636[i_29_] = Class38_Sub10_Sub3.method941(this.anIntArray2636[i_29_], -5);
 						} else
-							this.anIntArray2636[i_29_] = Class38_Sub3.method618(this.anIntArray2636[i_29_], 4);
+							this.anIntArray2636[i_29_] = Class38_Sub3.setClippingFlag(this.anIntArray2636[i_29_], 4);
 					if (i_28_ == 17)
 						method864((byte) 52, (anIntArray2638[i_29_] & ~0x3f80) + (i_27_ << 355887591), i_29_);
 					if (i_28_ == 49)
@@ -546,7 +546,7 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 
 	static final void method852(Entity class38_sub20_sub3_sub7, byte i) {
 		try {
-			if (class38_sub20_sub3_sub7.anInt3470 == Class45.anInt1016 || class38_sub20_sub3_sub7.currentAnimationId == -1 || class38_sub20_sub3_sub7.anInt3461 != 0 || class38_sub20_sub3_sub7.anInt3483 + 1 > Sequence.forID((byte) 106, class38_sub20_sub3_sub7.currentAnimationId).anIntArray2568[class38_sub20_sub3_sub7.anInt3471]) {
+			if (class38_sub20_sub3_sub7.anInt3470 == Class45.anInt1016 || class38_sub20_sub3_sub7.animationId == -1 || class38_sub20_sub3_sub7.animationDelay != 0 || class38_sub20_sub3_sub7.anInt3483 + 1 > Sequence.forID((byte) 106, class38_sub20_sub3_sub7.animationId).anIntArray2568[class38_sub20_sub3_sub7.anInt3471]) {
 				int i_68_ = -class38_sub20_sub3_sub7.anInt3476 + class38_sub20_sub3_sub7.anInt3470;
 				int i_69_ = -class38_sub20_sub3_sub7.anInt3476 + Class45.anInt1016;
 				int i_70_ = class38_sub20_sub3_sub7.anInt3457 * 64 + class38_sub20_sub3_sub7.anInt3463 * 128;
@@ -589,8 +589,8 @@ final class Class38_Sub10_Sub1 extends Class38_Sub10 {
 
 	static final void method854(boolean bool, byte i) {
 		try {
-			if (((Entity) Client.myPlayer).anInt3493 >> -2020394297 == Client.destX && ((Entity) Client.myPlayer).anInt3444 >> -1295190329 == Client.destY)
-				Client.destX = 0;
+			if (((Entity) Client.myPlayer).anInt3493 >> -2020394297 == Client.minimapFlagDestX && ((Entity) Client.myPlayer).anInt3444 >> -1295190329 == Client.destY)
+				Client.minimapFlagDestX = 0;
 			int i_74_ = ItemDefinition.anInt2783;
 			if (bool)
 				i_74_ = 1;

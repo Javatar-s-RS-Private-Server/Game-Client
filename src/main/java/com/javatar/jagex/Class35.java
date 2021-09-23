@@ -90,7 +90,7 @@ final class Class35 {
 								int i_1_ = class38_sub23.readUnsignedShort();
 								class4.anInt86 = i_1_ & 0x7fff;
 								class4.aBool83 = (i_1_ & 0x8000) != 0;
-								class4.aClass19_73 = class38_sub23.getUShort(1347418632);
+								class4.aClass19_73 = class38_sub23.readString(1347418632);
 								class4.anInt80 = class38_sub23.method772(false);
 								class4.anInt88 = i_0_;
 								class4.anInt77 = Class64.method473(-126, class4.aClass19_73);

@@ -28,25 +28,25 @@ final class Class64 {
 		try {
 			if (Class64.anInt1361 == 1)
 				return 7;
-			if (class19.method165(Class59.aClass19_1294, true))
+			if (class19.equals(Class59.aClass19_1294))
 				return 1;
-			if (class19.method165(Projectile.aClass19_3401, true))
+			if (class19.equals(Projectile.aClass19_3401))
 				return 1;
-			if (class19.method165(Class72.aClass19_1411, true))
+			if (class19.equals(Class72.aClass19_1411))
 				return 2;
-			if (class19.method165(Class38_Sub20_Sub4.aClass19_2571, true))
+			if (class19.equals(Class38_Sub20_Sub4.aClass19_2571))
 				return 2;
-			if (class19.method165(Class38_Sub11.aClass19_2106, true))
+			if (class19.equals(Class38_Sub11.aClass19_2106))
 				return 3;
-			if (class19.method165(Canvas_Sub1.aClass19_2518, true))
+			if (class19.equals(Canvas_Sub1.aClass19_2518))
 				return 4;
-			if (class19.method165(Class82.aClass19_1646, true))
+			if (class19.equals(Class82.aClass19_1646))
 				return 4;
 			if (i > -125)
 				return -69;
-			if (class19.method165(Class50.aClass19_1108, true))
+			if (class19.equals(Class50.aClass19_1108))
 				return 5;
-			if (class19.method165(Class13.aClass19_233, true))
+			if (class19.equals(Class13.aClass19_233))
 				return 6;
 			return 0;
 		} catch (RuntimeException runtimeexception) {

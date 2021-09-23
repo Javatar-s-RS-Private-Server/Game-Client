@@ -17,7 +17,7 @@ final class Class38_Sub3 extends Node {
 	static RSString aClass19_1789;
 	static RSString aClass19_1791;
 
-	static int method618(int i, int i_0_) {
+	static int setClippingFlag(int i, int i_0_) {
 		try {
 			return i | i_0_;
 		} catch (RuntimeException runtimeexception) {

@@ -23,34 +23,33 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 				Class38_Sub17.anInt2193 = regionX;
 				Canvas_Sub1.method808(0, 25);
 				Class53.method409(Class2.aClass19_39, 16777215, true);
-				int baseY = Client.currentBaseY;
-				Client.currentBaseY = regionY * 8 - 48;
-				int i_6_ = Client.currentBaseX;
-				Client.currentBaseX = (regionX - 6) * 8;
-				int i_7_ = -baseY + Client.currentBaseY;
-				baseY = Client.currentBaseY;
-				int i_8_ = -i_6_ + Client.currentBaseX;
-				i_6_ = Client.currentBaseX;
+				int baseY = Client.currentBaseX;
+				Client.currentBaseX = regionY * 8 - 48;
+				int i_6_ = Client.currentBaseY;
+				Client.currentBaseY = (regionX - 6) * 8;
+				int i_7_ = -baseY + Client.currentBaseX;
+				baseY = Client.currentBaseX;
+				int i_8_ = -i_6_ + Client.currentBaseY;
 				for (int i_9_ = 0; i_9_ < 32768; i_9_++) {
 					NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_9_];
 					if (class38_sub20_sub3_sub7_sub1 != null) {
 						for (int i_10_ = 0; i_10_ < 10; i_10_++) {
-							((Entity) class38_sub20_sub3_sub7_sub1).walkQueueX[i_10_] -= i_7_;
-							((Entity) class38_sub20_sub3_sub7_sub1).walkQueueY[i_10_] -= i_8_;
+							class38_sub20_sub3_sub7_sub1.walkQueueX[i_10_] -= i_7_;
+							class38_sub20_sub3_sub7_sub1.walkQueueY[i_10_] -= i_8_;
 						}
-						((Entity) class38_sub20_sub3_sub7_sub1).anInt3493 -= i_7_ * 128;
-						((Entity) class38_sub20_sub3_sub7_sub1).anInt3444 -= i_8_ * 128;
+						class38_sub20_sub3_sub7_sub1.anInt3493 -= i_7_ * 128;
+						class38_sub20_sub3_sub7_sub1.anInt3444 -= i_8_ * 128;
 					}
 				}
 				for (int i_11_ = 0; i_11_ < 2048; i_11_++) {
 					Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_11_];
 					if (class38_sub20_sub3_sub7_sub2 != null) {
 						for (int i_12_ = 0; i_12_ < 10; i_12_++) {
-							((Entity) class38_sub20_sub3_sub7_sub2).walkQueueX[i_12_] -= i_7_;
-							((Entity) class38_sub20_sub3_sub7_sub2).walkQueueY[i_12_] -= i_8_;
+							class38_sub20_sub3_sub7_sub2.walkQueueX[i_12_] -= i_7_;
+							class38_sub20_sub3_sub7_sub2.walkQueueY[i_12_] -= i_8_;
 						}
-						((Entity) class38_sub20_sub3_sub7_sub2).anInt3493 -= i_7_ * 128;
-						((Entity) class38_sub20_sub3_sub7_sub2).anInt3444 -= i_8_ * 128;
+						class38_sub20_sub3_sub7_sub2.anInt3493 -= i_7_ * 128;
+						class38_sub20_sub3_sub7_sub2.anInt3444 -= i_8_ * 128;
 					}
 				}
 				Client.height = height;
@@ -89,8 +88,8 @@ final class Class38_Sub20_Sub13 extends NodeSub {
 					if (class38_sub21.anInt2267 < 0 || class38_sub21.anInt2282 < 0 || class38_sub21.anInt2267 >= 104 || class38_sub21.anInt2282 >= 104)
 						class38_sub21.method330(0);
 				}
-				if (Client.destX != 0) {
-					Client.destX -= i_7_;
+				if (Client.minimapFlagDestX != 0) {
+					Client.minimapFlagDestX -= i_7_;
 					Client.destY -= i_8_;
 				}
 				Class38_Sub21.aBool2280 = false;

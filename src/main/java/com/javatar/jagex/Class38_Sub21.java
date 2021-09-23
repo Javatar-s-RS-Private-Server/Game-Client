@@ -69,7 +69,7 @@ final class Class38_Sub21 extends Node {
 						Class81.anInt1624 = Entity.anInt3513;
 						if (i < 16)
 							Class38_Sub21.method714((byte) -120, -78);
-						Client.outputBuffer.putOpcode(38);
+						Client.outputBuffer.writeIsaacByte(38);
 						Client.outputBuffer.writeLong(l);
 					}
 				}
@@ -146,9 +146,9 @@ final class Class38_Sub21 extends Node {
 								i_15_ += 15;
 								if (i_7_ == 1 && i_14_ - 75 <= i_9_ && i_14_ + 75 >= i_9_ && i_16_ - 20 <= i_8_ && i_8_ <= i_16_ + 20) {
 									Class51.aClass19_1135 = Class51.aClass19_1135.method147((byte) 117).method167((byte) 52);
-									if (Class51.aClass19_1135.method143((byte) 15) == 0)
+									if (Class51.aClass19_1135.length((byte) 15) == 0)
 										Class77.method551(false, Class38_Sub20_Sub11.aClass19_2970, Class38_Sub20_Sub11.aClass19_2913, Class38_Sub9.aClass19_2068);
-									else if (Class51.aClass19_1122.method143((byte) 107) == 0)
+									else if (Class51.aClass19_1122.length((byte) 107) == 0)
 										Class77.method551(false, Class38_Sub20_Sub11.aClass19_2959, Class38_Sub20_Sub11.aClass19_2971, Class38_Sub20_Sub3_Sub5.aClass19_3387);
 									else {
 										Class77.method551(false, Class38_Sub20_Sub11.aClass19_2927, Class38_Sub20_Sub11.aClass19_2953, Class11.aClass19_201);
@@ -163,29 +163,29 @@ final class Class38_Sub21 extends Node {
 									}
 									while (Class32.method300((byte) 65)) {
 										boolean bool = false;
-										for (int i_17_ = 0; Class41.aClass19_930.method143((byte) 64) > i_17_; i_17_++)
+										for (int i_17_ = 0; Class41.aClass19_930.length((byte) 64) > i_17_; i_17_++)
 											if (Class10.anInt181 == Class41.aClass19_930.method163(124, i_17_)) {
 												bool = true;
 												break;
 											}
 										if (Class50.anInt1106 == 0) {
-											if (NodeSub.anInt2256 == 85 && Class51.aClass19_1135.method143((byte) 99) > 0)
-												Class51.aClass19_1135 = Class51.aClass19_1135.method144((byte) 32, 0, Class51.aClass19_1135.method143((byte) 104) - 1);
+											if (NodeSub.anInt2256 == 85 && Class51.aClass19_1135.length((byte) 99) > 0)
+												Class51.aClass19_1135 = Class51.aClass19_1135.method144((byte) 32, 0, Class51.aClass19_1135.length((byte) 104) - 1);
 											if (NodeSub.anInt2256 == 84 || NodeSub.anInt2256 == 80)
 												Class50.anInt1106 = 1;
-											if (bool && Class51.aClass19_1135.method143((byte) 50) < 12)
+											if (bool && Class51.aClass19_1135.length((byte) 50) < 12)
 												Class51.aClass19_1135 = Class51.aClass19_1135.method180(255, Class10.anInt181);
 										} else if (Class50.anInt1106 == 1) {
-											if (NodeSub.anInt2256 == 85 && Class51.aClass19_1122.method143((byte) 85) > 0)
-												Class51.aClass19_1122 = Class51.aClass19_1122.method144((byte) 4, 0, Class51.aClass19_1122.method143((byte) 52) - 1);
+											if (NodeSub.anInt2256 == 85 && Class51.aClass19_1122.length((byte) 85) > 0)
+												Class51.aClass19_1122 = Class51.aClass19_1122.method144((byte) 4, 0, Class51.aClass19_1122.length((byte) 52) - 1);
 											if (NodeSub.anInt2256 == 84 || NodeSub.anInt2256 == 80)
 												Class50.anInt1106 = 0;
 											if (Player.anInt3582 == 2 && NodeSub.anInt2256 == 84) {
 												Class51.aClass19_1135 = Class51.aClass19_1135.method147((byte) 121).method167((byte) 52);
-												if (Class51.aClass19_1135.method143((byte) 115) == 0)
+												if (Class51.aClass19_1135.length((byte) 115) == 0)
 													Class77.method551(false, Class38_Sub20_Sub11.aClass19_2970, Class38_Sub20_Sub11.aClass19_2913, Class38_Sub9.aClass19_2068);
 												else {
-													if (Class51.aClass19_1122.method143((byte) 82) == 0)
+													if (Class51.aClass19_1122.length((byte) 82) == 0)
 														Class77.method551(false, Class38_Sub20_Sub11.aClass19_2959, Class38_Sub20_Sub11.aClass19_2971, Class38_Sub20_Sub3_Sub5.aClass19_3387);
 													else {
 														Class77.method551(false, Class38_Sub20_Sub11.aClass19_2927, Class38_Sub20_Sub11.aClass19_2953, Class11.aClass19_201);
@@ -196,7 +196,7 @@ final class Class38_Sub21 extends Node {
 												}
 												break;
 											}
-											if (bool && Class51.aClass19_1122.method143((byte) 84) < 20)
+											if (bool && Class51.aClass19_1122.length((byte) 84) < 20)
 												Class51.aClass19_1122 = Class51.aClass19_1122.method180(255, Class10.anInt181);
 										}
 									}

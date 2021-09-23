@@ -17,26 +17,24 @@ class RS2Buffer extends Node {
 	byte[] buffer;
 	static int anInt2416;
 
-	final void putLEShortA(int value) {
+	final void writeLEShortA(int value) {
 		this.buffer[this.pos++] = (byte) (value + 128);
 		this.buffer[this.pos++] = (byte) (value >> 8);
 	}
 
-	final int method726(boolean bool) {
+	final int readSmallShort() {
 		try {
-			if (bool != true)
-				RS2Buffer.aShortArray2380 = null;
-			int i = this.buffer[this.pos] & 0xff;
-			if (i < 128)
+			int peekValue = this.buffer[this.pos] & 0xff;
+			if (peekValue < 128)
 				return readUnsignedByte();
 			return readUnsignedShort() - 32768;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "jd.CB(" + bool
+			throw Class38_Sub1.method607(runtimeexception, "jd.CB(" + true
 					+ ')');
 		}
 	}
 
-	final void putByteA(int value) {
+	final void writeByteA(int value) {
 		this.buffer[this.pos++] = (byte) (value + 128);
 	}
 
@@ -47,7 +45,7 @@ class RS2Buffer extends Node {
 				this.pos++;
 				return null;
 			}
-			return getUShort(1347418632);
+			return readString(1347418632);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.HA(" + i + ')');
 		}
@@ -115,12 +113,12 @@ class RS2Buffer extends Node {
 		} while (false);
 	}
 
-	final void putShort(int value) {
+	final void writeShort(int value) {
 		this.buffer[this.pos++] = (byte) (value >> 8);
 		this.buffer[this.pos++] = (byte) value;
 	}
 
-	final void putByte(int value) {
+	final void writeByte(int value) {
 		this.buffer[this.pos++] = (byte) value;
 	}
 
@@ -163,7 +161,6 @@ class RS2Buffer extends Node {
 	final int method740(byte i) {
 		try {
 			this.pos += 2;
-			int i_8_ = -36 / ((43 - i) / 63);
 			return ((this.buffer[this.pos - 1] & 0xff) << 8)
 					+ (this.buffer[this.pos - 2] - 128 & 0xff);
 		} catch (RuntimeException runtimeexception) {
@@ -181,11 +178,9 @@ class RS2Buffer extends Node {
 		}
 	}
 
-	final void method742(RSString class19, byte i) {
+	final void writeStringCP1252(RSString class19, byte i) {
 		try {
-			this.pos += class19.method138((byte) -126, this.pos, 0,
-					class19.method143((byte) 59), this.buffer);
-			int i_9_ = -8 / ((i - 48) / 55);
+			this.pos += class19.method138(this.pos, class19.length((byte) 59), this.buffer);
 			this.buffer[this.pos++] = (byte) 0;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.T("
@@ -340,7 +335,7 @@ class RS2Buffer extends Node {
 	final int readUnsignedByteC(int i) {
 		try {
 			if (i != 13285)
-				putShort(117);
+				writeShort(117);
 			return -this.buffer[this.pos++] + 128 & 0xff;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "jd.IA(" + i + ')');
@@ -916,9 +911,9 @@ class RS2Buffer extends Node {
 	final void method766(int i, int i_61_) {
 		try {
 			if (i >= 0 && i < 128)
-				putByte(i);
+				writeByte(i);
 			else if (i >= 0 && i < 32768)
-				putShort(32768 + i);
+				writeShort(32768 + i);
 			else {
 				if (i_61_ != -64)
 					RS2Buffer.anInt2412 = 0;
@@ -1019,7 +1014,7 @@ class RS2Buffer extends Node {
 															// biginteger);
 				byte[] is_70_ = biginteger_69_.toByteArray();
 				this.pos = 0;
-				putByte(is_70_.length);
+				writeByte(is_70_.length);
 				method764(0, -25154, is_70_.length, is_70_);
 				if (bool == true)
 					break;
@@ -1054,14 +1049,14 @@ class RS2Buffer extends Node {
 					if ((i & ~0x3fff) != 0) {
 						if ((i & ~0x1fffff) != 0) {
 							if ((i & ~0xfffffff) != 0)
-								putByte(i >>> 28 | 0x80);
-							putByte(i >>> 21 | 0x80);
+								writeByte(i >>> 28 | 0x80);
+							writeByte(i >>> 21 | 0x80);
 						}
-						putByte(i >>> 14 | 0x80);
+						writeByte(i >>> 14 | 0x80);
 					}
-					putByte(i >>> 7 | 0x80);
+					writeByte(i >>> 7 | 0x80);
 				}
-				putByte(i & 0x7f);
+				writeByte(i & 0x7f);
 				if (!bool)
 					break;
 				RS2Buffer.aClass19_2355 = null;
@@ -1073,7 +1068,7 @@ class RS2Buffer extends Node {
 		} while (false);
 	}
 
-	final RSString getUShort(int i) {
+	final RSString readString(int i) {
 		try {
 			if (i != 1347418632)
 				return null;

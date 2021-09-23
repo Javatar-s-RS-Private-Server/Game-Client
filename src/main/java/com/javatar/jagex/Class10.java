@@ -1,6 +1,7 @@
 package com.javatar.jagex;/* Class10 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import javax.swing.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
@@ -38,19 +39,19 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 	}
 
 	@Override
-	public final synchronized void mousePressed(MouseEvent mouseevent) {
+	public synchronized void mousePressed(MouseEvent mouseevent) {
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
 				Client.mouseIdleTime = 0;
 				Class26.anInt613 = mouseevent.getX();
 				Class38_Sub10_Sub1.anInt2627 = mouseevent.getY();
 				PlayerAppearance.aLong414 = Class9.method48((byte) -45);
-				if (mouseevent.isMetaDown()) {
-					Class15.anInt277 = 2;
-					Applet_Sub1.anInt3636 = 2;
-				} else {
-					Class15.anInt277 = 1;
-					Applet_Sub1.anInt3636 = 1;
+				if (mouseevent.getButton() == MouseEvent.BUTTON3) {
+					Class15.clickMode1 = 2;
+					Applet_Sub1.clickMode2 = 2;
+				} else if(SwingUtilities.isLeftMouseButton(mouseevent)) {
+					Class15.clickMode1 = 1;
+					Applet_Sub1.clickMode2 = 1;
 				}
 			}
 			if (mouseevent.isPopupTrigger())
@@ -66,7 +67,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 			try {
 				if (Class38_Sub11.aClass10_2089 == null)
 					break;
-				Applet_Sub1.anInt3636 = 0;
+				Applet_Sub1.clickMode2 = 0;
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "pe.focusLost(" + (focusevent != null ? "{...}" : "null") + ')');
 			}
@@ -105,7 +106,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 		try {
 			if (Class38_Sub11.aClass10_2089 != null) {
 				Client.mouseIdleTime = 0;
-				Applet_Sub1.anInt3636 = 0;
+				Applet_Sub1.clickMode2 = 0;
 			}
 			if (mouseevent.isPopupTrigger())
 				mouseevent.consume();
@@ -210,7 +211,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 						class38_sub20_sub3 = new Class38_Sub20_Sub3_Sub2(i_1_, i_0_, i_2_, i_3_, i_4_, i, class38_sub20_sub1.anInt2472, true, null);
 					class27.method254(i_3_, i_4_, i, i_15_, 1, 1, class38_sub20_sub3, 0, i_14_, i_16_);
 					if (i_0_ >= 12 && i_0_ <= 17 && i_0_ != 13 && i_3_ > 0)
-						Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 2340);
+						Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 2340);
 					if (class38_sub20_sub1.anInt2482 != 0 && class74 != null)
 						class74.method521(i_7_, class38_sub20_sub1.aBool2466, i_4_, i, i_6_, (byte) -73);
 				} else if (i_0_ == 0) {
@@ -227,21 +228,21 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 								Class25.aByteArrayArrayArray583[i_3_][i_4_ + 1][i + 1] = (byte) 50;
 							}
 							if (class38_sub20_sub1.aBool2457)
-								Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
 						} else if (i_2_ == 2) {
 							if (class38_sub20_sub1.aBool2500) {
 								Class25.aByteArrayArrayArray583[i_3_][i_4_ + 1][i] = (byte) 50;
 								Class25.aByteArrayArrayArray583[i_3_][i_4_ + 1][i + 1] = (byte) 50;
 							}
 							if (class38_sub20_sub1.aBool2457)
-								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
 						} else if (i_2_ == 3) {
 							if (class38_sub20_sub1.aBool2500) {
 								Class25.aByteArrayArrayArray583[i_3_][i_4_][i] = (byte) 50;
 								Class25.aByteArrayArrayArray583[i_3_][i_4_ + 1][i] = (byte) 50;
 							}
 							if (class38_sub20_sub1.aBool2457)
-								Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
 						}
 					} else {
 						if (class38_sub20_sub1.aBool2500) {
@@ -249,7 +250,7 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 							Class25.aByteArrayArrayArray583[i_3_][i_4_][i + 1] = (byte) 50;
 						}
 						if (class38_sub20_sub1.aBool2457)
-							Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
+							Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
 					}
 					if (class38_sub20_sub1.anInt2482 != 0 && class74 != null)
 						class74.method527(class38_sub20_sub1.aBool2466, i_0_, i_4_, true, i, i_2_);
@@ -289,20 +290,20 @@ final class Class10 implements MouseListener, MouseMotionListener, FocusListener
 					if (class38_sub20_sub1.aBool2457)
 						if (i_2_ != 0) {
 							if (i_2_ == 1) {
-								Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
-								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
 							} else if (i_2_ != 2) {
 								if (i_2_ == 3) {
-									Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
-									Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
+									Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
+									Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
 								}
 							} else {
-								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
-								Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_ + 1][i], 585);
+								Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 1170);
 							}
 						} else {
-							Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
-							Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
+							Class5.anIntArrayArrayArray116[i_3_][i_4_][i] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i], 585);
+							Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_3_][i_4_][i + 1], 1170);
 						}
 					if (class38_sub20_sub1.anInt2482 != 0 && class74 != null)
 						class74.method527(class38_sub20_sub1.aBool2466, i_0_, i_4_, true, i, i_2_);

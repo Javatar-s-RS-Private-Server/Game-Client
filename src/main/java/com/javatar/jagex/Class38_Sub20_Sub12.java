@@ -110,7 +110,7 @@ final class Class38_Sub20_Sub12 extends NodeSub {
 						this.anIntArray2986 = new int[this.anInt2992];
 						for (int i_4_ = 0; i_4_ < this.anInt2992; i_4_++) {
 							this.anIntArray2986[i_4_] = stream.readInt(true);
-							this.aClass19Array2990[i_4_] = stream.getUShort(1347418632);
+							this.aClass19Array2990[i_4_] = stream.readString(1347418632);
 						}
 					} else if (i == 6) {
 						this.anInt2992 = stream.readUnsignedShort();
@@ -122,7 +122,7 @@ final class Class38_Sub20_Sub12 extends NodeSub {
 						}
 					}
 				} else
-					this.aClass19_2985 = stream.getUShort(1347418632);
+					this.aClass19_2985 = stream.readString(1347418632);
 			} else
 				this.anInt3003 = stream.readUnsignedByte();
 		} catch (RuntimeException runtimeexception) {

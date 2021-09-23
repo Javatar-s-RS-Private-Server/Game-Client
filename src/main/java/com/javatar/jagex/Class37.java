@@ -5,11 +5,11 @@ import java.awt.event.ActionEvent;
 
 final class Class37 {
 	static RSString[] aClass19Array865;
-	static boolean secondMapRegion = false;
+	static boolean isDynamic = false;
 	static RSString aClass19_870 = RSString.createRSString(" )2>");
 	static Class61[] aClass61Array872;
 	static RSString aClass19_874;
-	static RSString[] aClass19Array875 = new RSString[1000];
+	static RSString[] stringOperators = new RSString[1000];
 	static RSString aClass19_876;
 	static RSString aClass19_878 = RSString.createRSString("(U1");
 	static int[] anIntArray879;
@@ -18,7 +18,7 @@ final class Class37 {
 	static final boolean method322(int i, int i_0_) {
 		try {
 			if (i != 16777215)
-				Class37.secondMapRegion = true;
+				Class37.isDynamic = true;
 			if ((i_0_ >> 467696125 & 0x1) == 0)
 				return false;
 			return true;
@@ -32,7 +32,7 @@ final class Class37 {
 			Class37.anIntArray879 = null;
 			Class37.aClass19_870 = null;
 			Class37.aClass19_874 = null;
-			Class37.aClass19Array875 = null;
+			Class37.stringOperators = null;
 			Class37.aClass19_878 = null;
 			Class37.aClass19_876 = null;
 			if (i < -1) {
@@ -72,7 +72,7 @@ final class Class37 {
 	static final void method325(byte i, int i_3_, int i_4_, int i_5_, int i_6_) {
 		try {
 			if (i != -87)
-				Class37.secondMapRegion = false;
+				Class37.isDynamic = false;
 			Class72.anInt1416 = 0;
 			for (int i_7_ = -1; i_7_ < ItemDefinition.anInt2783 + Class4.anInt87; i_7_++) {
 				Entity class38_sub20_sub3_sub7;

@@ -29,7 +29,7 @@ abstract class Class17 {
 	private int[][] anIntArrayArray389;
 	static Class38_Sub20_Sub9_Sub3[] aClass38_Sub20_Sub9_Sub3Array391;
 
-	private final boolean method101(int i, int i_0_, int[] is) {
+	private boolean method101(int i, int i_0_, int[] is) {
 		try {
 			if (this.anObjectArray346[i_0_] == null)
 				return false;
@@ -56,7 +56,7 @@ abstract class Class17 {
 			}
 			byte[] is_5_;
 			try {
-				is_5_ = Sequence.method912(31535, is_4_);
+				is_5_ = Sequence.method912(is_4_);
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "T3 - " + (is != null) + "," + i_0_ + "," + is_4_.length + "," + Class67.method477((byte) 126, is_4_.length, is_4_) + "," + Class67.method477((byte) 114, is_4_.length - 2, is_4_) + "," + this.anIntArray368[i_0_] + "," + this.anInt369);
 			}
@@ -92,7 +92,7 @@ abstract class Class17 {
 					int i_16_ = 0;
 					for (int i_17_ = 0; i_1_ > i_17_; i_17_++) {
 						i_16_ += class38_sub23.readInt(true);
-						Class71.method510(is_5_, i_14_, is_12_[i_17_], is_8_[i_17_], i_16_);
+						Class71.arrayCopy(is_5_, i_14_, is_12_[i_17_], is_8_[i_17_], i_16_);
 						i_14_ += i_16_;
 						is_8_[i_17_] += i_16_;
 					}
@@ -230,7 +230,7 @@ abstract class Class17 {
 		do {
 			try {
 				this.anInt369 = Class67.method477((byte) 111, is.length, is);
-				RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(31535, is));
+				RS2Buffer class38_sub23 = new RS2Buffer(Sequence.method912(is));
 				int i_30_ = class38_sub23.readUnsignedByte();
 				if (i_30_ != 5 && i_30_ != 6)
 					throw new RuntimeException("Incorrect JS5 protocol number: " + i_30_);
@@ -306,7 +306,7 @@ abstract class Class17 {
 			if (i > -4)
 				Class17.aClass19_343 = null;
 			int i_51_ = aClass44Array372[i_50_].method370((byte) 46, class19_49_.method150(-44));
-			return method116(i_50_, true, i_51_);
+			return method116(i_50_, i_51_);
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "ea.BA(" + (class19 != null ? "{...}" : "null") + ',' + (class19_49_ != null ? "{...}" : "null") + ',' + i + ')');
 		}
@@ -470,7 +470,7 @@ abstract class Class17 {
 		} while (false);
 	}
 
-	final boolean method116(int i, boolean bool, int i_78_) {
+	final boolean method116(int i, int i_78_) {
 		try {
 			if (i < 0 || i >= anObjectArrayArray356.length || anObjectArrayArray356[i] == null || i_78_ < 0 || anObjectArrayArray356[i].length <= i_78_)
 				return false;
@@ -479,13 +479,9 @@ abstract class Class17 {
 			if (this.anObjectArray346[i] != null)
 				return true;
 			method102(i, 5);
-			if (bool != true)
-				method101(-20, -29, null);
-			if (this.anObjectArray346[i] != null)
-				return true;
-			return false;
+			return this.anObjectArray346[i] != null;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "ea.DA(" + i + ',' + bool + ',' + i_78_ + ')');
+			throw Class38_Sub1.method607(runtimeexception, "ea.DA(" + i + ',' + true + ',' + i_78_ + ')');
 		}
 	}
 
@@ -588,7 +584,6 @@ abstract class Class17 {
 						return null;
 				}
 			}
-			int i_92_ = 56 / ((i - 5) / 54);
 			byte[] is_93_ = Class50.method400(false, 2, anObjectArrayArray356[i_90_][i_91_]);
 			if (aBool373)
 				anObjectArrayArray356[i_90_][i_91_] = null;

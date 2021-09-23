@@ -404,9 +404,9 @@ final class Class13 {
 						i_28_ = Player.method1206((byte) -98, i_41_);
 					}
 					if (i_27_ == 18)
-						i_28_ = Client.currentBaseY + (((Entity) Client.myPlayer).anInt3493 >> 1906278375);
+						i_28_ = Client.currentBaseX + (((Entity) Client.myPlayer).anInt3493 >> 1906278375);
 					if (i_27_ == 19)
-						i_28_ = Client.currentBaseX + (((Entity) Client.myPlayer).anInt3444 >> 984806439);
+						i_28_ = Client.currentBaseY + (((Entity) Client.myPlayer).anInt3444 >> 984806439);
 					if (i_27_ == 20)
 						i_28_ = is[i_26_++];
 					if (i_29_ != 0)

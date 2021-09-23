@@ -110,9 +110,9 @@ final class Player extends Entity {
 		try {
 			if (this.appearance == null)
 				return null;
-			Class38_Sub20_Sub4 class38_sub20_sub4 = this.currentAnimationId != -1
-					&& this.anInt3461 == 0 ? Sequence.forID(
-					(byte) 95, this.currentAnimationId) : null;
+			Class38_Sub20_Sub4 class38_sub20_sub4 = this.animationId != -1
+					&& this.animationDelay == 0 ? Sequence.forID(
+					(byte) 95, this.animationId) : null;
 			Class38_Sub20_Sub4 class38_sub20_sub4_10_ = this.anInt3454 == -1
 					|| this.isIdle
 					|| this.anInt3454 == this.idleAnimation

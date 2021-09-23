@@ -29,7 +29,7 @@ final class Class38_Sub20_Sub16 extends NodeSub {
 				return true;
 			boolean bool = true;
 			for (int i_0_ = 0; anIntArray3097.length > i_0_; i_0_++)
-				if (!Class38_Sub10_Sub1.aClass17_2646.method116(anIntArray3097[i_0_], true, 0))
+				if (!Class38_Sub10_Sub1.aClass17_2646.method116(anIntArray3097[i_0_], 0))
 					bool = false;
 			if (i < 20)
 				method1028(55);
@@ -78,7 +78,7 @@ final class Class38_Sub20_Sub16 extends NodeSub {
 			if (i != 107)
 				return false;
 			for (/**/; i_4_ < 5; i_4_++)
-				if (anIntArray3082[i_4_] != -1 && !Class38_Sub10_Sub1.aClass17_2646.method116(anIntArray3082[i_4_], true, 0))
+				if (anIntArray3082[i_4_] != -1 && !Class38_Sub10_Sub1.aClass17_2646.method116(anIntArray3082[i_4_], 0))
 					bool = false;
 			return bool;
 		} catch (RuntimeException runtimeexception) {
@@ -217,7 +217,7 @@ final class Class38_Sub20_Sub16 extends NodeSub {
 										if (i_38_ > 0 && !Class38_Sub2.method616(4, i_38_ - 1).aBool3056)
 											bool = false;
 										if (bool && i_39_ == i_40_ && i_41_ == i_39_ && i_42_ == i_39_)
-											Class5.anIntArrayArrayArray116[i_9_][i_23_][i_34_] = Class38_Sub3.method618(Class5.anIntArrayArrayArray116[i_9_][i_23_][i_34_], 2340);
+											Class5.anIntArrayArrayArray116[i_9_][i_23_][i_34_] = Class38_Sub3.setClippingFlag(Class5.anIntArrayArrayArray116[i_9_][i_23_][i_34_], 2340);
 									}
 									int i_52_ = 0;
 									if (i_47_ != -1)

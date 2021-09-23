@@ -89,10 +89,10 @@ final class Class38_Sub22 extends Node {
 									Class30.method283(-125, class38_sub6),
 									i - 1)) {
 						if (i == 1) {
-							Client.outputBuffer.putOpcode(221); // ok here's the
+							Client.outputBuffer.writeIsaacByte(221); // ok here's the
 																// packet id
 							Client.outputBuffer.writeInt(i_1_); // int = 4 bytes
-							Client.outputBuffer.putShort(i_3_); // short = 2
+							Client.outputBuffer.writeShort(i_3_); // short = 2
 																// bytes
 							// byte = 1
 							// short = 2
@@ -103,50 +103,50 @@ final class Class38_Sub22 extends Node {
 							// server
 						}
 						if (i == 2) {
-							Client.outputBuffer.putOpcode(108);
+							Client.outputBuffer.writeIsaacByte(108);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 3) {
-							Client.outputBuffer.putOpcode(181);
+							Client.outputBuffer.writeIsaacByte(181);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 4) {
-							Client.outputBuffer.putOpcode(143);
+							Client.outputBuffer.writeIsaacByte(143);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 5) {
-							Client.outputBuffer.putOpcode(167);
+							Client.outputBuffer.writeIsaacByte(167);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 6) {
-							Client.outputBuffer.putOpcode(175);
+							Client.outputBuffer.writeIsaacByte(175);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 7) {
-							Client.outputBuffer.putOpcode(162);
+							Client.outputBuffer.writeIsaacByte(162);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 8) {
-							Client.outputBuffer.putOpcode(98);
+							Client.outputBuffer.writeIsaacByte(98);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i == 9) {
-							Client.outputBuffer.putOpcode(103);
+							Client.outputBuffer.writeIsaacByte(103);
 							Client.outputBuffer.writeInt(i_1_);
-							Client.outputBuffer.putShort(i_3_);
+							Client.outputBuffer.writeShort(i_3_);
 						}
 						if (i != 10)
 							break;
-						Client.outputBuffer.putOpcode(150);
+						Client.outputBuffer.writeIsaacByte(150);
 						Client.outputBuffer.writeInt(i_1_);
-						Client.outputBuffer.putShort(i_3_);
+						Client.outputBuffer.writeShort(i_3_);
 					}
 				}
 			} catch (RuntimeException runtimeexception) {

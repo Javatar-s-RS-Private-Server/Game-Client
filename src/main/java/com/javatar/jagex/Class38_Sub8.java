@@ -101,15 +101,15 @@ final class Class38_Sub8 extends Node {
 						}
 					}
 				}
-				if (class38_sub20_sub3_sub7.currentAnimationId != -1 && class38_sub20_sub3_sub7.anInt3461 <= 1) {
-					Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 125, class38_sub20_sub3_sub7.currentAnimationId);
+				if (class38_sub20_sub3_sub7.animationId != -1 && class38_sub20_sub3_sub7.animationDelay <= 1) {
+					Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 125, class38_sub20_sub3_sub7.animationId);
 					if (class38_sub20_sub4.anInt2574 == 1 && class38_sub20_sub3_sub7.anInt3494 > 0 && Class45.anInt1016 >= class38_sub20_sub3_sub7.anInt3476 && Class45.anInt1016 > class38_sub20_sub3_sub7.anInt3470) {
-						class38_sub20_sub3_sub7.anInt3461 = 1;
+						class38_sub20_sub3_sub7.animationDelay = 1;
 						break;
 					}
 				}
-				if (class38_sub20_sub3_sub7.currentAnimationId != -1 && class38_sub20_sub3_sub7.anInt3461 == 0) {
-					Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 109, class38_sub20_sub3_sub7.currentAnimationId);
+				if (class38_sub20_sub3_sub7.animationId != -1 && class38_sub20_sub3_sub7.animationDelay == 0) {
+					Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 109, class38_sub20_sub3_sub7.animationId);
 					if (class38_sub20_sub4 != null && class38_sub20_sub4.anIntArray2585 != null) {
 						class38_sub20_sub3_sub7.anInt3483++;
 						if (class38_sub20_sub4.anIntArray2585.length > class38_sub20_sub3_sub7.anInt3471 && class38_sub20_sub4.anIntArray2568[class38_sub20_sub3_sub7.anInt3471] < class38_sub20_sub3_sub7.anInt3483) {
@@ -124,17 +124,17 @@ final class Class38_Sub8 extends Node {
 								if (class38_sub20_sub3_sub7.anInt3471 >= 0 && class38_sub20_sub4.anIntArray2585.length > class38_sub20_sub3_sub7.anInt3471)
 									Class54.method422(-74, class38_sub20_sub3_sub7.anInt3444, class38_sub20_sub3_sub7.anInt3493, class38_sub20_sub3_sub7.anInt3471, class38_sub20_sub4);
 								else
-									class38_sub20_sub3_sub7.currentAnimationId = -1;
+									class38_sub20_sub3_sub7.animationId = -1;
 							} else
-								class38_sub20_sub3_sub7.currentAnimationId = -1;
+								class38_sub20_sub3_sub7.animationId = -1;
 						}
 						class38_sub20_sub3_sub7.aBool3481 = class38_sub20_sub4.aBool2563;
 					} else
-						class38_sub20_sub3_sub7.currentAnimationId = -1;
+						class38_sub20_sub3_sub7.animationId = -1;
 				}
-				if (class38_sub20_sub3_sub7.anInt3461 <= 0)
+				if (class38_sub20_sub3_sub7.animationDelay <= 0)
 					break;
-				class38_sub20_sub3_sub7.anInt3461--;
+				class38_sub20_sub3_sub7.animationDelay--;
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "ue.D(" + i + ',' + (class38_sub20_sub3_sub7 != null ? "{...}" : "null") + ')');
 			}

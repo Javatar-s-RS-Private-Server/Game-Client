@@ -163,7 +163,7 @@ final class RuntimeException_Sub1 extends RuntimeException {
 				if (i < 0 || i > i_22_)
 					i = 0;
 				i_22_ <<= i_21_;
-				Class21.anIntArray528[i_19_] = Class38_Sub3.method618(Class38_Sub10_Sub3.method941(i_22_, i << i_21_), Class38_Sub10_Sub3.method941(Class21.anIntArray528[i_19_], i_22_ ^ 0xffffffff));
+				Class21.anIntArray528[i_19_] = Class38_Sub3.setClippingFlag(Class38_Sub10_Sub3.method941(i_22_, i << i_21_), Class38_Sub10_Sub3.method941(Class21.anIntArray528[i_19_], i_22_ ^ 0xffffffff));
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "wf.E(" + i + ',' + i_17_ + ',' + i_18_ + ')');

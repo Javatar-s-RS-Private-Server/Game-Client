@@ -93,7 +93,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 		int i = -1;
 		int i_12_ = -1;
 		int i_13_ = 0;
-		for (int i_14_ = 0; i_14_ < class19.anInt478; i_14_++) {
+		for (int i_14_ = 0; i_14_ < class19.length; i_14_++) {
 			int i_15_ = class19.buffer[i_14_] & 0xff;
 			if (i_15_ == 60)
 				i = i_14_;
@@ -106,9 +106,9 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 					else if (class19_16_.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3221))
 						i_15_ = 62;
 					else {
-						if (class19_16_.method165(Class38_Sub20_Sub9_Sub1.aClass19_3206, true))
+						if (class19_16_.equals(Class38_Sub20_Sub9_Sub1.aClass19_3206))
 							try {
-								int i_17_ = class19_16_.method171((byte) -82, 4).method164(-127);
+								int i_17_ = class19_16_.substring((byte) -82, 4).method164(-127);
 								i_13_ += Class38_Sub20_Sub9_Sub1.aClass38_Sub20_Sub9_Sub2Array3220[i_17_].anInt3244;
 								i_12_ = -1;
 							} catch (Exception exception) {
@@ -129,7 +129,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 	}
 
 	static final RSString method1062(RSString class19) {
-		int i = class19.method143((byte) 99);
+		int i = class19.length((byte) 99);
 		int i_18_ = 0;
 		for (int i_19_ = 0; i_19_ < i; i_19_++) {
 			byte i_20_ = class19.buffer[i_19_];
@@ -137,8 +137,8 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 				i_18_ += 3;
 		}
 		RSString class19_21_ = new RSString();
-		class19_21_.anInt478 = i + i_18_;
-		class19_21_.buffer = new byte[class19_21_.anInt478];
+		class19_21_.length = i + i_18_;
+		class19_21_.buffer = new byte[class19_21_.length];
 		int i_22_ = 0;
 		for (int i_23_ = 0; i_23_ < i; i_23_++) {
 			byte i_24_ = class19.buffer[i_23_];
@@ -194,7 +194,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 	private final void method1064(RSString class19, int i) {
 		int i_36_ = 0;
 		boolean bool = false;
-		for (int i_37_ = 0; i_37_ < class19.method143((byte) 114); i_37_++) {
+		for (int i_37_ = 0; i_37_ < class19.length((byte) 114); i_37_++) {
 			int i_38_ = class19.method163(-122, i_37_);
 			if (i_38_ == 60)
 				bool = true;
@@ -288,9 +288,9 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 			method1073(i_74_, i_75_);
 			Class38_Sub20_Sub9_Sub1.aRandom3237.setSeed(i_76_);
 			Class38_Sub20_Sub9_Sub1.anInt3227 = (Class38_Sub20_Sub9_Sub1.aRandom3237.nextInt() & 0x1f) + 192;
-			int[] is = new int[class19.anInt478];
+			int[] is = new int[class19.length];
 			int i_77_ = 0;
-			for (int i_78_ = 0; i_78_ < class19.anInt478; i_78_++) {
+			for (int i_78_ = 0; i_78_ < class19.length; i_78_++) {
 				is[i_78_] = i_77_;
 				if ((Class38_Sub20_Sub9_Sub1.aRandom3237.nextInt() & 0x3) == 0)
 					i_77_++;
@@ -304,7 +304,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 		int i_81_ = -1;
 		int i_82_ = -1;
 		int i_83_ = 0;
-		for (int i_84_ = 0; i_84_ < class19.anInt478; i_84_++) {
+		for (int i_84_ = 0; i_84_ < class19.length; i_84_++) {
 			int i_85_ = class19.buffer[i_84_] & 0xff;
 			if (i_85_ == 60)
 				i_81_ = i_84_;
@@ -317,7 +317,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 					else if (class19_86_.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3221))
 						i_85_ = 62;
 					else {
-						if (class19_86_.method165(Class38_Sub20_Sub9_Sub1.aClass19_3206, true))
+						if (class19_86_.equals(Class38_Sub20_Sub9_Sub1.aClass19_3206))
 							try {
 								int i_87_;
 								if (is != null)
@@ -330,7 +330,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 								else
 									i_88_ = 0;
 								i_83_++;
-								int i_89_ = class19_86_.method171((byte) -74, 4).method164(-121);
+								int i_89_ = class19_86_.substring((byte) -74, 4).method164(-121);
 								Class38_Sub20_Sub9_Sub2 class38_sub20_sub9_sub2 = Class38_Sub20_Sub9_Sub1.aClass38_Sub20_Sub9_Sub2Array3220[i_89_];
 								class38_sub20_sub9_sub2.method1089(i + i_87_, i_79_ + this.anInt3216 - class38_sub20_sub9_sub2.anInt3243 + i_88_);
 								i += class38_sub20_sub9_sub2.anInt3244;
@@ -408,7 +408,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 		int i_101_ = -1;
 		int i_102_ = -1;
 		int i_103_ = 0;
-		int i_104_ = class19.method143((byte) 49);
+		int i_104_ = class19.length((byte) 49);
 		for (int i_105_ = 0; i_105_ < i_104_; i_105_++) {
 			int i_106_ = class19.method163(-122, i_105_);
 			if (i_106_ == 60)
@@ -421,8 +421,8 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 					class19_97_.method146(class19_107_, (byte) 109);
 					class19_97_.method176(62, -5);
 					if (class19_107_.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3236)) {
-						class19s[i_103_++] = class19_97_.method144((byte) 106, i_96_, class19_97_.method143((byte) 75));
-						i_96_ = class19_97_.method143((byte) 37);
+						class19s[i_103_++] = class19_97_.method144((byte) 106, i_96_, class19_97_.length((byte) 75));
+						i_96_ = class19_97_.length((byte) 37);
 						i = 0;
 						i_98_ = -1;
 						i_102_ = -1;
@@ -436,9 +436,9 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 						if (aByteArray3230 != null && i_102_ != -1)
 							i += aByteArray3230[(i_102_ << 8) + 62];
 						i_102_ = 62;
-					} else if (class19_107_.method165(Class38_Sub20_Sub9_Sub1.aClass19_3206, true))
+					} else if (class19_107_.equals(Class38_Sub20_Sub9_Sub1.aClass19_3206))
 						try {
-							int i_108_ = class19_107_.method171((byte) -92, 4).method164(-121);
+							int i_108_ = class19_107_.substring((byte) -92, 4).method164(-121);
 							i += Class38_Sub20_Sub9_Sub1.aClass38_Sub20_Sub9_Sub2Array3220[i_108_].anInt3244;
 							i_102_ = -1;
 						} catch (Exception exception) {
@@ -455,7 +455,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 						i_102_ = i_106_;
 					}
 					if (i_106_ == 32) {
-						i_98_ = class19_97_.method143((byte) 61);
+						i_98_ = class19_97_.length((byte) 61);
 						i_99_ = i;
 						i_100_ = 1;
 					}
@@ -467,23 +467,23 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 						i_102_ = -1;
 					}
 					if (i_106_ == 45) {
-						i_98_ = class19_97_.method143((byte) 57);
+						i_98_ = class19_97_.length((byte) 57);
 						i_99_ = i;
 						i_100_ = 0;
 					}
 				}
 			}
 		}
-		if (class19_97_.method143((byte) 83) > i_96_)
-			class19s[i_103_++] = class19_97_.method144((byte) 32, i_96_, class19_97_.method143((byte) 67));
+		if (class19_97_.length((byte) 83) > i_96_)
+			class19s[i_103_++] = class19_97_.method144((byte) 32, i_96_, class19_97_.length((byte) 67));
 		return i_103_;
 	}
 
 	final void method1075(RSString class19, int i, int i_109_, int i_110_, int i_111_, int i_112_) {
 		if (class19 != null) {
 			method1073(i_110_, i_111_);
-			int[] is = new int[class19.anInt478];
-			for (int i_113_ = 0; i_113_ < class19.anInt478; i_113_++)
+			int[] is = new int[class19.length];
+			for (int i_113_ = 0; i_113_ < class19.length; i_113_++)
 				is[i_113_] = (int) (Math.sin(i_113_ / 2.0 + i_112_ / 5.0) * 5.0);
 			method1072(class19, i - method1061(class19) / 2, i_109_, null, is);
 		}
@@ -492,24 +492,24 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 	private final void method1076(RSString class19) {
 		do {
 			try {
-				if (class19.method165(Class38_Sub20_Sub9_Sub1.aClass19_3207, true))
-					Class38_Sub20_Sub9_Sub1.anInt3234 = class19.method171((byte) -30, 4).method159(false, 16);
+				if (class19.equals(Class38_Sub20_Sub9_Sub1.aClass19_3207))
+					Class38_Sub20_Sub9_Sub1.anInt3234 = class19.substring((byte) -30, 4).method159(false, 16);
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3219))
 					Class38_Sub20_Sub9_Sub1.anInt3234 = Class38_Sub20_Sub9_Sub1.anInt3211;
-				else if (class19.method165(Class38_Sub20_Sub9_Sub1.aClass19_3225, true))
-					Class38_Sub20_Sub9_Sub1.anInt3226 = class19.method171((byte) -75, 4).method159(false, 16);
+				else if (class19.equals(Class38_Sub20_Sub9_Sub1.aClass19_3225))
+					Class38_Sub20_Sub9_Sub1.anInt3226 = class19.substring((byte) -75, 4).method159(false, 16);
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3231))
 					Class38_Sub20_Sub9_Sub1.anInt3226 = 8388608;
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3215))
 					Class38_Sub20_Sub9_Sub1.anInt3226 = -1;
-				else if (class19.method165(Class38_Sub20_Sub9_Sub1.aClass19_3218, true))
-					Class38_Sub20_Sub9_Sub1.anInt3223 = class19.method171((byte) -61, 2).method159(false, 16);
+				else if (class19.equals(Class38_Sub20_Sub9_Sub1.aClass19_3218))
+					Class38_Sub20_Sub9_Sub1.anInt3223 = class19.substring((byte) -61, 2).method159(false, 16);
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3232))
 					Class38_Sub20_Sub9_Sub1.anInt3223 = 0;
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3203))
 					Class38_Sub20_Sub9_Sub1.anInt3223 = -1;
-				else if (class19.method165(Class38_Sub20_Sub9_Sub1.aClass19_3212, true))
-					Class38_Sub20_Sub9_Sub1.anInt3205 = class19.method171((byte) -40, 5).method159(false, 16);
+				else if (class19.equals(Class38_Sub20_Sub9_Sub1.aClass19_3212))
+					Class38_Sub20_Sub9_Sub1.anInt3205 = class19.substring((byte) -40, 5).method159(false, 16);
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3233))
 					Class38_Sub20_Sub9_Sub1.anInt3205 = 0;
 				else if (class19.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3224))
@@ -563,7 +563,7 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 		i_126_ -= this.anInt3216;
 		int i_127_ = -1;
 		int i_128_ = -1;
-		for (int i_129_ = 0; i_129_ < class19.anInt478; i_129_++) {
+		for (int i_129_ = 0; i_129_ < class19.length; i_129_++) {
 			int i_130_ = class19.buffer[i_129_] & 0xff;
 			if (i_130_ == 60)
 				i_127_ = i_129_;
@@ -576,9 +576,9 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 					else if (class19_131_.method175(true, Class38_Sub20_Sub9_Sub1.aClass19_3221))
 						i_130_ = 62;
 					else {
-						if (class19_131_.method165(Class38_Sub20_Sub9_Sub1.aClass19_3206, true))
+						if (class19_131_.equals(Class38_Sub20_Sub9_Sub1.aClass19_3206))
 							try {
-								int i_132_ = class19_131_.method171((byte) -12, 4).method164(-101);
+								int i_132_ = class19_131_.substring((byte) -12, 4).method164(-101);
 								Class38_Sub20_Sub9_Sub2 class38_sub20_sub9_sub2 = Class38_Sub20_Sub9_Sub1.aClass38_Sub20_Sub9_Sub2Array3220[i_132_];
 								class38_sub20_sub9_sub2.method1089(i, i_126_ + this.anInt3216 - class38_sub20_sub9_sub2.anInt3243);
 								i += class38_sub20_sub9_sub2.anInt3244;
@@ -628,9 +628,9 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 	final void method1080(RSString class19, int i, int i_140_, int i_141_, int i_142_, int i_143_) {
 		if (class19 != null) {
 			method1073(i_141_, i_142_);
-			int[] is = new int[class19.anInt478];
-			int[] is_144_ = new int[class19.anInt478];
-			for (int i_145_ = 0; i_145_ < class19.anInt478; i_145_++) {
+			int[] is = new int[class19.length];
+			int[] is_144_ = new int[class19.length];
+			for (int i_145_ = 0; i_145_ < class19.length; i_145_++) {
 				is[i_145_] = (int) (Math.sin(i_145_ / 5.0 + i_143_ / 5.0) * 5.0);
 				is_144_[i_145_] = (int) (Math.sin(i_145_ / 3.0 + i_143_ / 5.0) * 5.0);
 			}
@@ -676,8 +676,8 @@ abstract class Class38_Sub20_Sub9_Sub1 extends Class38_Sub20_Sub9 {
 			double d = 7.0 - i_154_ / 8.0;
 			if (d < 0.0)
 				d = 0.0;
-			int[] is = new int[class19.anInt478];
-			for (int i_155_ = 0; i_155_ < class19.anInt478; i_155_++)
+			int[] is = new int[class19.length];
+			for (int i_155_ = 0; i_155_ < class19.length; i_155_++)
 				is[i_155_] = (int) (Math.sin(i_155_ / 1.5 + i_153_) * d);
 			method1072(class19, i - method1061(class19) / 2, i_150_, null, is);
 		}

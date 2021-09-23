@@ -16,7 +16,7 @@ final class Class38_Sub11 extends Node {
 	static Class38_Sub20_Sub9_Sub1_Sub1 aClass38_Sub20_Sub9_Sub1_Sub1_2093;
 	static RSString[] aClass19Array2094;
 	static RSString aClass19_2095;
-	static int[] anIntArray2096;
+	static int[] intOperators;
 	private static RSString aClass19_2097;
 	static RSString aClass19_2098;
 	static Class60 aClass60_2099;
@@ -80,7 +80,7 @@ final class Class38_Sub11 extends Node {
 				Class38_Sub11.aClass19_2102 = null;
 				Class38_Sub11.aClass19_2095 = null;
 				Class38_Sub11.aClass19Array2094 = null;
-				Class38_Sub11.anIntArray2096 = null;
+				Class38_Sub11.intOperators = null;
 				Class38_Sub11.aClass19_2083 = null;
 				Class38_Sub11.aClass17_Sub1_2103 = null;
 				Class38_Sub11.aClass10_2089 = null;
@@ -105,7 +105,7 @@ final class Class38_Sub11 extends Node {
 	static {
 		Class38_Sub11.aClass19_2085 = RSString.createRSString("You need a members account to login to this world)3");
 		Class38_Sub11.aClass19_2083 = Class38_Sub11.aClass19_2088;
-		Class38_Sub11.anIntArray2096 = new int[1000];
+		Class38_Sub11.intOperators = new int[1000];
 		Class38_Sub11.aClass19Array2094 = new RSString[8];
 		Class38_Sub11.aClass19_2095 = Class38_Sub11.aClass19_2085;
 		Class38_Sub11.aClass19_2092 = RSString.createRSString("(U2");

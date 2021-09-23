@@ -31,10 +31,10 @@ final class Class23 {
 			int i_5_ = 0;
 			for (/**/; i_5_ < Class38_Sub20_Sub3_Sub1.anInt3201; i_5_++) {
 				int i_6_ = Class38_Sub20_Sub3_Sub1.anIntArray3186[i_5_];
-				int i_7_ = (i_6_ & 0x613cc336) >> 690618365;
+				int i_7_ = (i_6_ & 0x613cc336) >> 29;
 				int i_8_ = i_6_ & 0x7f;
-				int i_9_ = (i_6_ & 0x1fffd07b) >> 440408974;
-				int i_10_ = (i_6_ & 0x3fdf) >> -358270073;
+				int i_9_ = (i_6_ & 0x1fffd07b) >> 14;
+				int i_10_ = (i_6_ & 0x3fdf) >> 7;
 				if (i_6_ != i_4_) {
 					i_4_ = i_6_;
 					if (i_7_ == 2 && RuntimeException_Sub1.aClass27_3292.method224(Client.height, i_8_, i_10_, i_6_) >= 0) {
@@ -44,10 +44,10 @@ final class Class23 {
 						if (class38_sub20_sub1 == null)
 							continue;
 						if (Class42.anInt964 == 1)
-							Class37.method328(i_6_, Class38_Sub10_Sub3.aClass19_2836, 3231, i_10_, 49, Class9.method43(new RSString[] { Class38_Sub2.aClass19_1759, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+							Class37.method328(i_6_, Class38_Sub10_Sub3.aClass19_2836, 3231, i_10_, 49, Class9.method43(new RSString[] { Class38_Sub2.aClass19_1759, Class41.aClass19_934, class38_sub20_sub1.name}, (byte) -20), i_8_);
 						else if (Class26.aBool614) {
 							if ((Class28.anInt693 & 0x4) == 4)
-								Class37.method328(i_6_, Class30.aClass19_736, 3231, i_10_, 2, Class9.method43(new RSString[] { Class53.aClass19_1168, Class41.aClass19_934, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+								Class37.method328(i_6_, Class30.aClass19_736, 3231, i_10_, 2, Class9.method43(new RSString[] { Class53.aClass19_1168, Class41.aClass19_934, class38_sub20_sub1.name}, (byte) -20), i_8_);
 						} else {
 							RSString[] class19s = class38_sub20_sub1.actions;
 							if (Class44.aBool992)
@@ -66,9 +66,9 @@ final class Class23 {
 											i_12_ = 1;
 										if (i_11_ == 4)
 											i_12_ = 1003;
-										Class37.method328(i_6_, class19s[i_11_], 3231, i_10_, i_12_, Class9.method43(new RSString[] { Class38_Sub20_Sub11.aClass19_2928, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+										Class37.method328(i_6_, class19s[i_11_], 3231, i_10_, i_12_, Class9.method43(new RSString[] { Class38_Sub20_Sub11.aClass19_2928, class38_sub20_sub1.name}, (byte) -20), i_8_);
 									}
-							Class37.method328(class38_sub20_sub1.anInt2468 << 1838973038, Class50.aClass19_1112, 3231, i_10_, 1002, Class9.method43(new RSString[] { Class38_Sub20_Sub11.aClass19_2928, class38_sub20_sub1.aClass19_2460 }, (byte) -20), i_8_);
+							Class37.method328(class38_sub20_sub1.objectId << 14, Class50.aClass19_1112, 3231, i_10_, 1002, Class9.method43(new RSString[] { Class38_Sub20_Sub11.aClass19_2928, class38_sub20_sub1.name, RSString.createRSString(" " + class38_sub20_sub1.objectId)}, (byte) -20), i_8_);
 						}
 					}
 					if (i_7_ == 1) {
@@ -248,7 +248,7 @@ final class Class23 {
 			byte[] is_37_ = new byte[i_36_];
 			if (i != 49)
 				return null;
-			Class71.method510(is, 0, is_37_, 0, i_36_);
+			Class71.arrayCopy(is, 0, is_37_, 0, i_36_);
 			return is_37_;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "mc.B(" + i + ',' + (is != null ? "{...}" : "null") + ')');

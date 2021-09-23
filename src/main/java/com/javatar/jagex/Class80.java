@@ -160,26 +160,26 @@ final class Class80 {
 		}
 	}
 
-	static final ObjectDefinition method581(int i, int i_17_) {
+	static ObjectDefinition method581(int i, int objectId) {
 		try {
-			ObjectDefinition class38_sub20_sub1 = (ObjectDefinition) Class17_Sub1.aClass83_1689.method591(-28825, i_17_);
+			ObjectDefinition def = (ObjectDefinition) Class17_Sub1.aClass83_1689.method591(-28825, objectId);
 			int i_18_ = 48 % ((i + 63) / 63);
-			if (class38_sub20_sub1 != null)
-				return class38_sub20_sub1;
-			byte[] is = Class26.aClass17_600.getFileData(6, i_17_, -82);
-			class38_sub20_sub1 = new ObjectDefinition();
-			class38_sub20_sub1.anInt2468 = i_17_;
+			if (def != null)
+				return def;
+			byte[] is = Class26.aClass17_600.getFileData(6, objectId, -82);
+			def = new ObjectDefinition();
+			def.objectId = objectId;
 			if (is != null)
-				class38_sub20_sub1.method802(new RS2Buffer(is), true);
-			class38_sub20_sub1.method807(1);
-			if (class38_sub20_sub1.aBool2445) {
-				class38_sub20_sub1.aBool2466 = false;
-				class38_sub20_sub1.anInt2482 = 0;
+				def.decodeObject(new RS2Buffer(is));
+			def.method807(1);
+			if (def.isSolid) {
+				def.aBool2466 = false;
+				def.anInt2482 = 0;
 			}
-			Class17_Sub1.aClass83_1689.method590(i_17_, (byte) -128, class38_sub20_sub1);
-			return class38_sub20_sub1;
+			Class17_Sub1.aClass83_1689.method590(objectId, (byte) -128, def);
+			return def;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "ad.D(" + i + ',' + i_17_ + ')');
+			throw Class38_Sub1.method607(runtimeexception, "ad.D(" + i + ',' + objectId + ')');
 		}
 	}
 

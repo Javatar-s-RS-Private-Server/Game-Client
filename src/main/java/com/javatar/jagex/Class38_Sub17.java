@@ -17,7 +17,7 @@ final class Class38_Sub17 extends Node {
 
 	static final void method691(int i, boolean bool, int i_0_) {
 		try {
-			Client.outputBuffer.putOpcode(172);
+			Client.outputBuffer.writeIsaacByte(172);
 			if (bool != true)
 				Class38_Sub17.aClass19_2186 = null;
 			Client.outputBuffer.method747(i_0_, -2687);
@@ -107,7 +107,7 @@ final class Class38_Sub17 extends Node {
 
 	static final void method695(boolean bool) {
 		try {
-			while (Class15.inputStream.method787((byte) -95, Entity.anInt3446) >= 27) {
+			while (Class15.inputStream.method787((byte) -95, Entity.packetLength) >= 27) {
 				int i = Class15.inputStream.readBits(15, (byte) 69);
 				if (i == 32767)
 					break;

@@ -63,8 +63,8 @@ final class Class51 {
 					if (Client.flagged) {
 						if (Client.lastMouseAction != 0 || Client.mouseRecorder.cacheIndex >= 40) {
 							int sentCoords = 0;
-							Client.outputBuffer.putOpcode(119);
-							Client.outputBuffer.putByte(0);
+							Client.outputBuffer.writeIsaacByte(119);
+							Client.outputBuffer.writeByte(0);
 							int offset = ((RS2Buffer) Client.outputBuffer).pos;
 							for (int id = 0; id < Client.mouseRecorder.cacheIndex; id++) {
 								if (((RS2Buffer) Client.outputBuffer).pos - offset >= 240)
@@ -99,7 +99,7 @@ final class Class51 {
 									if (Client.coordCounter < 8 && xDiff >= -32 && xDiff <= 31 && yDiff >= -32 && yDiff <= 31) {
 										xDiff += 32;
 										yDiff += 32;
-										Client.outputBuffer.putShort(yDiff + (Client.coordCounter << -781178420) + (xDiff << -543096346));
+										Client.outputBuffer.writeShort(yDiff + (Client.coordCounter << -781178420) + (xDiff << -543096346));
 										Client.coordCounter = 0;
 									} else if (Client.coordCounter < 8) {
 										Client.outputBuffer.method771(-31368, (Client.coordCounter << 938583731) + 8388608 + coords);
@@ -138,7 +138,7 @@ final class Class51 {
 					int button = 0;
 					if (Client.lastMouseAction == 2)
 						button = 1;
-					Client.outputBuffer.putOpcode(242);
+					Client.outputBuffer.writeIsaacByte(242);
 					int timeAsInt = (int) time;
 					if (y < 0)
 						y = 0;
@@ -154,21 +154,21 @@ final class Class51 {
 				if (Client.holdingArrowKeys && Client.cameraPacketDelay <= 0) {
 					Client.holdingArrowKeys = false;
 					Client.cameraPacketDelay = 20;
-					Client.outputBuffer.putOpcode(211);
-					Client.outputBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2930);
-					Client.outputBuffer.putLEShortA(Class38_Sub20_Sub11.anInt2958);
+					Client.outputBuffer.writeIsaacByte(211);
+					Client.outputBuffer.writeLEShortA(Class38_Sub20_Sub11.anInt2930);
+					Client.outputBuffer.writeLEShortA(Class38_Sub20_Sub11.anInt2958);
 				}
 				if (Client.awtFocused && !Client.windowFocused == true) {
 					Class38_Sub11.anInt2084++;
 					Client.windowFocused = true;
-					Client.outputBuffer.putOpcode(177);
-					Client.outputBuffer.putByte(1);
+					Client.outputBuffer.writeIsaacByte(177);
+					Client.outputBuffer.writeByte(1);
 				}
 				if (Client.awtFocused != true && !Client.windowFocused != true) {
 					Client.windowFocused = false;
 					Class38_Sub11.anInt2084++;
-					Client.outputBuffer.putOpcode(177);
-					Client.outputBuffer.putByte(0);
+					Client.outputBuffer.writeIsaacByte(177);
+					Client.outputBuffer.writeByte(0);
 				}
 				Class38_Sub20_Sub14.method1002((byte) -66);
 				if (Class48.anInt1069 == 30) {
@@ -235,7 +235,7 @@ final class Class51 {
 											class38_sub6.anIntArray1947[i_22_] = -1;
 											class38_sub6.anIntArray1866[i_22_] = 0;
 										}
-										Client.outputBuffer.putOpcode(56);
+										Client.outputBuffer.writeIsaacByte(56);
 										Client.outputBuffer.method769(Class73_Sub2.anInt2287, 122);
 										Client.outputBuffer.writeByteC(i_18_);
 										Client.outputBuffer.method774(8, Class38_Sub20_Sub8.aClass38_Sub6_2877.anInt1856);
@@ -346,7 +346,7 @@ final class Class51 {
 						if (mit > 4500 && kit > 4500) {
 							Client.logoutTimer = 250;
 							Client.setMouseIdleTime(4000);
-							Client.outputBuffer.putOpcode(13);
+							Client.outputBuffer.writeIsaacByte(13);
 						}
 						Class83.anInt1679++;
 						Class35.anInt816++;
@@ -390,7 +390,7 @@ final class Class51 {
 						if (Class21.anInt517 > 60)
 							Class38_Sub20_Sub8.anInt2855 = -2;
 						if (Client.pingTimer > 50) {
-							Client.outputBuffer.putOpcode(232);
+							Client.outputBuffer.writeIsaacByte(232);
 							Class78.anInt1545++;
 						}
 						try {

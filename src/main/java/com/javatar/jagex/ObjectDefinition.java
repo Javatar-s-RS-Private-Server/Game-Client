@@ -8,7 +8,7 @@ final class ObjectDefinition extends NodeSub {
 	private boolean aBool2441;
 	static int[] anIntArray2442 = new int[50];
 	private short[] aShortArray2444;
-	boolean aBool2445;
+	boolean isSolid;
 	private int[] types;
 	static RSString aClass19_2449;
 	private short[] aShortArray2450;
@@ -19,14 +19,14 @@ final class ObjectDefinition extends NodeSub {
 	boolean aBool2457;
 	private short[] aShortArray2458;
 	private static RSString aClass19_2459;
-	RSString aClass19_2460;
+	RSString name;
 	static Class65 aClass65_2461;
 	private int scaleX;
 	static int anInt2464 = 0;
 	int[] anIntArray2465;
 	boolean aBool2466;
 	static int anInt2467;
-	int anInt2468;
+	int objectId;
 	int anInt2469;
 	private int anInt2470;
 	int anInt2472;
@@ -85,9 +85,9 @@ final class ObjectDefinition extends NodeSub {
 				return null;
 			long l;
 			if (types == null)
-				l = i_6_ + (this.anInt2468 << -1008477846);
+				l = i_6_ + (this.objectId << -1008477846);
 			else
-				l = i_6_ + (i_3_ << -1680096605) + (this.anInt2468 << -1066599286);
+				l = i_6_ + (i_3_ << -1680096605) + (this.objectId << -1066599286);
 			Class38_Sub20_Sub3_Sub1 class38_sub20_sub3_sub1 = (Class38_Sub20_Sub3_Sub1) Class47.aClass83_1053.method591(-28825, l);
 			if (class38_sub20_sub3_sub1 == null) {
 				Model class38_sub20_sub3_sub3 = method796(i_6_, true, i_3_);
@@ -205,7 +205,7 @@ final class ObjectDefinition extends NodeSub {
 			if (i != 65535)
 				return true;
 			for (int i_22_ = 0; i_22_ < models.length; i_22_++)
-				bool &= Class72.aClass17_1408.method116(models[i_22_] & 0xffff, true, 0);
+				bool &= Class72.aClass17_1408.method116(models[i_22_] & 0xffff, 0);
 			return bool;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "hd.J(" + i + ')');
@@ -216,9 +216,9 @@ final class ObjectDefinition extends NodeSub {
 		try {
 			long l;
 			if (types == null)
-				l = (this.anInt2468 << 499755882) + i_27_;
+				l = (this.objectId << 499755882) + i_27_;
 			else
-				l = (i_23_ << -1240433533) + (this.anInt2468 << -592286998) + i_27_;
+				l = (i_23_ << -1240433533) + (this.objectId << -592286998) + i_27_;
 			Class38_Sub20_Sub3_Sub1 class38_sub20_sub3_sub1 = (Class38_Sub20_Sub3_Sub1) Class47.aClass83_1053.method591(-28825, l);
 			if (class38_sub20_sub3_sub1 == null) {
 				Model class38_sub20_sub3_sub3 = method796(i_27_, true, i_23_);
@@ -243,163 +243,138 @@ final class ObjectDefinition extends NodeSub {
 		}
 	}
 
-	private final void readValues(byte i, RS2Buffer Stream, int i_28_) {
+	private void readValues(RS2Buffer buffer, int opcode) {
 		try {
-			if (i == 125)
-				if (i_28_ == 1) {
-					int size = Stream.readUnsignedByte();
-					if (size > 0)
-						if (models == null || Class38_Sub9.objectLowMem) {
-							models = new int[size];
-							types = new int[size];
-							for (int id = 0; id < size; id++) {
-								models[id] = Stream.readUnsignedShort();
-								types[id] = Stream.readUnsignedByte();
-							}
-						} else
-							Stream.pos += size * 3;
-				} else if (i_28_ != 2) {
-					if (i_28_ != 5) {
-						if (i_28_ != 14) {
-							if (i_28_ == 15)
-								this.anInt2480 = Stream.readUnsignedByte();
-							else if (i_28_ == 17) {
-								this.aBool2466 = false;
-								this.anInt2482 = 0;
-							} else if (i_28_ != 18) {
-								if (i_28_ == 19)
-									this.anInt2440 = Stream.readUnsignedByte();
-								else if (i_28_ != 21) {
-									if (i_28_ == 22)
-										aBool2441 = true;
-									else if (i_28_ == 23)
-										this.aBool2457 = true;
-									else if (i_28_ == 24) {
-										this.anInt2472 = Stream.readUnsignedShort();
-										if (this.anInt2472 == 65535)
-											this.anInt2472 = -1;
-									} else if (i_28_ != 27) {
-										if (i_28_ != 28) {
-											if (i_28_ != 29) {
-												if (i_28_ != 39) {
-													if (i_28_ >= 30 && i_28_ < 35) {
-														this.actions[i_28_ - 30] = Stream.getUShort(1347418632);
-														if (this.actions[i_28_ - 30].method174((byte) 112, RuntimeException_Sub1.aClass19_3290))
-															this.actions[i_28_ - 30] = null;
-													} else if (i_28_ != 40) {
-														if (i_28_ == 41) {
-															int i_31_ = Stream.readUnsignedByte();
-															aShortArray2444 = new short[i_31_];
-															aShortArray2458 = new short[i_31_];
-															for (int i_32_ = 0; i_32_ < i_31_; i_32_++) {
-																aShortArray2458[i_32_] = (short) Stream.readUnsignedShort();
-																aShortArray2444[i_32_] = (short) Stream.readUnsignedShort();
-															}
-														} else if (i_28_ != 60) {
-															if (i_28_ != 62) {
-																if (i_28_ != 64) {
-																	if (i_28_ != 65) {
-																		if (i_28_ != 66) {
-																			if (i_28_ == 67)
-																				scaleZ = Stream.readUnsignedShort();
-																			else if (i_28_ == 68)
-																				this.anInt2473 = Stream.readUnsignedShort();
-																			else if (i_28_ != 69) {
-																				if (i_28_ == 70)
-																					anInt2452 = Stream.method772(false);
-																				else if (i_28_ != 71) {
-																					if (i_28_ != 72) {
-																						if (i_28_ == 73)
-																							this.aBool2451 = true;
-																						else if (i_28_ == 74)
-																							this.aBool2445 = true;
-																						else if (i_28_ == 75)
-																							this.anInt2499 = Stream.readUnsignedByte();
-																						else if (i_28_ == 77) {
-																							anInt2501 = Stream.readUnsignedShort();
-																							if (anInt2501 == 65535)
-																								anInt2501 = -1;
-																							anInt2483 = Stream.readUnsignedShort();
-																							if (anInt2483 == 65535)
-																								anInt2483 = -1;
-																							int i_33_ = Stream.readUnsignedByte();
-																							this.anIntArray2498 = new int[i_33_ + 1];
-																							for (int i_34_ = 0; i_33_ >= i_34_; i_34_++) {
-																								this.anIntArray2498[i_34_] = Stream.readUnsignedShort();
-																								if (this.anIntArray2498[i_34_] == 65535)
-																									this.anIntArray2498[i_34_] = -1;
-																							}
-																						} else if (i_28_ != 78) {
-																							if (i_28_ != 79) {
-																								if (i_28_ == 81)
-																									anInt2493 = Stream.readUnsignedByte() * 256;
-																							} else {
-																								this.anInt2506 = Stream.readUnsignedShort();
-																								this.anInt2497 = Stream.readUnsignedShort();
-																								this.anInt2487 = Stream.readUnsignedByte();
-																								int i_35_ = Stream.readUnsignedByte();
-																								this.anIntArray2465 = new int[i_35_];
-																								for (int i_36_ = 0; i_35_ > i_36_; i_36_++)
-																									this.anIntArray2465[i_36_] = Stream.readUnsignedShort();
-																							}
-																						} else {
-																							this.anInt2503 = Stream.readUnsignedShort();
-																							this.anInt2487 = Stream.readUnsignedByte();
-																						}
-																					} else
-																						anInt2479 = Stream.method772(false);
-																				} else
-																					anInt2470 = Stream.method772(false);
-																			} else
-																				this.anInt2439 = Stream.readUnsignedByte();
-																		} else
-																			scaleY = Stream.readUnsignedShort();
-																	} else
-																		scaleX = Stream.readUnsignedShort();
-																} else
-																	this.aBool2500 = false;
-															} else
-																aBool2504 = true;
-														} else
-															this.anInt2456 = Stream.readUnsignedShort();
-													} else {
-														int i_37_ = Stream.readUnsignedByte();
-														aShortArray2450 = new short[i_37_];
-														aShortArray2508 = new short[i_37_];
-														for (int i_38_ = 0; i_38_ < i_37_; i_38_++) {
-															aShortArray2450[i_38_] = (short) Stream.readUnsignedShort();
-															aShortArray2508[i_38_] = (short) Stream.readUnsignedShort();
-														}
-													}
-												} else
-													anInt2489 = Stream.readByte((byte) 102) * 5;
-											} else
-												anInt2478 = Stream.readByte((byte) 109);
-										} else
-											this.anInt2492 = Stream.readUnsignedByte();
-									} else
-										this.anInt2482 = 1;
-								} else
-									anInt2493 = 0;
-							} else
-								this.aBool2466 = false;
-						} else
-							this.anInt2469 = Stream.readUnsignedByte();
-					} else {
-						int i_39_ = Stream.readUnsignedByte();
-						if (i_39_ > 0)
-							if (models == null || Class38_Sub9.objectLowMem) {
-								types = null;
-								models = new int[i_39_];
-								for (int i_40_ = 0; i_40_ < i_39_; i_40_++)
-									models[i_40_] = Stream.readUnsignedShort();
-							} else
-								Stream.pos += i_39_ * 2;
-					}
-				} else
-					this.aClass19_2460 = Stream.getUShort(1347418632);
+			if (opcode == 1) {
+				int size = buffer.readUnsignedByte();
+				if (size > 0)
+					if (models == null || Class38_Sub9.objectLowMem) {
+						models = new int[size];
+						types = new int[size];
+						for (int id = 0; id < size; id++) {
+							models[id] = buffer.readUnsignedShort();
+							types[id] = buffer.readUnsignedByte();
+						}
+					} else
+						buffer.pos += size * 3;
+			} else if (opcode == 2) {
+				this.name = buffer.readString(1347418632);
+			} else if (opcode == 5) {
+				int i_39_ = buffer.readUnsignedByte();
+				if (i_39_ > 0)
+					if (models == null || Class38_Sub9.objectLowMem) {
+						types = null;
+						models = new int[i_39_];
+						for (int i_40_ = 0; i_40_ < i_39_; i_40_++)
+							models[i_40_] = buffer.readUnsignedShort();
+					} else
+						buffer.pos += i_39_ * 2;
+			} else if (opcode == 14) {
+				this.anInt2469 = buffer.readUnsignedByte();
+			} else if (opcode == 15) {
+				this.anInt2480 = buffer.readUnsignedByte();
+			} else if (opcode == 17) {
+				this.aBool2466 = false;
+				this.anInt2482 = 0;
+			} else if (opcode == 18) {
+				this.aBool2466 = false;
+			} else if (opcode == 19) {
+				this.anInt2440 = buffer.readUnsignedByte();
+			} else if (opcode == 21) {
+				anInt2493 = 0;
+			} else if (opcode == 22) {
+				aBool2441 = true;
+			} else if (opcode == 23) {
+				this.aBool2457 = true;
+			} else if (opcode == 24) {
+				this.anInt2472 = buffer.readUnsignedShort();
+				if (this.anInt2472 == 65535)
+					this.anInt2472 = -1;
+			} else if (opcode == 27) {
+				this.anInt2482 = 1;
+			} else if (opcode == 28) {
+				this.anInt2492 = buffer.readUnsignedByte();
+			} else if (opcode == 29) {
+				anInt2478 = buffer.readByte((byte) 109);
+			} else if (opcode == 39) {
+				anInt2489 = buffer.readByte((byte) 102) * 5;
+			} else if (opcode >= 30 && opcode < 35) {
+				this.actions[opcode - 30] = buffer.readString(1347418632);
+				if (this.actions[opcode - 30].method174((byte) 112, RuntimeException_Sub1.aClass19_3290))
+					this.actions[opcode - 30] = null;
+			} else if (opcode == 40) {
+				int i_37_ = buffer.readUnsignedByte();
+				aShortArray2450 = new short[i_37_];
+				aShortArray2508 = new short[i_37_];
+				for (int i_38_ = 0; i_38_ < i_37_; i_38_++) {
+					aShortArray2450[i_38_] = (short) buffer.readUnsignedShort();
+					aShortArray2508[i_38_] = (short) buffer.readUnsignedShort();
+				}
+			} else if (opcode == 41) {
+				int i_31_ = buffer.readUnsignedByte();
+				aShortArray2444 = new short[i_31_];
+				aShortArray2458 = new short[i_31_];
+				for (int i_32_ = 0; i_32_ < i_31_; i_32_++) {
+					aShortArray2458[i_32_] = (short) buffer.readUnsignedShort();
+					aShortArray2444[i_32_] = (short) buffer.readUnsignedShort();
+				}
+			} else if (opcode == 60) {
+				this.anInt2456 = buffer.readUnsignedShort();
+			} else if (opcode == 62) {
+				aBool2504 = true;
+			} else if (opcode == 64) {
+				this.aBool2500 = false;
+			} else if (opcode == 65) {
+				scaleX = buffer.readUnsignedShort();
+			} else if (opcode == 66) {
+				scaleY = buffer.readUnsignedShort();
+			} else if (opcode == 67) {
+				scaleZ = buffer.readUnsignedShort();
+			} else if (opcode == 68) {
+				this.anInt2473 = buffer.readUnsignedShort();
+			} else if (opcode == 69) {
+				this.anInt2439 = buffer.readUnsignedByte();
+			} else if (opcode == 70) {
+				anInt2452 = buffer.method772(false);
+			} else if (opcode == 71) {
+				anInt2470 = buffer.method772(false);
+			} else if (opcode == 72) {
+				anInt2479 = buffer.method772(false);
+			} else if (opcode == 73) {
+				this.aBool2451 = true;
+			} else if (opcode == 74) {
+				this.isSolid = true;
+			} else if (opcode == 75) {
+				this.anInt2499 = buffer.readUnsignedByte();
+			} else if (opcode == 77) {
+				anInt2501 = buffer.readUnsignedShort();
+				if (anInt2501 == 65535)
+					anInt2501 = -1;
+				anInt2483 = buffer.readUnsignedShort();
+				if (anInt2483 == 65535)
+					anInt2483 = -1;
+				int i_33_ = buffer.readUnsignedByte();
+				this.anIntArray2498 = new int[i_33_ + 1];
+				for (int i_34_ = 0; i_33_ >= i_34_; i_34_++) {
+					this.anIntArray2498[i_34_] = buffer.readUnsignedShort();
+					if (this.anIntArray2498[i_34_] == 65535)
+						this.anIntArray2498[i_34_] = -1;
+				}
+			} else if (opcode == 78) {
+				this.anInt2503 = buffer.readUnsignedShort();
+				this.anInt2487 = buffer.readUnsignedByte();
+			} else if (opcode == 79) {
+				this.anInt2506 = buffer.readUnsignedShort();
+				this.anInt2497 = buffer.readUnsignedShort();
+				this.anInt2487 = buffer.readUnsignedByte();
+				int i_35_ = buffer.readUnsignedByte();
+				this.anIntArray2465 = new int[i_35_];
+				for (int i_36_ = 0; i_35_ > i_36_; i_36_++)
+					this.anIntArray2465[i_36_] = buffer.readUnsignedShort();
+			} else if (opcode == 81)
+				anInt2493 = buffer.readUnsignedByte() * 256;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "hd.K(" + i + ',' + (Stream != null ? "{...}" : "null") + ',' + i_28_ + ')');
+			throw Class38_Sub1.method607(runtimeexception, "hd.K(" + (byte) 125 + ',' + (buffer != null ? "{...}" : "null") + ',' + opcode + ')');
 		}
 	}
 
@@ -426,7 +401,7 @@ final class ObjectDefinition extends NodeSub {
 			Class72.anInt1417 = 0;
 			Class38_Sub20_Sub17.anInt3129 = 0;
 			Class23.packetId = -1;
-			Entity.anInt3446 = 0;
+			Entity.packetLength = 0;
 			if (i != 104)
 				ObjectDefinition.method801((byte) 31);
 			((RS2Buffer) Client.outputBuffer).pos = 0;
@@ -436,13 +411,13 @@ final class ObjectDefinition extends NodeSub {
 			Client.systemUpdateTime = 0;
 			Class15.anInt280 = -1;
 			((RS2Buffer) Class15.inputStream).pos = 0;
-			Client.destX = 0;
+			Client.minimapFlagDestX = 0;
 			for (int i_41_ = 0; i_41_ < Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152.length; i_41_++)
 				if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_41_] != null)
-					((Entity) Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_41_]).anInt3502 = -1;
+					((Entity) Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_41_]).facingEntityIndex = -1;
 			for (int i_42_ = 0; i_42_ < Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164.length; i_42_++)
 				if (Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_42_] != null)
-					((Entity) Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_42_]).anInt3502 = -1;
+					((Entity) Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_42_]).facingEntityIndex = -1;
 			Class54.method423(32);
 			Canvas_Sub1.method808(0, 30);
 			for (int i_43_ = 0; i_43_ < 100; i_43_++)
@@ -452,18 +427,16 @@ final class ObjectDefinition extends NodeSub {
 		}
 	}
 
-	final void method802(RS2Buffer stream, boolean bool) {
+	final void decodeObject(RS2Buffer buffer) {
 		try {
 			for (;;) {
-				int opcode = stream.readUnsignedByte();
+				int opcode = buffer.readUnsignedByte();
 				if (opcode == 0)
 					break;
-				readValues((byte) 125, stream, opcode);
+				readValues(buffer, opcode);
 			}
-			if (bool != true)
-				ObjectDefinition.method803(true, -116);
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "hd.M(" + (stream != null ? "{...}" : "null") + ',' + bool + ')');
+			throw Class38_Sub1.method607(runtimeexception, "hd.M(" + (buffer != null ? "{...}" : "null") + ',' + true + ')');
 		}
 	}
 
@@ -483,9 +456,9 @@ final class ObjectDefinition extends NodeSub {
 		try {
 			long l;
 			if (types != null)
-				l = (this.anInt2468 << 1873215466) + (i_47_ << -2096104541) + i_45_;
+				l = (this.objectId << 1873215466) + (i_47_ << -2096104541) + i_45_;
 			else
-				l = i_45_ + (this.anInt2468 << -1573621974);
+				l = i_45_ + (this.objectId << -1573621974);
 			if (bool != true)
 				ObjectDefinition.method801((byte) -63);
 			SceneModel class38_sub20_sub3 = (SceneModel) Class20.aClass83_494.method591(-28825, l);
@@ -542,7 +515,7 @@ final class ObjectDefinition extends NodeSub {
 			if (types != null) {
 				for (int i_50_ = 0; i_50_ < types.length; i_50_++)
 					if (types[i_50_] == i_49_)
-						return Class72.aClass17_1408.method116(models[i_50_] & 0xffff, true, 0);
+						return Class72.aClass17_1408.method116(models[i_50_] & 0xffff, 0);
 				return true;
 			}
 			if (models == null)
@@ -551,7 +524,7 @@ final class ObjectDefinition extends NodeSub {
 				return true;
 			boolean bool = true;
 			for (int i_51_ = 0; models.length > i_51_; i_51_++)
-				bool &= Class72.aClass17_1408.method116(models[i_51_] & 0xffff, true, 0);
+				bool &= Class72.aClass17_1408.method116(models[i_51_] & 0xffff, 0);
 			return bool;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "hd.I(" + i + ',' + i_49_ + ')');
@@ -563,7 +536,7 @@ final class ObjectDefinition extends NodeSub {
 		this.anInt2456 = -1;
 		scaleX = 128;
 		this.anInt2482 = 2;
-		this.aClass19_2460 = Entity.aClass19_3445;
+		this.name = Entity.aClass19_3445;
 		this.anInt2469 = 1;
 		this.anInt2439 = 0;
 		scaleY = 128;
@@ -584,7 +557,7 @@ final class ObjectDefinition extends NodeSub {
 		this.aBool2466 = true;
 		anInt2470 = 0;
 		this.aBool2500 = true;
-		this.aBool2445 = false;
+		this.isSolid = false;
 		this.anInt2503 = -1;
 		this.anInt2473 = -1;
 		scaleZ = 128;

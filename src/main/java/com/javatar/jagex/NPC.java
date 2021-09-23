@@ -29,9 +29,9 @@ final class NPC extends Entity {
 		try {
 			if (this.aClass38_Sub20_Sub5_3543 == null)
 				return null;
-			Class38_Sub20_Sub4 class38_sub20_sub4 = ((Entity) this).currentAnimationId == -1
-					|| ((Entity) this).anInt3461 != 0 ? null : Sequence.forID(
-					(byte) 120, ((Entity) this).currentAnimationId);
+			Class38_Sub20_Sub4 class38_sub20_sub4 = ((Entity) this).animationId == -1
+					|| ((Entity) this).animationDelay != 0 ? null : Sequence.forID(
+					(byte) 120, ((Entity) this).animationId);
 			if (i != 109)
 				NPC.method1200(80, null, 28, null);
 			Class38_Sub20_Sub4 class38_sub20_sub4_0_ = ((Entity) this).anInt3454 != -1
@@ -85,15 +85,15 @@ final class NPC extends Entity {
 					int i_5_ = stream.readUnsignedByte();
 					if (i_5_ != 0 && i_5_ != 1 && i_5_ != 2) {
 						if (i_5_ == 3 || i_5_ == 4) {
-							String string = new String(stream.getUShort(
+							String string = new String(stream.readString(
 									1347418632).method158(122));
 							String string_6_ = new String(stream
-									.getUShort(1347418632).method158(122));
+									.readString(1347418632).method158(122));
 							int i_7_ = stream.readUnsignedByte();
 							String[] strings = new String[i_7_];
 							for (int i_8_ = 0; i_8_ < i_7_; i_8_++)
 								strings[i_8_] = new String(stream
-										.getUShort(1347418632).method158(122));
+										.readString(1347418632).method158(122));
 							byte[][] is = new byte[i_7_][];
 							if (i_5_ == 3)
 								for (int i_9_ = 0; i_9_ < i_7_; i_9_++) {
@@ -113,9 +113,9 @@ final class NPC extends Entity {
 							class38_sub7.aByteArrayArrayArray2033[i_4_] = is;
 						}
 					} else {
-						String string = new String(stream.getUShort(
+						String string = new String(stream.readString(
 								1347418632).method158(122));
-						String string_12_ = new String(stream.getUShort(
+						String string_12_ = new String(stream.readString(
 								1347418632).method158(122));
 						int i_13_ = 0;
 						if (i_5_ == 1)
@@ -206,7 +206,7 @@ final class NPC extends Entity {
 		try {
 			if (bool != true)
 				NPC.method1204(true, 42);
-			if (Class37.aClass19Array865[i].method143((byte) 39) > 0)
+			if (Class37.aClass19Array865[i].length((byte) 39) > 0)
 				return Class9.method43(new RSString[] {
 						Class10.aClass19Array194[i], Class77.aClass19_1510,
 						Class37.aClass19Array865[i] }, (byte) -20);

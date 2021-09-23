@@ -66,11 +66,11 @@ abstract class SceneModel extends NodeSub {
 			if (i > -20)
 				SceneModel.method817((byte) -123);
 			RSString class19 = new RSString();
-			class19.anInt478 = 0;
+			class19.length = 0;
 			class19.buffer = new byte[i_9_];
 			for (int i_10_ = i_8_; i_10_ < i_8_ + i_9_; i_10_++)
 				if (is[i_10_] != 0)
-					class19.buffer[class19.anInt478++] = is[i_10_];
+					class19.buffer[class19.length++] = is[i_10_];
 			return class19;
 		} catch (RuntimeException runtimeexception) {
 			throw Class38_Sub1.method607(runtimeexception, "dd.HB(" + (is != null ? "{...}" : "null") + ',' + i + ',' + i_8_ + ',' + i_9_ + ')');

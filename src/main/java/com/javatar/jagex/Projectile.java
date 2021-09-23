@@ -118,8 +118,7 @@ final class Projectile extends SceneModel {
 
 	static final WidgetComponent method1167(int i, int i_1_) {
 		try {
-			int i_2_ = -16 / ((i_1_ + 32) / 63);
-			int i_3_ = i >> 1014661456;
+			int i_3_ = i >> 16;
 			int i_4_ = i & 0xffff;
 			if (Class62.widgets[i_3_] == null
 					|| Class62.widgets[i_3_][i_4_] == null) {
@@ -129,6 +128,7 @@ final class Projectile extends SceneModel {
 			}
 			return Class62.widgets[i_3_][i_4_];
 		} catch (RuntimeException runtimeexception) {
+			runtimeexception.printStackTrace();
 			throw Class38_Sub1.method607(runtimeexception, "sc.G(" + i + ','
 					+ i_1_ + ')');
 		}
@@ -186,7 +186,7 @@ final class Projectile extends SceneModel {
 			NodeSub.anInt2257 = (int) (Math.random() * 110.0) - 55;
 			Class4.anInt87 = 0;
 			ItemDefinition.anInt2783 = 0;
-			Client.destX = 0;
+			Client.minimapFlagDestX = 0;
 			Class21.anInt517 = (int) (Math.random() * 120.0) - 60;
 			Class55.anInt1212 = (int) (Math.random() * 80.0) - 40;
 			Class38_Sub20_Sub11.anInt2943 = (int) (Math.random() * 100.0) - 50;

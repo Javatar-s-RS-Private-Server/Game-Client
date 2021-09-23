@@ -87,23 +87,21 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 		}
 	}
 
-	static final void sendMapRegion(boolean second, byte i) {
+	static void sendMapRegion(boolean isDynamic, byte i) {
 		do {
 			try {
-				Class37.secondMapRegion = second;
-				if (!Class37.secondMapRegion) {
+				Class37.isDynamic = isDynamic;
+				if (!Class37.isDynamic) {
 					int height = Class15.inputStream.getUByteC();
 					int regionX = Class15.inputStream.readUnsignedShortAdd();
 					int regionY = Class15.inputStream.readUnsignedShort();
-					int i_9_ = (-((RS2Buffer) Class15.inputStream).pos + Entity.anInt3446) / 16;
+					int i_9_ = (-Class15.inputStream.pos + Entity.packetLength) / 16;
 					Class83.anIntArrayArray1664 = new int[i_9_][4];
 					for (int i_10_ = 0; i_10_ < i_9_; i_10_++)
 						for (int i_11_ = 0; i_11_ < 4; i_11_++)
-							Class83.anIntArrayArray1664[i_10_][i_11_] = Class15.inputStream.readMEInt();
+							Class83.anIntArrayArray1664[i_10_][i_11_] = Class15.inputStream.readInt(true);
 					int localX = Class15.inputStream.getULEShort();
-					boolean bool_13_ = false;
-					if ((regionY / 8 == 48 || regionY / 8 == 49) && regionX / 8 == 48)
-						bool_13_ = true;
+					boolean bool_13_ = (regionY / 8 == 48 || regionY / 8 == 49) && regionX / 8 == 48;
 					int localY = Class15.inputStream.readUnsignedShort();
 					Class51.anIntArray1131 = new int[i_9_];
 					Class38_Sub17.aByteArrayArray2198 = new byte[i_9_][];
@@ -140,7 +138,7 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 									RSString.anIntArrayArrayArray445[i_22_][i_23_][i_24_] = Class15.inputStream.readBits(26, (byte) 69);
 							}
 					Class15.inputStream.method788(7);
-					int i_26_ = (Entity.anInt3446 - ((RS2Buffer) Class15.inputStream).pos) / 16;
+					int i_26_ = (Entity.packetLength - Class15.inputStream.pos) / 16;
 					Class83.anIntArrayArray1664 = new int[i_26_][4];
 					for (int i_27_ = 0; i_27_ < i_26_; i_27_++)
 						for (int i_28_ = 0; i_28_ < 4; i_28_++)
@@ -181,7 +179,7 @@ final class Class38_Sub20_Sub17 extends NodeSub {
 					break;
 				Class38_Sub20_Sub17.sendMapRegion(true, (byte) -101);
 			} catch (RuntimeException runtimeexception) {
-				throw Class38_Sub1.method607(runtimeexception, "ac.K(" + second + ',' + i + ')');
+				throw Class38_Sub1.method607(runtimeexception, "ac.K(" + isDynamic + ',' + i + ')');
 			}
 			break;
 		} while (false);

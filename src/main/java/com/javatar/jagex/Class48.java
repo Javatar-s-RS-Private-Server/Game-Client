@@ -126,7 +126,7 @@ final class Class48 {
 	static final void method388(boolean bool, byte i, Class38_Sub8 class38_sub8) {
 		do {
 			try {
-				int i_10_ = (int) ((Node) class38_sub8).aLong898;
+				int i_10_ = (int) class38_sub8.aLong898;
 				int i_11_ = class38_sub8.anInt2038;
 				class38_sub8.method330(0);
 				if (bool)
@@ -167,31 +167,30 @@ final class Class48 {
 		}
 	}
 
-	static final void method390(byte i, int i_12_, Player class38_sub20_sub3_sub7_sub2, int i_13_) {
+	static final void setPlayerAnimation(byte i, int animationDelay, Player player, int animationId) {
 		try {
-			if (i_13_ != ((Entity) class38_sub20_sub3_sub7_sub2).currentAnimationId || i_13_ == -1) {
-				if (i_13_ == -1 || ((Entity) class38_sub20_sub3_sub7_sub2).currentAnimationId == -1 || Sequence.forID((byte) 123, i_13_).anInt2576 >= Sequence.forID((byte) 119, ((Entity) class38_sub20_sub3_sub7_sub2).currentAnimationId).anInt2576) {
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3494 = ((Entity) class38_sub20_sub3_sub7_sub2).walkQueueLocationIndex;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3461 = i_12_;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3471 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3460 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3483 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).currentAnimationId = i_13_;
+			if (animationId != player.animationId || animationId == -1) {
+				if (animationId == -1 || player.animationId == -1 || Sequence.forID((byte) 123, animationId).anInt2576 >= Sequence.forID((byte) 119, player.animationId).anInt2576) {
+					player.anInt3494 = player.walkQueueLocationIndex;
+					player.animationDelay = animationDelay;
+					player.anInt3471 = 0;
+					player.anInt3460 = 0;
+					player.anInt3483 = 0;
+					player.animationId = animationId;
 				}
 			} else {
-				int i_14_ = Sequence.forID((byte) 105, i_13_).anInt2587;
+				int i_14_ = Sequence.forID((byte) 105, animationId).anInt2587;
 				if (i_14_ == 1) {
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3483 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3460 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3471 = 0;
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3461 = i_12_;
+					player.anInt3483 = 0;
+					player.anInt3460 = 0;
+					player.anInt3471 = 0;
+					player.animationDelay = animationDelay;
 				}
 				if (i_14_ == 2)
-					((Entity) class38_sub20_sub3_sub7_sub2).anInt3460 = 0;
+					player.anInt3460 = 0;
 			}
-			int i_15_ = 78 % ((82 - i) / 37);
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "tb.E(" + i + ',' + i_12_ + ',' + (class38_sub20_sub3_sub7_sub2 != null ? "{...}" : "null") + ',' + i_13_ + ')');
+			throw Class38_Sub1.method607(runtimeexception, "tb.E(" + i + ',' + animationDelay + ',' + (player != null ? "{...}" : "null") + ',' + animationId + ')');
 		}
 	}
 

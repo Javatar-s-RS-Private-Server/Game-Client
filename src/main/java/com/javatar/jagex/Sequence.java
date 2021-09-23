@@ -79,7 +79,7 @@ final class Sequence extends NodeSub {
 				return null;
 			boolean bool = false;
 			for (int i_5_ = 0; i_5_ < anIntArray2704.length; i_5_++)
-				if (!Class66.aClass17_1376.method116(anIntArray2704[i_5_], true, 0))
+				if (!Class66.aClass17_1376.method116(anIntArray2704[i_5_], 0))
 					bool = true;
 			if (bool)
 				return null;
@@ -130,13 +130,13 @@ final class Sequence extends NodeSub {
 				}
 				if (bool)
 					break;
-				class38_sub23_sub1.putOpcode(i_9_);
-				class38_sub23_sub1.putByte(0);
+				class38_sub23_sub1.writeIsaacByte(i_9_);
+				class38_sub23_sub1.writeByte(0);
 				int i_11_ = ((RS2Buffer) class38_sub23_sub1).pos;
 				class38_sub23_sub1.writeInt(class38_sub7.anInt2018);
 				for (int i_12_ = 0; class38_sub7.anInt2035 > i_12_; i_12_++)
 					if (class38_sub7.anIntArray2024[i_12_] != 0)
-						class38_sub23_sub1.putByte(class38_sub7.anIntArray2024[i_12_]);
+						class38_sub23_sub1.writeByte(class38_sub7.anIntArray2024[i_12_]);
 					else
 						try {
 							int i_13_ = class38_sub7.anIntArray2032[i_12_];
@@ -145,25 +145,25 @@ final class Sequence extends NodeSub {
 									if (i_13_ == 2) {
 										Field field = (Field) class38_sub7.aClass65Array2029[i_12_].anObject1365;
 										int i_14_ = field.getModifiers();
-										class38_sub23_sub1.putByte(0);
+										class38_sub23_sub1.writeByte(0);
 										class38_sub23_sub1.writeInt(i_14_);
 									}
 								} else {
 									Field field = (Field) class38_sub7.aClass65Array2029[i_12_].anObject1365;
 									field.setInt(null, class38_sub7.anIntArray2026[i_12_]);
-									class38_sub23_sub1.putByte(0);
+									class38_sub23_sub1.writeByte(0);
 								}
 							} else {
 								Field field = (Field) class38_sub7.aClass65Array2029[i_12_].anObject1365;
 								int i_15_ = field.getInt(null);
-								class38_sub23_sub1.putByte(0);
+								class38_sub23_sub1.writeByte(0);
 								class38_sub23_sub1.writeInt(i_15_);
 							}
 							if (i_13_ != 3) {
 								if (i_13_ == 4) {
 									Method method = (Method) class38_sub7.aClass65Array2034[i_12_].anObject1365;
 									int i_16_ = method.getModifiers();
-									class38_sub23_sub1.putByte(0);
+									class38_sub23_sub1.writeByte(0);
 									class38_sub23_sub1.writeInt(i_16_);
 								}
 							} else {
@@ -176,43 +176,43 @@ final class Sequence extends NodeSub {
 								}
 								Object object = method.invoke(null, objects);
 								if (object == null)
-									class38_sub23_sub1.putByte(0);
+									class38_sub23_sub1.writeByte(0);
 								else if (!(object instanceof Number)) {
 									if (!(object instanceof RSString))
-										class38_sub23_sub1.putByte(4);
+										class38_sub23_sub1.writeByte(4);
 									else {
-										class38_sub23_sub1.putByte(2);
-										class38_sub23_sub1.method742((RSString) object, (byte) 117);
+										class38_sub23_sub1.writeByte(2);
+										class38_sub23_sub1.writeStringCP1252((RSString) object, (byte) 117);
 									}
 								} else {
-									class38_sub23_sub1.putByte(1);
+									class38_sub23_sub1.writeByte(1);
 									class38_sub23_sub1.writeLong(((Number) object).longValue());
 								}
 							}
 						} catch (ClassNotFoundException classnotfoundexception) {
-							class38_sub23_sub1.putByte(-10);
+							class38_sub23_sub1.writeByte(-10);
 						} catch (java.io.InvalidClassException invalidclassexception) {
-							class38_sub23_sub1.putByte(-11);
+							class38_sub23_sub1.writeByte(-11);
 						} catch (java.io.StreamCorruptedException streamcorruptedexception) {
-							class38_sub23_sub1.putByte(-12);
+							class38_sub23_sub1.writeByte(-12);
 						} catch (java.io.OptionalDataException optionaldataexception) {
-							class38_sub23_sub1.putByte(-13);
+							class38_sub23_sub1.writeByte(-13);
 						} catch (IllegalAccessException illegalaccessexception) {
-							class38_sub23_sub1.putByte(-14);
+							class38_sub23_sub1.writeByte(-14);
 						} catch (IllegalArgumentException illegalargumentexception) {
-							class38_sub23_sub1.putByte(-15);
+							class38_sub23_sub1.writeByte(-15);
 						} catch (java.lang.reflect.InvocationTargetException invocationtargetexception) {
-							class38_sub23_sub1.putByte(-16);
+							class38_sub23_sub1.writeByte(-16);
 						} catch (SecurityException securityexception) {
-							class38_sub23_sub1.putByte(-17);
+							class38_sub23_sub1.writeByte(-17);
 						} catch (java.io.IOException ioexception) {
-							class38_sub23_sub1.putByte(-18);
+							class38_sub23_sub1.writeByte(-18);
 						} catch (NullPointerException nullpointerexception) {
-							class38_sub23_sub1.putByte(-19);
+							class38_sub23_sub1.writeByte(-19);
 						} catch (Exception exception) {
-							class38_sub23_sub1.putByte(-20);
+							class38_sub23_sub1.writeByte(-20);
 						} catch (Throwable throwable) {
-							class38_sub23_sub1.putByte(-21);
+							class38_sub23_sub1.writeByte(-21);
 						}
 				class38_sub23_sub1.method743((byte) 95, i_11_);
 				class38_sub23_sub1.putSizedByte(-i_11_ + ((RS2Buffer) class38_sub23_sub1).pos);
@@ -223,13 +223,11 @@ final class Sequence extends NodeSub {
 		}
 	}
 
-	static final byte[] method912(int i, byte[] is) {
+	static byte[] method912(byte[] is) {
 		try {
 			RS2Buffer class38_sub23 = new RS2Buffer(is);
 			int i_18_ = class38_sub23.readUnsignedByte();
 			int i_19_ = class38_sub23.readInt(true);
-			if (i != 31535)
-				Sequence.aClass19_2740 = null;
 			if (i_19_ < 0 || WidgetComponent.anInt1855 != 0 && WidgetComponent.anInt1855 < i_19_)
 				throw new RuntimeException();
 			if (i_18_ != 0) {
@@ -247,7 +245,8 @@ final class Sequence extends NodeSub {
 			class38_sub23.method778(i_19_, 0, false, is_22_);
 			return is_22_;
 		} catch (RuntimeException runtimeexception) {
-			throw Class38_Sub1.method607(runtimeexception, "o.H(" + i + ',' + (is != null ? "{...}" : "null") + ')');
+			runtimeexception.printStackTrace();
+			throw Class38_Sub1.method607(runtimeexception, "o.H(" + 31535 + ',' + (is != null ? "{...}" : "null") + ')');
 		}
 	}
 
@@ -375,7 +374,7 @@ final class Sequence extends NodeSub {
 			if (class38_sub20_sub3_sub1 == null) {
 				boolean bool = false;
 				for (int i_37_ = 0; timer.length > i_37_; i_37_++)
-					if (!Class66.aClass17_1376.method116(timer[i_37_], true, 0))
+					if (!Class66.aClass17_1376.method116(timer[i_37_], 0))
 						bool = true;
 				if (bool)
 					return null;
@@ -435,7 +434,7 @@ final class Sequence extends NodeSub {
 					for (int id = 0; id < len; id++)
 						timer[id] = stream.readUnsignedShort();
 				} else if (opcode == 2)
-					this.aClass19_2705 = stream.getUShort(1347418632);
+					this.aClass19_2705 = stream.readString(1347418632);
 				else if (opcode != 12) {
 					if (opcode == 13)
 						this.anInt2696 = stream.readUnsignedShort();
@@ -513,7 +512,7 @@ final class Sequence extends NodeSub {
 										}
 									}
 								} else {
-									this.aClass19Array2690[opcode - 30] = stream.getUShort(1347418632);
+									this.aClass19Array2690[opcode - 30] = stream.readString(1347418632);
 									if (this.aClass19Array2690[opcode - 30].method174((byte) 121, RuntimeException_Sub1.aClass19_3290))
 										this.aClass19Array2690[opcode - 30] = null;
 								}

@@ -65,17 +65,17 @@ final class Class33 {
 					boolean bool = Client.calculatePath(true, 0, ((Entity) Client.myPlayer).walkQueueY[0], 0, 0, i_13_, ((Entity) Client.myPlayer).walkQueueX[0], 0, i_12_, 0, 1);
 					if (!bool)
 						break;
-					Client.outputBuffer.putByte(i_5_);
-					Client.outputBuffer.putByte(i_6_);
-					Client.outputBuffer.putShort(Class38_Sub20_Sub11.anInt2930);
-					Client.outputBuffer.putByte(57);
-					Client.outputBuffer.putByte(Class21.anInt517);
-					Client.outputBuffer.putByte(Class38_Sub7.anInt2027);
-					Client.outputBuffer.putByte(89);
-					Client.outputBuffer.putShort(((Entity) Client.myPlayer).anInt3493);
-					Client.outputBuffer.putShort(((Entity) Client.myPlayer).anInt3444);
-					Client.outputBuffer.putByte(Client.arbitraryDestination);
-					Client.outputBuffer.putByte(63);
+					Client.outputBuffer.writeByte(i_5_);
+					Client.outputBuffer.writeByte(i_6_);
+					Client.outputBuffer.writeShort(Class38_Sub20_Sub11.anInt2930);
+					Client.outputBuffer.writeByte(57);
+					Client.outputBuffer.writeByte(Class21.anInt517);
+					Client.outputBuffer.writeByte(Class38_Sub7.anInt2027);
+					Client.outputBuffer.writeByte(89);
+					Client.outputBuffer.writeShort(((Entity) Client.myPlayer).anInt3493);
+					Client.outputBuffer.writeShort(((Entity) Client.myPlayer).anInt3444);
+					Client.outputBuffer.writeByte(Client.arbitraryDestination);
+					Client.outputBuffer.writeByte(63);
 				}
 			} catch (RuntimeException runtimeexception) {
 				throw Class38_Sub1.method607(runtimeexception, "a.D(" + i + ',' + i_3_ + ',' + i_4_ + ')');

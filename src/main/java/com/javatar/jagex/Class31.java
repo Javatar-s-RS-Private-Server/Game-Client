@@ -28,7 +28,7 @@ final class Class31 implements Runnable {
 
 	static final void addLocalPlayers(int i) {
 		try {
-			while (Class15.inputStream.method787((byte) -122, Entity.anInt3446) >= 11) {
+			while (Class15.inputStream.method787((byte) -122, Entity.packetLength) >= 11) {
 				int i_0_ = Class15.inputStream.readBits(11, (byte) 69);
 				if (i_0_ == 2047)
 					break;

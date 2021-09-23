@@ -60,15 +60,15 @@ final class Class57 {
 			aClass36_1265.method319(class38_sub23);
 		}
 		for (int i_0_ = 0; i_0_ < 10; i_0_++) {
-			int i_1_ = class38_sub23.method726(true);
+			int i_1_ = class38_sub23.readSmallShort();
 			if (i_1_ == 0)
 				break;
 			anIntArray1254[i_0_] = i_1_;
 			anIntArray1267[i_0_] = class38_sub23.method737(-49152);
-			anIntArray1255[i_0_] = class38_sub23.method726(true);
+			anIntArray1255[i_0_] = class38_sub23.readSmallShort();
 		}
-		anInt1272 = class38_sub23.method726(true);
-		anInt1268 = class38_sub23.method726(true);
+		anInt1272 = class38_sub23.readSmallShort();
+		anInt1268 = class38_sub23.readSmallShort();
 		this.anInt1275 = class38_sub23.readUnsignedShort();
 		this.anInt1262 = class38_sub23.readUnsignedShort();
 		aClass8_1256 = new Class8();

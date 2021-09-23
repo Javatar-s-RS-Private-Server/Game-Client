@@ -128,8 +128,8 @@ final class Class28 {
 						}
 					}
 					if (Class42.anInt962 == 2) {
-						int i_25_ = -(((Entity) Client.myPlayer).anInt3493 / 32) + 2 + (Class32.anInt770 - Client.currentBaseY) * 4;
-						int i_26_ = (-Client.currentBaseX + Class5.anInt93) * 4 + 2 - ((Entity) Client.myPlayer).anInt3444 / 32;
+						int i_25_ = -(((Entity) Client.myPlayer).anInt3493 / 32) + 2 + (Class32.anInt770 - Client.currentBaseX) * 4;
+						int i_26_ = (-Client.currentBaseY + Class5.anInt93) * 4 + 2 - ((Entity) Client.myPlayer).anInt3444 / 32;
 						Class59.method446(i_25_, i, i_2_, i_26_, Sequence.aClass38_Sub20_Sub9_Sub3Array2734[1], true);
 					}
 					if (Class42.anInt962 == 10 && Class62.anInt1344 >= 0 && Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152.length > Class62.anInt1344) {
@@ -141,8 +141,8 @@ final class Class28 {
 						}
 					}
 				}
-				if (Client.destX != 0) {
-					int i_29_ = Client.destX * 4 - ((Entity) Client.myPlayer).anInt3493 / 32 + 2;
+				if (Client.minimapFlagDestX != 0) {
+					int i_29_ = Client.minimapFlagDestX * 4 - ((Entity) Client.myPlayer).anInt3493 / 32 + 2;
 					int i_30_ = Client.destY * 4 + 2 - ((Entity) Client.myPlayer).anInt3444 / 32;
 					Class38_Sub20_Sub3_Sub5.method1159(-2011, i_2_, i, i_30_, Sequence.aClass38_Sub20_Sub9_Sub3Array2734[0], i_29_);
 				}

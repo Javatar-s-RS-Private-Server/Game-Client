@@ -31,31 +31,31 @@ final class Class29 {
 					int i = class19.method170(1, Class37.aClass19_878);
 					if (i == -1)
 						break;
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) -118, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 0)), class19.method171((byte) -15, i + 2) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) -118, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 0)), class19.substring((byte) -15, i + 2) }, (byte) -20);
 				}
 				for (;;) {
 					int i = class19.method170(1, Class38_Sub11.aClass19_2092);
 					if (i == -1)
 						break;
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) -116, 0, i), ObjectDefinition.method803(true, Class13.method72((byte) 23, class38_sub6, 1)), class19.method171((byte) -5, i + 2) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) -116, 0, i), ObjectDefinition.method803(true, Class13.method72((byte) 23, class38_sub6, 1)), class19.substring((byte) -5, i + 2) }, (byte) -20);
 				}
 				for (;;) {
 					int i = class19.method170(1, Class54.aClass19_1185);
 					if (i == -1)
 						break;
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) 50, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 2)), class19.method171((byte) -53, i + 2) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) 50, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 2)), class19.substring((byte) -53, i + 2) }, (byte) -20);
 				}
 				for (;;) {
 					int i = class19.method170(1, Class38_Sub11.aClass19_2100);
 					if (i == -1)
 						break;
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) 96, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 3)), class19.method171((byte) -102, i + 2) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) 96, 0, i), ObjectDefinition.method803(!bool, Class13.method72((byte) 23, class38_sub6, 3)), class19.substring((byte) -102, i + 2) }, (byte) -20);
 				}
 				for (;;) {
 					int i = class19.method170(1, Class50.aClass19_1117);
 					if (i == -1)
 						break;
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) -120, 0, i), ObjectDefinition.method803(true, Class13.method72((byte) 23, class38_sub6, 4)), class19.method171((byte) -61, i + 2) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) -120, 0, i), ObjectDefinition.method803(true, Class13.method72((byte) 23, class38_sub6, 4)), class19.substring((byte) -61, i + 2) }, (byte) -20);
 				}
 				for (;;) {
 					int i = class19.method170(1, Class76.aClass19_1486);
@@ -73,7 +73,7 @@ final class Class29 {
 							/* empty */
 						}
 					}
-					class19 = Class9.method43(new RSString[] { class19.method144((byte) 95, 0, i), class19_1_, class19.method171((byte) -128, i + 4) }, (byte) -20);
+					class19 = Class9.method43(new RSString[] { class19.method144((byte) 95, 0, i), class19_1_, class19.substring((byte) -128, i + 4) }, (byte) -20);
 				}
 			}
 			if (bool)

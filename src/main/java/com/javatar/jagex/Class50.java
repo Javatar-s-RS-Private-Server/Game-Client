@@ -52,9 +52,9 @@ final class Class50 {
 				if (Class38_Sub14.aByte2141 != 0)
 					try {
 						RS2Buffer class38_sub23 = new RS2Buffer(4);
-						class38_sub23.putByte(4);
-						class38_sub23.putByte(Class38_Sub14.aByte2141);
-						class38_sub23.putShort(0);
+						class38_sub23.writeByte(4);
+						class38_sub23.writeByte(Class38_Sub14.aByte2141);
+						class38_sub23.writeShort(0);
 						Class38_Sub20_Sub17.aClass31_3138.write(class38_sub23.buffer, 4, 0, (byte) 126);
 					} catch (java.io.IOException ioexception) {
 						try {
@@ -97,8 +97,7 @@ final class Class50 {
 		try {
 			if (object == null)
 				return null;
-			if (object instanceof byte[]) {
-				byte[] is = (byte[]) object;
+			if (object instanceof byte[] is) {
 				if (bool)
 					return Class23.method204(49, is);
 				return is;

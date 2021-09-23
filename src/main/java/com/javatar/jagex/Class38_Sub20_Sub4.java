@@ -63,25 +63,25 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 							Client.calculatePath(false, 0, ((Entity) Client.myPlayer).walkQueueY[0], 0, 1, ((Entity) class38_sub20_sub3_sub7_sub2).walkQueueX[0], ((Entity) Client.myPlayer).walkQueueX[0], 0, ((Entity) class38_sub20_sub3_sub7_sub2).walkQueueY[0], 1, 2);
 							bool = true;
 							if (i == 1) {
-								Client.outputBuffer.putOpcode(35);
+								Client.outputBuffer.writeIsaacByte(35);
 								Client.outputBuffer.method767(i_2_ - 25761, Class47.anIntArray1055[i_4_]);
 								Class77.anInt1518++;
 							} else if (i != 4) {
 								if (i != 6) {
 									if (i == 7) {
 										Class38_Sub2.anInt1764++;
-										Client.outputBuffer.putOpcode(138);
+										Client.outputBuffer.writeIsaacByte(138);
 										Client.outputBuffer.method769(Class47.anIntArray1055[i_4_], 109);
 									}
 								} else {
 									Class83.anInt1678++;
-									Client.outputBuffer.putOpcode(193);
-									Client.outputBuffer.putShort(Class47.anIntArray1055[i_4_]);
+									Client.outputBuffer.writeIsaacByte(193);
+									Client.outputBuffer.writeShort(Class47.anIntArray1055[i_4_]);
 								}
 							} else {
 								Class38_Sub22.anInt2323++;
-								Client.outputBuffer.putOpcode(81);
-								Client.outputBuffer.putLEShortA(Class47.anIntArray1055[i_4_]);
+								Client.outputBuffer.writeIsaacByte(81);
+								Client.outputBuffer.writeLEShortA(Class47.anIntArray1055[i_4_]);
 							}
 							break;
 						}
@@ -211,7 +211,7 @@ final class Class38_Sub20_Sub4 extends NodeSub {
 			if (i != -7645)
 				Class38_Sub20_Sub4.method824(-120, -22, null);
 			if (l != 0L) {
-				Client.outputBuffer.putOpcode(23);
+				Client.outputBuffer.writeIsaacByte(23);
 				Class28.anInt689++;
 				Client.outputBuffer.writeLong(l);
 			}

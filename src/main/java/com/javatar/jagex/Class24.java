@@ -26,7 +26,7 @@ final class Class24 {
 			for (int i_3_ = 0; i_3_ < i; i_3_++) {
 				if (class19s[i_3_ + i_0_] == null)
 					class19s[i_0_ + i_3_] = SceneModel.aClass19_2556;
-				i_2_ += class19s[i_3_ + i_0_].anInt478;
+				i_2_ += class19s[i_3_ + i_0_].length;
 			}
 			byte[] is = new byte[i_2_];
 			if (i_1_ > -123)
@@ -34,11 +34,11 @@ final class Class24 {
 			int i_4_ = 0;
 			for (int i_5_ = 0; i > i_5_; i_5_++) {
 				RSString class19 = class19s[i_0_ + i_5_];
-				Class71.method510(class19.buffer, 0, is, i_4_, class19.anInt478);
-				i_4_ += class19.anInt478;
+				Class71.arrayCopy(class19.buffer, 0, is, i_4_, class19.length);
+				i_4_ += class19.length;
 			}
 			RSString class19 = new RSString();
-			class19.anInt478 = i_2_;
+			class19.length = i_2_;
 			class19.buffer = is;
 			return class19;
 		} catch (RuntimeException runtimeexception) {

@@ -90,7 +90,7 @@ final class PacketBuffer extends RS2Buffer {
 		}
 	}
 
-	final void putOpcode(int opcode) {
+	final void writeIsaacByte(int opcode) {
 		((RS2Buffer) this).buffer[((RS2Buffer) this).pos++] = (byte) (opcode + isaac.nextVal());
 	}
 

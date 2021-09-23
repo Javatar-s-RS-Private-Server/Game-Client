@@ -102,7 +102,7 @@ final class Class54 {
 				Class54.method419(-49, -116, -108, -125, -109, 41, 113);
 			if (!NodeSub.method708(0, Class30.method283(i_22_ ^ ~0x3233, class38_sub6), i) && class38_sub6.anObjectArray1907 == null)
 				return null;
-			if (class38_sub6.aClass19Array1851 == null || class38_sub6.aClass19Array1851.length <= i || class38_sub6.aClass19Array1851[i] == null || class38_sub6.aClass19Array1851[i].method178(-91).method143((byte) 71) == 0) {
+			if (class38_sub6.aClass19Array1851 == null || class38_sub6.aClass19Array1851.length <= i || class38_sub6.aClass19Array1851[i] == null || class38_sub6.aClass19Array1851[i].method178(-91).length((byte) 71) == 0) {
 				if (Node.aBool892)
 					return Class9.method43(new RSString[] { NPC.aClass19_3551, RuntimeException_Sub1.method1098(i, i_22_ ^ 0x324a) }, (byte) -20);
 				return null;

@@ -9,7 +9,7 @@ abstract class Class32 {
 	static boolean[] aBoolArray768;
 	static int anInt770;
 	private static RSString aClass19_771 = RSString.createRSString("Unable to connect)3");
-	static int anInt772;
+	static int clientRights;
 	static RSString aClass19_773;
 	static RSString aClass19_775;
 	static RSString aClass19_776;
@@ -45,8 +45,8 @@ abstract class Class32 {
 				if (class38_sub20_sub3_sub7.walkQueueLocationIndex == 0)
 					class38_sub20_sub3_sub7.anInt3440 = 0;
 				else {
-					if ((class38_sub20_sub3_sub7.currentAnimationId ^ 0xffffffff) != i && class38_sub20_sub3_sub7.anInt3461 == 0) {
-						Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 118, class38_sub20_sub3_sub7.currentAnimationId);
+					if ((class38_sub20_sub3_sub7.animationId ^ 0xffffffff) != i && class38_sub20_sub3_sub7.animationDelay == 0) {
+						Class38_Sub20_Sub4 class38_sub20_sub4 = Sequence.forID((byte) 118, class38_sub20_sub3_sub7.animationId);
 						if (class38_sub20_sub3_sub7.anInt3494 > 0 && class38_sub20_sub4.anInt2574 == 0) {
 							class38_sub20_sub3_sub7.anInt3440++;
 							break;
@@ -112,7 +112,7 @@ abstract class Class32 {
 								class38_sub20_sub3_sub7.anInt3440--;
 							}
 						} else {
-							if (class38_sub20_sub3_sub7.anInt3491 != class38_sub20_sub3_sub7.anInt3488 && class38_sub20_sub3_sub7.anInt3502 == -1 && class38_sub20_sub3_sub7.anInt3439 != 0)
+							if (class38_sub20_sub3_sub7.anInt3491 != class38_sub20_sub3_sub7.anInt3488 && class38_sub20_sub3_sub7.facingEntityIndex == -1 && class38_sub20_sub3_sub7.anInt3439 != 0)
 								i_4_ = 2;
 							if (class38_sub20_sub3_sub7.walkQueueLocationIndex > 2)
 								i_4_ = 6;
@@ -207,7 +207,7 @@ abstract class Class32 {
 		Class32.anInt770 = 0;
 		Class32.aBoolArray768 = new boolean[100];
 		Class32.aClass19_776 = RSString.createRSString(" Sekunde(Xn(Y -Ubertragen)3");
-		Class32.anInt772 = 0;
+		Class32.clientRights = 0;
 		Class32.aClass19_773 = Class32.aClass19_771;
 		Class32.aClass19_775 = RSString.createRSString("<img=1>");
 		Class32.aClass19_778 = RSString.createRSString(":assist:");

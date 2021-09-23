@@ -37,11 +37,11 @@ final class Class5 {
 		try {
 			try {
 				RSString class19 = new RSString();
-				class19.anInt478 = class38_sub23.method726(true);
-				if (class19.anInt478 > i_0_)
-					class19.anInt478 = i_0_;
-				class19.buffer = new byte[class19.anInt478];
-				class38_sub23.pos += Class41.aClass53_935.method410(i, class38_sub23.pos, class19.buffer, class19.anInt478, true, class38_sub23.buffer);
+				class19.length = class38_sub23.readSmallShort();
+				if (class19.length > i_0_)
+					class19.length = i_0_;
+				class19.buffer = new byte[class19.length];
+				class38_sub23.pos += Class41.aClass53_935.method410(i, class38_sub23.pos, class19.buffer, class19.length, true, class38_sub23.buffer);
 				return class19;
 			} catch (Exception exception) {
 				return Class16.aClass19_332;

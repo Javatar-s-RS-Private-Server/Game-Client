@@ -2,6 +2,8 @@ package com.javatar.jagex;/* Class41 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
+import java.util.Arrays;
+
 final class Class41 {
 	int anInt922;
 	int anInt925;
@@ -84,7 +86,7 @@ final class Class41 {
 						Class80.anIntArray1606[Class81.anInt1618] = 0;
 						Class81.anInt1624 = Entity.anInt3513;
 						Class81.anInt1618++;
-						Client.outputBuffer.putOpcode(28);
+						Client.outputBuffer.writeIsaacByte(28);
 						Client.outputBuffer.writeLong(l);
 					}
 				}
@@ -182,7 +184,7 @@ final class Class41 {
 								Class15.method84(class38_sub19, (byte) -89);
 							}
 							if (Class67.aClass38_Sub6_1381 != null && Class38_Sub10_Sub1.method860(1442844045, Class15.aClass38_Sub6_293) != null) {
-								Client.outputBuffer.putOpcode(178);
+								Client.outputBuffer.writeIsaacByte(178);
 								Client.outputBuffer.method774(8, Class67.aClass38_Sub6_1381.anInt1856);
 								Client.outputBuffer.method769(Class67.aClass38_Sub6_1381.anInt1941, 88);
 								Client.outputBuffer.method747(Class15.aClass38_Sub6_293.anInt1856, i - 2689);
@@ -250,11 +252,11 @@ final class Class41 {
 				long l = class19.method162(0);
 				if (l != 0L) {
 					for (/**/; i_13_ < NPC.aClass38_Sub9Array3557.length; i_13_++)
-						if (((Node) NPC.aClass38_Sub9Array3557[i_13_]).aLong898 == l)
+						if (NPC.aClass38_Sub9Array3557[i_13_].aLong898 == l)
 							break;
 					if (NPC.aClass38_Sub9Array3557.length > i_13_ && NPC.aClass38_Sub9Array3557[i_13_] != null) {
-						Client.outputBuffer.putOpcode(194);
-						Client.outputBuffer.writeLong(((Node) NPC.aClass38_Sub9Array3557[i_13_]).aLong898);
+						Client.outputBuffer.writeIsaacByte(194);
+						Client.outputBuffer.writeLong(NPC.aClass38_Sub9Array3557[i_13_].aLong898);
 					}
 				}
 			}
@@ -271,14 +273,14 @@ final class Class41 {
 				Class14.updateLocation();
 				Class73.updateLocalPlayerLocations((byte) 127);
 				Class31.addLocalPlayers(11);
-				Class2_Sub1.updatePlayerFlags(19135);
+				Class2_Sub1.updatePlayerFlags();
 				for (int i_14_ = 0; Class4.anInt81 > i_14_; i_14_++) {
 					int i_15_ = Class21.anIntArray519[i_14_];
 					if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_15_].anInt3459 != Class45.anInt1016)
 						Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_15_] = null;
 				}
-				if (Entity.anInt3446 != Class15.inputStream.pos)
-					throw new RuntimeException("gpp1 pos:" + ((RS2Buffer) Class15.inputStream).pos + " psize:" + Entity.anInt3446);
+				if (Entity.packetLength != Class15.inputStream.pos)
+					throw new RuntimeException("gpp1 pos:" + Class15.inputStream.pos + " psize:" + Entity.packetLength);
 				for (int i_16_ = 0; i_16_ < ItemDefinition.anInt2783; i_16_++)
 					if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[Class47.anIntArray1055[i_16_]] == null)
 						throw new RuntimeException("gpp2 pos:" + i_16_ + " size:" + ItemDefinition.anInt2783);

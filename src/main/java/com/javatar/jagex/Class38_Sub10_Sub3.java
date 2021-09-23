@@ -96,8 +96,8 @@ final class Class38_Sub10_Sub3 extends Class38_Sub10 {
 					Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_7_] = null;
 				}
 			}
-			if (((RS2Buffer) Class15.inputStream).pos != Entity.anInt3446)
-				throw new RuntimeException("gnp1 pos:" + ((RS2Buffer) Class15.inputStream).pos + " psize:" + Entity.anInt3446);
+			if (((RS2Buffer) Class15.inputStream).pos != Entity.packetLength)
+				throw new RuntimeException("gnp1 pos:" + ((RS2Buffer) Class15.inputStream).pos + " psize:" + Entity.packetLength);
 			if (i == -3072)
 				for (int i_8_ = 0; i_8_ < Class4.anInt87; i_8_++)
 					if (Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[Class38_Sub10_Sub1.anIntArray2652[i_8_]] == null)

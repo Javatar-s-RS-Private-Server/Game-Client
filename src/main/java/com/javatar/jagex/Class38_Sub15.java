@@ -412,7 +412,7 @@ final class Class38_Sub15 extends Node {
 
 	static final Class38_Sub15 method688(Class17 class17, int i, int i_108_) {
 		if (!Class38_Sub15.method686(class17)) {
-			class17.method116(i, true, i_108_);
+			class17.method116(i, i_108_);
 			return null;
 		}
 		byte[] is = class17.getFileData(i, i_108_, -87);

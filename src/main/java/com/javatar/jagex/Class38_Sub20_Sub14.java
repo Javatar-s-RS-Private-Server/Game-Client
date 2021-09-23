@@ -24,8 +24,8 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 	static final void method997(boolean bool, Entity class38_sub20_sub3_sub7) {
 		try {
 			if (!bool && class38_sub20_sub3_sub7.anInt3439 != 0) {
-				if (class38_sub20_sub3_sub7.anInt3502 != -1 && class38_sub20_sub3_sub7.anInt3502 < 32768) {
-					NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[class38_sub20_sub3_sub7.anInt3502];
+				if (class38_sub20_sub3_sub7.facingEntityIndex != -1 && class38_sub20_sub3_sub7.facingEntityIndex < 32768) {
+					NPC class38_sub20_sub3_sub7_sub1 = Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[class38_sub20_sub3_sub7.facingEntityIndex];
 					if (class38_sub20_sub3_sub7_sub1 != null) {
 						int i = class38_sub20_sub3_sub7.anInt3493 - ((Entity) class38_sub20_sub3_sub7_sub1).anInt3493;
 						int i_0_ = -((Entity) class38_sub20_sub3_sub7_sub1).anInt3444 + class38_sub20_sub3_sub7.anInt3444;
@@ -33,8 +33,8 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 							class38_sub20_sub3_sub7.anInt3488 = (int) (Math.atan2(i, i_0_) * 325.949) & 0x7ff;
 					}
 				}
-				if (class38_sub20_sub3_sub7.anInt3502 >= 32768) {
-					int i = class38_sub20_sub3_sub7.anInt3502 - 32768;
+				if (class38_sub20_sub3_sub7.facingEntityIndex >= 32768) {
+					int i = class38_sub20_sub3_sub7.facingEntityIndex - 32768;
 					if (i == Class38_Sub9.anInt2067)
 						i = 2047;
 					Player class38_sub20_sub3_sub7_sub2 = Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i];
@@ -45,13 +45,13 @@ final class Class38_Sub20_Sub14 extends NodeSub {
 							class38_sub20_sub3_sub7.anInt3488 = (int) (Math.atan2(i_2_, i_1_) * 325.949) & 0x7ff;
 					}
 				}
-				if ((class38_sub20_sub3_sub7.anInt3487 != 0 || class38_sub20_sub3_sub7.anInt3443 != 0) && (class38_sub20_sub3_sub7.walkQueueLocationIndex == 0 || class38_sub20_sub3_sub7.anInt3440 > 0)) {
-					int i = class38_sub20_sub3_sub7.anInt3493 - (class38_sub20_sub3_sub7.anInt3487 - (Client.currentBaseY + Client.currentBaseY)) * 64;
-					int i_3_ = -((-Client.currentBaseX + class38_sub20_sub3_sub7.anInt3443 - Client.currentBaseX) * 64) + class38_sub20_sub3_sub7.anInt3444;
+				if ((class38_sub20_sub3_sub7.faceX != 0 || class38_sub20_sub3_sub7.faceY != 0) && (class38_sub20_sub3_sub7.walkQueueLocationIndex == 0 || class38_sub20_sub3_sub7.anInt3440 > 0)) {
+					int i = class38_sub20_sub3_sub7.anInt3493 - (class38_sub20_sub3_sub7.faceX - (Client.currentBaseX + Client.currentBaseX)) * 64;
+					int i_3_ = -((-Client.currentBaseY + class38_sub20_sub3_sub7.faceY - Client.currentBaseY) * 64) + class38_sub20_sub3_sub7.anInt3444;
 					if (i != 0 || i_3_ != 0)
 						class38_sub20_sub3_sub7.anInt3488 = (int) (Math.atan2(i, i_3_) * 325.949) & 0x7ff;
-					class38_sub20_sub3_sub7.anInt3487 = 0;
-					class38_sub20_sub3_sub7.anInt3443 = 0;
+					class38_sub20_sub3_sub7.faceX = 0;
+					class38_sub20_sub3_sub7.faceY = 0;
 				}
 				int i = class38_sub20_sub3_sub7.anInt3488 - class38_sub20_sub3_sub7.anInt3491 & 0x7ff;
 				if (i != 0) {

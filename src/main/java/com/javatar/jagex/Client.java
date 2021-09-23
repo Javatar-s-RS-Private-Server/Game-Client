@@ -26,11 +26,11 @@ public final class Client extends Applet_Sub1 {
 	static int height;
 	static Class74[] clippingHeights = new Class74[4];
 	static int arbitraryDestination = 0;
-	static int destX = 0;
+	static int minimapFlagDestX = 0;
 	static int destY;
 	static boolean[] heldKeys;
-	static int currentBaseX;
 	static int currentBaseY;
+	static int currentBaseX;
 	static int redrawTimer = 0;
 	static WidgetComponent atInventoryInterfaceType;
 	static int cameraPacketDelay = 0;
@@ -286,7 +286,7 @@ public final class Client extends Applet_Sub1 {
 								if (Class47.anInt1046 == 2) {
 									Class38_Sub20_Sub16.aClass31_3098 = new Class31((Socket) ObjectDefinition.aClass65_2461.anObject1365, Class38_Sub4.aClass56_1798);
 									RS2Buffer class38_sub23 = new RS2Buffer(5);
-									class38_sub23.putByte(15);
+									class38_sub23.writeByte(15);
 									class38_sub23.writeInt(468);// client
 																// revision
 									Class38_Sub20_Sub16.aClass31_3098.write(class38_sub23.buffer, 5, 0, (byte) 127);
@@ -526,7 +526,7 @@ public final class Client extends Applet_Sub1 {
 			if (i_22_ == 325)
 				Class38_Sub20_Sub15.aClass18_3072.method127(-109, true);
 			if (i_22_ == 326) {
-				Client.outputBuffer.putOpcode(78);
+				Client.outputBuffer.writeIsaacByte(78);
 				Class38_Sub20_Sub15.aClass18_3072.method125(Client.outputBuffer, -123);
 				return true;
 			}
@@ -720,28 +720,28 @@ public final class Client extends Applet_Sub1 {
 					Client.worldConnection.method290(124, 0, Class15.inputStream.buffer, 1);
 					Class15.inputStream.pos = 0;
 					Class23.packetId = Class15.inputStream.readIsaacByte();
-					Entity.anInt3446 = Class3.anIntArray67[Class23.packetId];
+					Entity.packetLength = Class3.anIntArray67[Class23.packetId];
 					i_41_--;
 				}
-				if (Entity.anInt3446 == -1) {
+				if (Entity.packetLength == -1) {
 					if (i_41_ <= 0)
 						return false;
 					i_41_--;
 					Client.worldConnection.method290(116, 0, Class15.inputStream.buffer, 1);
-					Entity.anInt3446 = Class15.inputStream.buffer[0] & 0xff;
+					Entity.packetLength = Class15.inputStream.buffer[0] & 0xff;
 				}
-				if (Entity.anInt3446 == -2)
+				if (Entity.packetLength == -2)
 					if (i_41_ > 1) {
 						i_41_ -= 2;
 						Client.worldConnection.method290(i ^ 0x7794, 0, Class15.inputStream.buffer, 2);
 						Class15.inputStream.pos = 0;
-						Entity.anInt3446 = Class15.inputStream.readUnsignedShort();
+						Entity.packetLength = Class15.inputStream.readUnsignedShort();
 					} else
 						return false;
-				if (i_41_ < Entity.anInt3446)
+				if (i_41_ < Entity.packetLength)
 					return false;
 				Class15.inputStream.pos = 0;
-				Client.worldConnection.method290(117, 0, Class15.inputStream.buffer, Entity.anInt3446);
+				Client.worldConnection.method290(117, 0, Class15.inputStream.buffer, Entity.packetLength);
 				Class38_Sub20_Sub8.anInt2857 = 0;
 				Class38_Sub20_Sub8.anInt2864 = Class15.anInt280;
 				Class15.anInt280 = Class38_Sub19.anInt2233;
@@ -794,7 +794,7 @@ public final class Client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 42) {
-					Class38_Sub20_Sub3_Sub2.anInt3250 = Entity.anInt3446 / 8;
+					Class38_Sub20_Sub3_Sub2.anInt3250 = Entity.packetLength / 8;
 					for (int i_51_ = 0; Class38_Sub20_Sub3_Sub2.anInt3250 > i_51_; i_51_++) {
 						Class5.aLongArray97[i_51_] = Class15.inputStream.method748(-118);
 						Class54.aClass19Array1206[i_51_] = Class73.method520(Class5.aLongArray97[i_51_], 1);
@@ -855,19 +855,19 @@ public final class Client extends Applet_Sub1 {
 				if (Class23.packetId == 175) {
 					for (int i_57_ = 0; i_57_ < Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152.length; i_57_++)
 						if (Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_] != null)
-							Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_].currentAnimationId = -1;
+							Class9.aClass38_Sub20_Sub3_Sub7_Sub2Array152[i_57_].animationId = -1;
 					for (int i_58_ = 0; Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164.length > i_58_; i_58_++)
 						if (Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_] != null)
-							Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_].currentAnimationId = -1;
+							Class53.aClass38_Sub20_Sub3_Sub7_Sub1Array1164[i_58_].animationId = -1;
 					Class23.packetId = -1;
 					return true;
 				}
 				if (Class23.packetId == 89) {
-					RSString class19 = Class15.inputStream.getUShort(1347418632);
-					Object[] objects = new Object[class19.method143((byte) 74) + 1];
-					for (int i_59_ = class19.method143((byte) 81) - 1; i_59_ >= 0; i_59_--)
+					RSString class19 = Class15.inputStream.readString(1347418632);
+					Object[] objects = new Object[class19.length((byte) 74) + 1];
+					for (int i_59_ = class19.length((byte) 81) - 1; i_59_ >= 0; i_59_--)
 						if (class19.method163(114, i_59_) == 115)
-							objects[i_59_ + 1] = Class15.inputStream.getUShort(1347418632);
+							objects[i_59_ + 1] = Class15.inputStream.readString(1347418632);
 						else
 							objects[i_59_ + 1] = new Integer(Class15.inputStream.readInt(true));
 					objects[0] = new Integer(Class15.inputStream.readInt(true));
@@ -878,7 +878,7 @@ public final class Client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 238) {
-					RSString class19 = Class15.inputStream.getUShort(i + 1347387929);
+					RSString class19 = Class15.inputStream.readString(i + 1347387929);
 					if (class19.method169(0, Class77.aClass19_1508)) {
 						RSString class19_60_ = class19.method144((byte) 52, 0, class19.method170(1, Class16.aClass19_341));
 						boolean bool = false;
@@ -940,7 +940,7 @@ public final class Client extends Applet_Sub1 {
 								break;
 							}
 						if (!bool && Sequence.anInt2731 == 0) {
-							RSString class19_71_ = class19.method144((byte) -124, class19.method170(1, Class16.aClass19_341) + 1, class19.method143((byte) 48) - 9);
+							RSString class19_71_ = class19.method144((byte) -124, class19.method170(1, Class16.aClass19_341) + 1, class19.length((byte) 48) - 9);
 							Class62.method464((byte) 98, class19_71_, 8, class19_69_);
 						}
 					}
@@ -1080,7 +1080,7 @@ public final class Client extends Applet_Sub1 {
 				}
 				if (Class23.packetId == 41) {
 					int i_97_ = Class15.inputStream.readInt(true);
-					RSString class19 = Class15.inputStream.getUShort(1347418632);
+					RSString class19 = Class15.inputStream.readString(1347418632);
 					WidgetComponent class38_sub6 = Projectile.method1167(i_97_, i - 30812);
 					if (!class19.method175(true, class38_sub6.aClass19_1876)) {
 						class38_sub6.aClass19_1876 = class19;
@@ -1169,7 +1169,7 @@ public final class Client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 134) {
-					destX = 0;
+					minimapFlagDestX = 0;
 					Class23.packetId = -1;
 					return true;
 				}
@@ -1426,8 +1426,8 @@ public final class Client extends Applet_Sub1 {
 						class38_sub6 = null;
 					if (i_137_ < -70000)
 						i_138_ += 32768;
-					while (Class15.inputStream.pos < Entity.anInt3446) {
-						int i_139_ = Class15.inputStream.method726(true);
+					while (Class15.inputStream.pos < Entity.packetLength) {
+						int i_139_ = Class15.inputStream.readSmallShort();
 						int i_140_ = Class15.inputStream.readUnsignedShort();
 						int i_141_ = 0;
 						if (i_140_ != 0) {
@@ -1463,7 +1463,7 @@ public final class Client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 51) {
-					NPC.method1200(Entity.anInt3446, Class15.inputStream, i - 30604, Class38_Sub4.aClass56_1798);
+					NPC.method1200(Entity.packetLength, Class15.inputStream, i - 30604, Class38_Sub4.aClass56_1798);
 					Class23.packetId = -1;
 					return true;
 				}
@@ -1487,7 +1487,7 @@ public final class Client extends Applet_Sub1 {
 				if (Class23.packetId == 94) {
 					int i_148_ = Class15.inputStream.readUnsignedByteC(i - 17418);
 					int i_149_ = Class15.inputStream.readUnsignedByteC(13285);
-					RSString class19 = Class15.inputStream.getUShort(1347418632);
+					RSString class19 = Class15.inputStream.readString(1347418632);
 					if (i_148_ >= 1 && i_148_ <= 8) {
 						if (class19.method174((byte) 102, Class41.aClass19_948))
 							class19 = null;
@@ -1510,7 +1510,7 @@ public final class Client extends Applet_Sub1 {
 					return true;
 				}
 				if (Class23.packetId == 224) {
-					int i_152_ = Entity.anInt3446 + Class15.inputStream.pos;
+					int i_152_ = Entity.packetLength + Class15.inputStream.pos;
 					int i_153_ = Class15.inputStream.readUnsignedShort();
 					int i_154_ = Class15.inputStream.readUnsignedShort();
 					if (i_153_ != NodeSub.windowId) {
@@ -1618,7 +1618,7 @@ public final class Client extends Applet_Sub1 {
 				if (Class23.packetId == 33) {
 					Class2_Sub1.anInt2003 = Class15.inputStream.method741(68);
 					Class64.anInt1358 = Class15.inputStream.getUByteC();
-					while (Class15.inputStream.pos < Entity.anInt3446) {
+					while (Class15.inputStream.pos < Entity.packetLength) {
 						Class23.packetId = Class15.inputStream.readUnsignedByte();
 						Class60.method452(7);
 					}
@@ -1777,13 +1777,13 @@ public final class Client extends Applet_Sub1 {
 					Class23.packetId = -1;
 					return true;
 				}
-				Class38_Sub20_Sub2.method813(null, "T1 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446, 95);
+				Class38_Sub20_Sub2.method813(null, "T1 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.packetLength, 95);
 				Class41.method350(-10015);
 			} catch (java.io.IOException ioexception) {
 				Client.dropClient();
 			} catch (Exception exception) {
-				String string = "T2 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.anInt3446 + "," + (currentBaseY + myPlayer.walkQueueX[0]) + "," + (currentBaseX + myPlayer.walkQueueY[0]) + " - ";
-				for (int i_198_ = 0; Entity.anInt3446 > i_198_ && i_198_ < 50; i_198_++)
+				String string = "T2 - " + Class23.packetId + "," + Class15.anInt280 + "," + Class38_Sub20_Sub8.anInt2864 + " - " + Entity.packetLength + "," + (currentBaseX + myPlayer.walkQueueX[0]) + "," + (currentBaseY + myPlayer.walkQueueY[0]) + " - ";
+				for (int i_198_ = 0; Entity.packetLength > i_198_ && i_198_ < 50; i_198_++)
 					string += Class15.inputStream.buffer[i_198_] + ",";
 				Class38_Sub20_Sub2.method813(exception, string, 95);
 				Class41.method350(-10015);
@@ -1955,33 +1955,38 @@ public final class Client extends Applet_Sub1 {
 			if (maxPathSize > 25)
 				maxPathSize = 25;
 			if (clickType == 0) { // minimap click
-				outputBuffer.putOpcode(184);
-				outputBuffer.putByte(maxPathSize + 3 + maxPathSize);
+				outputBuffer.writeIsaacByte(184);
+				outputBuffer.writeByte(maxPathSize + 3 + maxPathSize);
 			}
 			if (clickType == 1) { // main screen click
-				outputBuffer.putOpcode(24);
-				outputBuffer.putByte(maxPathSize + maxPathSize + 17);
+				outputBuffer.writeIsaacByte(24);
+				outputBuffer.writeByte(maxPathSize + maxPathSize + 17);
 			}
 			if (clickType == 2) { // object click
-				outputBuffer.putOpcode(110);
-				outputBuffer.putByte(maxPathSize + 3 + maxPathSize);
+				outputBuffer.writeIsaacByte(110);
+				outputBuffer.writeByte(maxPathSize + 3 + maxPathSize);
 			}
-			outputBuffer.putLEShortA(localX + currentBaseY);
-			destX = walkingQueueX[0];
-			destY = walkingQueueY[0];
-			for (int id = 1; maxPathSize > id; id++) {
-				currentIndex--;
-				outputBuffer.writeByteC(-localX + walkingQueueX[currentIndex]);
-				outputBuffer.putByteA(-localY + walkingQueueY[currentIndex]);
-			}
-			outputBuffer.writeByteC(heldKeys[82] ? 1 : 0);
-			outputBuffer.putShort(localY + currentBaseX);
+
+            outputBuffer.writeByte(heldKeys[82] ? 1 : 0);
+            outputBuffer.writeShort(localX + currentBaseX);
+            outputBuffer.writeShort(localY + currentBaseY);
+
+            System.out.println("X " + (localX + currentBaseX));
+            System.out.println("Y " + (localY + currentBaseY));
+            System.out.println("Max Path Size " + maxPathSize + " Sent " + (maxPathSize + 3 + maxPathSize) + " Decoded " + (((maxPathSize + 3 + maxPathSize) - 3) / 2));
+
+            minimapFlagDestX = walkingQueueX[0];
+            destY = walkingQueueY[0];
+            for (int id = 1; maxPathSize > id; id++) {
+                currentIndex--;
+                System.out.println(id);
+                outputBuffer.writeByte(-localX + walkingQueueX[currentIndex]);
+                outputBuffer.writeByte(-localY + walkingQueueY[currentIndex]);
+            }
 			return true;
 		}
-		if (clickType == 1)
-			return false;
-		return true;
-	}
+        return clickType != 1;
+    }
 
 	static final int keyboardIdleTime() {
 		return keyboardIdleTime++;
